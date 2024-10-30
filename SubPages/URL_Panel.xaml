@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="BLT_Generator.SubPages.URL_Panel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BLT_Generator.SubPages"
+             xmlns:helpers="clr-namespace:BLT_Generator.Helpers"
+             mc:Ignorable="d"
+             d:DesignHeight="510" d:DesignWidth="300"
+             Background="White">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top">
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBlock FontFamily="{StaticResource Bold}"
+                       Foreground="#4D4D4D"
+                       FontSize="30">
+                URL
+            </TextBlock>
+            <TextBox Margin="0 30 0 0"
+                     Style="{StaticResource Txb}"
+                     helpers:TextBoxHelper.PlaceholderText="Enter URL"
+                     FontFamily="{StaticResource Regular}"
+                     FontSize="14">
+
+            </TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top">
+            <Button Style="{StaticResource Clear}"
+                    FontFamily="{StaticResource Regular}">
+                Clear
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
