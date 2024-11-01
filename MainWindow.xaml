@@ -10,7 +10,7 @@
         ResizeMode="CanResizeWithGrip">
 
     <Window.Resources>
-        <ResourceDictionary Source="./ResourceDictionary/MainResources.xaml"/>
+        <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </Window.Resources>
 
     <Grid>
@@ -68,10 +68,12 @@
                                       Tag="/Images/WhiteIcons/wQR.png"
                                       Click="Btn_Generate_Click"/>
                         <ToggleButton x:Name="Btn_Profile"
+                                      Margin="0 10 0 0"
                                       Style="{StaticResource SelectableButtonStyle}"
                                       Tag="/Images/WhiteIcons/wUser.png"
                                       Click="Btn_Profile_Click"/>
                         <ToggleButton x:Name="Btn_Setting"
+                                      Margin="0 10 0 0"
                                       Style="{StaticResource SelectableButtonStyle}"
                                       Tag="/Images/WhiteIcons/wSetting.png"
                                       Click="Btn_Setting_Click"/>
@@ -79,7 +81,7 @@
                         <ToggleButton x:Name="Btn_Leave"
                                       Style="{StaticResource SelectableButtonStyle}"
                                       Tag="/Images/WhiteIcons/wLeave.png"
-                                      Margin="0 120 0 0"
+                                      Margin="0 100 0 0"
                                       Click="Btn_Leave_Click"/>
                     </StackPanel>
                 </Grid>

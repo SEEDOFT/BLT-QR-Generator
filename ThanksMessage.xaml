@@ -1,0 +1,60 @@
+﻿<Window x:Class="BLT_Generator.ThanksMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLT_Generator"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Width="500" Height="300"
+        Topmost="True"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False">
+
+    <Grid Background="#99000000">
+        <Border Width="500" Height="300"
+                Background="#CCFFFFFF"
+                CornerRadius="20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Padding="20">
+
+            <Grid>
+                <!-- Close button in the top-right corner -->
+                <Button x:Name="CloseButton" Content="X" Width="20" Height="20"
+                        HorizontalAlignment="Right" VerticalAlignment="Top"
+                        Background="Transparent" Foreground="Gray"
+                        BorderThickness="0"
+                        Click="CloseButton_Click"/>
+
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <!-- Logo and Images -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <!--<Image Source="/Images/Logo1.png" Width="50" Height="30" Margin="5"/>
+                        <Image Source="/Images/Logo2.png" Width="50" Height="30" Margin="5"/>
+                        <Image Source="/Images/Logo3.png" Width="50" Height="30" Margin="5"/>-->
+                    </StackPanel>
+
+                    <!-- Title -->
+                    <TextBlock Text="A LETTER FROM US"
+                               FontSize="18" FontWeight="Bold"
+                               HorizontalAlignment="Center"
+                               Margin="0,10,0,5"/>
+
+                    <!-- Message Text -->
+                    <TextBlock
+                        TextWrapping="Wrap"
+                        FontSize="14"
+                        HorizontalAlignment="Center"
+                        TextAlignment="Center"
+                        Margin="0,5,0,10">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis leo vestibulum purus lobortis, eget scelerisque arcu rhoncus. Nullam vel tincidunt nunc. In in velit accumsan, pellentesque enim a, accumsan est. Ut tempor volutpat mi eget convallis. Donec vel odio ac nisl pharetra dictum. Phasellus massa ipsum, blandit vitae scelerisque vitae, porttitor quis erat. Suspendisse pellentesque ligula nec eros porta
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

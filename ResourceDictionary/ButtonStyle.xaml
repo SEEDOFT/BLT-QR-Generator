@@ -90,8 +90,8 @@
     </Style>
     <!--Left Panel button for ICON-->
     <Style x:Key="SelectableButtonStyle" TargetType="ToggleButton">
-        <Setter Property="Width" Value="50"/>
-        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="45"/>
+        <Setter Property="Height" Value="45"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -100,7 +100,7 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="0"
-                            CornerRadius="25">
+                            CornerRadius="23">
                         <Grid>
                             <Rectangle Width="24" Height="24"
                                        HorizontalAlignment="Center"
@@ -160,6 +160,34 @@
                         <Trigger Property="IsChecked" Value="False">
                             <Setter Property="Foreground" Value="#4D4D4D"/>
                             <Setter TargetName="icon" Property="Source" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(helpers:ToggleButtonHelper.UncheckedIcon)}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Button A letter from US -->
+    <Style x:Key="Msg" TargetType="Button">
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="Border">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Images/BlackIcons/Book.png"
+                                        Stretch="UniformToFill"/>
+                        </Border.Background>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Images/WhiteIcons/wBook.png"
+                                                Stretch="UniformToFill"/>
+                                </Setter.Value>
+                            </Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

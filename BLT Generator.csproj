@@ -14,13 +14,21 @@
     <None Remove="Fonts\Segoe_Bold_Italic.ttf" />
     <None Remove="Fonts\Segoe_Italic.ttf" />
     <None Remove="Fonts\Segoe_Regular.ttf" />
+    <None Remove="Images\BlackIcons\Book.png" />
     <None Remove="Images\BlackIcons\Link.png" />
     <None Remove="Images\BlackIcons\rMinimize.png" />
     <None Remove="Images\BlackIcons\rXmark.png" />
     <None Remove="Images\BlackIcons\WIFI.png" />
     <None Remove="Images\BlackIcons\WIFI.svg" />
     <None Remove="Images\BLT Logo.png" />
+    <None Remove="Images\Contents\B.png" />
+    <None Remove="Images\Contents\Both.png" />
+    <None Remove="Images\Contents\L.png" />
+    <None Remove="Images\Contents\Leng.jpg" />
+    <None Remove="Images\Contents\T.png" />
+    <None Remove="Images\Contents\Thea.jpg" />
     <None Remove="Images\WhiteIcons\Minimize.png" />
+    <None Remove="Images\WhiteIcons\wBook.png" />
     <None Remove="Images\WhiteIcons\wCopy.png" />
     <None Remove="Images\WhiteIcons\wHistory.png" />
     <None Remove="Images\WhiteIcons\wLeave.png" />
@@ -32,6 +40,12 @@
     <None Remove="Images\WhiteIcons\wUser.png" />
     <None Remove="Images\WhiteIcons\wWIFI.png" />
     <None Remove="Images\WhiteIcons\Xmark.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\BlackIcons\Book.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -62,7 +76,28 @@
     <Resource Include="Images\BLT Logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Contents\B.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\Both.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\L.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\Leng.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\T.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\Thea.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\WhiteIcons\Minimize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wBook.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wCopy.png">

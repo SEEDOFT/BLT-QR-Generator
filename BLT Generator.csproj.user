@@ -19,13 +19,28 @@
     <Compile Update="Pages\SettingPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SubPages\BothCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SubPages\LengCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SubPages\QR_Panel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SubPages\SubProfile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SubPages\TheaCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SubPages\URL_Panel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SubPages\WIFI_Panel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ThanksMessage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -60,13 +75,28 @@
     <Page Update="ResourceDictionary\TextboxStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="SubPages\BothCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubPages\LengCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="SubPages\QR_Panel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubPages\SubProfile.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubPages\TheaCard.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SubPages\URL_Panel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SubPages\WIFI_Panel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ThanksMessage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

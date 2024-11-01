@@ -10,26 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BLT_Generator.SubPages;
 
-namespace BLT_Generator.Pages
+namespace BLT_Generator
 {
     /// <summary>
-    /// Interaction logic for ProfilePage.xaml
+    /// Interaction logic for ThanksMessage.xaml
     /// </summary>
-    public partial class ProfilePage : UserControl
+    public partial class ThanksMessage : Window
     {
-        public ProfilePage()
+        public ThanksMessage()
         {
             InitializeComponent();
         }
 
-        private void Btn_Msg_Click(object sender, RoutedEventArgs e)
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-            ThanksMessage msg = new ThanksMessage();
-            msg.ShowDialog();
+            this.Close();
         }
     }
 }

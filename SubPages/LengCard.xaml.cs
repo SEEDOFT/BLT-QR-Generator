@@ -9,27 +9,22 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BLT_Generator.SubPages;
 
-namespace BLT_Generator.Pages
+namespace BLT_Generator.SubPages
 {
     /// <summary>
-    /// Interaction logic for ProfilePage.xaml
+    /// Interaction logic for LengCard.xaml
     /// </summary>
-    public partial class ProfilePage : UserControl
+    public partial class LengCard : UserControl
     {
-        public ProfilePage()
+        public LengCard()
         {
             InitializeComponent();
         }
 
-        private void Btn_Msg_Click(object sender, RoutedEventArgs e)
-        {
-            ThanksMessage msg = new ThanksMessage();
-            msg.ShowDialog();
-        }
     }
 }

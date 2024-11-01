@@ -12,24 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BLT_Generator.SubPages;
 
-namespace BLT_Generator.Pages
+namespace BLT_Generator.SubPages
 {
     /// <summary>
-    /// Interaction logic for ProfilePage.xaml
+    /// Interaction logic for SubProfile.xaml
     /// </summary>
-    public partial class ProfilePage : UserControl
+    public partial class SubProfile : UserControl
     {
-        public ProfilePage()
+        public SubProfile()
         {
             InitializeComponent();
-        }
-
-        private void Btn_Msg_Click(object sender, RoutedEventArgs e)
-        {
-            ThanksMessage msg = new ThanksMessage();
-            msg.ShowDialog();
         }
     }
 }
