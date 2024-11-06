@@ -4,7 +4,7 @@
     <Style x:Key="Txb" TargetType="TextBox">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Foreground" Value="#4D4D4D"/>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -13,7 +13,8 @@
                         <Border x:Name="border"
                                 BorderThickness="0,0,0,1"
                                 BorderBrush="Gray"
-                                Margin="0">
+                                Margin="0"
+                                Padding="0 5">
                             <ScrollViewer x:Name="PART_ContentHost" Margin="0"/>
                         </Border>
                     </Grid>

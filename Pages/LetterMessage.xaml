@@ -1,0 +1,128 @@
+﻿<Window x:Class="BLT_Generator.Pages.LetterMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLT_Generator.Pages"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterOwner"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Title="LetterMessage" Height="600" Width="1000">
+
+    <Window.Resources>
+        <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
+    </Window.Resources>
+    <Grid Background="#B3000000">
+        <Border Width="550" Height="350"
+                Background="#162039"
+                CornerRadius="20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Padding="15">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!-- Close button in the top-right corner -->
+                <Button x:Name="CloseButton"
+                        Grid.Row="0"
+                        Content="X"
+                        Width="20" Height="20"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Background="Black"
+                        Foreground="Gray"
+                        BorderThickness="0"
+                        Click="CloseButton_Click"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Left -->
+                    <Border Grid.Column="0"
+                            Width="160"
+                            Background="#1Afdfdfd"
+                            HorizontalAlignment="Left"
+                            CornerRadius="15">
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Orientation="Horizontal">
+                            <Button x:Name="Btn_MPTC"
+                                    Width="40"
+                                    Height="40"
+                                    BorderThickness="0"
+                                    Click="Btn_MPTC_Click">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Images/Contents/MPTC.png"
+                                                Stretch="UniformToFill"/>
+                                </Button.Background>
+                            </Button>
+                            <Button x:Name="Btn_CBRD"
+                                    Width="98"
+                                    Height="40"
+                                    Margin="5 0 0 0"
+                                    BorderThickness="0"
+                                    Click="Btn_CBRD_Click">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Images/Contents/CBRD.png"
+                                                Stretch="Uniform"/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Right -->
+                    <Border Grid.Column="1"
+                            Width="160"
+                            Background="#1Afdfdfd"
+                            HorizontalAlignment="Right"
+                            CornerRadius="15">
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Orientation="Horizontal">
+                            <Button x:Name="Btn_ANT"
+                                    Width="130"
+                                    Height="60"
+                                    Margin="0 5 0 0"
+                                    BorderThickness="0"
+                                    Click="Btn_ANT_Click">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Images/Contents/ANT.png"
+                                                Stretch="Uniform"/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+                <StackPanel VerticalAlignment="Top"
+                            HorizontalAlignment="Center"
+                            Margin="0 20 0 0"
+                            Grid.Row="2">
+                    <!-- Title -->
+                    <TextBlock Text="A LETTER FROM US"
+                               FontSize="18" FontWeight="Bold"
+                               Foreground="White"
+                               HorizontalAlignment="Center"
+                               Margin="0,10,0,5"/>
+
+                    <!-- Message Text -->
+                    <TextBlock
+                        TextWrapping="Wrap"
+                        FontSize="14"
+                        HorizontalAlignment="Center"
+                        TextAlignment="Center"
+                        Foreground="White"
+                        Margin="0,5,0,10">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis leo vestibulum purus lobortis, eget scelerisque arcu rhoncus. Nullam vel tincidunt nunc. In in velit accumsan, pellentesque enim a, accumsan est. Ut tempor volutpat mi eget convallis. Donec vel odio ac nisl pharetra dictum. Phasellus massa ipsum, blandit vitae scelerisque vitae, porttitor quis erat. Suspendisse pellentesque ligula nec eros porta
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

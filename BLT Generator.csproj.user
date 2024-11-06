@@ -13,6 +13,12 @@
     <Compile Update="Pages\GeneratePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\HistoryPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LetterMessage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\ProfilePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,13 +40,16 @@
     <Compile Update="SubPages\TheaCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SubPages\URL_History.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SubPages\URL_Panel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="SubPages\WIFI_Panel.xaml.cs">
+    <Compile Update="SubPages\WIFI_History.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ThanksMessage.xaml.cs">
+    <Compile Update="SubPages\WIFI_Panel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -52,6 +61,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\GeneratePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\HistoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LetterMessage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\ProfilePage.xaml">
@@ -90,13 +105,16 @@
     <Page Update="SubPages\TheaCard.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="SubPages\URL_History.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="SubPages\URL_Panel.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="SubPages\WIFI_Panel.xaml">
+    <Page Update="SubPages\WIFI_History.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ThanksMessage.xaml">
+    <Page Update="SubPages\WIFI_Panel.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

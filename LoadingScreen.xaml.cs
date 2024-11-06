@@ -36,7 +36,7 @@ namespace BLT_Generator
 
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            for (int i = 0; i <= 80; i++)
+            for (int i = 0; i <= 60; i++)
             {
                 ((BackgroundWorker)sender).ReportProgress(i);
                 Thread.Sleep(50);
@@ -47,7 +47,7 @@ namespace BLT_Generator
         {
             progressBar.Value = e.ProgressPercentage;
 
-            if (progressBar.Value == 80)
+            if (progressBar.Value == 60)
             {
                 MainWindow main = new MainWindow();
                 Close();

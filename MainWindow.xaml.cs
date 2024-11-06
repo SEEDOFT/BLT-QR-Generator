@@ -44,13 +44,13 @@ namespace BLT_Generator
 
             selectedButton.IsChecked = true;
         }
-
+        //click to open generate page
         private void Btn_Generate_Click(object sender, RoutedEventArgs e)
         {
             SetSelectedButton(Btn_Generate);
             PageMain(new Pages.GeneratePage());
         }
-
+        //info
         private void Btn_Profile_Click(object sender, RoutedEventArgs e)
         {
             SetSelectedButton(Btn_Profile);
@@ -63,9 +63,33 @@ namespace BLT_Generator
             PageMain(new Pages.SettingPage());
         }
 
-        private void Btn_Leave_Click(object sender, RoutedEventArgs e)
+        private void Btn_History_Click(object sender, RoutedEventArgs e)
         {
-            SetSelectedButton(Btn_Leave);
+            SetSelectedButton(Btn_History);
+            PageMain(new Pages.HistoryPage());
+        }
+
+        private void Btn_Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Btn_Maximize_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_Minimize_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
         }
     }
 }

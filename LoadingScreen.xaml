@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:BLT_Generator"
         mc:Ignorable="d"
         Title="BLT Generator" Height="600" Width="1000"
-        WindowStartupLocation="CenterScreen" ContentRendered="Window_ContentRendered"
-        ResizeMode="CanMinimize">
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ContentRendered="Window_ContentRendered"
+        ResizeMode="NoResize">
 
     <Window.Resources>
         <ResourceDictionary Source="./ResourceDictionary/MainResources.xaml"/>
@@ -30,6 +32,7 @@
                 <TextBlock FontSize="28"
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"
+                           Foreground="#4d4d4d"
                            FontFamily="{StaticResource Bold}"
                            Margin="15 0 0 0">
                     BLT Generator
@@ -38,6 +41,7 @@
             <TextBlock Text="Loading Resources"
                        Margin="0 30 0 15"
                        FontSize="14"
+                       Foreground="#4d4d4d"
                        FontFamily="{StaticResource Regular}"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"/>

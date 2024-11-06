@@ -194,4 +194,60 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!-- Date Picker -->
+    <Style x:Key="DatePicker" TargetType="DatePicker">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DatePicker">
+                    <Grid>
+                        <!-- ToggleButton as the Calendar Icon -->
+                        <ToggleButton x:Name="CalendarButton"
+                                      Background="Transparent"
+                                      BorderThickness="0"
+                                      Cursor="Hand"
+                                      Focusable="False">
+                            <Image Source="/Images/WhiteIcons/wCalendar.png" Width="20" Height="20" Stretch="UniformToFill"/>
+                        </ToggleButton>
+
+                        <!-- Popup for the Calendar -->
+                        <Popup IsOpen="{Binding IsChecked, ElementName=CalendarButton, Mode=TwoWay}"
+                               PlacementTarget="{Binding ElementName=CalendarButton}"
+                               StaysOpen="False">
+                            <Border BorderBrush="Gray" BorderThickness="1" Background="White">
+                                <Calendar SelectedDate="{Binding SelectedDate, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+                            </Border>
+                        </Popup>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Organization" TargetType="Button">
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="Height" Value="45"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="0"
+                            CornerRadius="23">
+                        <Grid>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="#53C6D7"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

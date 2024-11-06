@@ -10,23 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BLT_Generator
+namespace BLT_Generator.SubPages
 {
     /// <summary>
-    /// Interaction logic for ThanksMessage.xaml
+    /// Interaction logic for WIFI_History.xaml
     /// </summary>
-    public partial class ThanksMessage : Window
+    public partial class WIFI_History : UserControl
     {
-        public ThanksMessage()
+        public WIFI_History()
         {
             InitializeComponent();
-        }
-
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

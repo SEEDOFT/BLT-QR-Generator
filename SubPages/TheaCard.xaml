@@ -24,21 +24,27 @@
                 <ImageBrush ImageSource="/Images/Contents/T.png"
                             Stretch="UniformToFill"/>
             </Border.Background>
-            <StackPanel HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Orientation="Vertical"
-                        Margin="0 170 0 0">
-                <TextBlock FontFamily="{StaticResource Bold}"
-                           FontSize="21"
-                           Foreground="White">
-                    SAM SOKUNTHEA
-                </TextBlock>
-                <TextBlock FontFamily="{StaticResource Bold}"
-                           FontSize="15"
-                           Foreground="White">
-                    UX/UI Designer
-                </TextBlock>
-            </StackPanel>
+            <Border CornerRadius="0 0 10 10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Height="80"
+                    Background="#4D162039">
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Orientation="Vertical">
+                    <TextBlock FontFamily="{StaticResource Bold}"
+                               FontSize="21"
+                               Foreground="White">
+                        SAM SOKUNTHEA
+                    </TextBlock>
+                    <TextBlock FontFamily="{StaticResource Bold}"
+                               FontSize="15"
+                               Foreground="White">
+                        UX/UI Designer
+                    </TextBlock>
+                </StackPanel>
+            </Border>
         </Border>
 
         <!-- Back Side -->
@@ -58,33 +64,39 @@
                                     Stretch="UniformToFill"/>
                     </Border.Background>
                     <Border.Effect>
-                        <BlurEffect Radius="20"/>
+                        <BlurEffect Radius="10"/>
                     </Border.Effect>
                 </Border>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <StackPanel Grid.Row="0"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Top"
-                                Orientation="Vertical"
-                                Margin="5 20 5 0">
-                        <TextBlock FontFamily="{StaticResource Bold}"
-                                   FontSize="20"
-                                   TextAlignment="Center"
-                                   Foreground="White">
-                            SAM SOKUNTHEA
-                        </TextBlock>
-                        <TextBlock FontFamily="{StaticResource Regular}"
-                                   FontSize="12"
-                                   Margin="5 5 5 0"
-                                   Foreground="White"
-                                   TextWrapping="Wrap"
-                                   TextAlignment="Left">
-                            My name is Sam Sokunthea. Alongside my university studies, I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development. This program spans 11 months, from February 19, 2024, to December 20, 2024.
-                        </TextBlock>
-                    </StackPanel>
+                    <Border Grid.Row="0"
+                            Width="200"
+                            Height="300"
+                            CornerRadius="10"
+                            Background="#99162039">
+                        <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    Orientation="Vertical"
+                                    Margin="5 20 5 0">
+                            <TextBlock FontFamily="{StaticResource Bold}"
+                                       FontSize="20"
+                                       TextAlignment="Center"
+                                       Foreground="White">
+                                SAM SOKUNTHEA
+                            </TextBlock>
+                            <TextBlock FontFamily="{StaticResource Regular}"
+                                       FontSize="12"
+                                       Margin="5 5 5 0"
+                                       Foreground="White"
+                                       TextWrapping="Wrap"
+                                       TextAlignment="Left">
+                                My name is Sam Sokunthea. Alongside my university studies, I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development. This program spans 11 months, from February 19, 2024, to December 20, 2024.
+                            </TextBlock>
+                        </StackPanel>
+                    </Border>
+
                 </Grid>
             </Grid>
         </Border>
@@ -95,15 +107,15 @@
                     <Storyboard>
                         <DoubleAnimation Storyboard.TargetName="Front_Side"
                                          Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
-                                         To="0" Duration="0:0:0.25" />
+                                         To="0" Duration="0:0:0.35" />
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Front_Side"
                                                        Storyboard.TargetProperty="Visibility"
-                                                       BeginTime="0:0:0.25">
+                                                       BeginTime="0:0:0.35">
                             <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Collapsed}" />
                         </ObjectAnimationUsingKeyFrames>
                         <DoubleAnimation Storyboard.TargetName="Back_Side"
                                          Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
-                                         From="0" To="1" Duration="0:0:0.25" />
+                                         From="0" To="1" Duration="0:0:0.35" />
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Back_Side"
                                                        Storyboard.TargetProperty="Visibility"
                                                        BeginTime="0:0:0">
@@ -118,16 +130,16 @@
                     <Storyboard>
                         <DoubleAnimation Storyboard.TargetName="Back_Side"
                                          Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
-                                         To="0" Duration="0:0:0.25" />
+                                         To="0" Duration="0:0:0.35" />
 
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Back_Side"
                                                        Storyboard.TargetProperty="Visibility"
-                                                       BeginTime="0:0:0.25">
+                                                       BeginTime="0:0:0.35">
                             <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Collapsed}" />
                         </ObjectAnimationUsingKeyFrames>
                         <DoubleAnimation Storyboard.TargetName="Front_Side"
                                          Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
-                                         From="0" To="1" Duration="0:0:0.25" />
+                                         From="0" To="1" Duration="0:0:0.35" />
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Front_Side"
                                                        Storyboard.TargetProperty="Visibility"
                                                        BeginTime="0:0:0">

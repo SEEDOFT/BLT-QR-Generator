@@ -15,20 +15,25 @@
     <None Remove="Fonts\Segoe_Italic.ttf" />
     <None Remove="Fonts\Segoe_Regular.ttf" />
     <None Remove="Images\BlackIcons\Book.png" />
+    <None Remove="Images\BlackIcons\Calendar.png" />
     <None Remove="Images\BlackIcons\Link.png" />
     <None Remove="Images\BlackIcons\rMinimize.png" />
     <None Remove="Images\BlackIcons\rXmark.png" />
     <None Remove="Images\BlackIcons\WIFI.png" />
     <None Remove="Images\BlackIcons\WIFI.svg" />
     <None Remove="Images\BLT Logo.png" />
+    <None Remove="Images\Contents\ANT.png" />
     <None Remove="Images\Contents\B.png" />
     <None Remove="Images\Contents\Both.png" />
+    <None Remove="Images\Contents\CBRD.png" />
     <None Remove="Images\Contents\L.png" />
     <None Remove="Images\Contents\Leng.jpg" />
+    <None Remove="Images\Contents\MPTC.png" />
     <None Remove="Images\Contents\T.png" />
     <None Remove="Images\Contents\Thea.jpg" />
     <None Remove="Images\WhiteIcons\Minimize.png" />
     <None Remove="Images\WhiteIcons\wBook.png" />
+    <None Remove="Images\WhiteIcons\wCalendar.png" />
     <None Remove="Images\WhiteIcons\wCopy.png" />
     <None Remove="Images\WhiteIcons\wHistory.png" />
     <None Remove="Images\WhiteIcons\wLeave.png" />
@@ -61,6 +66,9 @@
     <Resource Include="Fonts\Segoe_Regular.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\BlackIcons\Calendar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\BlackIcons\Link.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -76,16 +84,25 @@
     <Resource Include="Images\BLT Logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Contents\ANT.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Contents\B.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\Both.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Contents\CBRD.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Contents\L.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\Leng.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\MPTC.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\T.png">
@@ -98,6 +115,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wBook.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wCalendar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wCopy.png">

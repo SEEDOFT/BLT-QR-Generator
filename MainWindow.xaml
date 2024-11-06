@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BLT_Generator"
         mc:Ignorable="d"
-        Title="BLT Generator" Height="600" Width="1000"
+        Title="BLT Generator" Height="600" Width ="1000"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanResizeWithGrip">
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        MouseDown="Window_MouseDown">
 
     <Window.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
@@ -45,6 +47,30 @@
                 <ImageBrush ImageSource="./Images/BLT Logo.png" Stretch="UniformToFill"/>
             </Border.Background>
         </Border>
+        <StackPanel Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="2"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button x:Name="Btn_Minimize"
+                    Width="20"
+                    Height="20"
+                    Background="Black"
+                    Margin="0 0 6 0"
+                    Click="Btn_Minimize_Click"/>
+            <Button x:Name="Btn_Maximize"
+                    Width="20"
+                    Height="20"
+                    Background="Blue"
+                    Margin="0 0 6 0"
+                    Click="Btn_Maximize_Click"/>
+            <Button x:Name="Btn_Close"
+                    Width="20"
+                    Height="20"
+                    Background="Red"
+                    Margin="0 0 6 0"
+                    Click="Btn_Close_Click"/>
+
+        </StackPanel>
         <StackPanel Grid.Column="1"
                     Grid.Row="0"
                     Grid.RowSpan="3"
@@ -56,8 +82,9 @@
                     Background="#162039">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="50"/>
                         <RowDefinition Height="*"/>
+                        <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
                     <StackPanel Grid.Row="1"
                                 Orientation="Vertical"
@@ -67,22 +94,21 @@
                                       Style="{StaticResource SelectableButtonStyle}"
                                       Tag="/Images/WhiteIcons/wQR.png"
                                       Click="Btn_Generate_Click"/>
-                        <ToggleButton x:Name="Btn_Profile"
-                                      Margin="0 10 0 0"
+                        <ToggleButton x:Name="Btn_History"
+                                      Margin="0 20 0 0"
                                       Style="{StaticResource SelectableButtonStyle}"
-                                      Tag="/Images/WhiteIcons/wUser.png"
-                                      Click="Btn_Profile_Click"/>
+                                      Tag="/Images/WhiteIcons/wHistory.png"
+                                      Click="Btn_History_Click"/>
                         <ToggleButton x:Name="Btn_Setting"
-                                      Margin="0 10 0 0"
+                                      Margin="0 20 0 0"
                                       Style="{StaticResource SelectableButtonStyle}"
                                       Tag="/Images/WhiteIcons/wSetting.png"
                                       Click="Btn_Setting_Click"/>
-
-                        <ToggleButton x:Name="Btn_Leave"
+                        <ToggleButton x:Name="Btn_Profile"
+                                      Margin="0 20 0 0"
                                       Style="{StaticResource SelectableButtonStyle}"
-                                      Tag="/Images/WhiteIcons/wLeave.png"
-                                      Margin="0 100 0 0"
-                                      Click="Btn_Leave_Click"/>
+                                      Tag="/Images/WhiteIcons/wUser.png"
+                                      Click="Btn_Profile_Click"/>
                     </StackPanel>
                 </Grid>
             </Border>
