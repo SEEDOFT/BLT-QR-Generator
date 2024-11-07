@@ -4,4 +4,7 @@
     <FontFamily x:Key="Bold">/Fonts/Segoe_Bold.ttf#Segoe UI</FontFamily>
     <FontFamily x:Key="Italic">/Fonts/Segoe_Italic.ttf#Segoe UI</FontFamily>
     <FontFamily x:Key="Italic_Bold">/Fonts/Segoe_Bold_Italic.ttf#Segoe UI</FontFamily>
+    <FontFamily x:Key="Ole_Regular">/Fonts/OleoScriptSwashCaps_Regular.ttf#Oleo Script Swash Caps</FontFamily>
+    <FontFamily x:Key="Ole_Bold">/Fonts/OleoScriptSwashCaps_Bold.ttf#Oleo Script Swash Caps</FontFamily>
+
 </ResourceDictionary>

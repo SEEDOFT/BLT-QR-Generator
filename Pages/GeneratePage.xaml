@@ -19,10 +19,19 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="115"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="65"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0"
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   FontFamily="{StaticResource Ole_Bold}"
+                   FontSize="20">
+            <Run Text="BLT" Foreground="#5782B6"/> Generator
+        </TextBlock>
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
                     Orientation="Horizontal"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Bottom">
@@ -54,11 +63,11 @@
         </StackPanel>
         <Grid x:Name="Grid_Center"
               Grid.Column="0"
-              Grid.Row="1"
+              Grid.Row="2"
               Margin="0 0 0 15"/>
         <Grid x:Name="Grid_Right"
               Grid.Row="0"
-              Grid.RowSpan="2"
+              Grid.RowSpan="3"
               Grid.Column="2"/>
     </Grid>
 </UserControl>

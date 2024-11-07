@@ -27,6 +27,11 @@ namespace BLT_Generator.Pages
         public ProfilePage()
         {
             InitializeComponent();
+            //display card page
+            SubProfile tmp = new SubProfile();
+
+            Card_Display.Children.Clear();
+            Card_Display.Children.Add(tmp);
         }
 
         private void Btn_Msg_Click(object sender, RoutedEventArgs e)

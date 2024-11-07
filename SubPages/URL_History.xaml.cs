@@ -20,11 +20,14 @@ namespace BLT_Generator.SubPages
     /// </summary>
     public partial class URL_History : UserControl
     {
+        private URL_Data? _data;
         public URL_History()
         {
             InitializeComponent();
+
+            _data = new URL_Data();
+
+            Data1.Children.Add(_data);
         }
-
-
     }
 }

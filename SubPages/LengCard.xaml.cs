@@ -26,5 +26,61 @@ namespace BLT_Generator.SubPages
             InitializeComponent();
         }
 
+        private void Btn_Telegram_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.Tag is string url)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    {
+                        FileName = url,
+                        UseShellExecute = true
+                    });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Unable to open URL: {ex.Message}");
+                }
+            }
+        }
+
+        private void Btn_Facebook_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.Tag is string url)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    {
+                        FileName = url,
+                        UseShellExecute = true
+                    });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Unable to open URL: {ex.Message}");
+                }
+            }
+        }
+
+        private void Btn_Github_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.Tag is string url)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    {
+                        FileName = url,
+                        UseShellExecute = true
+                    });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Unable to open URL: {ex.Message}");
+                }
+            }
+        }
     }
 }

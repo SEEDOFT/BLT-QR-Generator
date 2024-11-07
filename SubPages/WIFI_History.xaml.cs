@@ -23,6 +23,11 @@ namespace BLT_Generator.SubPages
         public WIFI_History()
         {
             InitializeComponent();
+
+            WIFI_Data tmp = new WIFI_Data();
+
+            Data1.Children.Clear();
+            Data1.Children.Add(tmp);
         }
     }
 }

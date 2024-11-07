@@ -10,6 +10,9 @@
     <Compile Update="LoadingScreen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\AddIcon.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\GeneratePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,7 +31,13 @@
     <Compile Update="SubPages\BothCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SubPages\Language_Panel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SubPages\LengCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SubPages\PIN_Panel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SubPages\QR_Panel.xaml.cs">
@@ -40,10 +49,19 @@
     <Compile Update="SubPages\TheaCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SubPages\Theme_Panel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SubPages\URL_Data.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SubPages\URL_History.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SubPages\URL_Panel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SubPages\WIFI_Data.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SubPages\WIFI_History.xaml.cs">
@@ -58,6 +76,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\AddIcon.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\GeneratePage.xaml">
@@ -93,7 +114,13 @@
     <Page Update="SubPages\BothCard.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="SubPages\Language_Panel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="SubPages\LengCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubPages\PIN_Panel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SubPages\QR_Panel.xaml">
@@ -105,10 +132,19 @@
     <Page Update="SubPages\TheaCard.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="SubPages\Theme_Panel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubPages\URL_Data.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="SubPages\URL_History.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SubPages\URL_Panel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubPages\WIFI_Data.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SubPages\WIFI_History.xaml">

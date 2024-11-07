@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="BLT_Generator.SubPages.Theme_Panel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BLT_Generator.SubPages"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
+    </UserControl.Resources>
+    <Border Background="#99D9D9D9"
+            CornerRadius="10">
+        <Grid Margin="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0"
+                    BorderThickness="0 0 0 1"
+                    BorderBrush="Black">
+                <TextBlock FontFamily="{StaticResource Regular}"
+                           Foreground="Black" FontSize="14"
+                           TextWrapping="Wrap">
+                    <Run Text="Default" FontSize="20" FontFamily="{StaticResource Regular}"/>
+                    <LineBreak/>
+                    By default, our application is configured to select Light Mode as the primary display setting, providing users with a clean and well-lit interface that enhances visibility and ease of use in various lighting environments.
+                </TextBlock>
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>

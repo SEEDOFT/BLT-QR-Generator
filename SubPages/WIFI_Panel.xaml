@@ -46,7 +46,7 @@
                          FontSize="14"
                          Margin="0 25 0 0">
                 </TextBox>
-                <Border Width="200"
+                <Border Width="250"
                         Height="30"
                         CornerRadius="20"
                         Background="#F6F7F9"
@@ -59,19 +59,11 @@
                         <RadioButton Content=" WEP"
                                      FontFamily="{StaticResource Regular}"
                                      Margin="20 0 0 0"/>
+                        <RadioButton Content=" None"
+                                     FontFamily="{StaticResource Regular}"
+                                     Margin="20 0 0 0"/>
                     </StackPanel>
                 </Border>
-            </StackPanel>
-            <StackPanel Grid.Row="1"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Bottom"
-                        Margin="0 30">
-                <Button x:Name="Btn_Clear"
-                        Style="{StaticResource Clear}"
-                        FontFamily="{StaticResource Regular}"
-                        Click="Btn_Clear_Click">
-                    Clear
-                </Button>
             </StackPanel>
         </Grid>
     </Grid>

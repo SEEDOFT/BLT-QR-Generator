@@ -14,115 +14,130 @@
     <Window.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </Window.Resources>
-    <Grid Background="#B3000000">
+    <Grid Background="#80fdfdfd">
         <Border Width="550" Height="350"
                 Background="#162039"
                 CornerRadius="20"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Padding="15">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="25"/>
-                    <RowDefinition Height="55"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <!-- Close button in the top-right corner -->
-                <Button x:Name="CloseButton"
-                        Grid.Row="0"
-                        Content="X"
-                        Width="20" Height="20"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Top"
-                        Background="Black"
-                        Foreground="Gray"
-                        BorderThickness="0"
-                        Click="CloseButton_Click"/>
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+                VerticalAlignment="Center">
+            <StackPanel>
+                <StackPanel Margin="15">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <!-- Close button in the top-right corner -->
+                        <Button x:Name="CloseButton"
+                                Grid.Row="0"
+                                Content="X"
+                                Width="20" Height="20"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Top"
+                                Background="Black"
+                                Foreground="Gray"
+                                BorderThickness="0"
+                                Click="CloseButton_Click"/>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
 
-                    <!-- Left -->
-                    <Border Grid.Column="0"
-                            Width="160"
-                            Background="#1Afdfdfd"
-                            HorizontalAlignment="Left"
-                            CornerRadius="15">
-                        <StackPanel VerticalAlignment="Center"
+                            <!-- Left -->
+                            <Border Grid.Column="0"
+                                    Width="160"
+                                    Background="#fdfdfd"
+                                    HorizontalAlignment="Left"
+                                    CornerRadius="15">
+                                <StackPanel VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Orientation="Horizontal">
+                                    <Button x:Name="Btn_MPTC"
+                                            Width="40"
+                                            Height="40"
+                                            BorderThickness="0"
+                                            Click="Btn_MPTC_Click">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/Images/Contents/MPTC.png"
+                                                        Stretch="UniformToFill"/>
+                                        </Button.Background>
+                                    </Button>
+                                    <Button x:Name="Btn_CBRD"
+                                            Width="98"
+                                            Height="40"
+                                            Margin="5 0 0 0"
+                                            BorderThickness="0"
+                                            Click="Btn_CBRD_Click">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/Images/Contents/CBRD.png"
+                                                        Stretch="Uniform"/>
+                                        </Button.Background>
+                                    </Button>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Right -->
+                            <Border Grid.Column="1"
+                                    Width="160"
+                                    Background="#fdfdfd"
+                                    HorizontalAlignment="Right"
+                                    CornerRadius="15">
+                                <StackPanel VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Orientation="Horizontal">
+                                    <Button x:Name="Btn_ANT"
+                                            Width="130"
+                                            Height="60"
+                                            Margin="0 5 0 0"
+                                            BorderThickness="0"
+                                            Click="Btn_ANT_Click">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/Images/Contents/ANT.png"
+                                                        Stretch="Uniform"/>
+                                        </Button.Background>
+                                    </Button>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                        <StackPanel VerticalAlignment="Top"
                                     HorizontalAlignment="Center"
-                                    Orientation="Horizontal">
-                            <Button x:Name="Btn_MPTC"
-                                    Width="40"
-                                    Height="40"
-                                    BorderThickness="0"
-                                    Click="Btn_MPTC_Click">
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/Images/Contents/MPTC.png"
-                                                Stretch="UniformToFill"/>
-                                </Button.Background>
-                            </Button>
-                            <Button x:Name="Btn_CBRD"
-                                    Width="98"
-                                    Height="40"
-                                    Margin="5 0 0 0"
-                                    BorderThickness="0"
-                                    Click="Btn_CBRD_Click">
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/Images/Contents/CBRD.png"
-                                                Stretch="Uniform"/>
-                                </Button.Background>
-                            </Button>
-                        </StackPanel>
-                    </Border>
+                                    Margin="0 20 0 0"
+                                    Grid.Row="2">
+                            <!-- Title -->
+                            <TextBlock Text="A LETTER FROM US"
+                                       FontFamily="{StaticResource Bold}"
+                                       FontSize="20"
+                                       Foreground="White"
+                                       HorizontalAlignment="Center"/>
 
-                    <!-- Right -->
-                    <Border Grid.Column="1"
-                            Width="160"
-                            Background="#1Afdfdfd"
-                            HorizontalAlignment="Right"
-                            CornerRadius="15">
-                        <StackPanel VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"
-                                    Orientation="Horizontal">
-                            <Button x:Name="Btn_ANT"
-                                    Width="130"
-                                    Height="60"
-                                    Margin="0 5 0 0"
-                                    BorderThickness="0"
-                                    Click="Btn_ANT_Click">
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/Images/Contents/ANT.png"
-                                                Stretch="Uniform"/>
-                                </Button.Background>
-                            </Button>
+                            <!-- Message Text -->
+                            <TextBlock TextWrapping="Wrap"
+                                       FontSize="16"
+                                       FontFamily="{StaticResource Regular}"
+                                       HorizontalAlignment="Center"
+                                       TextAlignment="Center"
+                                       Foreground="White"
+                                       Margin="0,25,0,0">
+                                We're the scholarship students at <Run Text="ANT Technology Training Center" FontWeight="Bold"/>, specialize in <Run Text="Mobile Application." FontWeight="Bold"/> Study For 11 Months From 19 February 2024 To 20 December 2024. Thanks to the generous support of the <Run Text="Ministry of Post and Telecommunication." FontWeight="Bold"/> This opportunity is allowing us to develop valuable skills in mobile app development and pursue exciting careers in the tech industry.
+                            </TextBlock>
                         </StackPanel>
-                    </Border>
-                </Grid>
-                <StackPanel VerticalAlignment="Top"
-                            HorizontalAlignment="Center"
-                            Margin="0 20 0 0"
-                            Grid.Row="2">
-                    <!-- Title -->
-                    <TextBlock Text="A LETTER FROM US"
-                               FontSize="18" FontWeight="Bold"
-                               Foreground="White"
-                               HorizontalAlignment="Center"
-                               Margin="0,10,0,5"/>
-
-                    <!-- Message Text -->
-                    <TextBlock
-                        TextWrapping="Wrap"
-                        FontSize="14"
-                        HorizontalAlignment="Center"
-                        TextAlignment="Center"
-                        Foreground="White"
-                        Margin="0,5,0,10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis leo vestibulum purus lobortis, eget scelerisque arcu rhoncus. Nullam vel tincidunt nunc. In in velit accumsan, pellentesque enim a, accumsan est. Ut tempor volutpat mi eget convallis. Donec vel odio ac nisl pharetra dictum. Phasellus massa ipsum, blandit vitae scelerisque vitae, porttitor quis erat. Suspendisse pellentesque ligula nec eros porta
-                    </TextBlock>
+                    </Grid>
                 </StackPanel>
-            </Grid>
+                <Border Width="150"
+                        Height="41"
+                        Background="White"
+                        HorizontalAlignment="Left"
+                        CornerRadius="0,20,0,20">
+                    <TextBlock FontFamily="{StaticResource Ole_Bold}"
+                               FontSize="20"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center">
+                        <Run Text="BLT" Foreground="#5782B6"/> Generator
+                    </TextBlock>
+                </Border>
+            </StackPanel>
         </Border>
     </Grid>
 </Window>

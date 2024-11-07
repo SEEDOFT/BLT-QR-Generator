@@ -13,6 +13,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="120"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
@@ -22,11 +23,29 @@
             <ColumnDefinition Width="80"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="1"
+        <Button x:Name="Btn_Msg"
+                Style="{StaticResource Msg}"
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Margin="0 0 50 0"
+                Click="Btn_Msg_Click"/>
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   FontFamily="{StaticResource Ole_Bold}"
+                   FontSize="20">
+            <Run Text="BLT" Foreground="#5782B6"/> Generator
+        </TextBlock>
+        <StackPanel Grid.Row="1" Grid.Column="1"
                     Grid.ColumnSpan="2">
             <TextBlock FontFamily="{StaticResource Bold}"
                        FontSize="28" Margin="0 10 0 0"
                        HorizontalAlignment="Center"
+                       Foreground="#4D4D4D"
                        TextAlignment="Center">
                 History
                 <LineBreak/>
@@ -46,7 +65,7 @@
 
         </StackPanel>
 
-        <Grid Grid.Row="1" Grid.RowSpan="3"
+        <Grid Grid.Row="2" Grid.RowSpan="3"
               Grid.Column="1"
               x:Name="Grid_Display">
 

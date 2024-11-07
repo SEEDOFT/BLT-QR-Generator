@@ -10,15 +10,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\OleoScriptSwashCaps_Bold.ttf" />
+    <None Remove="Fonts\OleoScriptSwashCaps_Regular.ttf" />
     <None Remove="Fonts\Segoe_Bold.ttf" />
     <None Remove="Fonts\Segoe_Bold_Italic.ttf" />
     <None Remove="Fonts\Segoe_Italic.ttf" />
     <None Remove="Fonts\Segoe_Regular.ttf" />
+    <None Remove="Images\BlackIcons\ArrowRight.png" />
     <None Remove="Images\BlackIcons\Book.png" />
     <None Remove="Images\BlackIcons\Calendar.png" />
+    <None Remove="Images\BlackIcons\Copy.png" />
+    <None Remove="Images\BlackIcons\Earth.png" />
     <None Remove="Images\BlackIcons\Link.png" />
+    <None Remove="Images\BlackIcons\Passcode.png" />
+    <None Remove="Images\BlackIcons\Pin.png" />
+    <None Remove="Images\BlackIcons\Reverse.png" />
     <None Remove="Images\BlackIcons\rMinimize.png" />
     <None Remove="Images\BlackIcons\rXmark.png" />
+    <None Remove="Images\BlackIcons\Save.png" />
+    <None Remove="Images\BlackIcons\Sun.png" />
+    <None Remove="Images\BlackIcons\Upload.png" />
     <None Remove="Images\BlackIcons\WIFI.png" />
     <None Remove="Images\BlackIcons\WIFI.svg" />
     <None Remove="Images\BLT Logo.png" />
@@ -26,25 +37,69 @@
     <None Remove="Images\Contents\B.png" />
     <None Remove="Images\Contents\Both.png" />
     <None Remove="Images\Contents\CBRD.png" />
+    <None Remove="Images\Contents\Facebook.png" />
+    <None Remove="Images\Contents\Github.png" />
     <None Remove="Images\Contents\L.png" />
     <None Remove="Images\Contents\Leng.jpg" />
     <None Remove="Images\Contents\MPTC.png" />
     <None Remove="Images\Contents\T.png" />
+    <None Remove="Images\Contents\Telegram.png" />
     <None Remove="Images\Contents\Thea.jpg" />
     <None Remove="Images\WhiteIcons\Minimize.png" />
+    <None Remove="Images\WhiteIcons\wArrowRight.png" />
     <None Remove="Images\WhiteIcons\wBook.png" />
     <None Remove="Images\WhiteIcons\wCalendar.png" />
     <None Remove="Images\WhiteIcons\wCopy.png" />
+    <None Remove="Images\WhiteIcons\wEarth.png" />
     <None Remove="Images\WhiteIcons\wHistory.png" />
     <None Remove="Images\WhiteIcons\wLeave.png" />
     <None Remove="Images\WhiteIcons\wLink.png" />
+    <None Remove="Images\WhiteIcons\wPasscode.png" />
+    <None Remove="Images\WhiteIcons\wPin.png" />
     <None Remove="Images\WhiteIcons\wQR.png" />
+    <None Remove="Images\WhiteIcons\wReverse.png" />
     <None Remove="Images\WhiteIcons\wSave.png" />
     <None Remove="Images\WhiteIcons\wSetting.png" />
+    <None Remove="Images\WhiteIcons\wSun.png" />
+    <None Remove="Images\WhiteIcons\wTrash.png" />
+    <None Remove="Images\WhiteIcons\wUpload.png" />
     <None Remove="Images\WhiteIcons\wUrl.png" />
     <None Remove="Images\WhiteIcons\wUser.png" />
     <None Remove="Images\WhiteIcons\wWIFI.png" />
     <None Remove="Images\WhiteIcons\Xmark.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\OleoScriptSwashCaps_Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\OleoScriptSwashCaps_Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\ArrowRight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Copy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Earth.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Passcode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Save.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Sun.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Trash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Pin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -72,10 +127,16 @@
     <Resource Include="Images\BlackIcons\Link.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\BlackIcons\Reverse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\BlackIcons\rMinimize.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\BlackIcons\rXmark.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Upload.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\BlackIcons\WIFI.png">
@@ -96,6 +157,12 @@
     <Resource Include="Images\Contents\CBRD.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Contents\Facebook.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\Github.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Contents\L.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -108,10 +175,16 @@
     <Resource Include="Images\Contents\T.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Contents\Telegram.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Contents\Thea.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\Minimize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wArrowRight.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wBook.png">
@@ -123,6 +196,9 @@
     <Resource Include="Images\WhiteIcons\wCopy.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\WhiteIcons\wEarth.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\WhiteIcons\wHistory.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -132,13 +208,31 @@
     <Resource Include="Images\WhiteIcons\wLink.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\WhiteIcons\wPasscode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wPin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\WhiteIcons\wQR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wReverse.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wSave.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wSetting.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wSun.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wTrash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wUpload.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wUser.png">

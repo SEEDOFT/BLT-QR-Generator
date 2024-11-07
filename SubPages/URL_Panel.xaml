@@ -38,13 +38,5 @@
 
             </TextBox>
         </StackPanel>
-        <StackPanel Grid.Row="2"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top">
-            <Button Style="{StaticResource Clear}"
-                    FontFamily="{StaticResource Regular}">
-                Clear
-            </Button>
-        </StackPanel>
     </Grid>
 </UserControl>

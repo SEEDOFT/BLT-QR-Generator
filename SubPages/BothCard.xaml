@@ -68,11 +68,7 @@
                     </Border.Effect>
                 </Border>
                 <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Border Grid.Row="0"
-                            Width="200"
+                    <Border Width="200"
                             Height="300"
                             CornerRadius="10"
                             Background="#99162039">
@@ -80,20 +76,56 @@
                                     VerticalAlignment="Top"
                                     Orientation="Vertical"
                                     Margin="5 20 5 0">
-                            <TextBlock FontFamily="{StaticResource Bold}"
-                                       FontSize="20"
-                                       TextAlignment="Center"
-                                       Foreground="White">
-                                KOY YOTRABOTH
-                            </TextBlock>
-                            <TextBlock FontFamily="{StaticResource Regular}"
-                                       FontSize="12"
-                                       Margin="5 5 5 0"
-                                       Foreground="White"
-                                       TextWrapping="Wrap"
-                                       TextAlignment="Left">
-                                My name is Koy Yotraboth. Alongside my university studies, I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development. This program spans 11 months, from February 19, 2024, to December 20, 2024.
-                            </TextBlock>
+                            <StackPanel >
+                                <TextBlock FontFamily="{StaticResource Bold}"
+                                           FontSize="20"
+                                           TextAlignment="Center"
+                                           Foreground="White">
+                                    KOY YOTRABOTH
+                                </TextBlock>
+                                <TextBlock FontFamily="{StaticResource Regular}"
+                                           FontSize="12"
+                                           Margin="5 5 5 0"
+                                           Foreground="White"
+                                           TextWrapping="Wrap"
+                                           TextAlignment="Left">
+                                    My name is Koy Yotraboth. Alongside my university studies, I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development. This program spans 11 months, from February 19, 2024, to December 20, 2024.
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                </Grid>
+                                <TextBlock Grid.Column="0"
+                                           Margin="5 0 0 0"
+                                           FontFamily="{StaticResource Bold}"
+                                           FontSize="14"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Foreground="White">
+                                    Follow us
+                                </TextBlock>
+                                <StackPanel Grid.Column="1"
+                                            Orientation="Horizontal"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Margin="0 6 0 0">
+                                    <Button x:Name="Btn_Telegram" Style="{StaticResource Telegram}"
+                                            Tag="https://t.me/Seedoft"
+                                            Click="Btn_Telegram_Click"/>
+                                    <Button x:Name="Btn_Facebook" Style="{StaticResource Facebook}"
+                                            Margin="15 0 0 0"
+                                            Tag="https://www.facebook.com/seedoft.official"
+                                            Click="Btn_Facebook_Click"/>
+                                    <Button x:Name="Btn_Github" Style="{StaticResource Github}"
+                                            Margin="15 0 0 0"
+                                            Tag="https://github.com/SEEDOFT"
+                                            Click="Btn_Github_Click"/>
+                                </StackPanel>
+                            </StackPanel>
                         </StackPanel>
                     </Border>
                 </Grid>

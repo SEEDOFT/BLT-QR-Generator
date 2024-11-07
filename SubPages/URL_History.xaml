@@ -14,34 +14,53 @@
             <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
         <Border Grid.Row="0" Grid.RowSpan="2"
+                Grid.Column="0" Grid.ColumnSpan="5"
                 CornerRadius="10"
                 Background="#ECECEC"/>
-        <Border Grid.Row="0" Grid.Column="1"
+        <Border Grid.Row="0" Grid.Column="0"
+                Grid.ColumnSpan="6"
                 Background="#222B43"
-                CornerRadius="10 10 0 0">
-            <StackPanel Orientation="Horizontal"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Left">
-                <TextBlock FontFamily="{StaticResource Bold}"
-                           FontSize="20"
-                           Foreground="White"
-                           Margin="100 0 0 0">
-                    Date
-                </TextBlock>
-                <TextBlock FontFamily="{StaticResource Bold}"
-                           FontSize="20"
-                           Foreground="White"
-                           Margin="180 0 0 0">
-                    URL
-                </TextBlock>
-                <DatePicker Style="{StaticResource DatePicker}"
-                            Margin="200  0 0 0">
+                CornerRadius="10 10 0 0"/>
+        <StackPanel Grid.Column="1"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+            <TextBlock FontFamily="{StaticResource Bold}"
+                       FontSize="20"
+                       Foreground="White">
+                Date
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="2"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+            <TextBlock FontFamily="{StaticResource Bold}"
+                       FontSize="20"
+                       Foreground="White">
+                URL
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="3"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
 
-                </DatePicker>
-            </StackPanel>
-        </Border>
-        <Grid Grid.Row="1">
+        </StackPanel>
+        <StackPanel Grid.Column="4"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <DatePicker Style="{StaticResource DatePicker}">
+
+            </DatePicker>
+        </StackPanel>
+        <Grid Grid.Row="1" Grid.Column="0"
+              Grid.ColumnSpan="5">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -51,21 +70,31 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0"
-                        Background="Gray">
-
+            <StackPanel x:Name="Data1"
+                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <StackPanel x:Name="Data2" Grid.Row="1"
+                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <StackPanel x:Name="Data3" Grid.Row="2"
+                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <StackPanel x:Name="Data4" Grid.Row="3"
+                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <StackPanel x:Name="Data5" Grid.Row="4"
+                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <StackPanel x:Name="Data6" Grid.Row="5"
+                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <StackPanel x:Name="Data7" Grid.Row="6"
+                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <Button Style="{StaticResource Previous}"/>
+                <Button Style="{StaticResource Next}"
+                        Margin="20 0 0 0"/>
             </StackPanel>
-            <StackPanel Grid.Row="2"
-                        Background="Gray">
+            <Grid Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2">
 
-            </StackPanel>
-            <StackPanel Grid.Row="4"
-                        Background="Gray">
-
-            </StackPanel>
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>

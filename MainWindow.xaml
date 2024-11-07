@@ -8,8 +8,7 @@
         Title="BLT Generator" Height="600" Width ="1000"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        ResizeMode="NoResize"
-        MouseDown="Window_MouseDown">
+        ResizeMode="NoResize">
 
     <Window.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
@@ -47,37 +46,40 @@
                 <ImageBrush ImageSource="./Images/BLT Logo.png" Stretch="UniformToFill"/>
             </Border.Background>
         </Border>
-        <StackPanel Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="2"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
-                    Orientation="Horizontal">
-            <Button x:Name="Btn_Minimize"
-                    Width="20"
-                    Height="20"
-                    Background="Black"
-                    Margin="0 0 6 0"
-                    Click="Btn_Minimize_Click"/>
-            <Button x:Name="Btn_Maximize"
-                    Width="20"
-                    Height="20"
-                    Background="Blue"
-                    Margin="0 0 6 0"
-                    Click="Btn_Maximize_Click"/>
-            <Button x:Name="Btn_Close"
-                    Width="20"
-                    Height="20"
-                    Background="Red"
-                    Margin="0 0 6 0"
-                    Click="Btn_Close_Click"/>
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7"
+                Background="Transparent"
+                MouseDown="Border_MouseDown">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center">
+                <Button x:Name="Btn_Minimize"
+                        Width="20"
+                        Height="20"
+                        Background="Black"
+                        Margin="0 0 6 0"
+                        Click="Btn_Minimize_Click"/>
+                <Button x:Name="Btn_Maximize"
+                        Width="20"
+                        Height="20"
+                        Background="Blue"
+                        Margin="0 0 6 0"
+                        Click="Btn_Maximize_Click"/>
+                <Button x:Name="Btn_Close"
+                        Width="20"
+                        Height="20"
+                        Background="Red"
+                        Margin="0 0 6 0"
+                        Click="Btn_Close_Click"/>
+            </StackPanel>
 
-        </StackPanel>
+        </Border>
         <StackPanel Grid.Column="1"
                     Grid.Row="0"
                     Grid.RowSpan="3"
                     Margin="0 110 0 0"
                     Orientation="Vertical"
                     VerticalAlignment="Center">
-            <Border Height="420"
+            <Border Height="460"
                     CornerRadius="30"
                     Background="#162039">
                 <Grid>
