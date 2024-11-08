@@ -246,4 +246,13 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Languages\Strings.km-KH.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Languages\Strings.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
 </Project>

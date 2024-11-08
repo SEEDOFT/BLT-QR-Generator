@@ -72,6 +72,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Languages\Strings.km-KH.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Languages\Strings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="LoadingScreen.xaml">
       <SubType>Designer</SubType>
     </Page>

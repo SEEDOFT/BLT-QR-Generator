@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="Khmer">ភាសាខ្មែរ</system:String>
+    <system:String x:Key="English">ភាសាអង់គ្លេស</system:String>
+    <system:String x:Key="changeLangDetail">ចុចព្រួញចុះក្រោម ដើម្បីមើលជម្រើស ហើយជ្រើសរើសភាសា</system:String>
+    <system:String x:Key="changeLangTitle">ជ្រើសរើសភាសា</system:String>
+</ResourceDictionary>

@@ -10,6 +10,12 @@ namespace BLT_Generator
     public partial class App : Application
     {
         public static MainWindow main = new MainWindow();
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            LanguageManager.ChangeLanguage("en-US");
+        }
     }
 
 }
