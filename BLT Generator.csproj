@@ -39,12 +39,14 @@
     <None Remove="Images\Contents\CBRD.png" />
     <None Remove="Images\Contents\Facebook.png" />
     <None Remove="Images\Contents\Github.png" />
+    <None Remove="Images\Contents\KH.png" />
     <None Remove="Images\Contents\L.png" />
     <None Remove="Images\Contents\Leng.jpg" />
     <None Remove="Images\Contents\MPTC.png" />
     <None Remove="Images\Contents\T.png" />
     <None Remove="Images\Contents\Telegram.png" />
     <None Remove="Images\Contents\Thea.jpg" />
+    <None Remove="Images\Contents\UK.png" />
     <None Remove="Images\WhiteIcons\Minimize.png" />
     <None Remove="Images\WhiteIcons\wArrowRight.png" />
     <None Remove="Images\WhiteIcons\wBook.png" />
@@ -158,10 +160,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\Facebook.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\Github.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\KH.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\L.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -176,9 +181,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\Telegram.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\Thea.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\UK.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\Minimize.png">
