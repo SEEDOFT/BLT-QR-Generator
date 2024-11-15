@@ -14,6 +14,7 @@
     <Window.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </Window.Resources>
+
     <Grid Background="#80fdfdfd">
         <Border Width="550" Height="350"
                 Background="#162039"
@@ -35,10 +36,28 @@
                                 Width="20" Height="20"
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Top"
-                                Background="Black"
-                                Foreground="Gray"
+                                Background="Transparent"
+                                Foreground="White"
                                 BorderThickness="0"
-                                Click="CloseButton_Click"/>
+                                Click="CloseButton_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <TextBlock x:Name="PART_TextBlock"
+                                                   Text="{TemplateBinding Content}"
+                                                   HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"
+                                                   Foreground="{TemplateBinding Foreground}" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="PART_TextBlock" Property="Foreground" Value="red" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
                         <Grid Grid.Row="1">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -58,22 +77,66 @@
                                             Width="40"
                                             Height="40"
                                             BorderThickness="0"
-                                            Click="Btn_MPTC_Click">
-                                        <Button.Background>
-                                            <ImageBrush ImageSource="/Images/Contents/MPTC.png"
-                                                        Stretch="UniformToFill"/>
-                                        </Button.Background>
+                                            Click="Btn_MPTC_Click"
+                                            Background="Transparent">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid>
+                                                    <Image x:Name="Icon"
+                                                           Source="/Images/Contents/MPTC.png"
+                                                           Stretch="Uniform" />
+                                                </Grid>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="Icon" Property="Source" Value="/Images/Contents/MPTC.png"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                        <Button.Style>
+                                            <Style TargetType="Button" BasedOn="{x:Null}">
+                                                <Setter Property="ToolTipService.IsEnabled" Value="False" />
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter Property="ToolTipService.IsEnabled" Value="True" />
+                                                        <Setter Property="ToolTip" Value="Ministry of Post and Telecommunications" />
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Button.Style>
                                     </Button>
                                     <Button x:Name="Btn_CBRD"
                                             Width="98"
                                             Height="40"
                                             Margin="5 0 0 0"
                                             BorderThickness="0"
-                                            Click="Btn_CBRD_Click">
-                                        <Button.Background>
-                                            <ImageBrush ImageSource="/Images/Contents/CBRD.png"
-                                                        Stretch="Uniform"/>
-                                        </Button.Background>
+                                            Click="Btn_CBRD_Click"
+                                            Background="Transparent">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid>
+                                                    <Image x:Name="Icon"
+                                                           Source="/Images/Contents/CBRD.png"
+                                                           Stretch="Uniform" />
+                                                </Grid>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="Icon" Property="Source" Value="/Images/Contents/CBRD.png"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                        <Button.Style>
+                                            <Style TargetType="Button" BasedOn="{x:Null}">
+                                                <Setter Property="ToolTipService.IsEnabled" Value="False" />
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter Property="ToolTipService.IsEnabled" Value="True" />
+                                                        <Setter Property="ToolTip" Value="CBRD Fund" />
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Button.Style>
                                     </Button>
                                 </StackPanel>
                             </Border>
@@ -92,11 +155,33 @@
                                             Height="60"
                                             Margin="0 5 0 0"
                                             BorderThickness="0"
-                                            Click="Btn_ANT_Click">
-                                        <Button.Background>
-                                            <ImageBrush ImageSource="/Images/Contents/ANT.png"
-                                                        Stretch="Uniform"/>
-                                        </Button.Background>
+                                            Click="Btn_ANT_Click"
+                                            Background="Transparent">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid>
+                                                    <Image x:Name="Icon"
+                                                           Source="/Images/Contents/ANT.png"
+                                                           Stretch="Uniform" />
+                                                </Grid>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="Icon" Property="Source" Value="/Images/Contents/ANT.png"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                        <Button.Style>
+                                            <Style TargetType="Button" BasedOn="{x:Null}">
+                                                <Setter Property="ToolTipService.IsEnabled" Value="False" />
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter Property="ToolTipService.IsEnabled" Value="True" />
+                                                        <Setter Property="ToolTip" Value="ANT Technology Training Center" />
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Button.Style>
                                     </Button>
                                 </StackPanel>
                             </Border>
@@ -114,7 +199,7 @@
 
                             <!-- Message Text -->
                             <TextBlock TextWrapping="Wrap"
-                                       FontSize="16"
+                                       FontSize="14"
                                        FontFamily="{StaticResource Regular}"
                                        HorizontalAlignment="Center"
                                        TextAlignment="Center"

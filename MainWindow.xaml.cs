@@ -17,10 +17,10 @@ namespace BLT_Generator
     /// </summary>
     public partial class MainWindow : Window
     {
-        public void PageMain(UserControl page)
+        public void PageBig(UserControl page)
         {
-            Grid_Main.Children.Clear();
-            Grid_Main.Children.Add(page);
+            Grid_Big.Children.Clear();
+            Grid_Big.Children.Add(page);
         }
 
         public MainWindow()
@@ -29,7 +29,7 @@ namespace BLT_Generator
 
             Btn_Generate.IsChecked = true;
             SetSelectedButton(Btn_Generate);
-            PageMain(new Pages.GeneratePage());
+            PageBig(new Pages.GeneratePage());
         }
 
         private void SetSelectedButton(ToggleButton selectedButton)
@@ -48,25 +48,25 @@ namespace BLT_Generator
         private void Btn_Generate_Click(object sender, RoutedEventArgs e)
         {
             SetSelectedButton(Btn_Generate);
-            PageMain(new Pages.GeneratePage());
+            PageBig(new Pages.GeneratePage());
         }
         //info
         private void Btn_Profile_Click(object sender, RoutedEventArgs e)
         {
             SetSelectedButton(Btn_Profile);
-            PageMain(new Pages.ProfilePage());
+            PageBig(new Pages.ProfilePage());
         }
 
         private void Btn_Setting_Click(object sender, RoutedEventArgs e)
         {
             SetSelectedButton(Btn_Setting);
-            PageMain(new Pages.SettingPage());
+            PageBig(new Pages.SettingPage());
         }
 
         private void Btn_History_Click(object sender, RoutedEventArgs e)
         {
             SetSelectedButton(Btn_History);
-            PageMain(new Pages.HistoryPage());
+            PageBig(new Pages.HistoryPage());
         }
 
         private void Btn_Close_Click(object sender, RoutedEventArgs e)

@@ -20,13 +20,95 @@
                     BorderThickness="0 0 0 1"
                     BorderBrush="Black">
                 <TextBlock FontFamily="{StaticResource Regular}"
-                           Foreground="Black" FontSize="14"
+                           Foreground="Black" FontSize="12"
                            TextWrapping="Wrap">
-                    <Run Text="Default" FontSize="20" FontFamily="{StaticResource Regular}"/>
+                    <Run Text="Default" FontSize="20" FontFamily="{StaticResource Medium}"/>
                     <LineBreak/>
                     By default, our application is configured to select Light Mode as the primary display setting, providing users with a clean and well-lit interface that enhances visibility and ease of use in various lighting environments.
                 </TextBlock>
             </Border>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="{StaticResource Regular}"
+                           Foreground="Black" FontSize="12"
+                           TextWrapping="Wrap" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Run Text="Theme" FontSize="20" FontFamily="{StaticResource Medium}"/>
+                    <LineBreak/>
+                    Choose one of this option to change the application's appearance.
+                </TextBlock>
+                <!--Light mode and Dark mode-->
+                <StackPanel Grid.Row="1" Grid.Column="0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <Border Width="220" Height="160"
+                            Background="#D9D9D9"
+                            CornerRadius="20">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0"
+                                    Width="150" Height="100"
+                                    CornerRadius="10"
+                                    BorderThickness="0">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/Images/Contents/Lightmode.png" Stretch="Uniform"/>
+                                </Border.Background>
+                            </Border>
+                            <Border Grid.Row="1"
+                                    Background="#E5FDFDFD"
+                                    CornerRadius="0 0 20 20">
+                                <RadioButton VerticalAlignment="Center"
+                                             HorizontalAlignment="Center"
+                                             Content="Light Mode"
+                                             FontFamily="{StaticResource Regular}"
+                                             GroupName="Theme" Checked="RadioButton_Checked" Tag="Light"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                </StackPanel>
+                <!--Dark Mode-->
+                <StackPanel Grid.Row="1" Grid.Column="1"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <Border Width="220" Height="160"
+                            Background="#D9D9D9"
+                            CornerRadius="20">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0"
+                                    Width="150" Height="100"
+                                    CornerRadius="10"
+                                    BorderThickness="0">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/Images/Contents/Darkmode.png" Stretch="Uniform"/>
+                                </Border.Background>
+                            </Border>
+                            <Border Grid.Row="1"
+                                    Background="#E5FDFDFD"
+                                    CornerRadius="0 0 20 20">
+                                <RadioButton VerticalAlignment="Center"
+                                             HorizontalAlignment="Center"
+                                             Content="Dark Mode"
+                                             FontFamily="{StaticResource Regular}"
+                                             GroupName="Theme" Checked="RadioButton_Checked" Tag="Dark"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                </StackPanel>
+            </Grid>
         </Grid>
     </Border>
 </UserControl>

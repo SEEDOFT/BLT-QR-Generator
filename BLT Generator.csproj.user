@@ -31,6 +31,9 @@
     <Compile Update="SubPages\BothCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SubPages\FAQ_Panel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SubPages\Language_Panel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,6 +121,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SubPages\BothCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SubPages\FAQ_Panel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SubPages\Language_Panel.xaml">

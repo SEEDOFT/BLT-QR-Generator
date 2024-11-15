@@ -12,14 +12,14 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0">
-            <local:LengCard/>
+        <Grid Grid.Column="0"
+              x:Name="Grid_Leng">
         </Grid>
-        <Grid Grid.Column="1">
-            <local:BothCard/>
+        <Grid Grid.Column="1"
+              x:Name="Grid_Both">
         </Grid>
-        <Grid Grid.Column="2">
-            <local:TheaCard/>
+        <Grid Grid.Column="2"
+              x:Name="Grid_Thea">
         </Grid>
     </Grid>
 </UserControl>

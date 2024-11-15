@@ -225,5 +225,4 @@
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="Background" Value="Transparent" />
     </Style>
-    
 </ResourceDictionary>

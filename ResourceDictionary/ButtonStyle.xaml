@@ -141,14 +141,14 @@
     </Style>
     <!-- Button A letter from US -->
     <Style x:Key="Msg" TargetType="Button">
-        <Setter Property="Width" Value="30"/>
-        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="Height" Value="25"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="Border">
                         <Border.Background>
-                            <ImageBrush ImageSource="/Images/BlackIcons/Book.png"
+                            <ImageBrush ImageSource="/Images/BlackIcons/Book2.png"
                                         Stretch="UniformToFill"/>
                         </Border.Background>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -157,7 +157,62 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="Border" Property="Background">
                                 <Setter.Value>
-                                    <ImageBrush ImageSource="/Images/WhiteIcons/wBook.png"
+                                    <ImageBrush ImageSource="/Images/BlackIcons/Book1.png"
+                                                Stretch="UniformToFill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- FAQ -->
+    <Style x:Key="FAQ" TargetType="Button">
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="Border">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Images/BlackIcons/Question.png"
+                                        Stretch="UniformToFill"/>
+                        </Border.Background>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Images/WhiteIcons/wQuestion.png"
+                                                Stretch="UniformToFill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FAQ_Back" TargetType="Button">
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="Border">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Images/BlackIcons/Back.png"
+                                        Stretch="UniformToFill"/>
+                        </Border.Background>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Images/WhiteIcons/wBack.png"
                                                 Stretch="UniformToFill"/>
                                 </Setter.Value>
                             </Setter>
@@ -532,10 +587,11 @@
         </Setter>
     </Style>
     <!-- Change Language -->
-    <Style x:Key="Language" TargetType="Button">
+    <Style x:Key="Language" TargetType="ToggleButton">
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="Button">
+                <ControlTemplate TargetType="ToggleButton">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
@@ -571,6 +627,9 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="#7BCCD8"/>
                         </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="#53C6D7"/>
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -578,16 +637,17 @@
         <Setter Property="Foreground" Value="White" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Padding" Value="10,5" />
-        <Setter Property="Width" Value="120"/>
+        <Setter Property="Width" Value="126"/>
         <Setter Property="Height" Value="30"/>
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
     <!-- Theme-->
-    <Style x:Key="Theme" TargetType="Button">
+    <Style x:Key="Theme" TargetType="ToggleButton">
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="Button">
+                <ControlTemplate TargetType="ToggleButton">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
@@ -623,6 +683,9 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="#7BCCD8"/>
                         </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="#53C6D7"/>
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -630,16 +693,17 @@
         <Setter Property="Foreground" Value="White" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Padding" Value="10,5" />
-        <Setter Property="Width" Value="120"/>
+        <Setter Property="Width" Value="126"/>
         <Setter Property="Height" Value="30"/>
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
     <!-- Passcode -->
-    <Style x:Key="Passcode" TargetType="Button">
+    <Style x:Key="Passcode" TargetType="ToggleButton">
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="Button">
+                <ControlTemplate TargetType="ToggleButton">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
@@ -675,6 +739,9 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="#7BCCD8"/>
                         </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="#53C6D7"/>
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -682,7 +749,7 @@
         <Setter Property="Foreground" Value="White" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Padding" Value="10,5" />
-        <Setter Property="Width" Value="120"/>
+        <Setter Property="Width" Value="126"/>
         <Setter Property="Height" Value="30"/>
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />

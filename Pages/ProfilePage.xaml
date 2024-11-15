@@ -17,19 +17,22 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"
                    FontFamily="{StaticResource Ole_Bold}"
                    FontSize="20">
-            <Run Text="BLT" Foreground="#5782B6"/> Generator
+            <Run Text="BLT" Foreground="#5782B6"/> QR Generator
         </TextBlock>
         <Button x:Name="Btn_Msg"
                 Style="{StaticResource Msg}"
                 Grid.Row="0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
-                Margin="0 0 50 0"
                 Click="Btn_Msg_Click">
 
         </Button>
@@ -48,15 +51,31 @@
                     About Us
                 </TextBlock>
                 <TextBlock Margin="0 20 0 0"
-                           FontSize="16"
+                           FontSize="14"
                            FontFamily="{StaticResource Regular}"
                            Foreground="#4D4D4D"
                            TextWrapping="Wrap"
-                           FontWeight="Medium">
-                    <Run Text="&#x9;" />We are a team from Group 01, consisting of three members: <Run FontWeight="Bold" Text="Sam Sokunthea "/> (a student at the Royal University of Phnom Penh), <Run FontWeight="Bold" Text="Yong Bunleng "/> (a student at the National University of Management), and <Run FontWeight="Bold" Text="Koy Yotraboth "/> (also a student at the National University of Management). We are scholarship students specializing in Mobile Application (Flutter) studies at <Run FontWeight="Bold" Text="ANT Technology Training Center"/>. We are extremely pleased to have completed the C# Assignment, which is a part of our field of study. Thus, we would like to express our deep gratitude to our teachers and mentors who have guided and supported us all the way to this accomplishment.
+                           FontWeight="Medium"
+                           TextAlignment="Center">
+                    We are a team from Group 01, consisting of three members: <Run FontWeight="Bold" Text="Sam Sokunthea "/> (a student at the Royal University of Phnom Penh), <Run FontWeight="Bold" Text="Yong Bunleng "/> (a student at the National University of Management), and <Run FontWeight="Bold" Text="Koy Yotraboth "/> (also a student at the National University of Management). We are scholarship students specializing in Mobile Application (Flutter) studies at <Run FontWeight="Bold" Text="ANT Technology Training Center"/>. We are extremely pleased to have completed the C# Assignment, which is a part of our field of study. Thus, we would like to express our deep gratitude to our teachers and mentors who have guided and supported us all the way to this accomplishment.
                     <LineBreak/>
-                    <LineBreak/>
-                    <Run Text="&#x9;" />Lastly, we would also like to thank the <Run FontWeight="Bold" Text="Ministry of Posts and Telecommunications"/> and <Run FontWeight="Bold" Text="ANT Technology Training Center"/> for granting us the scholarship opportunity. We wish the <Run FontWeight="Bold" Text="Ministry of Posts and Telecommunications"/> and <Run FontWeight="Bold" Text="ANT Technology Training Center"/> smooth progress in their endeavors, and we wish our teachers great success in all their duties.
+
+                </TextBlock>
+
+                <TextBlock FontFamily="{StaticResource Ole_Bold}"
+                           FontSize="40"
+                           Foreground="#4D4D4D"
+                           HorizontalAlignment="Center">
+                    Our Mission
+                </TextBlock>
+                <TextBlock Margin="0 20 0 0"
+                           FontSize="14"
+                           FontFamily="{StaticResource Regular}"
+                           Foreground="#4D4D4D"
+                           TextWrapping="Wrap"
+                           FontWeight="Medium"
+                           TextAlignment="Center">
+                    Our mission is to empower individuals and businesses with an intuitive, efficient, and reliable QR code generation tool that simplifies digital connectivity. We designed this app to break down technological barriers, providing users with an easy-to-use interface that makes generating customized QR codes fast and accessible, regardless of technical experience. By focusing on user experience, we aim to make information sharing seamless, enabling everyone to create, customize, and share QR codes effortlessly. Whether it’s for professional marketing, personal use, or event planning, our app offers secure, high-quality QR codes that meet diverse needs while enhancing accessibility and interaction. Through continuous improvements and responsive support, we’re dedicated to making digital engagement straightforward, reliable, and adaptable to the evolving demands of the digital world.
                 </TextBlock>
 
                 <TextBlock FontFamily="{StaticResource Ole_Bold}"

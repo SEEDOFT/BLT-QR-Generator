@@ -23,6 +23,28 @@ namespace BLT_Generator.SubPages
         public SubProfile()
         {
             InitializeComponent();
+            Both(new SubPages.BothCard());
+            Thea(new SubPages.TheaCard());
+            Leng(new SubPages.LengCard());
         }
+
+        public void Both(UserControl userControl)
+        {
+            Grid_Both.Children.Clear();
+            Grid_Both.Children.Add(userControl);
+        }
+
+        public void Thea(UserControl userControl)
+        {
+            Grid_Thea.Children.Clear();
+            Grid_Thea.Children.Add(userControl);
+        }
+
+        public void Leng(UserControl userControl)
+        {
+            Grid_Leng.Children.Clear();
+            Grid_Leng.Children.Add(userControl);
+        }
+       
     }
 }

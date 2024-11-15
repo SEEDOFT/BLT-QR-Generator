@@ -10,20 +10,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\KH_SN.ttf" />
     <None Remove="Fonts\OleoScriptSwashCaps_Bold.ttf" />
     <None Remove="Fonts\OleoScriptSwashCaps_Regular.ttf" />
+    <None Remove="Fonts\Poppins_Bold.ttf" />
+    <None Remove="Fonts\Poppins_Medium.ttf" />
+    <None Remove="Fonts\Poppins_Regular.ttf" />
     <None Remove="Fonts\Segoe_Bold.ttf" />
     <None Remove="Fonts\Segoe_Bold_Italic.ttf" />
     <None Remove="Fonts\Segoe_Italic.ttf" />
     <None Remove="Fonts\Segoe_Regular.ttf" />
+    <None Remove="Images\BlackIcons\ArrowDown.png" />
     <None Remove="Images\BlackIcons\ArrowRight.png" />
+    <None Remove="Images\BlackIcons\Back.png" />
     <None Remove="Images\BlackIcons\Book.png" />
+    <None Remove="Images\BlackIcons\Book1.png" />
+    <None Remove="Images\BlackIcons\Book2.png" />
     <None Remove="Images\BlackIcons\Calendar.png" />
     <None Remove="Images\BlackIcons\Copy.png" />
     <None Remove="Images\BlackIcons\Earth.png" />
     <None Remove="Images\BlackIcons\Link.png" />
     <None Remove="Images\BlackIcons\Passcode.png" />
     <None Remove="Images\BlackIcons\Pin.png" />
+    <None Remove="Images\BlackIcons\Question.png" />
     <None Remove="Images\BlackIcons\Reverse.png" />
     <None Remove="Images\BlackIcons\rMinimize.png" />
     <None Remove="Images\BlackIcons\rXmark.png" />
@@ -33,15 +42,19 @@
     <None Remove="Images\BlackIcons\WIFI.png" />
     <None Remove="Images\BlackIcons\WIFI.svg" />
     <None Remove="Images\BLT Logo.png" />
+    <None Remove="Images\BLT_Darkmode.png" />
+    <None Remove="Images\BLT_Lightmode.png" />
     <None Remove="Images\Contents\ANT.png" />
     <None Remove="Images\Contents\B.png" />
     <None Remove="Images\Contents\Both.png" />
     <None Remove="Images\Contents\CBRD.png" />
+    <None Remove="Images\Contents\Darkmode.png" />
     <None Remove="Images\Contents\Facebook.png" />
     <None Remove="Images\Contents\Github.png" />
     <None Remove="Images\Contents\KH.png" />
     <None Remove="Images\Contents\L.png" />
     <None Remove="Images\Contents\Leng.jpg" />
+    <None Remove="Images\Contents\Lightmode.png" />
     <None Remove="Images\Contents\MPTC.png" />
     <None Remove="Images\Contents\T.png" />
     <None Remove="Images\Contents\Telegram.png" />
@@ -49,6 +62,7 @@
     <None Remove="Images\Contents\UK.png" />
     <None Remove="Images\WhiteIcons\Minimize.png" />
     <None Remove="Images\WhiteIcons\wArrowRight.png" />
+    <None Remove="Images\WhiteIcons\wBack.png" />
     <None Remove="Images\WhiteIcons\wBook.png" />
     <None Remove="Images\WhiteIcons\wCalendar.png" />
     <None Remove="Images\WhiteIcons\wCopy.png" />
@@ -59,6 +73,7 @@
     <None Remove="Images\WhiteIcons\wPasscode.png" />
     <None Remove="Images\WhiteIcons\wPin.png" />
     <None Remove="Images\WhiteIcons\wQR.png" />
+    <None Remove="Images\WhiteIcons\wQuestion.png" />
     <None Remove="Images\WhiteIcons\wReverse.png" />
     <None Remove="Images\WhiteIcons\wSave.png" />
     <None Remove="Images\WhiteIcons\wSetting.png" />
@@ -72,13 +87,37 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fonts\KH_SN.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Fonts\OleoScriptSwashCaps_Bold.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Fonts\OleoScriptSwashCaps_Regular.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Fonts\Poppins_Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Poppins_Medium.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Poppins_Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\ArrowDown.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\BlackIcons\ArrowRight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Book1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Book2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\BlackIcons\Copy.png">
@@ -88,6 +127,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\BlackIcons\Passcode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Question.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\BlackIcons\Save.png">
@@ -147,6 +189,12 @@
     <Resource Include="Images\BLT Logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\BLT_Darkmode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BLT_Lightmode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Contents\ANT.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -157,6 +205,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\CBRD.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\Darkmode.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\Facebook.png">
@@ -172,6 +223,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\Leng.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\Lightmode.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\MPTC.png">
@@ -193,6 +247,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wArrowRight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wBack.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wBook.png">
@@ -223,6 +280,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wQR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wQuestion.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wReverse.png">

@@ -24,15 +24,16 @@
             <ColumnDefinition Width="140"/>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="50"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="Btn_Msg"
-                Style="{StaticResource Msg}"
+        <Button x:Name="Btn_FAQ"
+                Style="{StaticResource FAQ}"
                 Grid.Row="0"
-                Grid.Column="4"
+                Grid.Column="3"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
-                Margin="0 0 50 0"
-                Click="Btn_Msg_Click"/>
+                Click="Btn_FAQ_Click"/>
 
         <TextBlock Grid.Row="0"
                    Grid.Column="0"
@@ -41,10 +42,10 @@
                    VerticalAlignment="Center"
                    FontFamily="{StaticResource Ole_Bold}"
                    FontSize="20">
-            <Run Text="BLT" Foreground="#5782B6"/> Generator
+            <Run Text="BLT" Foreground="#5782B6"/> QR Generator
         </TextBlock>
 
-        <TextBlock Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1"
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1"
                    FontFamily="{StaticResource Bold}"
                    FontSize="28"
                    HorizontalAlignment="Center"
@@ -67,33 +68,37 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button x:Name="Btn_Language" Click="Btn_Language_Click"
-                        Grid.Row="1" Style="{StaticResource Language}"
-                        FontFamily="{StaticResource Regular}" FontSize="14"
-                        Content="Languages"/>
+                <ToggleButton x:Name="Btn_Language" Click="Btn_Language_Click"
+                              Grid.Row="1" Style="{StaticResource Language}"
+                              FontFamily="{StaticResource Regular}" FontSize="14"
+                              Content="Languages"/>
                 <TextBlock Margin="15 0 0 0"
                            Grid.Row="2" Foreground="White"
                            FontFamily="{StaticResource Regular}"
                            FontSize="8" Text="Language change"/>
-                <Button x:Name="Btn_Theme" Click="Btn_Theme_Click"
-                        Grid.Row="3" Style="{StaticResource Theme}"
-                        FontFamily="{StaticResource Regular}" FontSize="14"
-                        Content="Theme"/>
+                <ToggleButton x:Name="Btn_Theme" Click="Btn_Theme_Click"
+                              Grid.Row="3" Style="{StaticResource Theme}"
+                              FontFamily="{StaticResource Regular}" FontSize="14"
+                              Content="Theme"/>
                 <TextBlock Margin="15 0 0 0"
                            Grid.Row="4" Foreground="White"
                            FontFamily="{StaticResource Regular}"
                            FontSize="8" Text="Theme change"/>
-                <Button x:Name="Btn_Passcode" Click="Btn_Passcode_Click"
-                        Grid.Row="5" Style="{StaticResource Passcode}"
-                        FontFamily="{StaticResource Regular}" FontSize="14"
-                        Content="PIN"/>
+                <ToggleButton x:Name="Btn_Passcode" Click="Btn_Passcode_Click"
+                              Grid.Row="5" Style="{StaticResource Passcode}"
+                              FontFamily="{StaticResource Regular}" FontSize="14"
+                              Content="PIN"/>
                 <TextBlock Margin="15 0 0 0"
                            Grid.Row="6" Foreground="White"
                            FontFamily="{StaticResource Regular}"
                            FontSize="8" Text="PIN change"/>
             </Grid>
         </Border>
-        <Grid Grid.Column="2" Grid.Row="2" Grid.RowSpan="3"
+        <Grid Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3"
               x:Name="Grid_Display"/>
+        <Grid Grid.Row="0" Grid.RowSpan="5" Grid.Column="3" Grid.ColumnSpan="2"
+              Background="White" Width="0" HorizontalAlignment="Right"
+              x:Name="Grid_FAQ">
+        </Grid>
     </Grid>
 </UserControl>

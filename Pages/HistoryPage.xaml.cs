@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -20,16 +21,23 @@ namespace BLT_Generator.Pages
     /// </summary>
     public partial class HistoryPage : UserControl
     {
-        private LetterMessage? msg;
+        private bool isDrawerOpen = false;
         public void OpenPage(UserControl Page)
         {
             Grid_Display?.Children.Clear();
             Grid_Display?.Children.Add(Page);
         }
+
         public HistoryPage()
         {
             InitializeComponent();
             OpenPage(new SubPages.URL_History());
+
+            var faqPanel = new BLT_Generator.SubPages.FAQ_Panel();
+            faqPanel.RequestCloseDrawer += HandleDrawerToggle;
+
+            Grid_FAQ.Children.Clear();
+            Grid_FAQ.Children.Add(faqPanel);
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -40,7 +48,7 @@ namespace BLT_Generator.Pages
             {
                 comboBox.SelectedIndex = 0;
             }
-            else if(comboBox?.SelectedIndex == 0)
+            else if (comboBox?.SelectedIndex == 0)
             {
                 OpenPage(new SubPages.URL_History());
             }
@@ -50,44 +58,23 @@ namespace BLT_Generator.Pages
             }
         }
 
-        private void Btn_Msg_Click(object sender, RoutedEventArgs e)
+        private void Btn_FAQ_Click(object sender, RoutedEventArgs e)
         {
-            msg = new LetterMessage();
-            msg.Owner = Application.Current.MainWindow;
-            msg.WindowStartupLocation = WindowStartupLocation.Manual; // Allow manual positioning
-            CenterThanksMessage();
+            HandleDrawerToggle();
+        }
 
-            Application.Current.MainWindow.LocationChanged += MainWindow_LocationChanged!;
-            Application.Current.MainWindow.SizeChanged += MainWindow_SizeChanged;
-
-            msg.Closed += (s, args) =>
+        private void HandleDrawerToggle()
+        {
+            DoubleAnimation animation = new DoubleAnimation
             {
-                // Detach events when message closes
-                Application.Current.MainWindow.LocationChanged -= MainWindow_LocationChanged!;
-                Application.Current.MainWindow.SizeChanged -= MainWindow_SizeChanged;
+                Duration = TimeSpan.FromSeconds(0.3),
+                To = isDrawerOpen ? 0 : 200,
+                EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
             };
 
-            msg.ShowDialog();
-        }
+            Grid_FAQ.BeginAnimation(WidthProperty, animation);
 
-        private void CenterThanksMessage()
-        {
-            if (msg != null && msg.Owner != null)
-            {
-                Window mainWindow = msg.Owner;
-                msg.Left = mainWindow.Left + (mainWindow.Width - msg.Width) / 2;
-                msg.Top = mainWindow.Top + (mainWindow.Height - msg.Height) / 2;
-            }
-        }
-
-        private void MainWindow_LocationChanged(object sender, EventArgs e)
-        {
-            CenterThanksMessage();
-        }
-
-        private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            CenterThanksMessage();
+            isDrawerOpen = !isDrawerOpen;
         }
     }
 }

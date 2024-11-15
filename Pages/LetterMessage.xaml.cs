@@ -25,7 +25,7 @@ namespace BLT_Generator.Pages
             InitializeComponent();
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

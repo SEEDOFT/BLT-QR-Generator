@@ -36,14 +36,17 @@
               x:Name="Grid_Main">
 
         </Grid>
+        <Grid Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="4"
+              x:Name="Grid_Big">
+
+        </Grid>
         <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
         <Border Grid.Column="1" Grid.Row="1"
                 Width="60"
                 Height="60"
-                CornerRadius="30"
                 VerticalAlignment="Top">
             <Border.Background>
-                <ImageBrush ImageSource="./Images/BLT Logo.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="./Images/BLT_Lightmode.png" Stretch="UniformToFill"/>
             </Border.Background>
         </Border>
         <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7"
