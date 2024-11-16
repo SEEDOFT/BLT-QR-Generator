@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLT_Generator.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,38 +24,67 @@ namespace BLT_Generator.SubPages
         public Theme_Panel()
         {
             InitializeComponent();
+            LoadTheme();
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void Rd_LightMode_Checked(object? sender, RoutedEventArgs? e)
         {
-            if (sender is RadioButton radioButton)
+            if (LightModeButton.IsChecked == true)
             {
-                string theme = radioButton.Tag.ToString()!;
-                //ApplyTheme(theme);
+                SetTheme("Light");
+            }
+            else if (DarkModeButton.IsChecked == true)
+            {
+                SetTheme("Dark");
             }
         }
 
-        public void ApplyTheme(string theme)
+        private void LoadLightMode()
         {
+            var lightMode = new ResourceDictionary { Source = new Uri("/ResourceDictionary/LightMode.xaml", UriKind.Relative) };
             Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(lightMode);
+        }
 
+        private void LoadDarkMode()
+        {
+            var darkMode = new ResourceDictionary { Source = new Uri("/ResourceDictionary/DarkMode.xaml", UriKind.Relative) };
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(darkMode);
+        }
+
+        private void SetTheme(string theme)
+        {
             if (theme == "Light")
             {
-                ResourceDictionary lightTheme = new ResourceDictionary
-                {
-                    Source = new Uri("pack://application:,,,/ResourceDictionary/LightMode.xaml")
-                };
-                Application.Current.Resources.MergedDictionaries.Add(lightTheme);
+                LoadLightMode();
             }
             else if (theme == "Dark")
             {
-                ResourceDictionary darkTheme = new ResourceDictionary
-                {
-                    Source = new Uri("pack://application:,,,/ResourceDictionary/DarkMode.xaml")
-                };
-                Application.Current.Resources.MergedDictionaries.Add(darkTheme);
+                LoadDarkMode();
             }
-            Application.Current.Resources.MergedDictionaries.Count();
+
+            // Save the theme to settings
+            Properties.Settings.Default.Theme = theme;
+            Properties.Settings.Default.Save();
         }
+
+        public void LoadTheme()
+        {
+            string savedTheme = Properties.Settings.Default.Theme;
+
+            if (savedTheme == "Dark")
+            {
+                DarkModeButton.IsChecked = true;
+                LoadDarkMode();
+            }
+            else
+            {
+                LightModeButton.IsChecked = true;
+                LoadLightMode();
+            }
+        }
+
+
     }
 }

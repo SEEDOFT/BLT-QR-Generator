@@ -9,7 +9,7 @@
     <UserControl.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </UserControl.Resources>
-    <Border Background="#99D9D9D9"
+    <Border Background="{DynamicResource WIFI_URL_BG}"
             CornerRadius="10">
         <Grid Margin="25">
             <Grid.RowDefinitions>
@@ -20,7 +20,8 @@
                     BorderThickness="0 0 0 1"
                     BorderBrush="Black">
                 <TextBlock FontFamily="{StaticResource Regular}"
-                           Foreground="Black" FontSize="14"
+                           Foreground="{DynamicResource Uncheck}"
+                           FontSize="14"
                            TextWrapping="Wrap">
                     <Run Text="PINs change" FontSize="20" FontFamily="{StaticResource Regular}"/>
                     <LineBreak/>

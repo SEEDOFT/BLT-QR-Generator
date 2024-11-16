@@ -7,7 +7,7 @@
         <Setter Property="Height" Value="45"/>
         <Setter Property="Background" Value="Green"/>
         <Setter Property="FontSize" Value="14"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="{DynamicResource Text}"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -37,7 +37,7 @@
         <Setter Property="Height" Value="45"/>
         <Setter Property="Background" Value="Blue"/>
         <Setter Property="FontSize" Value="14"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="{DynamicResource Text}"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -88,10 +88,10 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="#53C6D7"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource HowerBackgroundColor}"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="#53C6D7"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource HowerBackgroundColor}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -99,7 +99,7 @@
         </Setter>
     </Style>
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-    <!-- TOP Button-->
+    <!-- TOP Button WIFI and URL-->
     <Style x:Key="TopButton" TargetType="ToggleButton">
         <Setter Property="Width" Value="80"/>
         <Setter Property="Height" Value="23"/>
@@ -123,15 +123,15 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="buttonBorder" Property="Background" Value="#53C6D7"/>
+                            <Setter TargetName="buttonBorder" Property="Background" Value="{DynamicResource Hower_WIFI_URL}"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="buttonBorder" Property="Background" Value="#53C6D7"/>
-                            <Setter Property="Foreground" Value="White"/>
+                            <Setter TargetName="buttonBorder" Property="Background" Value="{DynamicResource Hower_WIFI_URL}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Check}"/>
                             <Setter TargetName="icon" Property="Source" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(helpers:ToggleButtonHelper.CheckedIcon)}"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="False">
-                            <Setter Property="Foreground" Value="#4D4D4D"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Uncheck}"/>
                             <Setter TargetName="icon" Property="Source" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(helpers:ToggleButtonHelper.UncheckedIcon)}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -228,13 +228,34 @@
             <Setter.Value>
                 <ControlTemplate TargetType="DatePicker">
                     <Grid>
-                        <!-- ToggleButton as the Calendar Icon -->
                         <ToggleButton x:Name="CalendarButton"
                                       Background="Transparent"
                                       BorderThickness="0"
                                       Cursor="Hand"
                                       Focusable="False">
-                            <Image Source="/Images/WhiteIcons/wCalendar.png" Width="20" Height="20" Stretch="UniformToFill"/>
+                            <Image x:Name="CalendarIcon"
+                                   Source="/Images/WhiteIcons/wCalendar.png"
+                                   Width="20" Height="20" Stretch="UniformToFill"/>
+
+                            <!-- Trigger to change the image when IsMouseOver -->
+                            <ToggleButton.Style>
+                                <Style TargetType="ToggleButton">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="ToggleButton">
+                                                <Image x:Name="IconImage"
+                                                       Source="/Images/WhiteIcons/wCalendar.png"
+                                                       Width="20" Height="20" Stretch="UniformToFill"/>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="IconImage" Property="Source" Value="/Images/WhiteIcons/wCalendar.png"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </ToggleButton.Style>
                         </ToggleButton>
 
                         <!-- Popup for the Calendar -->
@@ -250,7 +271,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-
+    <!-- school and Organization -->
     <Style x:Key="Organization" TargetType="Button">
         <Setter Property="Width" Value="120"/>
         <Setter Property="Height" Value="45"/>
@@ -282,7 +303,7 @@
         <Setter Property="Width" Value="70"/>
         <Setter Property="Height" Value="20"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="Gray"/>
+        <Setter Property="Foreground" Value="{DynamicResource Text}"/>
         <Setter Property="BorderThickness" Value="0"/>
 
         <Setter Property="Template">
@@ -293,12 +314,12 @@
                         <TextBlock Text="&gt;" VerticalAlignment="Center"/>
 
                         <!-- Text with a border -->
-                        <Border Background="#7BCCD8"
+                        <Border Background="{DynamicResource QR_Background}"
                                 Width="60"
                                 CornerRadius="10">
                             <!-- Adjust padding to center vertically -->
                             <TextBlock Text="Next"
-                                       Foreground="#fdfdfd"
+                                       Foreground="{DynamicResource Text}"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center" />
                         </Border>
@@ -312,7 +333,7 @@
         <Setter Property="Width" Value="70"/>
         <Setter Property="Height" Value="20"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="Gray"/>
+        <Setter Property="Foreground" Value="{DynamicResource Text}"/>
         <Setter Property="BorderThickness" Value="0"/>
 
         <Setter Property="Template">
@@ -320,12 +341,12 @@
                 <ControlTemplate TargetType="Button">
                     <StackPanel Orientation="Horizontal">
                         <!-- Text with a border -->
-                        <Border Background="#7BCCD8"
+                        <Border Background="{DynamicResource QR_Background}"
                                 Width="60"
                                 CornerRadius="10">
                             <!-- Adjust padding to center vertically -->
                             <TextBlock Text="Previous"
-                                       Foreground="#fdfdfd"
+                                       Foreground="{DynamicResource Text}"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center" />
                         </Border>
@@ -342,9 +363,9 @@
     <Style x:Key="Regenerate" TargetType="Button">
         <Setter Property="Width" Value="100"/>
         <Setter Property="Height" Value="20"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="{DynamicResource DefaultRegenerate}"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Background" Value="#53C6D7"/>
+        <Setter Property="Background" Value="{DynamicResource RegenerateBG}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -352,7 +373,7 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="12">
+                            CornerRadius="5">
                         <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center">
@@ -375,7 +396,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="icon" Property="Source" Value="/Images/BlackIcons/Reverse.png"/>
-                            <Setter Property="Foreground" Value="#4d4d4d"/>
+                            <Setter Property="Foreground" Value="{DynamicResource HowerRegenerate}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -625,10 +646,10 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#7BCCD8"/>
+                            <Setter Property="Background" Value="{DynamicResource Hower_WIFI_URL}"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="#53C6D7"/>
+                            <Setter Property="Background" Value="{DynamicResource Hower_WIFI_URL}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -681,10 +702,10 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#7BCCD8"/>
+                            <Setter Property="Background" Value="{DynamicResource Hower_WIFI_URL}"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="#53C6D7"/>
+                            <Setter Property="Background" Value="{DynamicResource Hower_WIFI_URL}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -737,10 +758,10 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#7BCCD8"/>
+                            <Setter Property="Background" Value="{DynamicResource Hower_WIFI_URL}"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="#53C6D7"/>
+                            <Setter Property="Background" Value="{DynamicResource Hower_WIFI_URL}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

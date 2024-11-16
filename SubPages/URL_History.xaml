@@ -24,17 +24,17 @@
         <Border Grid.Row="0" Grid.RowSpan="2"
                 Grid.Column="0" Grid.ColumnSpan="5"
                 CornerRadius="10"
-                Background="#ECECEC"/>
+                Background="{DynamicResource WIFI_URL_BG}"/>
         <Border Grid.Row="0" Grid.Column="0"
                 Grid.ColumnSpan="6"
-                Background="#222B43"
+                Background="{DynamicResource HistoryBarColor}"
                 CornerRadius="10 10 0 0"/>
         <StackPanel Grid.Column="1"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
             <TextBlock FontFamily="{StaticResource Bold}"
                        FontSize="20"
-                       Foreground="White">
+                       Foreground="{DynamicResource Text}">
                 Date
             </TextBlock>
         </StackPanel>
@@ -43,7 +43,7 @@
                     VerticalAlignment="Center">
             <TextBlock FontFamily="{StaticResource Bold}"
                        FontSize="20"
-                       Foreground="White">
+                       Foreground="{DynamicResource Text}">
                 URL
             </TextBlock>
         </StackPanel>

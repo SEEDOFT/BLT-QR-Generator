@@ -6,8 +6,7 @@
              xmlns:local="clr-namespace:BLT_Generator.SubPages"
              xmlns:helpers="clr-namespace:BLT_Generator.Helpers"
              mc:Ignorable="d"
-             d:DesignHeight="510" d:DesignWidth="300"
-             Background="White">
+             d:DesignHeight="510" d:DesignWidth="300">
 
     <UserControl.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
@@ -26,7 +25,7 @@
         </StackPanel>
         <StackPanel Grid.Row="1">
             <TextBlock FontFamily="{StaticResource Bold}"
-                       Foreground="#4D4D4D"
+                       Foreground="{DynamicResource WU_Title}"
                        FontSize="30">
                 URL
             </TextBlock>

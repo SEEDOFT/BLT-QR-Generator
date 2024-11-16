@@ -15,9 +15,9 @@
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </Window.Resources>
 
-    <Grid Background="#80fdfdfd">
+    <Grid Background="{DynamicResource MessageBG}">
         <Border Width="550" Height="350"
-                Background="#162039"
+                Background="{DynamicResource MessageInsideBG}"
                 CornerRadius="20"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">

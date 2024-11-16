@@ -111,7 +111,13 @@
     <Page Update="ResourceDictionary\ComboboxStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ResourceDictionary\DarkMode.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ResourceDictionary\Fonts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceDictionary\LightMode.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ResourceDictionary\MainResources.xaml">

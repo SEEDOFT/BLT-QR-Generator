@@ -5,8 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:BLT_Generator.Pages"
              mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800"
-             Background="White">
+             d:DesignHeight="450" d:DesignWidth="800">
 
     <UserControl.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
@@ -40,22 +39,23 @@
                    Grid.ColumnSpan="3"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"
+                   Foreground="{DynamicResource _QR_Generator}"
                    FontFamily="{StaticResource Ole_Bold}"
                    FontSize="20">
-            <Run Text="BLT" Foreground="#5782B6"/> QR Generator
+            <Run Text="BLT" Foreground="{DynamicResource _BLT}"/> QR Generator
         </TextBlock>
 
-        <TextBlock Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1"
+        <TextBlock Grid.Column="0" Grid.Row="1"
                    FontFamily="{StaticResource Bold}"
                    FontSize="28"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   Foreground="#4D4D4D">
+                   Foreground="{DynamicResource Uncheck}">
             Setting
         </TextBlock>
 
         <Border Grid.Column="0" Grid.Row="2" Grid.RowSpan="3"
-                CornerRadius="10" Background="#222B43">
+                CornerRadius="10" Background="{DynamicResource LeftPanelBackground}">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -68,28 +68,43 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <ToggleButton x:Name="Btn_Language" Click="Btn_Language_Click"
-                              Grid.Row="1" Style="{StaticResource Language}"
-                              FontFamily="{StaticResource Regular}" FontSize="14"
+                <ToggleButton x:Name="Btn_Language"
+                              Click="Btn_Language_Click"
+                              Grid.Row="1"
+                              Style="{StaticResource Language}"
+                              FontFamily="{StaticResource Regular}"
+                              FontSize="14"
+                              Foreground="{DynamicResource Check}"
                               Content="Languages"/>
                 <TextBlock Margin="15 0 0 0"
-                           Grid.Row="2" Foreground="White"
+                           Grid.Row="2"
+                           Foreground="{DynamicResource Check}"
                            FontFamily="{StaticResource Regular}"
                            FontSize="8" Text="Language change"/>
-                <ToggleButton x:Name="Btn_Theme" Click="Btn_Theme_Click"
-                              Grid.Row="3" Style="{StaticResource Theme}"
-                              FontFamily="{StaticResource Regular}" FontSize="14"
+                <ToggleButton x:Name="Btn_Theme"
+                              Click="Btn_Theme_Click"
+                              Grid.Row="3"
+                              Style="{StaticResource Theme}"
+                              FontFamily="{StaticResource Regular}"
+                              FontSize="14"
+                              Foreground="{DynamicResource Check}"
                               Content="Theme"/>
                 <TextBlock Margin="15 0 0 0"
-                           Grid.Row="4" Foreground="White"
+                           Grid.Row="4"
+                           Foreground="{DynamicResource Check}"
                            FontFamily="{StaticResource Regular}"
                            FontSize="8" Text="Theme change"/>
-                <ToggleButton x:Name="Btn_Passcode" Click="Btn_Passcode_Click"
-                              Grid.Row="5" Style="{StaticResource Passcode}"
-                              FontFamily="{StaticResource Regular}" FontSize="14"
+                <ToggleButton x:Name="Btn_Passcode"
+                              Click="Btn_Passcode_Click"
+                              Grid.Row="5"
+                              Style="{StaticResource Passcode}"
+                              FontFamily="{StaticResource Regular}"
+                              FontSize="14"
+                              Foreground="{DynamicResource Check}"
                               Content="PIN"/>
                 <TextBlock Margin="15 0 0 0"
-                           Grid.Row="6" Foreground="White"
+                           Grid.Row="6"
+                           Foreground="{DynamicResource Check}"
                            FontFamily="{StaticResource Regular}"
                            FontSize="8" Text="PIN change"/>
             </Grid>

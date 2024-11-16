@@ -5,6 +5,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using BLT_Generator.SubPages;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -26,10 +27,13 @@ namespace BLT_Generator
         public MainWindow()
         {
             InitializeComponent();
+            //Load user theme
+            Theme_Panel loadUserTheme = new Theme_Panel();
 
             Btn_Generate.IsChecked = true;
             SetSelectedButton(Btn_Generate);
             PageBig(new Pages.GeneratePage());
+
         }
 
         private void SetSelectedButton(ToggleButton selectedButton)

@@ -10,7 +10,7 @@
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </UserControl.Resources>
 
-    <Border Background="#99D9D9D9"
+    <Border Background="{DynamicResource WIFI_URL_BG}"
             CornerRadius="10">
         <Grid Margin="25">
             <Grid.RowDefinitions>
@@ -21,21 +21,24 @@
                     BorderThickness="0 0 0 1"
                     BorderBrush="Black">
                 <TextBlock FontFamily="{StaticResource Regular}"
-                           Foreground="Black" FontSize="14"
+                           FontSize="14"
+                           Foreground="{DynamicResource Uncheck}"
                            TextWrapping="Wrap">
-                    <Run Text="Default" FontSize="20" FontFamily="{StaticResource Regular}"/>
+                    <Run Text="Default"
+                         FontSize="20"
+                         FontFamily="{StaticResource Regular}"/>
                     <LineBreak/>
-                    By default, our application is configured to select Khmer as the primary language, providing users with an intuitive and localizedexperience right from the start.
+                    By default, our application is configured to select Khmer as the primary language, providing users with an intuitive and localized experience right from the start.
                 </TextBlock>
             </Border>
             <StackPanel Grid.Row="1">
                 <TextBlock FontFamily="{StaticResource Regular}"
-                           Foreground="Black"
+                           Foreground="{DynamicResource Uncheck}"
                            FontSize="20"
                            Text="Languages"/>
 
                 <TextBlock FontFamily="{StaticResource Regular}"
-                           Foreground="Black"
+                           Foreground="{DynamicResource Uncheck}"
                            FontSize="14"
                            TextWrapping="Wrap"
                            Text="{DynamicResource changeLangDetail}"

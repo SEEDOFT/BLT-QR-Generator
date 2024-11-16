@@ -27,18 +27,18 @@ namespace BLT_Generator.SubPages
 
         private void ComboBoxLanguage_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ComboBoxItem selectedItem = (ComboBoxItem)ComboBoxLanguage.SelectedItem;
-            string language = selectedItem.Content.ToString();
+            //ComboBoxItem selectedItem = (ComboBoxItem)ComboBoxLanguage.SelectedItem;
+            //string language = selectedItem.Content.ToString()!;
 
-            switch (language)
-            {
-                case "Khmer":
-                    LanguageManager.ChangeLanguage("km-KH");
-                    break;
-                default:
-                    LanguageManager.ChangeLanguage("en-US");
-                    break;
-            }
+            //switch (language)
+            //{
+            //    case "Khmer":
+            //        LanguageManager.ChangeLanguage("km-KH");
+            //        break;
+            //    default:
+            //        LanguageManager.ChangeLanguage("en-US");
+            //        break;
+            //}
         }
     }
 }

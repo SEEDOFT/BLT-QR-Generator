@@ -5,8 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:BLT_Generator.Pages"
              mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="1000"
-             Background="White">
+             d:DesignHeight="450" d:DesignWidth="1000">
     <UserControl.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </UserControl.Resources>
@@ -37,29 +36,31 @@
                    Grid.ColumnSpan="3"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"
+                   Foreground="{DynamicResource _QR_Generator}"
                    FontFamily="{StaticResource Ole_Bold}"
                    FontSize="20">
-            <Run Text="BLT" Foreground="#5782B6"/> QR Generator
+            <Run Text="BLT" Foreground="{DynamicResource _BLT}"/> QR Generator
         </TextBlock>
         <StackPanel Grid.Row="1" Grid.Column="1"
                     Grid.ColumnSpan="3">
             <TextBlock FontFamily="{StaticResource Bold}"
                        FontSize="28" Margin="0 10 0 0"
                        HorizontalAlignment="Center"
-                       Foreground="#4D4D4D"
+                       Foreground="{DynamicResource Uncheck}"
                        TextAlignment="Center">
                 History
                 <LineBreak/>
-                <Run FontSize="14" Foreground="Gray" FontFamily="{StaticResource Regular}">Record of Generated QR Code</Run>
+                <Run FontSize="14" Foreground="{DynamicResource Uncheck}" FontFamily="{StaticResource Regular}">Record of Generated QR Code</Run>
             </TextBlock>
             <ComboBox Style="{StaticResource Box}"
                       Width="115"
                       FontFamily="{StaticResource Regular}"
                       FontSize="14"
+                      Foreground="{DynamicResource Uncheck}"
                       SelectionChanged="ComboBox_SelectionChanged"
                       SelectedIndex="0"
                       HorizontalAlignment="Left"
-                      Margin="0 30 0 0">
+                      Margin="0 20 0 0">
                 <ComboBoxItem>URL Records</ComboBoxItem>
                 <ComboBoxItem>WIFI Records</ComboBoxItem>
             </ComboBox>

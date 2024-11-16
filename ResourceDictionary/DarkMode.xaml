@@ -1,0 +1,72 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--Background Color-->
+    <Color x:Key="Background">#14181C</Color>
+    <SolidColorBrush x:Key="BackgroundColor" Color="{DynamicResource Background}"/>
+    <!-- Left Panel that Contain Buttons -->
+    <Color x:Key="LeftPanel">#3C3D37</Color>
+    <SolidColorBrush x:Key="LeftPanelBackground" Color="{DynamicResource LeftPanel}"/>
+    <!--Left Panel IsMouseOver and IsClick Color-->
+    <Color x:Key="HowerColor">#697565</Color>
+    <SolidColorBrush x:Key="HowerBackgroundColor" Color="{DynamicResource HowerColor}"/>
+    <!-- Background of WIFI and URL-->
+    <Color x:Key="BG_WIFI_URL">#3C3D37</Color>
+    <SolidColorBrush x:Key="WIFI_URL_BG" Color="{DynamicResource BG_WIFI_URL}"/>
+    <!-- IsMouseOver and IsClick of WIFI and URL-->
+    <Color x:Key="_WIFI_URL">#697565</Color>
+    <SolidColorBrush x:Key="Hower_WIFI_URL" Color="{DynamicResource _WIFI_URL}"/>
+    <!--QR (Background) -->
+    <Color x:Key="QR">#697565</Color>
+    <SolidColorBrush x:Key="QR_Background" Color="{DynamicResource QR}"/>
+    <!-- WIFI and URL History top bar -->
+    <Color x:Key="Color">#697565</Color>
+    <SolidColorBrush x:Key="HistoryBarColor" Color="{DynamicResource Color}"/>
+    <!-- Regenerate button -->
+    <Color x:Key="Regenerate">#3C3D37</Color>
+    <SolidColorBrush x:Key="RegenerateBG" Color="{DynamicResource Regenerate}"/>
+    <!-- DarkMode and LightMode Background -->
+    <Color x:Key="Dark_Light">#697565</Color>
+    <SolidColorBrush x:Key="DarkLightBG" Color="{DynamicResource Dark_Light}"/>
+    <!-- DarkMode and LightMode of A letter from us  -->
+    <Color x:Key="Message">#80000000</Color>
+    <SolidColorBrush x:Key="MessageBG" Color="{DynamicResource Message}"/>
+    <!-- A letter from us(Inside background  -->
+    <Color x:Key="MessageInside">#3C3D37</Color>
+    <SolidColorBrush x:Key="MessageInsideBG" Color="{DynamicResource MessageInside}"/>
+
+    <!-- Dropdown Icon (Combobox) -->
+    <Color x:Key="DD">#ECDFCC</Color>
+    <SolidColorBrush x:Key="DropdownFG" Color="{DynamicResource DD}"/>
+    <!-- Dropdown Icon (Combobox BG) -->
+    <Color x:Key="DD2">#3C3D37</Color>
+    <SolidColorBrush x:Key="DropdownBG" Color="{DynamicResource DD2}"/>
+    <!-- Dropdown Icon (Combobox Hower) -->
+    <Color x:Key="DD3">#000000</Color>
+    <SolidColorBrush x:Key="DropdownHower" Color="{DynamicResource DD3}"/>
+
+    <!--Text Title (BLT QR Generator) -->
+    <Color x:Key="BLT">#697565</Color>
+    <SolidColorBrush x:Key="_BLT" Color="{DynamicResource BLT}"/>
+    <Color x:Key="Qr">#ECDFCC</Color>
+    <SolidColorBrush x:Key="_QR_Generator" Color="{DynamicResource Qr}"/>
+    <!--Normal Text (Default White) -->
+    <Color x:Key="Txt">#ECDFCC</Color>
+    <SolidColorBrush x:Key="Text" Color="{DynamicResource Txt}"/>
+    <!-- Top Button text (URL and WIFI) check -->
+    <Color x:Key="W_U">#FDFDFD</Color>
+    <SolidColorBrush x:Key="Check" Color="{DynamicResource W_U}"/>
+    <!-- Top Button text (URL and WIFI) uncheck -->
+    <Color x:Key="W_U_2">#ECDFCC</Color>
+    <SolidColorBrush x:Key="Uncheck" Color="{DynamicResource W_U_2}"/>
+    <!-- WIFI URL Title-->
+    <Color x:Key="T">#ECDFCC</Color>
+    <SolidColorBrush x:Key="WU_Title" Color="{DynamicResource T}"/>
+    <!-- Regenerate button (when Normal) -->
+    <Color x:Key="Reg">#ECDFCC</Color>
+    <SolidColorBrush x:Key="DefaultRegenerate" Color="{DynamicResource Reg}"/>
+    <!-- Regenerate button (when isMouseOver) -->
+    <Color x:Key="Regen">#000000</Color>
+    <SolidColorBrush x:Key="HowerRegenerate" Color="{DynamicResource Regen}"/>
+
+
+</ResourceDictionary>

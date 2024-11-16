@@ -9,7 +9,7 @@
     <UserControl.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </UserControl.Resources>
-    <Border Background="#99D9D9D9"
+    <Border Background="{DynamicResource WIFI_URL_BG}"
             CornerRadius="10">
         <Grid Margin="25">
             <Grid.RowDefinitions>
@@ -20,7 +20,8 @@
                     BorderThickness="0 0 0 1"
                     BorderBrush="Black">
                 <TextBlock FontFamily="{StaticResource Regular}"
-                           Foreground="Black" FontSize="12"
+                           Foreground="{DynamicResource Uncheck}"
+                           FontSize="12"
                            TextWrapping="Wrap">
                     <Run Text="Default" FontSize="20" FontFamily="{StaticResource Medium}"/>
                     <LineBreak/>
@@ -38,8 +39,10 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <TextBlock FontFamily="{StaticResource Regular}"
-                           Foreground="Black" FontSize="12"
-                           TextWrapping="Wrap" Grid.Column="0" Grid.ColumnSpan="2">
+                           Foreground="{DynamicResource Uncheck}"
+                           FontSize="12"
+                           TextWrapping="Wrap"
+                           Grid.Column="0" Grid.ColumnSpan="2">
                     <Run Text="Theme" FontSize="20" FontFamily="{StaticResource Medium}"/>
                     <LineBreak/>
                     Choose one of this option to change the application's appearance.
@@ -49,7 +52,7 @@
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center">
                     <Border Width="220" Height="160"
-                            Background="#D9D9D9"
+                            Background="{DynamicResource DarkLightBG}"
                             CornerRadius="20">
                         <Grid>
                             <Grid.RowDefinitions>
@@ -61,17 +64,18 @@
                                     CornerRadius="10"
                                     BorderThickness="0">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="/Images/Contents/Lightmode.png" Stretch="Uniform"/>
+                                    <ImageBrush ImageSource="/Images/Contents/Lightmode.png" Stretch="Fill"/>
                                 </Border.Background>
                             </Border>
                             <Border Grid.Row="1"
                                     Background="#E5FDFDFD"
                                     CornerRadius="0 0 20 20">
-                                <RadioButton VerticalAlignment="Center"
+                                <RadioButton x:Name="LightModeButton" VerticalAlignment="Center"
                                              HorizontalAlignment="Center"
                                              Content="Light Mode"
                                              FontFamily="{StaticResource Regular}"
-                                             GroupName="Theme" Checked="RadioButton_Checked" Tag="Light"/>
+                                             GroupName="Theme"
+                                             Checked="Rd_LightMode_Checked"/>
                             </Border>
                         </Grid>
                     </Border>
@@ -81,7 +85,7 @@
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center">
                     <Border Width="220" Height="160"
-                            Background="#D9D9D9"
+                            Background="{DynamicResource DarkLightBG}"
                             CornerRadius="20">
                         <Grid>
                             <Grid.RowDefinitions>
@@ -93,17 +97,17 @@
                                     CornerRadius="10"
                                     BorderThickness="0">
                                 <Border.Background>
-                                    <ImageBrush ImageSource="/Images/Contents/Darkmode.png" Stretch="Uniform"/>
+                                    <ImageBrush ImageSource="/Images/Contents/Darkmode.png" Stretch="Fill"/>
                                 </Border.Background>
                             </Border>
                             <Border Grid.Row="1"
                                     Background="#E5FDFDFD"
                                     CornerRadius="0 0 20 20">
-                                <RadioButton VerticalAlignment="Center"
+                                <RadioButton x:Name="DarkModeButton" VerticalAlignment="Center"
                                              HorizontalAlignment="Center"
                                              Content="Dark Mode"
                                              FontFamily="{StaticResource Regular}"
-                                             GroupName="Theme" Checked="RadioButton_Checked" Tag="Dark"/>
+                                             GroupName="Theme" Checked="Rd_LightMode_Checked"/>
                             </Border>
                         </Grid>
                     </Border>

@@ -5,8 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:BLT_Generator.Pages"
              mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800"
-             Background="White">
+             d:DesignHeight="1000" d:DesignWidth="800">
 
     <UserControl.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
@@ -25,8 +24,9 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"
                    FontFamily="{StaticResource Ole_Bold}"
+                   Foreground="{DynamicResource _QR_Generator}"
                    FontSize="20">
-            <Run Text="BLT" Foreground="#5782B6"/> QR Generator
+            <Run Text="BLT" Foreground="{DynamicResource _BLT}"/> QR Generator
         </TextBlock>
         <Button x:Name="Btn_Msg"
                 Style="{StaticResource Msg}"
@@ -46,14 +46,14 @@
                         Margin="0 20 0 0">
                 <TextBlock FontFamily="{StaticResource Ole_Bold}"
                            FontSize="40"
-                           Foreground="#4D4D4D"
+                           Foreground="{DynamicResource _QR_Generator}"
                            HorizontalAlignment="Center">
                     About Us
                 </TextBlock>
                 <TextBlock Margin="0 20 0 0"
                            FontSize="14"
                            FontFamily="{StaticResource Regular}"
-                           Foreground="#4D4D4D"
+                           Foreground="{DynamicResource _QR_Generator}"
                            TextWrapping="Wrap"
                            FontWeight="Medium"
                            TextAlignment="Center">
@@ -64,14 +64,14 @@
 
                 <TextBlock FontFamily="{StaticResource Ole_Bold}"
                            FontSize="40"
-                           Foreground="#4D4D4D"
+                           Foreground="{DynamicResource _QR_Generator}"
                            HorizontalAlignment="Center">
                     Our Mission
                 </TextBlock>
                 <TextBlock Margin="0 20 0 0"
                            FontSize="14"
                            FontFamily="{StaticResource Regular}"
-                           Foreground="#4D4D4D"
+                           Foreground="{DynamicResource _QR_Generator}"
                            TextWrapping="Wrap"
                            FontWeight="Medium"
                            TextAlignment="Center">
@@ -82,7 +82,7 @@
                            FontSize="40"
                            HorizontalAlignment="Center"
                            Margin="10 20 10 10"
-                           Foreground="#4D4D4D">
+                           Foreground="{DynamicResource _QR_Generator}">
                     Our Team Members
                 </TextBlock>
 

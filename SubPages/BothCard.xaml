@@ -89,7 +89,7 @@
                                            Foreground="White"
                                            TextWrapping="Wrap"
                                            TextAlignment="Left">
-                                    My name is Koy Yotraboth. Alongside my university studies, I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development. This program spans 11 months, from February 19, 2024, to December 20, 2024.
+                                    My name is Koy Yotraboth. Alongside my university studies, I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development.
                                 </TextBlock>
                             </StackPanel>
                             <StackPanel>

@@ -6,13 +6,12 @@
              xmlns:local="clr-namespace:BLT_Generator.Pages"
              xmlns:helpers="clr-namespace:BLT_Generator.Helpers"
              mc:Ignorable="d"
-             d:DesignHeight="600" d:DesignWidth="1000"
-             Background="White">
+             d:DesignHeight="600" d:DesignWidth="1000">
     <UserControl.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </UserControl.Resources>
 
-    <Grid>
+    <Grid Background="{DynamicResource BackgroundColor}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="60"/>
@@ -28,9 +27,10 @@
                    Grid.Column="0"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"
+                   Foreground="{DynamicResource _QR_Generator}"
                    FontFamily="{StaticResource Ole_Bold}"
                    FontSize="20">
-            <Run Text="BLT" Foreground="#5782B6"/> QR Generator
+            <Run Text="BLT" Foreground="{DynamicResource _BLT}"/> QR Generator
         </TextBlock>
         <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
                     Orientation="Horizontal"
@@ -38,7 +38,7 @@
                     VerticalAlignment="Bottom">
             <Border Width="180"
                     Height="35"
-                    Background="#ebebeb"
+                    Background="{DynamicResource WIFI_URL_BG}"
                     CornerRadius="20">
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center">
@@ -71,13 +71,13 @@
               Grid.RowSpan="3"
               Grid.Column="2">
             <Border
-                Background="#162039"
+                Background="{DynamicResource LeftPanelBackground}"
                 CornerRadius="25">
                 <StackPanel Margin="20"
                             Orientation="Vertical">
                     <Border Height="170"
                             CornerRadius="25"
-                            Background="#53C6D7">
+                            Background="{DynamicResource QR_Background}">
                         <Border Width="150"
                                 Height="150">
                         </Border>
@@ -85,7 +85,7 @@
                     <Border Height="120"
                             CornerRadius="20"
                             Margin="0,20,0,0"
-                            Background="#53C6D7">
+                            Background="{DynamicResource QR_Background}">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="30"/>
@@ -103,7 +103,7 @@
                                         Margin="20 0 0 0">
                                 <TextBlock FontFamily="{StaticResource Bold}"
                                            FontSize="16"
-                                           Foreground="White">
+                                           Foreground="{DynamicResource Text}">
                                     Frame
                                 </TextBlock>
                             </StackPanel>
@@ -160,7 +160,7 @@
                               Height="45"
                               FontFamily="{StaticResource Bold}"
                               FontSize="16"
-                              Foreground="White">
+                              Foreground="{DynamicResource Text}">
                         <ComboBoxItem>
                             1
                         </ComboBoxItem>
@@ -182,13 +182,13 @@
                             <ControlTemplate TargetType="Button">
                                 <Border Height="45"
                                         CornerRadius="15"
-                                        Background="#53C6D7">
+                                        Background="{DynamicResource QR_Background}">
                                     <TextBlock Text="{TemplateBinding Content}"
                                                FontFamily="{StaticResource Bold}"
                                                VerticalAlignment="Center"
                                                HorizontalAlignment="Left"
                                                Margin="20 0 0 0"
-                                               Foreground="White"
+                                               Foreground="{DynamicResource Text}"
                                                FontSize="16"/>
                                 </Border>
                             </ControlTemplate>

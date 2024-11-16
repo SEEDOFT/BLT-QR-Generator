@@ -6,8 +6,7 @@
              xmlns:local="clr-namespace:BLT_Generator.SubPages"
              xmlns:helpers="clr-namespace:BLT_Generator.Helpers"
              mc:Ignorable="d"
-             d:DesignHeight="510" d:DesignWidth="300"
-             Background="White">
+             d:DesignHeight="510" d:DesignWidth="300">
 
     <UserControl.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
@@ -27,7 +26,7 @@
             </StackPanel>
             <StackPanel Grid.Row="1">
                 <TextBlock FontFamily="{StaticResource Bold}"
-                           Foreground="#4D4D4D"
+                           Foreground="{DynamicResource WU_Title}"
                            FontSize="30">
                     WIFI
                 </TextBlock>
@@ -49,17 +48,20 @@
                 <Border Width="250"
                         Height="30"
                         CornerRadius="20"
-                        Background="#F6F7F9"
+                        Background="{DynamicResource WIFI_URL_BG}"
                         Margin="0 25 0 0">
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
                         <RadioButton Content=" WPA"
+                                     Foreground="{DynamicResource Uncheck}"
                                      FontFamily="{StaticResource Regular}"/>
                         <RadioButton Content=" WEP"
+                                     Foreground="{DynamicResource Uncheck}"
                                      FontFamily="{StaticResource Regular}"
                                      Margin="20 0 0 0"/>
                         <RadioButton Content=" None"
+                                     Foreground="{DynamicResource Uncheck}"
                                      FontFamily="{StaticResource Regular}"
                                      Margin="20 0 0 0"/>
                     </StackPanel>

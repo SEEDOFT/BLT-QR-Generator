@@ -14,7 +14,7 @@
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </Window.Resources>
 
-    <Grid>
+    <Grid Background="{DynamicResource BackgroundColor}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="60"/>
@@ -84,7 +84,7 @@
                     VerticalAlignment="Center">
             <Border Height="460"
                     CornerRadius="30"
-                    Background="#162039">
+                    Background="{DynamicResource LeftPanelBackground}">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50"/>
