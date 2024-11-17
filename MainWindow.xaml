@@ -36,19 +36,18 @@
               x:Name="Grid_Main">
 
         </Grid>
-        <Grid Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="4"
+        <Grid Grid.Row="1" Grid.RowSpan="3" Grid.Column="3" Grid.ColumnSpan="4"
               x:Name="Grid_Big">
 
         </Grid>
         <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-        <Border Grid.Column="1" Grid.Row="1"
-                Width="60"
-                Height="60"
-                VerticalAlignment="Top">
-            <Border.Background>
-                <ImageBrush ImageSource="./Images/BLT_Lightmode.png" Stretch="UniformToFill"/>
-            </Border.Background>
-        </Border>
+        <Image Grid.Column="1" Grid.Row="1"
+               Width="60"
+               Height="60"
+               VerticalAlignment="Top"
+               Stretch="UniformToFill"
+               Source="{DynamicResource BLT_Icon}"/>
+
         <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7"
                 Background="Transparent"
                 MouseDown="Border_MouseDown">
@@ -56,21 +55,15 @@
                         HorizontalAlignment="Right"
                         VerticalAlignment="Center">
                 <Button x:Name="Btn_Minimize"
-                        Width="20"
-                        Height="20"
-                        Background="Black"
+                        Style="{StaticResource Minimize}"
                         Margin="0 0 6 0"
                         Click="Btn_Minimize_Click"/>
                 <Button x:Name="Btn_Maximize"
-                        Width="20"
-                        Height="20"
-                        Background="Blue"
+                        Style="{StaticResource Maximize}"
                         Margin="0 0 6 0"
                         Click="Btn_Maximize_Click"/>
                 <Button x:Name="Btn_Close"
-                        Width="20"
-                        Height="20"
-                        Background="Red"
+                        Style="{StaticResource Close}"
                         Margin="0 0 6 0"
                         Click="Btn_Close_Click"/>
             </StackPanel>
@@ -97,22 +90,22 @@
 
                         <ToggleButton x:Name="Btn_Generate"
                                       Style="{StaticResource SelectableButtonStyle}"
-                                      Tag="/Images/WhiteIcons/wQR.png"
+                                      Tag="{DynamicResource QR_Icon}"
                                       Click="Btn_Generate_Click"/>
                         <ToggleButton x:Name="Btn_History"
                                       Margin="0 20 0 0"
                                       Style="{StaticResource SelectableButtonStyle}"
-                                      Tag="/Images/WhiteIcons/wHistory.png"
+                                      Tag="{DynamicResource History_Icon}"
                                       Click="Btn_History_Click"/>
                         <ToggleButton x:Name="Btn_Setting"
                                       Margin="0 20 0 0"
                                       Style="{StaticResource SelectableButtonStyle}"
-                                      Tag="/Images/WhiteIcons/wSetting.png"
+                                      Tag="{DynamicResource Setting_Icon}"
                                       Click="Btn_Setting_Click"/>
                         <ToggleButton x:Name="Btn_Profile"
                                       Margin="0 20 0 0"
                                       Style="{StaticResource SelectableButtonStyle}"
-                                      Tag="/Images/WhiteIcons/wUser.png"
+                                      Tag="{DynamicResource User_Icon}"
                                       Click="Btn_Profile_Click"/>
                     </StackPanel>
                 </Grid>

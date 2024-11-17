@@ -24,12 +24,13 @@
     <None Remove="Images\BlackIcons\ArrowRight.png" />
     <None Remove="Images\BlackIcons\Back.png" />
     <None Remove="Images\BlackIcons\Book.png" />
-    <None Remove="Images\BlackIcons\Book1.png" />
-    <None Remove="Images\BlackIcons\Book2.png" />
     <None Remove="Images\BlackIcons\Calendar.png" />
     <None Remove="Images\BlackIcons\Copy.png" />
+    <None Remove="Images\BlackIcons\Cross.png" />
     <None Remove="Images\BlackIcons\Earth.png" />
     <None Remove="Images\BlackIcons\Link.png" />
+    <None Remove="Images\BlackIcons\Maximize.png" />
+    <None Remove="Images\BlackIcons\Minimize.png" />
     <None Remove="Images\BlackIcons\Passcode.png" />
     <None Remove="Images\BlackIcons\Pin.png" />
     <None Remove="Images\BlackIcons\Question.png" />
@@ -60,16 +61,34 @@
     <None Remove="Images\Contents\Telegram.png" />
     <None Remove="Images\Contents\Thea.jpg" />
     <None Remove="Images\Contents\UK.png" />
-    <None Remove="Images\WhiteIcons\Minimize.png" />
+    <None Remove="Images\DarkIcons\dArrowRight.png" />
+    <None Remove="Images\DarkIcons\dBook.png" />
+    <None Remove="Images\DarkIcons\dCalendar.png" />
+    <None Remove="Images\DarkIcons\dEarth.png" />
+    <None Remove="Images\DarkIcons\dHistory.png" />
+    <None Remove="Images\DarkIcons\dLink.png" />
+    <None Remove="Images\DarkIcons\dPin.png" />
+    <None Remove="Images\DarkIcons\dQR.png" />
+    <None Remove="Images\DarkIcons\dQuestion.png" />
+    <None Remove="Images\DarkIcons\dReverse.png" />
+    <None Remove="Images\DarkIcons\dSave.png" />
+    <None Remove="Images\DarkIcons\dSetting.png" />
+    <None Remove="Images\DarkIcons\dSun.png" />
+    <None Remove="Images\DarkIcons\dUser.png" />
+    <None Remove="Images\DarkIcons\dWIFI.png" />
     <None Remove="Images\WhiteIcons\wArrowRight.png" />
     <None Remove="Images\WhiteIcons\wBack.png" />
     <None Remove="Images\WhiteIcons\wBook.png" />
     <None Remove="Images\WhiteIcons\wCalendar.png" />
+    <None Remove="Images\WhiteIcons\wCalendar1.png" />
     <None Remove="Images\WhiteIcons\wCopy.png" />
+    <None Remove="Images\WhiteIcons\wCross.png" />
     <None Remove="Images\WhiteIcons\wEarth.png" />
     <None Remove="Images\WhiteIcons\wHistory.png" />
     <None Remove="Images\WhiteIcons\wLeave.png" />
     <None Remove="Images\WhiteIcons\wLink.png" />
+    <None Remove="Images\WhiteIcons\wMaximize.png" />
+    <None Remove="Images\WhiteIcons\wMinimize.png" />
     <None Remove="Images\WhiteIcons\wPasscode.png" />
     <None Remove="Images\WhiteIcons\wPin.png" />
     <None Remove="Images\WhiteIcons\wQR.png" />
@@ -114,16 +133,22 @@
     <Resource Include="Images\BlackIcons\Back.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\BlackIcons\Book1.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\BlackIcons\Book2.png">
+    <Resource Include="Images\BlackIcons\Book.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\BlackIcons\Copy.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\BlackIcons\Cross.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\BlackIcons\Earth.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Maximize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BlackIcons\Minimize.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\BlackIcons\Passcode.png">
@@ -142,12 +167,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\BlackIcons\Pin.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Images\BlackIcons\Book.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
@@ -172,12 +191,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\BlackIcons\Reverse.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\BlackIcons\rMinimize.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\BlackIcons\rXmark.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\BlackIcons\Upload.png">
@@ -243,7 +256,49 @@
     <Resource Include="Images\Contents\UK.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\WhiteIcons\Minimize.png">
+    <Resource Include="Images\DarkIcons\dArrowRight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dBook.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dCalendar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dEarth.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dHistory.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dLink.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dPin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dQR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dQuestion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dReverse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dSave.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dSetting.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dSun.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dUser.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DarkIcons\dWIFI.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wArrowRight.png">
@@ -258,7 +313,13 @@
     <Resource Include="Images\WhiteIcons\wCalendar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\WhiteIcons\wCalendar1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\WhiteIcons\wCopy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wCross.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wEarth.png">
@@ -267,10 +328,13 @@
     <Resource Include="Images\WhiteIcons\wHistory.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\WhiteIcons\wLeave.png">
+    <Resource Include="Images\WhiteIcons\wLink.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\WhiteIcons\wLink.png">
+    <Resource Include="Images\WhiteIcons\wMaximize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\wMinimize.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wPasscode.png">
@@ -307,9 +371,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wWIFI.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\WhiteIcons\Xmark.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

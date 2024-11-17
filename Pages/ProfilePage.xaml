@@ -89,6 +89,15 @@
                 <Grid x:Name="Card_Display" Margin="0 20 0 0">
 
                 </Grid>
+
+                <TextBlock FontFamily="{StaticResource Ole_Bold}"
+                           FontSize="40"
+                           Foreground="{DynamicResource _QR_Generator}"
+                           HorizontalAlignment="Center">
+                    <LineBreak/>
+                    Thank you for using our application.
+                    <LineBreak/>
+                </TextBlock>
             </StackPanel>
         </ScrollViewer>
     </Grid>

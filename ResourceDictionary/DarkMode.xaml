@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <!--Background Color-->
     <Color x:Key="Background">#14181C</Color>
     <SolidColorBrush x:Key="BackgroundColor" Color="{DynamicResource Background}"/>
@@ -33,6 +34,26 @@
     <!-- A letter from us(Inside background  -->
     <Color x:Key="MessageInside">#3C3D37</Color>
     <SolidColorBrush x:Key="MessageInsideBG" Color="{DynamicResource MessageInside}"/>
+    <!-- FAQ top Background -->
+    <Color x:Key="TBR">#ECDFCC</Color>
+    <SolidColorBrush x:Key="FAQ_Top" Color="{DynamicResource TBR}"/>
+
+
+    <!--Loading Screen -->
+    <!--Top left -->
+    <Color x:Key="TL">#3C3D37</Color>
+    <SolidColorBrush x:Key="TopLeft" Color="{DynamicResource TL}"/>
+    <!--Top Right -->
+    <Color x:Key="TR">#C1B7A6</Color>
+    <SolidColorBrush x:Key="TopRight" Color="{DynamicResource TR}"/>
+    <!--Bottom Left -->
+    <Color x:Key="BL">#ECDFCC</Color>
+    <SolidColorBrush x:Key="BottomLeft" Color="{DynamicResource BL}"/>
+    <!--Bottom Right -->
+    <Color x:Key="BR">#697565</Color>
+    <SolidColorBrush x:Key="BottomRight" Color="{DynamicResource BR}"/>
+
+
 
     <!-- Dropdown Icon (Combobox) -->
     <Color x:Key="DD">#ECDFCC</Color>
@@ -44,6 +65,14 @@
     <Color x:Key="DD3">#000000</Color>
     <SolidColorBrush x:Key="DropdownHower" Color="{DynamicResource DD3}"/>
 
+
+
+    <!-- TextBox Color -->
+    <Color x:Key="TxbColor">#ECDFCC</Color>
+    <SolidColorBrush x:Key="TxB" Color="{DynamicResource TxbColor}"/>
+    <!-- TextBox Color (PIN) -->
+    <Color x:Key="TxbPin">#ECDFCC</Color>
+    <SolidColorBrush x:Key="TxPin" Color="{DynamicResource TxbPin}"/>
     <!--Text Title (BLT QR Generator) -->
     <Color x:Key="BLT">#697565</Color>
     <SolidColorBrush x:Key="_BLT" Color="{DynamicResource BLT}"/>
@@ -67,6 +96,63 @@
     <!-- Regenerate button (when isMouseOver) -->
     <Color x:Key="Regen">#000000</Color>
     <SolidColorBrush x:Key="HowerRegenerate" Color="{DynamicResource Regen}"/>
+    <!--Profile Image Border -->
+    <Color x:Key="st">#4D181C14</Color>
+    <SolidColorBrush x:Key="FrontBD" Color="{DynamicResource st}"/>
 
 
+    <!--Icons and Images-->
+    <!--BLT Icon-->
+    <ImageSource x:Key="BLT_Icon">/Images/BLT_Darkmode.png</ImageSource>
+    <!--Left Panel-->
+    <!--QR Button-->
+    <sys:String x:Key="QR_Icon">/Images/DarkIcons/dQR.png</sys:String>
+    <!--History Button-->
+    <sys:String x:Key="History_Icon">/Images/DarkIcons/dHistory.png</sys:String>
+    <!--Setting Button-->
+    <sys:String x:Key="Setting_Icon">/Images/DarkIcons/dSetting.png</sys:String>
+    <!--User Button-->
+    <sys:String x:Key="User_Icon">/Images/DarkIcons/dUser.png</sys:String>
+    <!---->
+    <!--Link Icon-->
+    <sys:String x:Key="Link_Icon_Check">/Images/WhiteIcons/wLink.png</sys:String>
+    <sys:String x:Key="Link_Icon_UnCheck">/Images/DarkIcons/dLink.png</sys:String>
+    <!--WIFI Icon-->
+    <sys:String x:Key="WIFI_Icon_Check">/Images/WhiteIcons/wWIFI.png</sys:String>
+    <sys:String x:Key="WIFI_Icon_UnCheck">/Images/DarkIcons/dWIFI.png</sys:String>
+    <!--FAQ Back Button -->
+    <ImageSource x:Key="FAQ_BackIcon">/Images/BlackIcons/Back.png</ImageSource>
+    <!--is Hower -->
+    <ImageSource x:Key="FAQ_BackIcon_Hower">/Images/WhiteIcons/wBack.png</ImageSource>
+    <!-- FAQ Question -->
+    <ImageSource x:Key="FAQ_ButtonIcon">/Images/DarkIcons/dQuestion.png</ImageSource>
+    <!-- Is Hower -->
+    <ImageSource x:Key="FAQ_ButtonIcon_Hower">/Images/WhiteIcons/wQuestion.png</ImageSource>
+    <!-- Regenerate Icon -->
+    <ImageSource x:Key="RegenerateIcon">/Images/DarkIcons/dReverse.png</ImageSource>
+    <!--Is Hower -->
+    <ImageSource x:Key="RegenerateIconHower">/Images/BlackIcons/Reverse.png</ImageSource>
+    <!--Language Icon -->
+    <ImageSource x:Key="LanguageIcon">/Images/DarkIcons/dEarth.png</ImageSource>
+    <!--Theme Icon -->
+    <ImageSource x:Key="ThemeIcon">/Images/DarkIcons/dSun.png</ImageSource>
+    <!--PIN Icon -->
+    <ImageSource x:Key="PinIcon">/Images/DarkIcons/dPin.png</ImageSource>
+    <!--Arrow Right (Caret) Icon -->
+    <ImageSource x:Key="ArrowRightIcon">/Images/DarkIcons/dArrowRight.png</ImageSource>
+    <!--Book Icon-->
+    <ImageSource x:Key="BookIcon">/Images/DarkIcons/dBook.png</ImageSource>
+    <!--is Hower-->
+    <ImageSource x:Key="BookIconHower">/Images/WhiteIcons/wBook.png</ImageSource>
+    <!-- Calendar Icon-->
+    <ImageSource x:Key="CalendarIcon">/Images/DarkIcons/dCalendar.png</ImageSource>
+    <!--Is Hower-->
+    <ImageSource x:Key="CalendarIconHower">/Images/WhiteIcons/wCalendar1.png</ImageSource>
+
+    <!--BOTH Profile Picture -->
+    <ImageSource x:Key="BothProfile">/Images/Contents/B.png</ImageSource>
+    <!--Leng Profile Picture -->
+    <ImageSource x:Key="LengProfile">/Images/Contents/L.png</ImageSource>
+    <!--Kunthea Profile Picture -->
+    <ImageSource x:Key="TheaProfile">/Images/Contents/T.png</ImageSource>
 </ResourceDictionary>

@@ -15,40 +15,106 @@
         <ResourceDictionary Source="./ResourceDictionary/MainResources.xaml"/>
     </Window.Resources>
 
-    <Grid>
+    <Grid Background="{DynamicResource BackgroundColor}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <WrapPanel>
-                <Border Width="50"
-                        Height="50"
-                        CornerRadius="25">
-                    <Border.Background>
-                        <ImageBrush ImageSource="./Images/BLT Logo.png" Stretch="UniformToFill"/>
-                    </Border.Background>
-                </Border>
-                <TextBlock FontSize="28"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center"
-                           Foreground="#4d4d4d"
-                           FontFamily="{StaticResource Bold}"
-                           Margin="15 0 0 0">
-                    BLT Generator
-                </TextBlock>
-            </WrapPanel>
-            <TextBlock Text="Loading Resources"
-                       Margin="0 30 0 15"
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.Column="0" Grid.Row="0"
+                   Width="200" Height="150"
+                   Fill="{DynamicResource TopLeft}"
+                   RenderTransformOrigin="0,1">
+            <Rectangle.RenderTransform>
+                <RotateTransform Angle="-35"/>
+            </Rectangle.RenderTransform>
+            <Rectangle.HorizontalAlignment>Left</Rectangle.HorizontalAlignment>
+            <Rectangle.VerticalAlignment>Top</Rectangle.VerticalAlignment>
+        </Rectangle>
+
+        <Rectangle Grid.Column="2" Grid.Row="0"
+                   Width="300" Height="150"
+                   Fill="{DynamicResource TopRight}"
+                   RenderTransformOrigin="0.9,1.1">
+            <Rectangle.RenderTransform>
+                <RotateTransform Angle="45"/>
+            </Rectangle.RenderTransform>
+            <Rectangle.HorizontalAlignment>Right</Rectangle.HorizontalAlignment>
+            <Rectangle.VerticalAlignment>Top</Rectangle.VerticalAlignment>
+        </Rectangle>
+
+        <Rectangle Grid.Column="0" Grid.Row="1"
+                   Width="250" Height="250"
+                   Fill="{DynamicResource BottomLeft}"
+                   RenderTransformOrigin="0,-0.9">
+            <Rectangle.RenderTransform>
+                <RotateTransform Angle="8"/>
+            </Rectangle.RenderTransform>
+            <Rectangle.HorizontalAlignment>Left</Rectangle.HorizontalAlignment>
+            <Rectangle.VerticalAlignment>Bottom</Rectangle.VerticalAlignment>
+        </Rectangle>
+
+        <Rectangle Grid.Column="2" Grid.Row="1"
+                   Width="300" Height="150"
+                   Fill="{DynamicResource BottomRight}"
+                   RenderTransformOrigin="0.8,-0.2">
+            <Rectangle.RenderTransform>
+                <RotateTransform Angle="-45"/>
+            </Rectangle.RenderTransform>
+            <Rectangle.HorizontalAlignment>Right</Rectangle.HorizontalAlignment>
+            <Rectangle.VerticalAlignment>Bottom</Rectangle.VerticalAlignment>
+        </Rectangle>
+
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center">
+            <TextBlock Grid.Column="1"
+                       HorizontalAlignment="Center"
+                       Foreground="{DynamicResource _QR_Generator}"
+                       FontFamily="{StaticResource Ole_Bold}"
+                       FontSize="25">
+                Welcome to <Run Text="BLT" Foreground="{DynamicResource _BLT}"/> QR Generator
+            </TextBlock>
+            <Image Width="70"
+                   Height="70"
+                   Margin="0 40"
+                   Stretch="UniformToFill"
+                   Source="{DynamicResource BLT_Icon}">
+            </Image>
+            <ProgressBar Grid.Column="1" x:Name="progressBar"
+                         Value="0" Height="20"
+                         VerticalAlignment="Center"
+                         Background="Transparent">
+                <ProgressBar.Template>
+                    <ControlTemplate TargetType="ProgressBar">
+                        <Grid>
+                            <Border Background="Transparent" CornerRadius="6" />
+
+                            <Border x:Name="PART_Track" Background="Transparent" CornerRadius="10">
+                                <Border x:Name="PART_Indicator"
+                                        Background="#408ee0"
+                                        CornerRadius="10"
+                                        HorizontalAlignment="Left"
+                                        Width="0" />
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </ProgressBar.Template>
+            </ProgressBar>
+            <TextBlock FontFamily="{StaticResource Medium}"
                        FontSize="14"
-                       Foreground="#4d4d4d"
-                       FontFamily="{StaticResource Regular}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Left"/>
-            <ProgressBar x:Name="progressBar"
-                         Value="0"
-                         Width="250" Height="5" IsIndeterminate="True"
-                         VerticalAlignment="Bottom"/>
+                       Margin="0 20"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Foreground="{DynamicResource _QR_Generator}">
+                Every scan tells a story. Make yours unique with BLT QR Generator.
+            </TextBlock>
         </StackPanel>
+
     </Grid>
 </Window>

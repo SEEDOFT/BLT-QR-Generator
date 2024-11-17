@@ -21,7 +21,7 @@
                 <ScaleTransform ScaleX="1"/>
             </Border.RenderTransform>
             <Border.Background>
-                <ImageBrush ImageSource="/Images/Contents/B.png"
+                <ImageBrush ImageSource="{DynamicResource BothProfile}"
                             Stretch="UniformToFill"/>
             </Border.Background>
             <Border CornerRadius="0 0 10 10"
@@ -29,18 +29,18 @@
                     VerticalAlignment="Bottom"
                     Width="200"
                     Height="80"
-                    Background="#4D162039">
+                    Background="{DynamicResource FrontBD}">
                 <StackPanel HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             Orientation="Vertical">
                     <TextBlock FontFamily="{StaticResource Bold}"
                                FontSize="21"
-                               Foreground="White">
+                               Foreground="{DynamicResource Text}">
                         KOY YOTRABOTH
                     </TextBlock>
                     <TextBlock FontFamily="{StaticResource Bold}"
                                FontSize="16"
-                               Foreground="White">
+                               Foreground="{DynamicResource Text}">
                         Developer
                     </TextBlock>
                 </StackPanel>
@@ -60,7 +60,7 @@
             <Grid>
                 <Border CornerRadius="10">
                     <Border.Background>
-                        <ImageBrush ImageSource="/Images/Contents/B.png"
+                        <ImageBrush ImageSource="{DynamicResource BothProfile}"
                                     Stretch="UniformToFill"/>
                     </Border.Background>
                     <Border.Effect>
@@ -80,13 +80,13 @@
                                 <TextBlock FontFamily="{StaticResource Bold}"
                                            FontSize="20"
                                            TextAlignment="Center"
-                                           Foreground="White">
+                                           Foreground="{DynamicResource Text}">
                                     KOY YOTRABOTH
                                 </TextBlock>
                                 <TextBlock FontFamily="{StaticResource Regular}"
                                            FontSize="12"
                                            Margin="5 5 5 0"
-                                           Foreground="White"
+                                           Foreground="{DynamicResource Text}"
                                            TextWrapping="Wrap"
                                            TextAlignment="Left">
                                     My name is Koy Yotraboth. Alongside my university studies, I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development.
@@ -105,7 +105,7 @@
                                            FontSize="14"
                                            HorizontalAlignment="Center"
                                            VerticalAlignment="Center"
-                                           Foreground="White">
+                                           Foreground="{DynamicResource Text}">
                                     Follow us
                                 </TextBlock>
                                 <StackPanel Grid.Column="1"

@@ -9,7 +9,8 @@
         WindowStartupLocation="CenterOwner"
         Background="Transparent"
         AllowsTransparency="True"
-        Title="LetterMessage" Height="600" Width="1000">
+        Title="LetterMessage"
+        Height="600" Width="1000">
 
     <Window.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
@@ -25,37 +26,17 @@
                 <StackPanel Margin="15">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="30"/>
                             <RowDefinition Height="55"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <!-- Close button in the top-right corner -->
                         <Button x:Name="CloseButton"
                                 Grid.Row="0"
-                                Content="X"
-                                Width="20" Height="20"
+                                Style="{StaticResource Close}"
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Top"
-                                Background="Transparent"
-                                Foreground="White"
-                                BorderThickness="0"
                                 Click="CloseButton_Click">
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Background="{TemplateBinding Background}">
-                                        <TextBlock x:Name="PART_TextBlock"
-                                                   Text="{TemplateBinding Content}"
-                                                   HorizontalAlignment="Center"
-                                                   VerticalAlignment="Center"
-                                                   Foreground="{TemplateBinding Foreground}" />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter TargetName="PART_TextBlock" Property="Foreground" Value="red" />
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Button.Template>
                         </Button>
 
                         <Grid Grid.Row="1">
@@ -204,22 +185,23 @@
                                        HorizontalAlignment="Center"
                                        TextAlignment="Center"
                                        Foreground="White"
-                                       Margin="0,25,0,0">
+                                       Margin="0,19,0,0">
                                 We're the scholarship students at <Run Text="ANT Technology Training Center" FontWeight="Bold"/>, specialize in <Run Text="Mobile Application." FontWeight="Bold"/> Study For 11 Months From 19 February 2024 To 20 December 2024. Thanks to the generous support of the <Run Text="Ministry of Post and Telecommunication." FontWeight="Bold"/> This opportunity is allowing us to develop valuable skills in mobile app development and pursue exciting careers in the tech industry.
                             </TextBlock>
                         </StackPanel>
                     </Grid>
                 </StackPanel>
                 <Border Width="150"
-                        Height="41"
+                        Height="40"
                         Background="White"
                         HorizontalAlignment="Left"
                         CornerRadius="0,20,0,20">
                     <TextBlock FontFamily="{StaticResource Ole_Bold}"
                                FontSize="20"
+                               Foreground="Black"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center">
-                        <Run Text="BLT" Foreground="#5782B6"/> Generator
+                        <Run Text="BLT" Foreground="{DynamicResource _BLT}"/> Generator
                     </TextBlock>
                 </Border>
             </StackPanel>

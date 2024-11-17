@@ -9,13 +9,14 @@
         WindowStartupLocation="CenterOwner"
         Background="Transparent"
         AllowsTransparency="True"
-        Title="LetterMessage" Height="600" Width="1000">
+        Title="LetterMessage"
+        Height="600" Width="1000">
 
     <Window.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </Window.Resources>
 
-    <Grid Background="#80fdfdfd">
+    <Grid Background="{DynamicResource MessageBG}">
         <Border Width="700" Height="500"
                 Background="#686D76"
                 CornerRadius="20"
@@ -35,18 +36,14 @@
                     </Grid.RowDefinitions>
                     <Button x:Name="CloseButton"
                             Grid.Row="0"
-                            Content="X"
-                            Width="20" Height="20"
+                            Style="{StaticResource Close}"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Top"
-                            Background="Black"
-                            Foreground="Gray"
-                            BorderThickness="0"
                             Click="CloseButton_Click"/>
                     <TextBlock Grid.Row="1" Margin="25 0 0 0"
                                FontFamily="{StaticResource Regular}"
                                FontSize="16" Text="Default"
-                               Foreground="White"
+                               Foreground="{DynamicResource Text}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Left"/>
                     <Grid Grid.Row="2">
@@ -110,7 +107,7 @@
                     <TextBlock Grid.Row="3" Margin="25 0 0 0"
                                FontFamily="{StaticResource Regular}"
                                FontSize="16" Text="Recent"
-                               Foreground="White"
+                               Foreground="{DynamicResource Text}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Left"/>
                     <Grid Grid.Row="4">
@@ -173,7 +170,7 @@
                     <TextBlock Grid.Row="5" Margin="25 0 0 0"
                                FontFamily="{StaticResource Regular}"
                                FontSize="16" Text="Choose File"
-                               Foreground="White"
+                               Foreground="{DynamicResource Text}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Left"/>
                     <Grid Grid.Row="6" Margin="15 15 15 0">
@@ -184,6 +181,7 @@
                             <Button Style="{StaticResource Upload}"
                                     Content="Browse files"
                                     FontFamily="{StaticResource Regular}"
+                                    Foreground="{DynamicResource Text}"
                                     FontSize="16"/>
                         </Border>
                     </Grid>

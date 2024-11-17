@@ -4,8 +4,8 @@
     <Style x:Key="Txb" TargetType="TextBox">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Foreground" Value="{DynamicResource WU_Title}"/>
-
+        <Setter Property="Foreground" Value="{DynamicResource TxB}"/>
+        <Setter Property="CaretBrush" Value="{DynamicResource TxB}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
@@ -13,6 +13,31 @@
                         <Border x:Name="border"
                                 BorderThickness="0,0,0,1"
                                 BorderBrush="Gray"
+                                Margin="0"
+                                Padding="0 5">
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="0"/>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- For PINs -->
+
+    <Style x:Key="PIN" TargetType="TextBox">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Foreground" Value="{DynamicResource TxPin}"/>
+        <Setter Property="CaretBrush" Value="{DynamicResource TxPin}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Grid>
+                        <Border x:Name="border"
+                                BorderThickness="1"
+                                BorderBrush="{DynamicResource TxPin}"
                                 Margin="0"
                                 Padding="0 5">
                             <ScrollViewer x:Name="PART_ContentHost" Margin="0"/>

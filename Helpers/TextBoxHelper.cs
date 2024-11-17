@@ -11,8 +11,7 @@ namespace BLT_Generator.Helpers
 {
     public static class TextBoxHelper
     {
-        public static readonly DependencyProperty PlaceholderTextProperty =
-        DependencyProperty.RegisterAttached(
+        public static readonly DependencyProperty PlaceholderTextProperty = DependencyProperty.RegisterAttached (
             "PlaceholderText",
             typeof(string),
             typeof(TextBoxHelper),
@@ -31,7 +30,6 @@ namespace BLT_Generator.Helpers
                 if (string.IsNullOrEmpty(textBox.Text))
                 {
                     textBox.Text = (string)e.NewValue;
-                    textBox.Foreground = Brushes.Gray;
                 }
 
                 textBox.GotFocus += (sender, args) =>
@@ -39,7 +37,6 @@ namespace BLT_Generator.Helpers
                     if (textBox.Text == (string)e.NewValue)
                     {
                         textBox.Text = string.Empty;
-                        textBox.Foreground = Brushes.Black;
                     }
                 };
 
@@ -48,7 +45,6 @@ namespace BLT_Generator.Helpers
                     if (string.IsNullOrEmpty(textBox.Text))
                     {
                         textBox.Text = (string)e.NewValue;
-                        textBox.Foreground = Brushes.Gray;
                     }
                 };
             }

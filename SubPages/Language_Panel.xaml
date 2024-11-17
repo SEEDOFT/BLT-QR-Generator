@@ -21,7 +21,7 @@
                     BorderThickness="0 0 0 1"
                     BorderBrush="Black">
                 <TextBlock FontFamily="{StaticResource Regular}"
-                           FontSize="14"
+                           FontSize="12"
                            Foreground="{DynamicResource Uncheck}"
                            TextWrapping="Wrap">
                     <Run Text="Default"
@@ -39,7 +39,7 @@
 
                 <TextBlock FontFamily="{StaticResource Regular}"
                            Foreground="{DynamicResource Uncheck}"
-                           FontSize="14"
+                           FontSize="12"
                            TextWrapping="Wrap"
                            Text="{DynamicResource changeLangDetail}"
                            Margin="0,5,0,0"/>

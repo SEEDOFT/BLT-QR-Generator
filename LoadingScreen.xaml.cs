@@ -22,6 +22,7 @@ namespace BLT_Generator
     {
         public LoadingScreen()
         {
+            SubPages.Theme_Panel theme_Panel = new SubPages.Theme_Panel();
             InitializeComponent();
         }
 
@@ -36,10 +37,14 @@ namespace BLT_Generator
 
         void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            for (int i = 0; i <= 60; i++)
+            for (int i = 0; i <= 100; i++)
             {
                 ((BackgroundWorker)sender).ReportProgress(i);
-                Thread.Sleep(50);
+                Thread.Sleep(20);
+                if(i >= 80 && i <= 100)
+                {
+                    Thread.Sleep(50);
+                }
             }
         }
 
@@ -47,7 +52,7 @@ namespace BLT_Generator
         {
             progressBar.Value = e.ProgressPercentage;
 
-            if (progressBar.Value == 60)
+            if (progressBar.Value == 100)
             {
                 MainWindow main = new MainWindow();
                 Close();

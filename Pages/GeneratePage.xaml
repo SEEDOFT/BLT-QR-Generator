@@ -21,7 +21,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="65"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0"
                    Grid.Column="0"
@@ -47,8 +48,8 @@
                                   Content="URL"
                                   FontFamily="{StaticResource Regular}"
                                   FontSize="10"
-                                  helpers:ToggleButtonHelper.CheckedIcon="/Images/WhiteIcons/wLink.png"
-                                  helpers:ToggleButtonHelper.UncheckedIcon="/Images/BlackIcons/Link.png"
+                                  helpers:ToggleButtonHelper.CheckedIcon="{DynamicResource Link_Icon_Check}"
+                                  helpers:ToggleButtonHelper.UncheckedIcon="{DynamicResource Link_Icon_UnCheck}"
                                   Click="Btn_URL_Click"/>
                     <ToggleButton x:Name="Btn_WIFI"
                                   Style="{StaticResource TopButton}"
@@ -56,8 +57,8 @@
                                   FontFamily="{StaticResource Regular}"
                                   FontSize="10"
                                   Margin="5 0 0 0"
-                                  helpers:ToggleButtonHelper.CheckedIcon="/Images/WhiteIcons/wWIFI.png"
-                                  helpers:ToggleButtonHelper.UncheckedIcon="/Images/BlackIcons/WIFI.png"
+                                  helpers:ToggleButtonHelper.CheckedIcon="{DynamicResource WIFI_Icon_Check}"
+                                  helpers:ToggleButtonHelper.UncheckedIcon="{DynamicResource WIFI_Icon_UnCheck}"
                                   Click="Btn_WIFI_Click"/>
                 </StackPanel>
             </Border>
@@ -161,17 +162,17 @@
                               FontFamily="{StaticResource Bold}"
                               FontSize="16"
                               Foreground="{DynamicResource Text}">
-                        <ComboBoxItem>
+                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}">
                             1
                         </ComboBoxItem>
-                        <ComboBoxItem>
-                            1
+                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}">
+                            2
                         </ComboBoxItem>
-                        <ComboBoxItem>
-                            1
+                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}">
+                            3
                         </ComboBoxItem>
-                        <ComboBoxItem>
-                            1
+                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}">
+                            4
                         </ComboBoxItem>
                     </ComboBox>
 

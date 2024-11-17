@@ -148,7 +148,7 @@
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="Border">
                         <Border.Background>
-                            <ImageBrush ImageSource="/Images/BlackIcons/Book2.png"
+                            <ImageBrush ImageSource="{DynamicResource BookIcon}"
                                         Stretch="UniformToFill"/>
                         </Border.Background>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -157,7 +157,7 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="Border" Property="Background">
                                 <Setter.Value>
-                                    <ImageBrush ImageSource="/Images/BlackIcons/Book1.png"
+                                    <ImageBrush ImageSource="{DynamicResource BookIconHower}"
                                                 Stretch="UniformToFill"/>
                                 </Setter.Value>
                             </Setter>
@@ -176,7 +176,7 @@
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="Border">
                         <Border.Background>
-                            <ImageBrush ImageSource="/Images/BlackIcons/Question.png"
+                            <ImageBrush ImageSource="{DynamicResource FAQ_ButtonIcon}"
                                         Stretch="UniformToFill"/>
                         </Border.Background>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -185,7 +185,7 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="Border" Property="Background">
                                 <Setter.Value>
-                                    <ImageBrush ImageSource="/Images/WhiteIcons/wQuestion.png"
+                                    <ImageBrush ImageSource="{DynamicResource FAQ_ButtonIcon_Hower}"
                                                 Stretch="UniformToFill"/>
                                 </Setter.Value>
                             </Setter>
@@ -195,6 +195,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!---->
     <Style x:Key="FAQ_Back" TargetType="Button">
         <Setter Property="Width" Value="25"/>
         <Setter Property="Height" Value="25"/>
@@ -203,7 +204,7 @@
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="Border">
                         <Border.Background>
-                            <ImageBrush ImageSource="/Images/BlackIcons/Back.png"
+                            <ImageBrush ImageSource="{DynamicResource FAQ_BackIcon}"
                                         Stretch="UniformToFill"/>
                         </Border.Background>
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -212,7 +213,7 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="Border" Property="Background">
                                 <Setter.Value>
-                                    <ImageBrush ImageSource="/Images/WhiteIcons/wBack.png"
+                                    <ImageBrush ImageSource="{DynamicResource FAQ_BackIcon_Hower}"
                                                 Stretch="UniformToFill"/>
                                 </Setter.Value>
                             </Setter>
@@ -234,7 +235,7 @@
                                       Cursor="Hand"
                                       Focusable="False">
                             <Image x:Name="CalendarIcon"
-                                   Source="/Images/WhiteIcons/wCalendar.png"
+                                   Source="{DynamicResource CalendarIcon}"
                                    Width="20" Height="20" Stretch="UniformToFill"/>
 
                             <!-- Trigger to change the image when IsMouseOver -->
@@ -244,11 +245,11 @@
                                         <Setter.Value>
                                             <ControlTemplate TargetType="ToggleButton">
                                                 <Image x:Name="IconImage"
-                                                       Source="/Images/WhiteIcons/wCalendar.png"
+                                                       Source="{DynamicResource CalendarIcon}"
                                                        Width="20" Height="20" Stretch="UniformToFill"/>
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsMouseOver" Value="True">
-                                                        <Setter TargetName="IconImage" Property="Source" Value="/Images/WhiteIcons/wCalendar.png"/>
+                                                        <Setter TargetName="IconImage" Property="Source" Value="{DynamicResource CalendarIconHower}"/>
                                                     </Trigger>
                                                 </ControlTemplate.Triggers>
                                             </ControlTemplate>
@@ -362,7 +363,7 @@
     <!--Button regenerate -->
     <Style x:Key="Regenerate" TargetType="Button">
         <Setter Property="Width" Value="100"/>
-        <Setter Property="Height" Value="20"/>
+        <Setter Property="Height" Value="30"/>
         <Setter Property="Foreground" Value="{DynamicResource DefaultRegenerate}"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Background" Value="{DynamicResource RegenerateBG}"/>
@@ -377,22 +378,19 @@
                         <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center">
-                            <!-- Icon on the left -->
                             <Image x:Name="icon"
                                    Width="13"
                                    Height="13"
                                    Stretch="UniformToFill"
                                    Margin="0,0,5,0"
-                                   Source="/Images/WhiteIcons/wReverse.png"/>
+                                   Source="{DynamicResource RegenerateIcon}"/>
 
-                            <!-- Text on the right -->
                             <TextBlock x:Name="buttonText"
                                        Text="{TemplateBinding Content}"
                                        VerticalAlignment="Center"/>
                         </StackPanel>
                     </Border>
 
-                    <!-- Trigger to change the image source on mouse over -->
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="icon" Property="Source" Value="/Images/BlackIcons/Reverse.png"/>
@@ -624,7 +622,7 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
-                            <Image Source="/Images/WhiteIcons/wEarth.png"
+                            <Image Source="{DynamicResource LanguageIcon}"
                                    Width="10" Height="10"
                                    VerticalAlignment="Center"
                                    Grid.Column="0"
@@ -636,7 +634,7 @@
                                               VerticalAlignment="Center"
                                               Margin="5 0 0 2"/>
 
-                            <Image Source="/Images/WhiteIcons/wArrowRight.png"
+                            <Image Source="{DynamicResource ArrowRightIcon}"
                                    Width="10" Height="10"
                                    VerticalAlignment="Center"
                                    Grid.Column="2"
@@ -680,7 +678,7 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
-                            <Image Source="/Images/WhiteIcons/wSun.png"
+                            <Image Source="{DynamicResource ThemeIcon}"
                                    Width="10" Height="10"
                                    VerticalAlignment="Center"
                                    Grid.Column="0"
@@ -692,7 +690,7 @@
                                               VerticalAlignment="Center"
                                               Margin="5 0 0 2"/>
 
-                            <Image Source="/Images/WhiteIcons/wArrowRight.png"
+                            <Image Source="{DynamicResource ArrowRightIcon}"
                                    Width="10" Height="10"
                                    VerticalAlignment="Center"
                                    Grid.Column="2"
@@ -736,7 +734,7 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
-                            <Image Source="/Images/WhiteIcons/wPasscode.png"
+                            <Image Source="{DynamicResource PinIcon}"
                                    Width="10" Height="10"
                                    VerticalAlignment="Center"
                                    Grid.Column="0"
@@ -748,7 +746,7 @@
                                               VerticalAlignment="Center"
                                               Margin="5 0 0 2"/>
 
-                            <Image Source="/Images/WhiteIcons/wArrowRight.png"
+                            <Image Source="{DynamicResource ArrowRightIcon}"
                                    Width="10" Height="10"
                                    VerticalAlignment="Center"
                                    Grid.Column="2"
@@ -774,5 +772,119 @@
         <Setter Property="Height" Value="30"/>
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <!--PIN Button Save -->
+    <Style x:Key="PinSave" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="buttonBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="0"
+                            CornerRadius="5">
+                        <TextBlock HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Foreground="{DynamicResource TxPin}"
+                                   FontSize="12">
+                            Save
+                        </TextBlock>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#53C6D7"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Button Minimize-->
+    <Style x:Key="Minimize" TargetType="Button">
+        <Setter Property="Width" Value="20" />
+        <Setter Property="Height" Value="20" />
+        <Setter Property="Background" Value="Gray"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="3"
+                            BorderBrush="Transparent"
+                            BorderThickness="0">
+                        <Image x:Name="MinimizeIcon"
+                               Width="10" Height="10"
+                               Margin="0 2 0 0"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Top"
+                               Source="/Images/WhiteIcons/wMinimize.png"
+                               Stretch="UniformToFill"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#fdfdfd"/>
+                            <Setter Property="Source" TargetName="MinimizeIcon" Value="/Images/BlackIcons/Minimize.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Button Maximize -->
+    <Style x:Key="Maximize" TargetType="Button">
+        <Setter Property="Width" Value="20" />
+        <Setter Property="Height" Value="20" />
+        <Setter Property="Background" Value="Blue"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="3"
+                            BorderBrush="Transparent"
+                            BorderThickness="0">
+                        <Image x:Name="MaximizeIcon"
+                               Width="10" Height="10"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Source="/Images/WhiteIcons/wMaximize.png"
+                               Stretch="UniformToFill"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#fdfdfd"/>
+                            <Setter Property="Source" TargetName="MaximizeIcon" Value="/Images/BlackIcons/Maximize.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Button Close -->
+    <Style x:Key="Close" TargetType="Button">
+        <Setter Property="Width" Value="20" />
+        <Setter Property="Height" Value="20" />
+        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="3"
+                            BorderBrush="Transparent"
+                            BorderThickness="0">
+                        <Image x:Name="CloseIcon"
+                               Width="10" Height="10"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Source="/Images/WhiteIcons/wCross.png"
+                               Stretch="UniformToFill"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#fdfdfd"/>
+                            <Setter Property="Source" TargetName="CloseIcon" Value="/Images/BlackIcons/Cross.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>

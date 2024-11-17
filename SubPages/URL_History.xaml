@@ -71,20 +71,20 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <StackPanel x:Name="Data1"
-                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-            <StackPanel x:Name="Data2" Grid.Row="1"
-                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-            <StackPanel x:Name="Data3" Grid.Row="2"
-                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-            <StackPanel x:Name="Data4" Grid.Row="3"
-                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-            <StackPanel x:Name="Data5" Grid.Row="4"
-                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-            <StackPanel x:Name="Data6" Grid.Row="5"
-                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-            <StackPanel x:Name="Data7" Grid.Row="6"
-                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <Grid x:Name="Data1"
+                  Grid.ColumnSpan="2"/>
+            <Grid x:Name="Data2" Grid.Row="1"
+                  Grid.ColumnSpan="2"/>
+            <Grid x:Name="Data3" Grid.Row="2"
+                  Grid.ColumnSpan="2"/>
+            <Grid x:Name="Data4" Grid.Row="3"
+                  Grid.ColumnSpan="2"/>
+            <Grid x:Name="Data5" Grid.Row="4"
+                  Grid.ColumnSpan="2"/>
+            <Grid x:Name="Data6" Grid.Row="5"
+                  Grid.ColumnSpan="2"/>
+            <Grid x:Name="Data7" Grid.Row="6"
+                  Grid.ColumnSpan="2"/>
             <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">

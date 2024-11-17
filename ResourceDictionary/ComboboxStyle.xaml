@@ -7,6 +7,8 @@
                 <ControlTemplate TargetType="ComboBox">
                     <Grid>
                         <Border x:Name="Border"
+                                Width="{TemplateBinding Width}"
+                                Height="{TemplateBinding Height}"
                                 Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="0"
@@ -68,7 +70,7 @@
                                   MinWidth="{TemplateBinding ActualWidth}"
                                   MaxHeight="{TemplateBinding MaxDropDownHeight}">
                                 <Border x:Name="DropDownBorder"
-                                        Background="LightGray"
+                                        Background="{DynamicResource BackgroundColor}"
                                         BorderBrush="{TemplateBinding BorderBrush}"
                                         BorderThickness="1"
                                         CornerRadius="10">

@@ -18,6 +18,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="140"/>
@@ -74,11 +75,11 @@
                               Style="{StaticResource Language}"
                               FontFamily="{StaticResource Regular}"
                               FontSize="14"
-                              Foreground="{DynamicResource Check}"
+                              Foreground="{DynamicResource Text}"
                               Content="Languages"/>
                 <TextBlock Margin="15 0 0 0"
                            Grid.Row="2"
-                           Foreground="{DynamicResource Check}"
+                           Foreground="{DynamicResource Text}"
                            FontFamily="{StaticResource Regular}"
                            FontSize="8" Text="Language change"/>
                 <ToggleButton x:Name="Btn_Theme"
@@ -87,11 +88,11 @@
                               Style="{StaticResource Theme}"
                               FontFamily="{StaticResource Regular}"
                               FontSize="14"
-                              Foreground="{DynamicResource Check}"
+                              Foreground="{DynamicResource Text}"
                               Content="Theme"/>
                 <TextBlock Margin="15 0 0 0"
                            Grid.Row="4"
-                           Foreground="{DynamicResource Check}"
+                           Foreground="{DynamicResource Text}"
                            FontFamily="{StaticResource Regular}"
                            FontSize="8" Text="Theme change"/>
                 <ToggleButton x:Name="Btn_Passcode"
@@ -100,19 +101,22 @@
                               Style="{StaticResource Passcode}"
                               FontFamily="{StaticResource Regular}"
                               FontSize="14"
-                              Foreground="{DynamicResource Check}"
+                              Foreground="{DynamicResource Text}"
                               Content="PIN"/>
                 <TextBlock Margin="15 0 0 0"
                            Grid.Row="6"
-                           Foreground="{DynamicResource Check}"
+                           Foreground="{DynamicResource Text}"
                            FontFamily="{StaticResource Regular}"
                            FontSize="8" Text="PIN change"/>
             </Grid>
         </Border>
         <Grid Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3"
               x:Name="Grid_Display"/>
-        <Grid Grid.Row="0" Grid.RowSpan="5" Grid.Column="3" Grid.ColumnSpan="2"
-              Background="White" Width="0" HorizontalAlignment="Right"
+        <Grid Grid.Row="0" Grid.RowSpan="6"
+              Grid.Column="3" Grid.ColumnSpan="2"
+              Background="White"
+              Width="0"
+              HorizontalAlignment="Right"
               x:Name="Grid_FAQ">
         </Grid>
     </Grid>
