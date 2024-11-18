@@ -17,21 +17,23 @@
                 <RowDefinition Height="90"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Border Grid.Row="0"
-                    BorderThickness="0 0 0 1"
-                    BorderBrush="Black">
-                <TextBlock FontFamily="{StaticResource Poppins_KhSN}"
-                           Foreground="{DynamicResource Uncheck}"
-                           FontSize="12"
-                           TextWrapping="Wrap">
-                    <Run Text="{DynamicResource ThemePanel_Default}"
-                         FontSize="20" FontFamily="{DynamicResource PoppinsBold_Moul}"/>
-                    <LineBreak/>
-                    <Run Text="{DynamicResource ThemePanel_TextP1}"/>
-                </TextBlock>
-            </Border>
+            <TextBlock FontFamily="{StaticResource Poppins_KhSN}"
+                       Foreground="{DynamicResource Uncheck}"
+                       FontSize="12"
+                       TextWrapping="Wrap">
+                <Run Text="{DynamicResource ThemePanel_Default}"
+                     FontSize="20" FontFamily="{DynamicResource PoppinsBold_Moul}"/>
+                <LineBreak/>
+                <Run Text="{DynamicResource ThemePanel_TextP1}"/>
+                <LineBreak/>
+                <Line X1="10" Y1="10" X2="800" Y2="10"
+                      HorizontalAlignment="Center"
+                      Stroke="{DynamicResource Text}"
+                      StrokeThickness="2"/>
+            </TextBlock>
 
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1"
+                  Margin="0 5 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>

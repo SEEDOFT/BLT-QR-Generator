@@ -46,6 +46,26 @@
     <sys:String x:Key="Thanks">សូមអរគុណសម្រាប់ការប្រើប្រាស់កម្មវិធីរបស់ពួកខ្ញុំ</sys:String>
 
 
+
+    <!--BOTH Card -->
+    <sys:String x:Key="BothName">កុយ យុត្ត្រាបុត្រ</sys:String>
+    <sys:String x:Key="BothTitle">អ្នកអភិវឌ្ឍន៍កម្មវិធី</sys:String>
+    <sys:String x:Key="BothDetail">ជម្រាបសួរ ខ្ញុំបាទឈ្មោះ កុយ យុត្ត្រាបុត្រ។ បច្ចុប្បន្នខ្ញុំកំពុងសិក្សារក្នុងកម្មវិធីអាហារូបករណ៍ដែលផ្តល់ដោយ ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ នៅសាលាបណ្ដុះបណ្ដាលបច្ចេកវិទ្យាអាន ជំនាញ Mobile App (Flutter)</sys:String>
+    <sys:String x:Key="FollowUS">តាមដានខ្ញុំនៅលើ</sys:String>
+
+
+    <!--Leng Card -->
+    <sys:String x:Key="LengName">យ៉ង់ ប៊ុនឡេង</sys:String>
+    <sys:String x:Key="LengDetail">ជម្រាបសួរ ខ្ញុំបាទឈ្មោះ យ៉ង់ ប៊ុនឡេង។ បច្ចុប្បន្នខ្ញុំកំពុងសិក្សារក្នុងកម្មវិធីអាហារូបករណ៍ដែលផ្តល់ដោយ ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ នៅសាលាបណ្ដុះបណ្ដាលបច្ចេកវិទ្យាអាន ជំនាញ Mobile App (Flutter)</sys:String>
+
+
+
+    <!--Kunthea Card -->
+    <sys:String x:Key="TheaName">សំ សុគន្ធធារ</sys:String>
+    <sys:String x:Key="TheaTitle">អ្នករចនា UX/UI</sys:String>
+    <sys:String x:Key="TheaDetail">ជម្រាបសួរ ខ្ញុំបាទឈ្មោះ សំ សុគន្ធធារ។ បច្ចុប្បន្នខ្ញុំកំពុងសិក្សារក្នុងកម្មវិធីអាហារូបករណ៍ដែលផ្តល់ដោយ ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ នៅសាលាបណ្ដុះបណ្ដាលបច្ចេកវិទ្យាអាន ជំនាញ Mobile App (Flutter)</sys:String>
+
+
     <!-- A Letter from US-->
     <sys:String x:Key="LetterTitle">សេចក្តីថ្លែងអំណរគុណ</sys:String>
     <sys:String x:Key="ANT_">មជ្ឈមណ្ឌលបណ្ដុះបណ្ដាលបច្ចេកវិទ្យាអាន</sys:String>

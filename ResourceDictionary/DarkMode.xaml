@@ -10,6 +10,8 @@
     <!--Left Panel IsMouseOver and IsClick Color-->
     <Color x:Key="HowerColor">#697565</Color>
     <SolidColorBrush x:Key="HowerBackgroundColor" Color="{DynamicResource HowerColor}"/>
+    <Color x:Key="HowerColorHalf">#1A697565</Color>
+    <SolidColorBrush x:Key="HowerBackgroundColorHalf" Color="{DynamicResource HowerColor}"/>
     <!-- Background of WIFI and URL-->
     <Color x:Key="BG_WIFI_URL">#3C3D37</Color>
     <SolidColorBrush x:Key="WIFI_URL_BG" Color="{DynamicResource BG_WIFI_URL}"/>
@@ -99,6 +101,8 @@
     <!--Profile Image Border -->
     <Color x:Key="st">#4D181C14</Color>
     <SolidColorBrush x:Key="FrontBD" Color="{DynamicResource st}"/>
+    <Color x:Key="st1">#99181C14</Color>
+    <SolidColorBrush x:Key="BackBD" Color="{DynamicResource st1}"/>
 
 
     <!--Icons and Images-->
@@ -150,9 +154,9 @@
     <ImageSource x:Key="CalendarIconHower">/Images/WhiteIcons/wCalendar1.png</ImageSource>
 
     <!--BOTH Profile Picture -->
-    <ImageSource x:Key="BothProfile">/Images/Contents/B.png</ImageSource>
+    <ImageSource x:Key="BothProfile">/Images/Contents/Dark_B.png</ImageSource>
     <!--Leng Profile Picture -->
-    <ImageSource x:Key="LengProfile">/Images/Contents/L.png</ImageSource>
+    <ImageSource x:Key="LengProfile">/Images/Contents/Dark_L.png</ImageSource>
     <!--Kunthea Profile Picture -->
-    <ImageSource x:Key="TheaProfile">/Images/Contents/T.png</ImageSource>
+    <ImageSource x:Key="TheaProfile">/Images/Contents/Dark_T.png</ImageSource>
 </ResourceDictionary>

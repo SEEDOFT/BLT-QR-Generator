@@ -47,6 +47,26 @@
     <sys:String x:Key="Thanks">Thank you for using our application.</sys:String>
 
 
+    <!--BOTH Card -->
+    <sys:String x:Key="BothName">Koy Yotraboth</sys:String>
+    <sys:String x:Key="BothTitle">Developer</sys:String>
+    <sys:String x:Key="BothDetail">My name is Koy Yotraboth. I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development.</sys:String>
+    <sys:String x:Key="FollowUS">Follow Us</sys:String>
+
+
+    <!--Leng Card -->
+    <sys:String x:Key="LengName">YONG BUNLENG</sys:String>
+    <sys:String x:Key="LengDetail">My name is Yong Bunleng. I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development.</sys:String>
+
+
+
+    <!--Kunthea Card -->
+    <sys:String x:Key="TheaName">SAM SOKUNTHEA</sys:String>
+    <sys:String x:Key="TheaTitle">UX/UI Designer</sys:String>
+    <sys:String x:Key="TheaDetail">My name is Sam Sokunthea. I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development.</sys:String>
+
+
+
     <!-- A Letter from US-->
     <sys:String x:Key="LetterTitle">A LETTER FROM US</sys:String>
     <sys:String x:Key="ANT_">ANT Technology Training Center, </sys:String>

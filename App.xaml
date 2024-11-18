@@ -13,8 +13,6 @@
                 <ResourceDictionary Source="/ResourceDictionary/DarkMode.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionary/EnglishLanguage.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionary/KhmerLanguage.xaml"/>
-                <ResourceDictionary Source="/ResourceDictionary/EnglishFonts.xaml"/>
-                <ResourceDictionary Source="/ResourceDictionary/KhmerFonts.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

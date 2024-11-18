@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BLT_Generator.Pages;
 
 namespace BLT_Generator
 {
@@ -18,6 +19,7 @@ namespace BLT_Generator
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public void PageBig(UserControl page)
         {
             Grid_Big.Children.Clear();
@@ -78,13 +80,17 @@ namespace BLT_Generator
 
         private void Btn_Maximize_Click(object sender, RoutedEventArgs e)
         {
+           
             if (this.WindowState == WindowState.Maximized)
             {
+
                 this.WindowState = WindowState.Normal;
+
             }
             else
             {
                 this.WindowState = WindowState.Maximized;
+
             }
         }
 

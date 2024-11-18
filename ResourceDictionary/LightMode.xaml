@@ -10,6 +10,8 @@
     <!--Left Panel IsMouseOver and IsClick Color-->
     <Color x:Key="HowerColor">#53C6D7</Color>
     <SolidColorBrush x:Key="HowerBackgroundColor" Color="{DynamicResource HowerColor}"/>
+    <Color x:Key="HowerColorHalf">#1A53C6D7</Color>
+    <SolidColorBrush x:Key="HowerBackgroundColorHalf" Color="{DynamicResource HowerColor}"/>
     <!-- Background of WIFI and URL-->
     <Color x:Key="BG_WIFI_URL">#F6F7F9</Color>
     <SolidColorBrush x:Key="WIFI_URL_BG" Color="{DynamicResource BG_WIFI_URL}"/>
@@ -95,6 +97,8 @@
     <!--Profile Image Border -->
     <Color x:Key="st">#4D162039</Color>
     <SolidColorBrush x:Key="FrontBD" Color="{DynamicResource st}"/>
+    <Color x:Key="st1">#99162039</Color>
+    <SolidColorBrush x:Key="BackBD" Color="{DynamicResource st1}"/>
 
     <!--Icons and Images-->
     <!--BLT Icon-->

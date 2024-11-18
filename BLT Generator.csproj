@@ -47,6 +47,10 @@
     <None Remove="Images\Contents\Both.png" />
     <None Remove="Images\Contents\CBRD.png" />
     <None Remove="Images\Contents\Darkmode.png" />
+    <None Remove="Images\Contents\Dark_B.png" />
+    <None Remove="Images\Contents\Dark_L.png" />
+    <None Remove="Images\Contents\Dark_T.png" />
+    <None Remove="Images\Contents\Developer.png" />
     <None Remove="Images\Contents\Facebook.png" />
     <None Remove="Images\Contents\Github.png" />
     <None Remove="Images\Contents\KH.png" />
@@ -58,6 +62,7 @@
     <None Remove="Images\Contents\Telegram.png" />
     <None Remove="Images\Contents\Thea.jpg" />
     <None Remove="Images\Contents\UK.png" />
+    <None Remove="Images\Contents\UXUI.png" />
     <None Remove="Images\DarkIcons\dArrowRight.png" />
     <None Remove="Images\DarkIcons\dBook.png" />
     <None Remove="Images\DarkIcons\dCalendar.png" />
@@ -211,6 +216,18 @@
     <Resource Include="Images\Contents\Darkmode.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Contents\Dark_B.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\Dark_L.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\Dark_T.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\Developer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Contents\Facebook.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -242,6 +259,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\UK.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\UXUI.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\DarkIcons\dArrowRight.png">

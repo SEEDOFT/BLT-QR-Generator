@@ -30,7 +30,7 @@
         <StackPanel Grid.Column="2"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
-            <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
+            <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
                        FontSize="14"
                        TextTrimming="CharacterEllipsis">
                 https://www.youtube.com/watch?v=3BFTio5296w

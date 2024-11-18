@@ -35,14 +35,18 @@
                             Orientation="Vertical">
                     <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                FontSize="21"
-                               Foreground="{DynamicResource Text}">
-                        SAM SOKUNTHEA
-                    </TextBlock>
-                    <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
-                               FontSize="15"
-                               Foreground="{DynamicResource Text}">
-                        UX/UI Designer
-                    </TextBlock>
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Foreground="{DynamicResource Text}"
+                               Text="{DynamicResource TheaName}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                   FontSize="15"
+                                   Foreground="{DynamicResource Text}"
+                                   Text="{DynamicResource TheaTitle}"/>
+                        <Image Style="{StaticResource UXUI_Icon}"
+                               Margin="10 0 0 3"/>
+                    </StackPanel>
                 </StackPanel>
             </Border>
         </Border>
@@ -71,43 +75,34 @@
                     <Border Width="200"
                             Height="300"
                             CornerRadius="10"
-                            Background="#99162039">
+                            Background="{DynamicResource BackBD}">
                         <StackPanel>
                             <StackPanel HorizontalAlignment="Center"
                                         VerticalAlignment="Top"
                                         Orientation="Vertical"
-                                        Margin="5 20 5 0">
+                                        Margin="5 25 5 0">
                                 <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            FontSize="20"
                                            TextAlignment="Center"
-                                           Foreground="{DynamicResource Text}">
-                                    SAM SOKUNTHEA
-                                </TextBlock>
+                                           Foreground="{DynamicResource Text}"
+                                           Text="{DynamicResource TheaName}"/>
                                 <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
                                            FontSize="12"
                                            Margin="5 5 5 0"
                                            Foreground="{DynamicResource Text}"
                                            TextWrapping="Wrap"
-                                           TextAlignment="Left">
-                                    My name is Sam Sokunthea. Alongside my university studies, I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development.
-                                </TextBlock>
+                                           TextAlignment="Center"
+                                           Text="{DynamicResource TheaDetail}"/>
                             </StackPanel>
                             <StackPanel>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition/>
-                                        <ColumnDefinition/>
-                                    </Grid.ColumnDefinitions>
-                                </Grid>
                                 <TextBlock Grid.Column="0"
-                                           Margin="5 0 0 0"
+                                           Margin="5 20 0 0"
                                            FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            FontSize="14"
                                            HorizontalAlignment="Center"
                                            VerticalAlignment="Center"
-                                           Foreground="{DynamicResource Text}">
-                                    Follow us
-                                </TextBlock>
+                                           Foreground="{DynamicResource Text}"
+                                           Text="{DynamicResource FollowUS}"/>
                                 <StackPanel Grid.Column="1"
                                             Orientation="Horizontal"
                                             VerticalAlignment="Center"

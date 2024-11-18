@@ -108,13 +108,7 @@
     <Page Update="ResourceDictionary\DarkMode.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ResourceDictionary\EnglishFonts.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="ResourceDictionary\EnglishLanguage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ResourceDictionary\KhmerFonts.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ResourceDictionary\KhmerLanguage.xaml">

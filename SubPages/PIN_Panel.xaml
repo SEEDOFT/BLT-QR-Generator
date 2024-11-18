@@ -17,20 +17,22 @@
                 <RowDefinition Height="90"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Border Grid.Row="0"
-                    BorderThickness="0 0 0 1"
-                    BorderBrush="Black">
-                <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
-                           Foreground="{DynamicResource Uncheck}"
-                           FontSize="12"
-                           TextWrapping="Wrap">
-                    <Run Text="{DynamicResource PinPanel_Default}"
-                         FontSize="20" FontFamily="{DynamicResource PoppinsBold_Moul}"/>
-                    <LineBreak/>
-                    <Run Text="{DynamicResource PinPanel_TextP1}"/>
-                </TextBlock>
-            </Border>
-            <Grid Grid.Row="1">
+            <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
+                       Foreground="{DynamicResource Uncheck}"
+                       FontSize="12"
+                       TextWrapping="Wrap">
+                <Run Text="{DynamicResource PinPanel_Default}"
+                     FontSize="20" FontFamily="{DynamicResource PoppinsBold_Moul}"/>
+                <LineBreak/>
+                <Run Text="{DynamicResource PinPanel_TextP1}"/>
+                <LineBreak/>
+                <Line X1="10" Y1="10" X2="800" Y2="10"
+                      HorizontalAlignment="Center"
+                      Stroke="{DynamicResource Text}"
+                      StrokeThickness="2"/>
+            </TextBlock>
+            <Grid Grid.Row="1"
+                  Margin="0 5 0 0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
@@ -49,18 +51,19 @@
                            Text="{DynamicResource PinPanel_Title}"/>
                 <Border Grid.Row="1" Grid.Column="1"
                         Background="{DynamicResource HistoryBarColor}"
-                        CornerRadius="10">
+                        CornerRadius="10"
+                        Margin="0 5 0 0">
                     <StackPanel Margin="20"
                                 Orientation="Vertical">
                         <TextBox Style="{StaticResource PIN}"
                                  Height="30" FontFamily="{DynamicResource Poppins_KhSN}"
                                  helpers:TextBoxHelper.PlaceholderText="Old Password"/>
                         <TextBox Style="{StaticResource PIN}"
-                                 Height="30" Margin="0 10 0 0"
+                                 Height="30" Margin="0 5 0 0"
                                  FontFamily="{DynamicResource Poppins_KhSN}"
                                  helpers:TextBoxHelper.PlaceholderText="New Password"/>
                         <TextBox Style="{StaticResource PIN}"
-                                 Height="30" Margin="0 10 0 0"
+                                 Height="30" Margin="0 5 0 0"
                                  FontFamily="{DynamicResource Poppins_KhSN}"
                                  helpers:TextBoxHelper.PlaceholderText="Confirm Password"/>
                         <Button Style="{StaticResource PinSave}"

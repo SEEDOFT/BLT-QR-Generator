@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BLT_Generator"
         mc:Ignorable="d"
-        Title="BLT Generator" Height="600" Width ="1000"
+        Title="BLT Generator"
+        Height="600" Width ="1000"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         ResizeMode="NoResize">
