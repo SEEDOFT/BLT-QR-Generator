@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:BLT_Generator.SubPages"
              mc:Ignorable="d"
-             d:DesignHeight="1000" d:DesignWidth="150">
+             d:DesignHeight="1000" d:DesignWidth="200">
     <UserControl.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </UserControl.Resources>
@@ -29,6 +29,7 @@
                 <TextBlock HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            FontFamily="{StaticResource Ole_Bold}"
+                           Foreground="{DynamicResource _BLT}"
                            FontSize="20">
                     FAQs
                 </TextBlock>
@@ -36,182 +37,194 @@
             <ScrollViewer HorizontalScrollBarVisibility="Disabled"
                           VerticalScrollBarVisibility="Hidden"
                           Grid.Row="1" Margin="0 15 0 0">
-                <StackPanel>
-                    <Expander FontSize="12" HorizontalAlignment="Stretch">
+                <StackPanel Orientation="Vertical"
+                            Margin="5 0 5 0">
+                    <Expander FontSize="12">
                         <Expander.Header>
-                            <Border BorderThickness="0 0 0 1"
-                                    BorderBrush="{DynamicResource _QR_Generator}">
-                                <TextBlock Text="1. What is BLT QR Generator?"
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{DynamicResource Q1}"
                                            Foreground="{DynamicResource _QR_Generator}"
-                                           TextWrapping="Wrap" FontFamily="{StaticResource Bold}"/>
-                            </Border>
+                                           TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"/>
+                                <Line X1="0" Y1="5" X2="165" Y2="5"
+                                      Stroke="{DynamicResource _QR_Generator}"
+                                      StrokeThickness="1"/>
+                            </StackPanel>
                         </Expander.Header>
                         <TextBlock TextAlignment="Left" TextWrapping="Wrap"
-                                   Margin="25 5 5 0" FontFamily="{StaticResource Regular}"
-                                   Foreground="{DynamicResource _QR_Generator}">
-                            BLT QR Generator is a tool designed to create QR codes easily and efficiently. It is especially tailored for users looking for a straightforward way to generate QR codes with various customization options.
-                        </TextBlock>
+                                   Margin="25 5 5 0" FontFamily="{DynamicResource Poppins_KhSN}"
+                                   Foreground="{DynamicResource _QR_Generator}"
+                                   Text="{DynamicResource A1}"/>
                     </Expander>
 
-                    <Expander FontSize="12" HorizontalAlignment="Stretch"
+                    <Expander FontSize="12"
                               Margin="0 15 0 0">
                         <Expander.Header>
-                            <Border BorderThickness="0 0 0 1"
-                                    BorderBrush="{DynamicResource _QR_Generator}">
-                                <TextBlock Text="2. What platforms does BLT QR Generator support?"
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{DynamicResource Q2}"
                                            Foreground="{DynamicResource _QR_Generator}"
-                                           TextWrapping="Wrap" FontFamily="{StaticResource Bold}"/>
-                            </Border>
+                                           TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"/>
+                                <Line X1="0" Y1="5" X2="165" Y2="5"
+                                      Stroke="{DynamicResource _QR_Generator}"
+                                      StrokeThickness="1"/>
+                            </StackPanel>
                         </Expander.Header>
                         <TextBlock TextAlignment="Left" TextWrapping="Wrap"
-                                   Margin="25 5 5 0" FontFamily="{StaticResource Regular}"
-                                   Foreground="{DynamicResource _QR_Generator}">
-                            Currently, BLT QR Generator is developed as a WPF application, making it suitable for Windows users.
-                        </TextBlock>
+                                   Margin="25 5 5 0" FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                   Foreground="{DynamicResource _QR_Generator}"
+                                   Text="{DynamicResource A2}"/>
                     </Expander>
 
                     <Expander FontSize="12" HorizontalAlignment="Stretch"
                               Margin="0 15 0 0">
                         <Expander.Header>
-                            <Border BorderThickness="0 0 0 1"
-                                    BorderBrush="{DynamicResource _QR_Generator}">
-                                <TextBlock Text="3. What types of QR codes can I create with BLT QR Generator?"
-                                           TextWrapping="Wrap" FontFamily="{StaticResource Bold}"
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{DynamicResource Q3}"
+                                           TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            Foreground="{DynamicResource _QR_Generator}"/>
-                            </Border>
+                                <Line X1="0" Y1="5" X2="165" Y2="5"
+                                      Stroke="{DynamicResource _QR_Generator}"
+                                      StrokeThickness="1"/>
+                            </StackPanel>
                         </Expander.Header>
                         <TextBlock TextAlignment="Left" TextWrapping="Wrap"
-                                   Margin="25 5 5 0" FontFamily="{StaticResource Regular}"
-                                   Foreground="{DynamicResource _QR_Generator}">
-                            You can generate QR codes for a variety of data types, such as URLs, contact information, email addresses, text, Wi-Fi details, and more.
-                        </TextBlock>
+                                   Margin="25 5 5 0" FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                   Foreground="{DynamicResource _QR_Generator}"
+                                   Text="{DynamicResource A3}"/>
                     </Expander>
 
                     <Expander FontSize="12" HorizontalAlignment="Stretch"
                               Margin="0 15 0 0">
                         <Expander.Header>
-                            <Border BorderThickness="0 0 0 1"
-                                    BorderBrush="{DynamicResource _QR_Generator}">
-                                <TextBlock Text="4. How can I customize my QR codes?"
-                                           TextWrapping="Wrap" FontFamily="{StaticResource Bold}"
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{DynamicResource Q4}"
+                                           TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            Foreground="{DynamicResource _QR_Generator}"/>
-                            </Border>
+                                <Line X1="0" Y1="5" X2="165" Y2="5"
+                                      Stroke="{DynamicResource _QR_Generator}"
+                                      StrokeThickness="1"/>
+                            </StackPanel>
                         </Expander.Header>
                         <TextBlock TextAlignment="Left" TextWrapping="Wrap"
-                                   Margin="25 5 5 0" FontFamily="{StaticResource Regular}"
-                                   Foreground="{DynamicResource _QR_Generator}">
-                            The app allows customization options like changing QR code colors, adjusting error correction levels, and potentially adding a logo.
-                        </TextBlock>
+                                   Margin="25 5 5 0" FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                   Foreground="{DynamicResource _QR_Generator}"
+                                   Text="{DynamicResource A4}"/>
                     </Expander>
 
                     <Expander FontSize="12" HorizontalAlignment="Stretch"
                               Margin="0 15 0 0">
                         <Expander.Header>
-                            <Border BorderThickness="0 0 0 1"
-                                    BorderBrush="{DynamicResource _QR_Generator}">
-                                <TextBlock Text="5. Can I save or export my generated QR codes?"
-                                           TextWrapping="Wrap" FontFamily="{StaticResource Bold}"
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{DynamicResource Q5}"
+                                           TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            Foreground="{DynamicResource _QR_Generator}"/>
-                            </Border>
+                                <Line X1="0" Y1="5" X2="165" Y2="5"
+                                      Stroke="{DynamicResource _QR_Generator}"
+                                      StrokeThickness="1"/>
+                            </StackPanel>
                         </Expander.Header>
                         <TextBlock TextAlignment="Left" TextWrapping="Wrap"
-                                   Margin="25 5 5 0" FontFamily="{StaticResource Regular}"
-                                   Foreground="{DynamicResource _QR_Generator}">
-                            Yes, BLT QR Generator enables you to save your QR codes in various image formats, such as PNG or JPG, making it easy to use in other applications or share online.
-                        </TextBlock>
+                                   Margin="25 5 5 0" FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                   Foreground="{DynamicResource _QR_Generator}"
+                                   Text="{DynamicResource A5}"/>
                     </Expander>
 
                     <Expander FontSize="12" HorizontalAlignment="Stretch"
                               Margin="0 15 0 0">
                         <Expander.Header>
-                            <Border BorderThickness="0 0 0 1"
-                                    BorderBrush="{DynamicResource _QR_Generator}">
-                                <TextBlock Text="6. Does BLT QR Generator offer any security features?"
-                                           TextWrapping="Wrap" FontFamily="{StaticResource Bold}"
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{DynamicResource Q6}"
+                                           TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            Foreground="{DynamicResource _QR_Generator}"/>
-
-                            </Border>
+                                <Line X1="0" Y1="5" X2="165" Y2="5"
+                                      Stroke="{DynamicResource _QR_Generator}"
+                                      StrokeThickness="1"/>
+                            </StackPanel>
                         </Expander.Header>
                         <TextBlock TextAlignment="Left" TextWrapping="Wrap"
-                                   Margin="25 5 5 0" FontFamily="{StaticResource Regular}"
-                                   Foreground="{DynamicResource _QR_Generator}">
-                            While QR codes themselves are open data, you should avoid including sensitive information. BLT QR Generator focuses on generating QR codes, leaving the security of data management to users.
-                        </TextBlock>
+                                   Margin="25 5 5 0" FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                   Foreground="{DynamicResource _QR_Generator}"
+                                   Text="{DynamicResource A6}"/>
                     </Expander>
 
                     <Expander FontSize="12" HorizontalAlignment="Stretch"
                               Margin="0 15 0 0">
                         <Expander.Header>
-                            <Border BorderThickness="0 0 0 1"
-                                    BorderBrush="{DynamicResource _QR_Generator}">
-                                <TextBlock Text="7. Is there a settings menu in BLT QR Generator? What options does it offer?"
-                                           TextWrapping="Wrap" FontFamily="{StaticResource Bold}"
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{DynamicResource Q7}"
+                                           TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            Foreground="{DynamicResource _QR_Generator}"/>
-                            </Border>
+                                <Line X1="0" Y1="5" X2="165" Y2="5"
+                                      Stroke="{DynamicResource _QR_Generator}"
+                                      StrokeThickness="1"/>
+                            </StackPanel>
                         </Expander.Header>
                         <TextBlock TextAlignment="Left" TextWrapping="Wrap"
-                                   Margin="25 5 5 0" FontFamily="{StaticResource Regular}"
-                                   Foreground="{DynamicResource _QR_Generator}">
-                            Yes, the settings menu includes options like default save locations, QR code size adjustments, and error correction level settings.
-                        </TextBlock>
+                                   Margin="25 5 5 0" FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                   Foreground="{DynamicResource _QR_Generator}"
+                                   Text="{DynamicResource A7}"/>
                     </Expander>
 
                     <Expander FontSize="12" HorizontalAlignment="Stretch"
                               Margin="0 15 0 0">
                         <Expander.Header>
-                            <Border BorderThickness="0 0 0 1"
-                                    BorderBrush="{DynamicResource _QR_Generator}">
-                                <TextBlock Text="8. Can I use BLT QR Generator for commercial purposes?"
-                                           TextWrapping="Wrap" FontFamily="{StaticResource Bold}"
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{DynamicResource Q8}"
+                                           TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            Foreground="{DynamicResource _QR_Generator}"/>
-                            </Border>
+                                <Line X1="0" Y1="5" X2="165" Y2="5"
+                                      Stroke="{DynamicResource _QR_Generator}"
+                                      StrokeThickness="1"/>
+                            </StackPanel>
                         </Expander.Header>
                         <TextBlock TextAlignment="Left" TextWrapping="Wrap"
-                                   Margin="25 5 5 0" FontFamily="{StaticResource Regular}"
-                                   Foreground="{DynamicResource _QR_Generator}">
-                            BLT QR Generator is available for personal and commercial use, though it may depend on any licensing terms provided by your project.
-                        </TextBlock>
+                                   Margin="25 5 5 0" FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                   Foreground="{DynamicResource _QR_Generator}"
+                                   Text="{DynamicResource A8}"/>
                     </Expander>
 
                     <Expander FontSize="12" HorizontalAlignment="Stretch"
                               Margin="0 15 0 0">
                         <Expander.Header>
-                            <Border BorderThickness="0 0 0 1"
-                                    BorderBrush="{DynamicResource _QR_Generator}">
-                                <TextBlock Text="9. What makes BLT QR Generator different from other QR code generators?"
-                                           TextWrapping="Wrap" FontFamily="{StaticResource Bold}"
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{DynamicResource Q9}"
+                                           TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            Foreground="{DynamicResource _QR_Generator}"/>
-                            </Border>
+                                <Line X1="0" Y1="5" X2="165" Y2="5"
+                                      Stroke="{DynamicResource _QR_Generator}"
+                                      StrokeThickness="1"/>
+                            </StackPanel>
                         </Expander.Header>
                         <TextBlock TextAlignment="Left" TextWrapping="Wrap"
-                                   Margin="25 5 5 0" FontFamily="{StaticResource Regular}"
-                                   Foreground="{DynamicResource _QR_Generator}">
-                            BLT QR Generator is designed with simplicity and customization in mind, offering a user-friendly interface, powerful customization options, and the ability to integrate logos or unique design elements.
-                        </TextBlock>
+                                   Margin="25 5 5 0" FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                   Foreground="{DynamicResource _QR_Generator}"
+                                   Text="{DynamicResource A9}"/>
                     </Expander>
 
                     <Expander FontSize="12" HorizontalAlignment="Stretch"
                               Margin="0 15 0 0">
                         <Expander.Header>
-                            <Border BorderThickness="0 0 0 1"
-                                    BorderBrush="{DynamicResource _QR_Generator}">
-                                <TextBlock Text="10. How can I get support if I encounter issues with BLT QR Generator?"
-                                           TextWrapping="Wrap" FontFamily="{StaticResource Bold}"
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{DynamicResource Q10}"
+                                           TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            Foreground="{DynamicResource _QR_Generator}"/>
-                            </Border>
+                                <Line X1="0" Y1="5" X2="165" Y2="5"
+                                      Stroke="{DynamicResource _QR_Generator}"
+                                      StrokeThickness="1"/>
+                            </StackPanel>
                         </Expander.Header>
                         <TextBlock TextAlignment="Left" TextWrapping="Wrap"
-                                   Margin="25 5 5 0" FontFamily="{StaticResource Regular}"
-                                   Foreground="{DynamicResource _QR_Generator}">
-                            For support, you can refer to the documentation provided with the app or contact the development team through the specified support channels.
-                        </TextBlock>
+                                   Margin="25 5 5 0" FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                   Foreground="{DynamicResource _QR_Generator}"
+                                   Text="{DynamicResource A10}"/>
                     </Expander>
 
                     <TextBlock Margin="0 40 0 0" FontFamily="{StaticResource Ole_Bold}"
                                Foreground="{DynamicResource _QR_Generator}"
-                               FontSize="16"
+                               FontSize="11"
                                HorizontalAlignment="Center">
-                        ©Copyright By Group 1
+                        ©Copyright By
+                        <Run Text="Group 1"
+                             Foreground="{DynamicResource _BLT}"/>
                         <LineBreak/>
                         <LineBreak/>
                     </TextBlock>

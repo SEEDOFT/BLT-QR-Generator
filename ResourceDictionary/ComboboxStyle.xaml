@@ -39,7 +39,7 @@
 
                                 <ContentPresenter x:Name="ContentSite"
                                                   IsHitTestVisible="False"
-                                                  Content="Choose your color pallet"
+                                                  Content="{DynamicResource ColorPallet}"
                                                   ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
                                                   ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
                                                   Margin="20,3,23,3"

@@ -27,8 +27,6 @@ namespace BLT_Generator
         public MainWindow()
         {
             InitializeComponent();
-            //Load user theme
-            Theme_Panel loadUserTheme = new Theme_Panel();
 
             Btn_Generate.IsChecked = true;
             SetSelectedButton(Btn_Generate);

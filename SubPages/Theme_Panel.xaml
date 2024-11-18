@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:local="clr-namespace:BLT_Generator.SubPages"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
@@ -19,13 +20,14 @@
             <Border Grid.Row="0"
                     BorderThickness="0 0 0 1"
                     BorderBrush="Black">
-                <TextBlock FontFamily="{StaticResource Regular}"
+                <TextBlock FontFamily="{StaticResource Poppins_KhSN}"
                            Foreground="{DynamicResource Uncheck}"
                            FontSize="12"
                            TextWrapping="Wrap">
-                    <Run Text="Default" FontSize="20" FontFamily="{StaticResource Medium}"/>
+                    <Run Text="{DynamicResource ThemePanel_Default}"
+                         FontSize="20" FontFamily="{DynamicResource PoppinsBold_Moul}"/>
                     <LineBreak/>
-                    By default, our application is configured to select Light Mode as the primary display setting, providing users with a clean and well-lit interface that enhances visibility and ease of use in various lighting environments.
+                    <Run Text="{DynamicResource ThemePanel_TextP1}"/>
                 </TextBlock>
             </Border>
 
@@ -38,14 +40,15 @@
                     <RowDefinition Height="70"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock FontFamily="{StaticResource Regular}"
+                <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
                            Foreground="{DynamicResource Uncheck}"
                            FontSize="12"
                            TextWrapping="Wrap"
                            Grid.Column="0" Grid.ColumnSpan="2">
-                    <Run Text="Theme" FontSize="20" FontFamily="{StaticResource Medium}"/>
+                    <Run Text="{DynamicResource ThemePanel_Title}"
+                         FontSize="20" FontFamily="{DynamicResource PoppinsBold_Moul}"/>
                     <LineBreak/>
-                    Choose one of this option to change the application's appearance.
+                    <Run Text="{DynamicResource ThemePanel_TextP2}"/>
                 </TextBlock>
                 <!--Light mode and Dark mode-->
                 <StackPanel Grid.Row="1" Grid.Column="0"
@@ -73,7 +76,7 @@
                                 <RadioButton x:Name="LightModeButton" VerticalAlignment="Center"
                                              HorizontalAlignment="Center"
                                              Content="Light Mode"
-                                             FontFamily="{StaticResource Regular}"
+                                             FontFamily="{DynamicResource Poppins_KhSN}"
                                              GroupName="Theme"
                                              Checked="Rd_LightMode_Checked"/>
                             </Border>
@@ -106,7 +109,7 @@
                                 <RadioButton x:Name="DarkModeButton" VerticalAlignment="Center"
                                              HorizontalAlignment="Center"
                                              Content="Dark Mode"
-                                             FontFamily="{StaticResource Regular}"
+                                             FontFamily="{DynamicResource Poppins_KhSN}"
                                              GroupName="Theme" Checked="Rd_LightMode_Checked"/>
                             </Border>
                         </Grid>

@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
                     xmlns:helpers="clr-namespace:BLT_Generator.Helpers">
     <!-- Button Copy -->
     <Style x:Key="Copy" TargetType="Button">
@@ -311,14 +312,10 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <StackPanel Orientation="Horizontal">
-                        <!-- Symbol without a border -->
                         <TextBlock Text="&gt;" VerticalAlignment="Center"/>
-
-                        <!-- Text with a border -->
                         <Border Background="{DynamicResource QR_Background}"
                                 Width="60"
                                 CornerRadius="10">
-                            <!-- Adjust padding to center vertically -->
                             <TextBlock Text="Next"
                                        Foreground="{DynamicResource Text}"
                                        HorizontalAlignment="Center"
@@ -341,18 +338,15 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <StackPanel Orientation="Horizontal">
-                        <!-- Text with a border -->
                         <Border Background="{DynamicResource QR_Background}"
                                 Width="60"
                                 CornerRadius="10">
-                            <!-- Adjust padding to center vertically -->
                             <TextBlock Text="Previous"
                                        Foreground="{DynamicResource Text}"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center" />
                         </Border>
 
-                        <!-- Symbol without a border -->
                         <TextBlock Text="&lt;" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ControlTemplate>

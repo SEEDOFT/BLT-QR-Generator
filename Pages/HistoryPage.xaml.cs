@@ -68,7 +68,7 @@ namespace BLT_Generator.Pages
             DoubleAnimation animation = new DoubleAnimation
             {
                 Duration = TimeSpan.FromSeconds(0.3),
-                To = isDrawerOpen ? 0 : 200,
+                To = isDrawerOpen ? 0 : 210,
                 EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
             };
 

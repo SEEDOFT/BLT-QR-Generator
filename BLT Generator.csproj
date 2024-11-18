@@ -10,16 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Kh_ANG.ttf" />
     <None Remove="Fonts\KH_SN.ttf" />
+    <None Remove="Fonts\Moul_Regular.ttf" />
     <None Remove="Fonts\OleoScriptSwashCaps_Bold.ttf" />
     <None Remove="Fonts\OleoScriptSwashCaps_Regular.ttf" />
     <None Remove="Fonts\Poppins_Bold.ttf" />
-    <None Remove="Fonts\Poppins_Medium.ttf" />
     <None Remove="Fonts\Poppins_Regular.ttf" />
-    <None Remove="Fonts\Segoe_Bold.ttf" />
-    <None Remove="Fonts\Segoe_Bold_Italic.ttf" />
-    <None Remove="Fonts\Segoe_Italic.ttf" />
-    <None Remove="Fonts\Segoe_Regular.ttf" />
     <None Remove="Images\BlackIcons\ArrowDown.png" />
     <None Remove="Images\BlackIcons\ArrowRight.png" />
     <None Remove="Images\BlackIcons\Back.png" />
@@ -106,7 +103,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fonts\Kh_ANG.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Fonts\KH_SN.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Moul_Regular.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Fonts\OleoScriptSwashCaps_Bold.ttf">
@@ -116,9 +119,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Fonts\Poppins_Bold.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Poppins_Medium.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Fonts\Poppins_Regular.ttf">
@@ -172,18 +172,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fonts\Segoe_Bold.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Segoe_Bold_Italic.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Segoe_Italic.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Fonts\Segoe_Regular.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Images\BlackIcons\Calendar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -388,15 +376,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Page Update="Languages\Strings.km-KH.xaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Page>
-    <Page Update="Languages\Strings.xaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Page>
   </ItemGroup>
 
 </Project>

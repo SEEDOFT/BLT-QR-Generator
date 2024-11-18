@@ -23,7 +23,7 @@
             <ColumnDefinition Width="80"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="60"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="Btn_FAQ"
                 Style="{StaticResource FAQ}"
@@ -44,24 +44,26 @@
         </TextBlock>
         <StackPanel Grid.Row="1" Grid.Column="1"
                     Grid.ColumnSpan="3">
-            <TextBlock FontFamily="{StaticResource Bold}"
-                       FontSize="28" Margin="0 10 0 0"
+            <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                       FontSize="28"
                        HorizontalAlignment="Center"
                        Foreground="{DynamicResource Uncheck}"
                        TextAlignment="Center">
-                History
+                <Run Text="{DynamicResource HistoryTitle}"/>
                 <LineBreak/>
-                <Run FontSize="14" Foreground="{DynamicResource Uncheck}" FontFamily="{StaticResource Regular}">Record of Generated QR Code</Run>
+                <Run Text="{DynamicResource History_Text}"
+                     FontSize="14"
+                     Foreground="{DynamicResource Uncheck}" FontFamily="{DynamicResource Poppins_KhSN}"/>
             </TextBlock>
             <ComboBox Style="{StaticResource Box}"
                       Width="115"
-                      FontFamily="{StaticResource Regular}"
+                      FontFamily="{DynamicResource Poppins_KhSN}"
                       FontSize="14"
                       Foreground="{DynamicResource Uncheck}"
                       SelectionChanged="ComboBox_SelectionChanged"
                       SelectedIndex="0"
                       HorizontalAlignment="Left"
-                      Margin="0 20 0 0">
+                      Margin="0 12 0 0">
                 <ComboBoxItem>URL Records</ComboBoxItem>
                 <ComboBoxItem>WIFI Records</ComboBoxItem>
             </ComboBox>
@@ -70,9 +72,7 @@
 
         <Grid Grid.Row="2" Grid.RowSpan="3"
               Grid.Column="1" Grid.ColumnSpan="2"
-              x:Name="Grid_Display">
-
-        </Grid>
+              x:Name="Grid_Display"/>
 
         <Grid x:Name="Grid_FAQ"
               Grid.Row="0"
@@ -81,8 +81,6 @@
               Grid.ColumnSpan="2"
               HorizontalAlignment="Right"
               Width="0"
-              Background="White">
-
-        </Grid>
+              Background="White"/>
     </Grid>
 </UserControl>

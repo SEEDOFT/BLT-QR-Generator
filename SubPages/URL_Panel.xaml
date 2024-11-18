@@ -24,18 +24,16 @@
                     VerticalAlignment="Top">
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <TextBlock FontFamily="{StaticResource Bold}"
+            <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
                        Foreground="{DynamicResource WU_Title}"
                        FontSize="30">
                 URL
             </TextBlock>
             <TextBox Margin="0 30 0 0"
                      Style="{StaticResource Txb}"
-                     helpers:TextBoxHelper.PlaceholderText="Enter URL"
-                     FontFamily="{StaticResource Regular}"
-                     FontSize="14">
-
-            </TextBox>
+                     helpers:TextBoxHelper.PlaceholderText="{DynamicResource URL_Insert}"
+                     FontFamily="{DynamicResource Poppins_KhSN}"
+                     FontSize="14"/>
         </StackPanel>
     </Grid>
 </UserControl>

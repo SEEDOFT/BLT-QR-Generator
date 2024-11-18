@@ -1,8 +1,0 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <FontFamily x:Key="Regular">/Fonts/Poppins_Regular.ttf#Poppins</FontFamily>
-    <FontFamily x:Key="Bold">/Fonts/Poppins_Bold.ttf#Poppins</FontFamily>
-    <FontFamily x:Key="Medium">/Fonts/Poppins_Medium.ttf#Poppins</FontFamily>
-    <FontFamily x:Key="Ole_Regular">/Fonts/OleoScriptSwashCaps_Regular.ttf#Oleo Script Swash Caps</FontFamily>
-    <FontFamily x:Key="Ole_Bold">/Fonts/OleoScriptSwashCaps_Bold.ttf#Oleo Script Swash Caps</FontFamily>
-</ResourceDictionary>

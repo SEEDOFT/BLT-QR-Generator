@@ -32,25 +32,41 @@ namespace BLT_Generator.SubPages
             if (LightModeButton.IsChecked == true)
             {
                 SetTheme("Light");
+                new Language_Panel().LoadLanguage();
             }
             else if (DarkModeButton.IsChecked == true)
             {
                 SetTheme("Dark");
+                new Language_Panel().LoadLanguage();
             }
         }
 
         private void LoadLightMode()
         {
-            var lightMode = new ResourceDictionary { Source = new Uri("/ResourceDictionary/LightMode.xaml", UriKind.Relative) };
-            Application.Current.Resources.MergedDictionaries.Clear();
+            RemoveThemeDictionaries();
+            var lightMode = new ResourceDictionary { Source = new Uri("/ResourceDictionary/LightMode.xaml", UriKind.Relative) };          
             Application.Current.Resources.MergedDictionaries.Add(lightMode);
         }
 
         private void LoadDarkMode()
         {
-            var darkMode = new ResourceDictionary { Source = new Uri("/ResourceDictionary/DarkMode.xaml", UriKind.Relative) };
-            Application.Current.Resources.MergedDictionaries.Clear();
+            RemoveThemeDictionaries();
+            var darkMode = new ResourceDictionary { Source = new Uri("/ResourceDictionary/DarkMode.xaml", UriKind.Relative) };           
             Application.Current.Resources.MergedDictionaries.Add(darkMode);
+        }
+
+        private void RemoveThemeDictionaries()
+        {
+            var dictionaries = Application.Current.Resources.MergedDictionaries.ToList();
+            foreach (var dictionary in dictionaries)
+            {
+                if (dictionary.Source != null &&
+                   (dictionary.Source.OriginalString.Contains("LightMode.xaml") ||
+                    dictionary.Source.OriginalString.Contains("DarkMode.xaml")))
+                {
+                    Application.Current.Resources.MergedDictionaries.Remove(dictionary);
+                }
+            }
         }
 
         private void SetTheme(string theme)

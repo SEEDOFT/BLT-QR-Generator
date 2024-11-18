@@ -22,7 +22,7 @@
         <StackPanel Grid.Column="1"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
-            <TextBlock FontFamily="{StaticResource Regular}"
+            <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
                        FontSize="14">
                 | 14/Oct/2024
             </TextBlock>
@@ -30,7 +30,7 @@
         <StackPanel Grid.Column="2"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
-            <TextBlock FontFamily="{StaticResource Regular}"
+            <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
                        FontSize="14"
                        TextTrimming="CharacterEllipsis">
                 https://www.youtube.com/watch?v=3BFTio5296w
@@ -40,7 +40,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
             <Button Style="{StaticResource Regenerate}"
-                    FontFamily="{StaticResource Regular}"
+                    FontFamily="{DynamicResource PoppinsBold_KhSN}"
                     Content="Regenerate">
 
             </Button>

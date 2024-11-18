@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="60"/>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0"
                    HorizontalAlignment="Left"
@@ -44,58 +44,60 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Top"
                         Margin="0 20 0 0">
-                <TextBlock FontFamily="{StaticResource Ole_Bold}"
-                           FontSize="40"
+                <TextBlock FontFamily="{DynamicResource Ole_Moul}"
+                           FontSize="32"
                            Foreground="{DynamicResource _QR_Generator}"
-                           HorizontalAlignment="Center">
-                    About Us
-                </TextBlock>
+                           HorizontalAlignment="Center"
+                           Text="{DynamicResource AboutUS}"/>
+
                 <TextBlock Margin="0 20 0 0"
                            FontSize="14"
-                           FontFamily="{StaticResource Regular}"
+                           FontFamily="{DynamicResource Poppins_KhSN}"
                            Foreground="{DynamicResource _QR_Generator}"
                            TextWrapping="Wrap"
                            FontWeight="Medium"
                            TextAlignment="Center">
-                    We are a team from Group 01, consisting of three members: <Run FontWeight="Bold" Text="Sam Sokunthea "/> (a student at the Royal University of Phnom Penh), <Run FontWeight="Bold" Text="Yong Bunleng "/> (a student at the National University of Management), and <Run FontWeight="Bold" Text="Koy Yotraboth "/> (also a student at the National University of Management). We are scholarship students specializing in Mobile Application (Flutter) studies at <Run FontWeight="Bold" Text="ANT Technology Training Center"/>. We are extremely pleased to have completed the C# Assignment, which is a part of our field of study. Thus, we would like to express our deep gratitude to our teachers and mentors who have guided and supported us all the way to this accomplishment.
+                    <Run Text="{DynamicResource AboutUS_TextP1}"/>
+                    <Run FontWeight="Bold" Text="{DynamicResource Kunthea}"/>
+                    <Run Text="{DynamicResource AboutUS_TextP2}"/>
+                    <Run FontWeight="Bold" Text="{DynamicResource Bunleng}"/>
+                    <Run Text="{DynamicResource AboutUS_TextP3}"/>
+                    <Run FontWeight="Bold" Text="{DynamicResource Yotraboth}"/>
+                    <Run Text="{DynamicResource AboutUS_TextP4}"/>
+                    <Run FontWeight="Bold" Text="{DynamicResource ANT}"/>
+                    <Run Text="{DynamicResource AboutUS_TextP5}"/>
                     <LineBreak/>
-
                 </TextBlock>
 
-                <TextBlock FontFamily="{StaticResource Ole_Bold}"
-                           FontSize="40"
+                <TextBlock FontFamily="{DynamicResource Ole_Moul}"
+                           FontSize="32"
                            Foreground="{DynamicResource _QR_Generator}"
-                           HorizontalAlignment="Center">
-                    Our Mission
-                </TextBlock>
+                           HorizontalAlignment="Center"
+                           Text="{DynamicResource OurMission}"/>
                 <TextBlock Margin="0 20 0 0"
                            FontSize="14"
-                           FontFamily="{StaticResource Regular}"
+                           FontFamily="{DynamicResource Poppins_KhSN}"
                            Foreground="{DynamicResource _QR_Generator}"
                            TextWrapping="Wrap"
                            FontWeight="Medium"
-                           TextAlignment="Center">
-                    Our mission is to empower individuals and businesses with an intuitive, efficient, and reliable QR code generation tool that simplifies digital connectivity. We designed this app to break down technological barriers, providing users with an easy-to-use interface that makes generating customized QR codes fast and accessible, regardless of technical experience. By focusing on user experience, we aim to make information sharing seamless, enabling everyone to create, customize, and share QR codes effortlessly. Whether it’s for professional marketing, personal use, or event planning, our app offers secure, high-quality QR codes that meet diverse needs while enhancing accessibility and interaction. Through continuous improvements and responsive support, we’re dedicated to making digital engagement straightforward, reliable, and adaptable to the evolving demands of the digital world.
-                </TextBlock>
+                           TextAlignment="Center"
+                           Text="{DynamicResource OurMission_Text}"/>
 
-                <TextBlock FontFamily="{StaticResource Ole_Bold}"
-                           FontSize="40"
+                <TextBlock FontFamily="{DynamicResource Ole_Moul}"
+                           FontSize="32"
                            HorizontalAlignment="Center"
                            Margin="10 20 10 10"
-                           Foreground="{DynamicResource _QR_Generator}">
-                    Our Team Members
-                </TextBlock>
+                           Foreground="{DynamicResource _QR_Generator}"
+                           Text="{DynamicResource OurMember}"/>
 
                 <Grid x:Name="Card_Display" Margin="0 20 0 0">
 
                 </Grid>
 
-                <TextBlock FontFamily="{StaticResource Ole_Bold}"
-                           FontSize="40"
+                <TextBlock FontFamily="{DynamicResource Ole_Moul}"
+                           FontSize="30"
                            Foreground="{DynamicResource _QR_Generator}"
                            HorizontalAlignment="Center">
-                    <LineBreak/>
-                    Thank you for using our application.
                     <LineBreak/>
                 </TextBlock>
             </StackPanel>

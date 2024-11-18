@@ -29,7 +29,7 @@
     <Color x:Key="Dark_Light">#D9D9D9</Color>
     <SolidColorBrush x:Key="DarkLightBG" Color="{DynamicResource Dark_Light}"/>
     <!-- DarkMode and LightMode of A letter from us  -->
-    <Color x:Key="Message">#80fdfdfd</Color>
+    <Color x:Key="Message">#B2000000</Color>
     <SolidColorBrush x:Key="MessageBG" Color="{DynamicResource Message}"/>
     <!-- A letter from us(Inside background  -->
     <Color x:Key="MessageInside">#162039</Color>

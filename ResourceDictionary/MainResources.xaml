@@ -4,7 +4,6 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/ResourceDictionary/ButtonStyle.xaml"/>
         <ResourceDictionary Source="/ResourceDictionary/ComboboxStyle.xaml"/>
-        <ResourceDictionary Source="/ResourceDictionary/Fonts.xaml"/>
         <ResourceDictionary Source="/ResourceDictionary/TextboxStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

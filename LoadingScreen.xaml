@@ -106,7 +106,7 @@
                     </ControlTemplate>
                 </ProgressBar.Template>
             </ProgressBar>
-            <TextBlock FontFamily="{StaticResource Medium}"
+            <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
                        FontSize="14"
                        Margin="0 20"
                        TextWrapping="Wrap"

@@ -1,0 +1,136 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--Font Changing and Key to use for Dynamic-->
+    <FontFamily x:Key="Poppins_KhSN">/Fonts/KH_SN.ttf#Kh SN Kampongsom</FontFamily>
+    <FontFamily x:Key="Ole_Moul">/Fonts/Moul_Regular.ttf#Moul</FontFamily>
+    <FontFamily x:Key="PoppinsBold_Moul">/Fonts/Moul_Regular.ttf#Moul</FontFamily>
+    <FontFamily x:Key="PoppinsBold_KhSN">/Fonts/KH_SN.ttf#Kh SN Kampongsom</FontFamily>
+    <FontFamily x:Key="KhANG_PoppinsBold">/Fonts/Kh_ANG.ttf#Kh Ang Moulhand</FontFamily>
+    <FontFamily x:Key="Ole_Bold">/Fonts/OleoScriptSwashCaps_Bold.ttf#Oleo Script Swash Caps</FontFamily>
+
+    <!--Frame Title-->
+    <sys:String x:Key="Frame">ស៊ុម</sys:String>
+    <sys:String x:Key="ColorPallet">ជ្រើសរើសពណ៌</sys:String>
+    <sys:String x:Key="InsertImage">បញ្ចូលរូបភាព</sys:String>
+    <sys:String x:Key="BtnSave">រក្សាទុក</sys:String>
+    <sys:String x:Key="BtnCopy">ចម្លង</sys:String>
+
+
+    <!-- WIFI Panel-->
+    <sys:String x:Key="WIFI_Name">បញ្ចូលឈ្មោះ WIFI របស់អ្នក ឬ SSID</sys:String>
+    <sys:String x:Key="WIFI_Pw">លេខកូដសម្ងាត់</sys:String>
+
+
+    <!-- URL Panel-->
+    <sys:String x:Key="URL_Insert">បញ្ចូល URL</sys:String>
+
+
+    <!-- About US -->
+    <sys:String x:Key="AboutUS">អំពីពួកយើង</sys:String>
+    <sys:String x:Key="Kunthea">សំ សុគន្ធធារ</sys:String>
+    <sys:String x:Key="Bunleng">យ៉ង់ ប៊ុនឡេង</sys:String>
+    <sys:String x:Key="Yotraboth">កុយ យុត្ត្រាបុត្រ</sys:String>
+    <sys:String x:Key="ANT">មជ្ឈមណ្ឌលបណ្ដុះបណ្ដាលបច្ចេកវិទ្យាអាន។</sys:String>
+    <sys:String x:Key="AboutUS_TextP1">ពួកយើងគឺមកពីក្រុមទី ០១ ដែលមានសមាជិកចំនួនបីរូប៖</sys:String>
+    <sys:String x:Key="AboutUS_TextP2">(ជានិស្សិតមកពីសាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ)</sys:String>
+    <sys:String x:Key="AboutUS_TextP3">(ជានិស្សិតមកពីសាកលវិទ្យាល័យជាតិគ្រប់គ្រង) និង</sys:String>
+    <sys:String x:Key="AboutUS_TextP4">(ជានិស្សិតមកពីសាកលវិទ្យាល័យជាតិគ្រប់គ្រង)។ ពួកយើងជានិស្សិតដែលបានទទួលអាហារូបករណ៍ក្នុងការសិក្សាជំនាញ Mobile Application (Flutter) សិក្សានៅ</sys:String>
+    <sys:String x:Key="AboutUS_TextP5">យើងមានក្តីរីករាយយ៉ាងខ្លាំងដែលបានបញ្ចប់ការងារ Assignment C# ដែលជាផ្នែកមួយនៃជំនាញសិក្សារបស់យើង។ ដូច្នេះ ពួកយើងសូមថ្លែងអំណរគុណយ៉ាងជ្រាលជ្រៅចំពោះលោកគ្រូ អ្នកគ្រូ និង Mentors ដែលបានដឹកនាំ និងគាំទ្រពួកយើងរហូតដល់ សម្រេចបានជោគជ័យនេះ។</sys:String>
+    <!-- Our Mission -->
+    <sys:String x:Key="OurMission">គោលដៅរបស់ពួកយើង</sys:String>
+    <sys:String x:Key="OurMission_Text">គោលដៅរបស់យើងគឺជំរុញឱ្យអ្នកប្រើ និងម្ចាស់អាជីវកម្មទទួលបានកម្មវិធីបង្កើត QR Code ដែលមានភាពងាយស្រួល ប្រសិទ្ធភាព និងទុកចិត្តបាន ដើម្បីធ្វើការផ្សារភ្ជាប់ទៅកាន់សម័យឌីជីថល ឱ្យកាន់តែមានភាពងាយស្រួល។ យើងបានបង្កើតកម្មវិធីនេះឡើងដើម្បីវែកញែក រាល់ភាពលំបាករបស់បច្ចេកវិទ្យា ដោយផ្តល់ឱ្យអ្នកប្រើប្រាស់នូវចំណុចដែលងាយស្រួលប្រើធ្វើការបង្កើត QR Code ដែលអាចប្ដូរទៅតាមបំណងរបស់អ្នកប្រើ មានល្បឿនលឿន និងអាចប្រើប្រាស់បាន ទោះបីជាមិនមានបទពិសោធន៍ក៏ដោយ។ ដោយផ្តោតសំខាន់លើបទពិសោធន៍អ្នកប្រើ យើងមានគោលដៅធ្វើឱ្យការចែករំលែកព័ត៌មានកាន់តែមានភាពងាយស្រួល ដោយអាចបង្កើត QR Code ហើយអាចប្ដូរតាមបំណង និងចែករំលែក QR Code របស់អ្នកប្រើបានយ៉ាងងាយស្រួល។ មិនថាសម្រាប់សេវាកម្មលើទីផ្សារផ្លូវការ ការប្រើប្រាស់ផ្ទាល់ខ្លួន ឬការធ្វើរៀបចំកម្មវិធីផ្សេងៗជាដើម កម្មវិធីរបស់យើងផ្តល់ឱ្យនូវ QR Code ដែលមានសុវត្ថិភាព មានគុណភាពខ្ពស់ និងបំពេញតម្រូវការ ដំណើរការជាច្រើន រួមទាំងការចូលដំណើរការកម្មវិធី និងអន្តរកម្មបានល្អ។ តាមរយៈការអភិវឌ្ឍឥតឈប់ឈរ និងការគាំទ្រដែលឆ្លើយតបបានយ៉ាងល្អ យើងសម្រេចក្នុងការ ធ្វើឱ្យការចូលទៅក្នុងសម័យឌីជីថលឱ្យ កាន់តែងាយស្រួល ទុកចិត្តបាន និងអាចផ្លាស់ប្ដូរទៅតាមបំណង តាមតម្រូវការ ដែលកំពុងតែផ្លាស់ប្តូរក្នុងពិភពឌីជីថល។</sys:String>
+    <!-- our team memeber -->
+    <sys:String x:Key="OurMember">សមាជិកក្រុម</sys:String>
+    <!-- Thanks-->
+    <sys:String x:Key="Thanks">សូមអរគុណសម្រាប់ការប្រើប្រាស់កម្មវិធីរបស់ពួកខ្ញុំ</sys:String>
+
+
+    <!-- A Letter from US-->
+    <sys:String x:Key="LetterTitle">សេចក្តីថ្លែងអំណរគុណ</sys:String>
+    <sys:String x:Key="ANT_">មជ្ឈមណ្ឌលបណ្ដុះបណ្ដាលបច្ចេកវិទ្យាអាន</sys:String>
+    <sys:String x:Key="MPTC">ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍។</sys:String>
+    <sys:String x:Key="Letter_TextP1">យើងគឺជាសិស្សដែលទទួលបានអាហារូបករណ៍នៅ</sys:String>
+    <sys:String x:Key="Letter_TextP2">ឯកទេស</sys:String>
+    <sys:String x:Key="Letter_TextP4">Mobile Application.</sys:String>
+    <sys:String x:Key="Letter_TextP5">សិក្សារយៈពេល ១១ ខែ ចាប់ពីថ្ងៃទី ១៩ កុម្ភៈ ២០២៤ ដល់ថ្ងៃទី ២០ ធ្នូ ២០២៤។ ពួកយើងសូមអរគុណចំពោះការគាំទ្រពី</sys:String>
+    <sys:String x:Key="Letter_TextP6">ឱកាសដ៏ល្អនេះអនុញ្ញាតឱ្យពួកយើង អាចអភិវឌ្ឍជំនាញក្នុងការអភិវឌ្ឍកម្មវិធីទូរស័ព្ទដៃ និងអាចប្រឡូកក្នុងអាជីពដ៏ល្អមួយនេះ ជាពិសេសក្នុងសម័យបច្ចេកវិទ្យានេះឯង។</sys:String>
+
+
+    <!-- History Panel -->
+    <sys:String x:Key="HistoryTitle">ប្រវត្តិ</sys:String>
+    <sys:String x:Key="History_Text">ទិន្នន័យ QR Code នានាដែលបានបង្កើតរួច</sys:String>
+    <sys:String x:Key="Date">ការបរិច្ឆេទ</sys:String>
+    <sys:String x:Key="Name">ឈ្មោះ SSID</sys:String>
+    <sys:String x:Key="Password">ពាក្យសម្ងាត់</sys:String>
+    <sys:String x:Key="Next">ទៅមុខ</sys:String>
+    <sys:String x:Key="Previous">ថយក្រោយ</sys:String>
+    <!--<sys:String x:Key="Regenerate">បង្កើតម្ដងទៀត</sys:String>-->
+
+
+
+    <!-- Setting Panel -->
+    <sys:String x:Key="SettingTitle">ការកំណត់</sys:String>
+    <sys:String x:Key="LanguageTitle">ភាសា</sys:String>
+    <sys:String x:Key="LanguageChange">ផ្លាស់ប្ដូរភាសា</sys:String>
+    <sys:String x:Key="ThemeTitle">ផ្ទាំងលំអរ</sys:String>
+    <sys:String x:Key="ThemeChange">ផ្លាស់ប្ដូរផ្ទាំងលម្អ</sys:String>
+    <sys:String x:Key="PINs">លេខសម្ងាត់</sys:String>
+    <sys:String x:Key="PINsChange">ផ្លាស់ប្ដូរលេខសម្ងាត់</sys:String>
+
+
+
+    <!-- Language Panel (Default Title) -->
+    <sys:String x:Key="LanguagePanel_Default">លំនាំដើម</sys:String>
+    <sys:String x:Key="LanguagePanel_Title">ផ្លាស់ប្ដូរភាសា</sys:String>
+    <!-- Language Panel (Inside text, first part) -->
+    <sys:String x:Key="LanguagePanel_TextP1">កម្មវិធីរបស់យើងត្រូវបានកំណត់រចនាឡើងដើម្បីជ្រើសរើសភាសាខ្មែរជាភាសាចម្បង ដោយផ្តល់ភាពងាយស្រួលដល់អ្នកប្រើប្រាស់ដែលជាជនជាតិខ្មែរ។</sys:String>
+
+
+
+
+    <!-- Theme Panel (Default Title) -->
+    <sys:String x:Key="ThemePanel_Default">ផ្ទាំងលំអរ</sys:String>
+    <sys:String x:Key="ThemePanel_Title">ផ្លាស់ប្ដូរផ្ទាំងលម្អ</sys:String>
+    <!-- Theme Panel (Inside text, first part -->
+    <sys:String x:Key="ThemePanel_TextP1">កម្មវិធីរបស់យើងត្រូវបានកំណត់ដើម្បីជ្រើសរើសរផ្ទាំងសរជាការកំណត់ការបង្ហាញដំបូងដោយផ្តល់មុខងារដែលមានភាពស្អាតនិងងាយស្រួលប្រើប្រាស់បង្កើនការមើលនិងភាពងាយស្រួលក្នុងបរិស្ថានដែលមានពន្លឺភ្លឺ។</sys:String>
+    <!-- Theme Panel (Inside text, second part -->
+    <sys:String x:Key="ThemePanel_TextP2">ជ្រើសរើសមួយក្នុងចំណោមជម្រើសទាំងនេះ ដើម្បីផ្លាស់ប្តូរផ្ទាំង។</sys:String>
+    <!-- Theme Panel (DarkMode) -->
+    <sys:String x:Key="ThemePanel_DarkMode">ម៉ូដងងឺត</sys:String>
+    <!--Theme Panel (LightMode)-->
+    <sys:String x:Key="ThemePanel_LightMode">ម៉ូដភ្លឺ</sys:String>
+
+
+
+    <!-- PINs Panel (Default Title) -->
+    <sys:String x:Key="PinPanel_Default">លេខសម្ងាត់</sys:String>
+    <sys:String x:Key="PinPanel_Title">ផ្លាស់ប្ដូរលេខសម្ងាត់</sys:String>
+    <!-- PINs Panel (Inside text, first part -->
+    <sys:String x:Key="PinPanel_TextP1">អ្នកប្រើប្រាស់អាចផ្លាស់ប្តូរលេខកូដបស់ខ្លួនបានក្នុងករណីចាំបាច់ដើម្បីដោះស្រាយបញ្ហាសុវត្ថិភាពឬបញ្ហាដែលពាក់ព័ន្ធនឹងការចូលប្រើបានយ៉ាងមានប្រសិទ្ធភាព។</sys:String>
+
+
+
+    <!-- FAQ Panel -->
+    <sys:String x:Key="Q1">១.តើ BLT QR Generator គឺជាអ្វី?</sys:String>
+    <sys:String x:Key="Q2">២.តើ BLT QR Generator អាចប្រើប្រាស់លើអ្វីខ្លះ?</sys:String>
+    <sys:String x:Key="Q3">៣.តើ BLT QR Generator អាចបង្កើត QR Code ប្រភេទអ្វីខ្លះ?</sys:String>
+    <sys:String x:Key="Q4">៤.តើខ្ញុំអាចប្ដូរស្ទាយ QR Code របស់ខ្ញុំបានដូចម្តេច?</sys:String>
+    <sys:String x:Key="Q5">៥.តើខ្ញុំអាចរក្សាទុកឬនាំចេញ QR Code ដែលបានបង្កើតរបស់ខ្ញុំបានទេ?</sys:String>
+    <sys:String x:Key="Q6">៦.តើ BLT QR Generator ផ្តល់នូវសុវត្ថិភាពដល់អ្នកប្រើប្រាស់ដែរឬទេ?</sys:String>
+    <sys:String x:Key="Q7">៧.តើ BLT QR Generator មានមីនុយការកំណត់ទេ? ហើយវាផ្តល់ជម្រើសអ្វីខ្លះ?</sys:String>
+    <sys:String x:Key="Q8">៨.តើខ្ញុំអាចប្រើ BLT QR Generator សម្រាប់អាជីវកម្មបានទេ?</sys:String>
+    <sys:String x:Key="Q9">៩.តើ BLT QR Generator មានអ្វីខុសពីកម្មវិធីបង្កើត QR Code ផ្សេងទៀត?</sys:String>
+    <sys:String x:Key="Q10">១០.តើខ្ញុំអាចទទួលបានជំនួយបើប្រឈមនឹងបញ្ហាជាមួយ BLT QR Generator បានដូចម្តេច?</sys:String>
+
+    <sys:String x:Key="A1">BLT QR Generator គឺជាកម្មវិធីដែលត្រូវបានរចនាឡើងដើម្បីបង្កើត QR Code បានយ៉ាងងាយស្រួល និងមានប្រសិទ្ធភាព។ វាត្រូវបានបង្កើតឡើងជាពិសេសសម្រាប់អ្នកប្រើប្រាស់ដែលកំពុងស្វែងរកវិធីងាយស្រួលក្នុងការបង្កើត QR Code ជាមួយនឹងជម្រើសប្ដូរទៅតាមបំណងរបស់អ្នកប្រើប្រាស់។</sys:String>
+    <sys:String x:Key="A2">បច្ចុប្បន្ន BLT QR Generator ត្រូវបានអភិវឌ្ឍជា WPF Application ដែលធ្វើឱ្យវាសមស្របសម្រាប់អ្នកប្រើ Windows។</sys:String>
+    <sys:String x:Key="A3">អ្នកអាចបង្កើត QR Code សម្រាប់ទិន្នន័យប្រភេទដូចជា URL និង Wi-Fi តែប៉ុណ្ណោះ។</sys:String>
+    <sys:String x:Key="A4">កម្មវិធីនេះអាចអនុញ្ញាតឱ្យប្ដូរតាមស្ទាយដូចជាការផ្លាស់ប្តូរពណ៌ QR Codeនិងការបន្ថែមឡូហ្គោ បានផងដែរ។</sys:String>
+    <sys:String x:Key="A5">បាន។ BLT QR Generator អាចអនុញ្ញាតឱ្យអ្នករក្សាទុក QR Code ជាទ្រង់ទ្រាយរូបភាពជា PNG ដើម្បីងាយស្រួលប្រើប្រាស់ក្នុងកម្មវិធីផ្សេងទៀត។</sys:String>
+    <sys:String x:Key="A6">កម្មវិធីរបស់យើង មានកំណត់នៅលេខកូដសម្ងាត់ដើម្បីរក្សាសុវត្ថិភាពជូនអ្នកប្រើប្រាស់។</sys:String>
+    <sys:String x:Key="A7">មានមីនុយការកំណត់រួមមានជម្រើសដូចជា ទីតាំងរក្សាទុកដ៏លំនាំដើម, ការកំណត់ទំហំ QR code។</sys:String>
+    <sys:String x:Key="A8">BLT QR Generator អាចប្រើប្រាស់សម្រាប់គោលបំណងផ្ទាល់ខ្លួន និងអាជីវកម្ម ប៉ុន្តែវាអាចស្ថិតក្នុងលក្ខខណ្ឌអាជ្ញាប័ណ្ណដែលបានផ្តល់ដោយគម្រោងរបស់អ្នក។</sys:String>
+    <sys:String x:Key="A9">BLT QR Generator ត្រូវបានរចនាឡើងដោយផ្តោតសំខាន់លើភាពងាយស្រួលនិងជម្រើសប្ដូរស្ទាយ ដោយផ្តល់នូវចំណុចល្អ ងាយស្រួលប្រើ ជម្រើសប្ដូរស្ទាយដោយសេរី និងសមត្ថភាពក្នុងការបញ្ចូលឡូហ្គោ។</sys:String>
+    <sys:String x:Key="A10">សម្រាប់ជំនួយ អ្នកអាចស្វែងរកនូវឯកសារដែលបានផ្តល់ជូនជាមួយកម្មវិធី ឬទាក់ទងក្រុមអភិវឌ្ឍតាមបណ្ដាញសង្គមនានាដែលបានដាក់ជូន។</sys:String>
+</ResourceDictionary>

@@ -32,16 +32,15 @@
         <StackPanel Grid.Column="1"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
-            <TextBlock FontFamily="{StaticResource Bold}"
+            <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
                        FontSize="20"
-                       Foreground="{DynamicResource Text}">
-                Date
-            </TextBlock>
+                       Foreground="{DynamicResource Text}"
+                       Text="{DynamicResource Date}"/>
         </StackPanel>
         <StackPanel Grid.Column="2"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
-            <TextBlock FontFamily="{StaticResource Bold}"
+            <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
                        FontSize="20"
                        Foreground="{DynamicResource Text}">
                 URL

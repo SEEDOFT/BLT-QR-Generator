@@ -23,7 +23,7 @@
         <StackPanel Grid.Column="1"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
-            <TextBlock FontFamily="{StaticResource Regular}"
+            <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
                        FontSize="14">
                 | 14/Oct/2024
             </TextBlock>
@@ -31,7 +31,7 @@
         <StackPanel Grid.Column="2"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
-            <TextBlock FontFamily="{StaticResource Regular}"
+            <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
                        FontSize="14"
                        TextTrimming="CharacterEllipsis">
                 ANT 42
@@ -40,7 +40,7 @@
         <StackPanel Grid.Column="3"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
-            <TextBlock FontFamily="{StaticResource Regular}"
+            <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
                        FontSize="14"
                        TextTrimming="CharacterEllipsis">
                 @ANT@2024
@@ -50,10 +50,8 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
             <Button Style="{StaticResource Regenerate}"
-                    FontFamily="{StaticResource Regular}"
-                    Content="Regenerate">
-
-            </Button>
+                    FontFamily="{DynamicResource Poppins_KhSN}"
+                    Content="Regenerate"/>
         </StackPanel>
         <StackPanel Grid.Column="5"
                     HorizontalAlignment="Center"

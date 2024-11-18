@@ -28,8 +28,9 @@
                    Grid.Column="0"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"
-                   Foreground="{DynamicResource _QR_Generator}"
                    FontFamily="{StaticResource Ole_Bold}"
+                   Foreground="{DynamicResource _QR_Generator}"
+
                    FontSize="20">
             <Run Text="BLT" Foreground="{DynamicResource _BLT}"/> QR Generator
         </TextBlock>
@@ -46,7 +47,7 @@
                     <ToggleButton x:Name="Btn_URL"
                                   Style="{StaticResource TopButton}"
                                   Content="URL"
-                                  FontFamily="{StaticResource Regular}"
+                                  FontFamily="{DynamicResource Poppins_KhSN}"
                                   FontSize="10"
                                   helpers:ToggleButtonHelper.CheckedIcon="{DynamicResource Link_Icon_Check}"
                                   helpers:ToggleButtonHelper.UncheckedIcon="{DynamicResource Link_Icon_UnCheck}"
@@ -54,7 +55,7 @@
                     <ToggleButton x:Name="Btn_WIFI"
                                   Style="{StaticResource TopButton}"
                                   Content="WIFI"
-                                  FontFamily="{StaticResource Regular}"
+                                  FontFamily="{DynamicResource Poppins_KhSN}"
                                   FontSize="10"
                                   Margin="5 0 0 0"
                                   helpers:ToggleButtonHelper.CheckedIcon="{DynamicResource WIFI_Icon_Check}"
@@ -102,11 +103,11 @@
                                         HorizontalAlignment="Left"
                                         VerticalAlignment="Bottom"
                                         Margin="20 0 0 0">
-                                <TextBlock FontFamily="{StaticResource Bold}"
-                                           FontSize="16"
-                                           Foreground="{DynamicResource Text}">
-                                    Frame
-                                </TextBlock>
+                                <TextBlock
+                                    FontSize="16"
+                                    Foreground="{DynamicResource Text}"
+                                    Text="{DynamicResource Frame}"
+                                    FontFamily="{DynamicResource PoppinsBold_KhSN}"/>
                             </StackPanel>
                             <Border Grid.Row="1" Grid.Column="0"
                                     Width="50"
@@ -159,7 +160,7 @@
                     <ComboBox Style="{StaticResource Color}"
                               Margin="0,15,0,0"
                               Height="45"
-                              FontFamily="{StaticResource Bold}"
+                              FontFamily="{DynamicResource PoppinsBold_KhSN}"
                               FontSize="16"
                               Foreground="{DynamicResource Text}">
                         <ComboBoxItem Foreground="{DynamicResource _QR_Generator}">
@@ -177,7 +178,8 @@
                     </ComboBox>
 
                     <Button x:Name="Btn_AddIcon"
-                            Margin="0 15 0 0" Content="Insert Image"
+                            Margin="0 15 0 0" Content="{DynamicResource InsertImage}"
+                            FontFamily="{DynamicResource PoppinsBold_KhSN}"
                             Click="Btn_AddIcon_Click">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
@@ -185,7 +187,7 @@
                                         CornerRadius="15"
                                         Background="{DynamicResource QR_Background}">
                                     <TextBlock Text="{TemplateBinding Content}"
-                                               FontFamily="{StaticResource Bold}"
+
                                                VerticalAlignment="Center"
                                                HorizontalAlignment="Left"
                                                Margin="20 0 0 0"
@@ -203,19 +205,17 @@
                         </Grid.ColumnDefinitions>
 
                         <Button Style="{StaticResource Save}"
-                                FontFamily="{StaticResource Bold}"
+                                FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                 HorizontalAlignment="Left"
                                 FontSize="16"
-                                Grid.Column="0">
-                            Save
-                        </Button>
+                                Grid.Column="0"
+                                Content="{DynamicResource BtnSave}"/>
                         <Button Style="{StaticResource Copy}"
-                                FontFamily="{StaticResource Bold}"
+                                FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                 HorizontalAlignment="Right"
                                 FontSize="16"
-                                Grid.Column="1">
-                            Copy
-                        </Button>
+                                Grid.Column="1"
+                                Content="{DynamicResource BtnCopy}"/>
                     </Grid>
                 </StackPanel>
             </Border>

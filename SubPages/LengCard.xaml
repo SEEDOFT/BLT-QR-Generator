@@ -33,12 +33,12 @@
                 <StackPanel HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             Orientation="Vertical">
-                    <TextBlock FontFamily="{StaticResource Bold}"
+                    <TextBlock FontFamily="{DynamicResource  PoppinsBold_KhSN}"
                                FontSize="21"
                                Foreground="{DynamicResource Text}">
                         YONG BUNLENG
                     </TextBlock>
-                    <TextBlock FontFamily="{StaticResource Bold}"
+                    <TextBlock FontFamily="{DynamicResource  PoppinsBold_KhSN}"
                                FontSize="16"
                                Foreground="{DynamicResource Text}">
                         Developer
@@ -77,13 +77,13 @@
                                     Orientation="Vertical"
                                     Margin="5 20 5 0">
                             <StackPanel>
-                                <TextBlock FontFamily="{StaticResource Bold}"
+                                <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            FontSize="20"
                                            TextAlignment="Center"
                                            Foreground="{DynamicResource Text}">
                                     YONG BUNLENG
                                 </TextBlock>
-                                <TextBlock FontFamily="{StaticResource Regular}"
+                                <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
                                            FontSize="12"
                                            Margin="5 5 5 0"
                                            Foreground="{DynamicResource Text}"
@@ -100,7 +100,7 @@
                                     </Grid>
                                     <TextBlock Grid.Column="0"
                                                Margin="5 0 0 0"
-                                               FontFamily="{StaticResource Bold}"
+                                               FontFamily="{DynamicResource Poppins_KhSN}"
                                                FontSize="14"
                                                HorizontalAlignment="Center"
                                                VerticalAlignment="Center"

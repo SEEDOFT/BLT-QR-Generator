@@ -75,12 +75,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Languages\Strings.km-KH.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Languages\Strings.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="LoadingScreen.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -114,7 +108,16 @@
     <Page Update="ResourceDictionary\DarkMode.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ResourceDictionary\Fonts.xaml">
+    <Page Update="ResourceDictionary\EnglishFonts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceDictionary\EnglishLanguage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceDictionary\KhmerFonts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceDictionary\KhmerLanguage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ResourceDictionary\LightMode.xaml">

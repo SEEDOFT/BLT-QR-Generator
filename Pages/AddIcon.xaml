@@ -41,7 +41,7 @@
                             VerticalAlignment="Top"
                             Click="CloseButton_Click"/>
                     <TextBlock Grid.Row="1" Margin="25 0 0 0"
-                               FontFamily="{StaticResource Regular}"
+                               FontFamily="{DynamicResource Poppins_KhSN}"
                                FontSize="16" Text="Default"
                                Foreground="{DynamicResource Text}"
                                VerticalAlignment="Center"
@@ -105,7 +105,7 @@
                     </Grid>
 
                     <TextBlock Grid.Row="3" Margin="25 0 0 0"
-                               FontFamily="{StaticResource Regular}"
+                               FontFamily="{DynamicResource Poppins_KhSN}"
                                FontSize="16" Text="Recent"
                                Foreground="{DynamicResource Text}"
                                VerticalAlignment="Center"
@@ -168,7 +168,7 @@
                         </ScrollViewer>
                     </Grid>
                     <TextBlock Grid.Row="5" Margin="25 0 0 0"
-                               FontFamily="{StaticResource Regular}"
+                               FontFamily="{DynamicResource Poppins_KhSN}"
                                FontSize="16" Text="Choose File"
                                Foreground="{DynamicResource Text}"
                                VerticalAlignment="Center"
@@ -180,7 +180,7 @@
                                 CornerRadius="15">
                             <Button Style="{StaticResource Upload}"
                                     Content="Browse files"
-                                    FontFamily="{StaticResource Regular}"
+                                    FontFamily="{DynamicResource Poppins_KhSN}"
                                     Foreground="{DynamicResource Text}"
                                     FontSize="16"/>
                         </Border>

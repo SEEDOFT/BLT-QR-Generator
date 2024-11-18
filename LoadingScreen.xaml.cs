@@ -23,6 +23,7 @@ namespace BLT_Generator
         public LoadingScreen()
         {
             SubPages.Theme_Panel theme_Panel = new SubPages.Theme_Panel();
+            SubPages.Language_Panel language_Panel = new SubPages.Language_Panel();
             InitializeComponent();
         }
 

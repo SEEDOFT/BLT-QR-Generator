@@ -25,7 +25,7 @@
                         VerticalAlignment="Top">
             </StackPanel>
             <StackPanel Grid.Row="1">
-                <TextBlock FontFamily="{StaticResource Bold}"
+                <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
                            Foreground="{DynamicResource WU_Title}"
                            FontSize="30">
                     WIFI
@@ -33,15 +33,15 @@
 
                 <TextBox x:Name="Txb_WIFI"
                          Style="{StaticResource Txb}"
-                         helpers:TextBoxHelper.PlaceholderText="Enter your WIFI name or SSID"
-                         FontFamily="{StaticResource Regular}"
+                         helpers:TextBoxHelper.PlaceholderText="{DynamicResource WIFI_Name}"
+                         FontFamily="{DynamicResource Poppins_KhSN}"
                          FontSize="14"
                          Margin="0 25 0 0">
                 </TextBox>
                 <TextBox x:Name="Txb_Password"
                          Style="{StaticResource Txb}"
-                         helpers:TextBoxHelper.PlaceholderText="Password"
-                         FontFamily="{StaticResource Regular}"
+                         helpers:TextBoxHelper.PlaceholderText="{DynamicResource WIFI_Pw}"
+                         FontFamily="{DynamicResource Poppins_KhSN}"
                          FontSize="14"
                          Margin="0 25 0 0">
                 </TextBox>
@@ -55,14 +55,14 @@
                                 VerticalAlignment="Center">
                         <RadioButton Content=" WPA"
                                      Foreground="{DynamicResource Uncheck}"
-                                     FontFamily="{StaticResource Regular}"/>
+                                     FontFamily="{DynamicResource Poppins_KhSN}"/>
                         <RadioButton Content=" WEP"
                                      Foreground="{DynamicResource Uncheck}"
-                                     FontFamily="{StaticResource Regular}"
+                                     FontFamily="{DynamicResource Poppins_KhSN}"
                                      Margin="20 0 0 0"/>
                         <RadioButton Content=" None"
                                      Foreground="{DynamicResource Uncheck}"
-                                     FontFamily="{StaticResource Regular}"
+                                     FontFamily="{DynamicResource Poppins_KhSN}"
                                      Margin="20 0 0 0"/>
                     </StackPanel>
                 </Border>

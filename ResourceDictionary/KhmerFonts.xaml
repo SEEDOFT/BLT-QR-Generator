@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Font Changing and Key to use for Dynamic -->
+    <FontFamily x:Key="Poppins_KhSN">/Fonts/KH_SN.ttf#Kh SN Kampongsom</FontFamily>
+    <FontFamily x:Key="Ole_Moul">/Fonts/Moul_Regular.ttf#Moul</FontFamily>
+    <FontFamily x:Key="PoppinsBold_Moul">/Fonts/Moul_Regular.ttf#Moul</FontFamily>
+    <FontFamily x:Key="PoppinsBold_KhSN">/Fonts/KH_SN.ttf#Kh SN Kampongsom</FontFamily>
+    <FontFamily x:Key="KhANG_PoppinsBold">/Fonts/Kh_ANG.ttf#Kh Ang Moulhand</FontFamily>
+    <FontFamily x:Key="Ole_Bold">/Fonts/OleoScriptSwashCaps_Bold.ttf#Oleo Script Swash Caps</FontFamily>
+</ResourceDictionary>
