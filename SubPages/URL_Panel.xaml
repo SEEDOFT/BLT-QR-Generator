@@ -33,7 +33,8 @@
                      Style="{StaticResource Txb}"
                      helpers:TextBoxHelper.PlaceholderText="{DynamicResource URL_Insert}"
                      FontFamily="{DynamicResource Poppins_KhSN}"
-                     FontSize="14"/>
+                     FontSize="14" TextChanged="TextBox_TextChanged"
+                     x:Name="TxtUrl"/>
         </StackPanel>
     </Grid>
 </UserControl>

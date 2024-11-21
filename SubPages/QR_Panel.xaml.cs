@@ -23,14 +23,16 @@ namespace BLT_Generator.SubPages
     public partial class QR_Panel : UserControl
     {
         private AddIcon? icon;
+        private GeneratePage? generatePage;
         public QR_Panel()
         {
             InitializeComponent();
+            this.generatePage = generatePage;
         }
 
         private void Btn_AddIcon_Click(object sender, RoutedEventArgs e)
         {
-            icon = new AddIcon();
+            icon = new AddIcon(generatePage);
             icon.Owner = Application.Current.MainWindow;
             icon.WindowStartupLocation = WindowStartupLocation.Manual;
             CenterAddIcon();

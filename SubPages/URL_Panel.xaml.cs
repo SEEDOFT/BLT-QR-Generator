@@ -1,28 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using BLT_Generator.Pages;
+using System;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace BLT_Generator.SubPages
 {
-    /// <summary>
-    /// Interaction logic for URL_Panel.xaml
-    /// </summary>
     public partial class URL_Panel : UserControl
     {
-        public URL_Panel()
+        private readonly GeneratePage parentPage;
+
+        public URL_Panel(GeneratePage parent)
         {
             InitializeComponent();
+            parentPage = parent;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string url = TxtUrl.Text;
+            if (string.IsNullOrWhiteSpace(url))
+            {
+                if (parentPage != null)
+                {
+                    parentPage.ClearQRCode();
+                }
+            }
+            else
+            {
+                if (parentPage != null)
+                {
+                    parentPage.path = url;
+                    parentPage.GenerateQR();
+                }
+            }
         }
     }
 }

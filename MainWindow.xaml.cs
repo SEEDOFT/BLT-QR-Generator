@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BLT_Generator.Pages;
+using System.IO;
 
 namespace BLT_Generator
 {
@@ -19,6 +20,8 @@ namespace BLT_Generator
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public string dir = "Data";
 
         public void PageBig(UserControl page)
         {
@@ -34,6 +37,7 @@ namespace BLT_Generator
             SetSelectedButton(Btn_Generate);
             PageBig(new Pages.GeneratePage());
 
+            Directory.CreateDirectory(dir);
         }
 
         private void SetSelectedButton(ToggleButton selectedButton)

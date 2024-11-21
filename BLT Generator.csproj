@@ -10,6 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\DefaultIcons\B.png" />
+    <None Remove="Assets\DefaultIcons\L.png" />
+    <None Remove="Assets\DefaultIcons\T.png" />
+    <None Remove="Assets\frame.png" />
+    <None Remove="Assets\frameFour.jpg" />
+    <None Remove="Assets\frameThree.jpg" />
+    <None Remove="Assets\frameTwo.png" />
     <None Remove="Fonts\Kh_ANG.ttf" />
     <None Remove="Fonts\KH_SN.ttf" />
     <None Remove="Fonts\Moul_Regular.ttf" />
@@ -105,6 +112,37 @@
     <None Remove="Images\WhiteIcons\wUser.png" />
     <None Remove="Images\WhiteIcons\wWIFI.png" />
     <None Remove="Images\WhiteIcons\Xmark.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\DefaultIcons\B.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\DefaultIcons\L.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\DefaultIcons\T.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\frame.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\frameFour.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\frameThree.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\frameTwo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Win32.SystemEvents" Version="9.0.0" />
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
+    <PackageReference Include="ZXing.Net" Version="0.16.9" />
   </ItemGroup>
 
   <ItemGroup>
