@@ -15,6 +15,7 @@ using System.Diagnostics;
 using System.Xml.Linq;
 using BLT_Generator.SubPages;
 using ZXing.Common;
+using System.Data.SQLite;
 
 namespace BLT_Generator.Pages
 {
@@ -38,6 +39,7 @@ namespace BLT_Generator.Pages
         private bool isFrame2Clicked = false;
         private bool isFrame3Clicked = false;
         private bool isFrame4Clicked = false;
+        public string databasePath = "qrcode.sqlite";
 
         public void PageCenter(UserControl Page)
         {
@@ -51,6 +53,24 @@ namespace BLT_Generator.Pages
             Btn_URL.IsChecked = true;
             SetSelectedButton(Btn_URL);
             PageCenter(CreateUrlPanel());
+
+            if (!File.Exists(databasePath))
+            {
+                SQLiteConnection.CreateFile(databasePath);
+
+                SQLiteConnection connection = new SQLiteConnection($"Data Source={databasePath}");
+                connection.Open();
+                string createTable = @"
+                CREATE TABLE tbl_url (
+                    id         INTEGER PRIMARY KEY AUTOINCREMENT,
+                    url        TEXT    NOT NULL,
+                    date       DATE    NOT NULL
+                );";
+                var command = new SQLiteCommand(createTable, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+
         }
 
         private URL_Panel CreateUrlPanel()
@@ -74,7 +94,7 @@ namespace BLT_Generator.Pages
         {
             QRCode.Source = null;
             SetSelectedButton(Btn_WIFI);
-            PageCenter(new SubPages.WIFI_Panel(this)); // Pass 'this' as the parent page
+            PageCenter(new SubPages.WIFI_Panel(this));
         }
 
         private void Btn_URL_Click(object sender, RoutedEventArgs e)
@@ -86,12 +106,12 @@ namespace BLT_Generator.Pages
         public void UpdateQRCodeIcon(string iconPath)
         {
             selectPath = iconPath;
-            GenerateQR(); // Regenerate QR code with the new icon
+            GenerateQR();
         }
 
         private void Btn_AddIcon_Click(object sender, RoutedEventArgs e)
         {
-            icon = new AddIcon(this); // Pass this instance to AddIcon
+            icon = new AddIcon(this);
             icon.Owner = Application.Current.MainWindow;
             icon.WindowStartupLocation = WindowStartupLocation.Manual;
             CenterAddIcon();
@@ -480,6 +500,17 @@ namespace BLT_Generator.Pages
                         Clipboard.SetImage(bitmapImage);
                     }
                 }
+
+                SQLiteConnection connection = new SQLiteConnection($"Data Source={databasePath}");
+                connection.Open();
+                string sql = $"INSERT INTO tbl_url (url, date) VALUES (@url, @date);";
+                using (var command = new SQLiteCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@url", path);
+                    command.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
             }
             catch (Exception ex)
             {
@@ -512,7 +543,6 @@ namespace BLT_Generator.Pages
 
             if (saveFileDialog.ShowDialog() == true)
             {
-                // Rest of your save code...
                 string filePath = saveFileDialog.FileName;
                 string extension = Path.GetExtension(filePath).ToLower();
 

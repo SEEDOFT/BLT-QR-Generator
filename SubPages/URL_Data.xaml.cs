@@ -20,9 +20,44 @@ namespace BLT_Generator.SubPages
     /// </summary>
     public partial class URL_Data : UserControl
     {
+        private bool isPinned = false;
+        public bool IsPinned
+        {
+            get => isPinned;
+            private set
+            {
+                if (isPinned != value)
+                {
+                    isPinned = value;
+                    UpdatePinVisual();
+                }
+            }
+        }
+
+        public event EventHandler<bool>? PinStateChanged;
+
         public URL_Data()
         {
             InitializeComponent();
+            BtnPin.Click += BtnPin_Click;
+            UpdatePinVisual();
+        }
+
+        private void BtnPin_Click(object sender, RoutedEventArgs e)
+        {
+            IsPinned = !IsPinned;
+            PinStateChanged?.Invoke(this, IsPinned);
+        }
+
+        private void UpdatePinVisual()
+        {
+            //BtnPin.Style = (Style)FindResource(IsPinned ? "PinActive" : "Pin");
+            //BtnPin.Style = (Style)FindResource(IsPinned ? "PinActive" : "Pin");
+        }
+
+        public void SetPinned(bool pinned)
+        {
+            IsPinned = pinned;
         }
     }
 }

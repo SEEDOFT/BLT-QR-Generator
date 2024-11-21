@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLT_Generator.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,17 @@ using System.Windows.Shapes;
 
 namespace BLT_Generator.SubPages
 {
-/// <summary>
+    /// <summary>
     /// Interaction logic for WIFI_Panel.xaml
-/// </summary>
+    /// </summary>
     public partial class WIFI_Panel : UserControl
     {
-        public WIFI_Panel()
+        private GeneratePage parentPage;
+
+        public WIFI_Panel(GeneratePage parent)
         {
             InitializeComponent();
+            parentPage = parent;
         }
 
         private void Btn_Clear_Click(object sender, RoutedEventArgs e)
