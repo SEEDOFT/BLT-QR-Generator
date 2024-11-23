@@ -1,24 +1,10 @@
 ﻿using BLT_Generator.Pages;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace BLT_Generator.SubPages
 {
-    /// <summary>
-    /// Interaction logic for WIFI_Panel.xaml
-    /// </summary>
     public partial class WIFI_Panel : UserControl
     {
         private GeneratePage parentPage;
@@ -27,12 +13,51 @@ namespace BLT_Generator.SubPages
         {
             InitializeComponent();
             parentPage = parent;
+            BtnWifiGenerate.Click += BtnWifiGenerate_Click;
+            RbWPA.IsChecked = true;
         }
 
-        private void Btn_Clear_Click(object sender, RoutedEventArgs e)
+        private void BtnWifiGenerate_Click(object sender, RoutedEventArgs e)
         {
-            Txb_WIFI.Text = string.Empty;
-            Txb_Password.Text = string.Empty;
+            if (string.IsNullOrWhiteSpace(Txb_WIFI.Text))
+            {
+                MessageBox.Show("Please enter WIFI SSID", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            string encryptionType = "WPA";
+            if (RbWEP.IsChecked == true)
+                encryptionType = "WEP";
+            else if (RbNone.IsChecked == true)
+                encryptionType = "nopass";
+
+            string password = "";
+            if (encryptionType != "nopass")
+            {
+                if (string.IsNullOrWhiteSpace(Txb_Password.Text))
+                {
+                    MessageBox.Show("Please enter WIFI password", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
+                password = Txb_Password.Text;
+            }
+
+            // Set the credentials in the parent page
+            parentPage.SetWifiCredentials(Txb_WIFI.Text, password, encryptionType);
+
+            // Generate the WIFI configuration string
+            string wifiConfig = $"WIFI:S:{Txb_WIFI.Text};T:{encryptionType};";
+            if (encryptionType != "nopass")
+            {
+                wifiConfig += $"P:{password};;";
+            }
+            else
+            {
+                wifiConfig += ";";
+            }
+
+            parentPage.path = wifiConfig;
+            parentPage.GenerateQR();
         }
     }
 }

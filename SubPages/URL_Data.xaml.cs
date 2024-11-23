@@ -21,6 +21,8 @@ namespace BLT_Generator.SubPages
     public partial class URL_Data : UserControl
     {
         private bool isPinned = false;
+        public event EventHandler<URL_Data>? DeleteRequested;
+        public event EventHandler<bool>? PinStateChanged;
         public bool IsPinned
         {
             get => isPinned;
@@ -33,8 +35,6 @@ namespace BLT_Generator.SubPages
                 }
             }
         }
-
-        public event EventHandler<bool>? PinStateChanged;
 
         public URL_Data()
         {
@@ -58,6 +58,20 @@ namespace BLT_Generator.SubPages
         public void SetPinned(bool pinned)
         {
             IsPinned = pinned;
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show(
+            "Are you sure you want to delete this WIFI record?",
+            "Confirm Delete",
+            MessageBoxButton.YesNo,
+            MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                DeleteRequested?.Invoke(this, this);
+            }
         }
     }
 }

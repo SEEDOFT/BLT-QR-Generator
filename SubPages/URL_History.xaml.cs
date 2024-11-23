@@ -168,12 +168,67 @@ namespace BLT_Generator.SubPages
                         }
 
                         data.PinStateChanged += Data_PinStateChanged;
+                        data.DeleteRequested += Data_DeleteRequested;
                         allData.Add(data);
                     }
                 }
             }
 
             filteredData = new List<URL_Data>(allData);
+            UpdatePageDisplay();
+        }
+
+        private void Data_DeleteRequested(object? sender, URL_Data data)
+        {
+            if (data == null) return;
+
+            try
+            {
+                using (SQLiteConnection connection = new SQLiteConnection($"Data Source={(new GeneratePage()).databasePath}"))
+                {
+                    connection.Open();
+                    using (var transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            using (SQLiteCommand deleteCommand = new SQLiteCommand(
+                                "DELETE FROM tbl_url WHERE url = @url AND date = @date;",
+                                connection))
+                            {
+                                deleteCommand.Parameters.AddWithValue("@url", data.TxbURL.Text);
+                                deleteCommand.Parameters.AddWithValue("@date", DateTime.ParseExact(data.TxbDate.Text, "dd/MMM/yyyy", null).ToString("yyyy-MM-dd"));
+                                deleteCommand.ExecuteNonQuery();
+                            }
+
+                            transaction.Commit();
+                            
+                            allData.Remove(data);
+                            filteredData.Remove(data);
+
+                            if (currentPinnedItem == data)
+                            {
+                                currentPinnedItem = null;
+                            }
+
+                            if (currentPage > 0 && currentPage * ITEMS_PER_PAGE >= GetCurrentDataSource().Count)
+                            {
+                                currentPage--;
+                            }
+
+                            UpdatePageDisplay();
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback();
+                            throw;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error deleting WIFI record: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Data_PinStateChanged(object sender, bool isPinned)

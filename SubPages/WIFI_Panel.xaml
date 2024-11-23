@@ -7,11 +7,9 @@
              xmlns:helpers="clr-namespace:BLT_Generator.Helpers"
              mc:Ignorable="d"
              d:DesignHeight="510" d:DesignWidth="300">
-
     <UserControl.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </UserControl.Resources>
-
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -30,7 +28,6 @@
                            FontSize="30">
                     WIFI
                 </TextBlock>
-
                 <TextBox x:Name="Txb_WIFI"
                          Style="{StaticResource Txb}"
                          helpers:TextBoxHelper.PlaceholderText="{DynamicResource WIFI_Name}"
@@ -53,19 +50,26 @@
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
-                        <RadioButton Content=" WPA"
+                        <RadioButton x:Name="RbWPA"
+                                     Content=" WPA"
                                      Foreground="{DynamicResource Uncheck}"
                                      FontFamily="{DynamicResource Poppins_KhSN}"/>
-                        <RadioButton Content=" WEP"
+                        <RadioButton x:Name="RbWEP"
+                                     Content=" WEP"
                                      Foreground="{DynamicResource Uncheck}"
                                      FontFamily="{DynamicResource Poppins_KhSN}"
                                      Margin="20 0 0 0"/>
-                        <RadioButton Content=" None"
+                        <RadioButton x:Name="RbNone"
+                                     Content=" None"
                                      Foreground="{DynamicResource Uncheck}"
                                      FontFamily="{DynamicResource Poppins_KhSN}"
                                      Margin="20 0 0 0"/>
                     </StackPanel>
                 </Border>
+                <Button x:Name="BtnWifiGenerate" 
+                        Content="Generate QR"
+                        Width="100"
+                        Margin="0,20,0,0"/>
             </StackPanel>
         </Grid>
     </Grid>

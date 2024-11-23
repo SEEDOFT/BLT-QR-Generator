@@ -24,7 +24,8 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
             <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
-                       FontSize="14">
+                       FontSize="14"
+                       x:Name="TxbDate">
                 | 14/Oct/2024
             </TextBlock>
         </StackPanel>
@@ -33,7 +34,8 @@
                     VerticalAlignment="Center">
             <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
                        FontSize="14"
-                       TextTrimming="CharacterEllipsis">
+                       TextTrimming="CharacterEllipsis"
+                       x:Name="TxbWifiName">
                 ANT 42
             </TextBlock>
         </StackPanel>
@@ -42,7 +44,8 @@
                     VerticalAlignment="Center">
             <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
                        FontSize="14"
-                       TextTrimming="CharacterEllipsis">
+                       TextTrimming="CharacterEllipsis"
+                       x:Name="TxbPassword">
                 @ANT@2024
             </TextBlock>
         </StackPanel>
@@ -57,11 +60,13 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Orientation="Horizontal">
-            <Button Style="{StaticResource Pin}">
+            <Button Style="{StaticResource Pin}"
+                    x:Name="BtnPin" Click="BtnPin_Click">
 
             </Button>
             <Button Style="{StaticResource Trash}"
-                    Margin="15 0 0 0">
+                    Margin="15 0 0 0"
+                    x:Name="BtnDelete" Click="BtnDelete_Click">
 
             </Button>
         </StackPanel>

@@ -40,6 +40,11 @@ namespace BLT_Generator.Pages
         private bool isFrame3Clicked = false;
         private bool isFrame4Clicked = false;
         public string databasePath = "qrcode.sqlite";
+        private string currentFrameName = "";
+        private string ssid = "";
+        private string password = "";
+        private string encryptionType = "";
+        private bool isOnWIFI = false;
 
         public void PageCenter(UserControl Page)
         {
@@ -58,19 +63,54 @@ namespace BLT_Generator.Pages
             {
                 SQLiteConnection.CreateFile(databasePath);
 
-                SQLiteConnection connection = new SQLiteConnection($"Data Source={databasePath}");
-                connection.Open();
-                string createTable = @"
-                CREATE TABLE tbl_url (
-                    id         INTEGER PRIMARY KEY AUTOINCREMENT,
-                    url        TEXT    NOT NULL,
-                    date       DATE    NOT NULL
-                );";
-                var command = new SQLiteCommand(createTable, connection);
-                command.ExecuteNonQuery();
-                connection.Close();
+                var tables = new[]
+                {
+                    @"CREATE TABLE tbl_url (
+                        id         INTEGER PRIMARY KEY AUTOINCREMENT,
+                        url        TEXT    NOT NULL,
+                        date       DATE    NOT NULL
+                    )",
+                    @"CREATE TABLE tbl_wifi (
+                        id               INTEGER PRIMARY KEY AUTOINCREMENT,
+                        ssid             TEXT    NOT NULL,
+                        password         TEXT    NOT NULL,
+                        encryptionType   TEXT    NOT NULL,
+                        date             DATE    NOT NULL
+                    )"
+                };
+
+                using (var connection = new SQLiteConnection($"Data Source={databasePath}"))
+                {
+                    connection.Open();
+                    using (var transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            foreach (var createTable in tables)
+                            {
+                                using (var command = new SQLiteCommand(createTable, connection))
+                                {
+                                    command.ExecuteNonQuery();
+                                }
+                            }
+                            transaction.Commit();
+                        }
+                        catch
+                        {
+                            transaction.Rollback();
+                            throw;
+                        }
+                    }
+                }
             }
 
+        }
+
+        public void SetWifiCredentials(string ssid, string password, string encryptionType)
+        {
+            this.ssid = ssid;
+            this.password = password;
+            this.encryptionType = encryptionType;
         }
 
         private URL_Panel CreateUrlPanel()
@@ -95,12 +135,14 @@ namespace BLT_Generator.Pages
             QRCode.Source = null;
             SetSelectedButton(Btn_WIFI);
             PageCenter(new SubPages.WIFI_Panel(this));
+            isOnWIFI = true;
         }
 
         private void Btn_URL_Click(object sender, RoutedEventArgs e)
         {
             SetSelectedButton(Btn_URL);
             PageCenter(CreateUrlPanel());
+            isOnWIFI = false;
         }
 
         public void UpdateQRCodeIcon(string iconPath)
@@ -372,79 +414,100 @@ namespace BLT_Generator.Pages
         {
             if (sender is Button button)
             {
-                if (qrBackColor == Color.Black && qrColor == Color.White)
+                var frame = button.Name;
+
+                if (generateQRCodeWithLogo == null)
                 {
-                    qrBackColor = Color.White;
-                    qrColor = Color.Black;
+                    MessageBox.Show("Please generate a QR code first.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
                 }
 
-                var frame = button.Name;
+                if (frame != currentFrameName)
+                {
+                    isFrame1Clicked = false;
+                    isFrame2Clicked = false;
+                    isFrame3Clicked = false;
+                    isFrame4Clicked = false;
+                }
 
                 switch (frame)
                 {
                     case "frame1":
-                        qrBackColor = Color.Black;
-                        qrColor = Color.White;
-                        framePath = Path.Combine("Assets", "frame.png");
                         if (isFrame1Clicked)
                         {
                             ClearFrame();
                             isFrame1Clicked = false;
+                            currentFrameName = "";
                         }
                         else
                         {
+                            qrBackColor = Color.Black;
+                            qrColor = Color.White;
+                            framePath = Path.Combine("Assets", "frame.png");
                             isFrame1Clicked = true;
+                            currentFrameName = frame;
                             ApplyFrame();
                             GenerateQR();
                         }
                         break;
+
                     case "frame2":
-                        framePath = Path.Combine("Assets", "frameTwo.png");
                         if (isFrame2Clicked)
                         {
                             ClearFrame();
                             isFrame2Clicked = false;
+                            currentFrameName = "";
                         }
                         else
                         {
+                            qrBackColor = Color.White;
+                            qrColor = Color.Black;
+                            framePath = Path.Combine("Assets", "frameTwo.png");
                             isFrame2Clicked = true;
+                            currentFrameName = frame;
                             ApplyFrame();
                             GenerateQR();
                         }
                         break;
+
                     case "frame3":
-                        framePath = Path.Combine("Assets", "frameThree.jpg");
                         if (isFrame3Clicked)
                         {
                             ClearFrame();
                             isFrame3Clicked = false;
+                            currentFrameName = "";
                         }
                         else
                         {
+                            qrBackColor = Color.White;
+                            qrColor = Color.Black;
+                            framePath = Path.Combine("Assets", "frameThree.jpg");
                             isFrame3Clicked = true;
+                            currentFrameName = frame;
                             ApplyFrame();
                             GenerateQR();
                         }
                         break;
+
                     case "frame4":
-                        framePath = Path.Combine("Assets", "frameFour.jpg");
                         if (isFrame4Clicked)
                         {
                             ClearFrame();
                             isFrame4Clicked = false;
+                            currentFrameName = "";
                         }
                         else
                         {
+                            // Apply frame4
+                            qrBackColor = Color.White;
+                            qrColor = Color.Black;
+                            framePath = Path.Combine("Assets", "frameFour.jpg");
                             isFrame4Clicked = true;
+                            currentFrameName = frame;
                             ApplyFrame();
                             GenerateQR();
                         }
                         break;
-                }
-                if (generateQRCodeWithLogo == null)
-                {
-                    MessageBox.Show("QR Code is not generated.");
-                    return;
                 }
             }
         }
@@ -461,12 +524,12 @@ namespace BLT_Generator.Pages
 
         private void ButtonCopy_Click(object sender, RoutedEventArgs e)
         {
-            var urlPanel = Grid_Center.Children[0] as URL_Panel;
-            if (urlPanel == null || string.IsNullOrWhiteSpace(urlPanel.TxtUrl.Text))
-            {
-                MessageBox.Show("Please enter valid content to generate QR code.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
+            //var urlPanel = Grid_Center.Children[0] as URL_Panel;
+            //if (urlPanel == null || string.IsNullOrWhiteSpace(urlPanel.TxtUrl.Text))
+            //{
+            //    MessageBox.Show("Please enter valid content to generate QR code.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //    return;
+            //}
 
             if (generateQRCodeWithLogo == null)
             {
@@ -476,7 +539,6 @@ namespace BLT_Generator.Pages
 
             try
             {
-                // Rest of your copy code...
                 using (Bitmap finalImage = new Bitmap(generateQRCodeWithLogo.Width, generateQRCodeWithLogo.Height))
                 {
                     using (Graphics g = Graphics.FromImage(finalImage))
@@ -501,21 +563,49 @@ namespace BLT_Generator.Pages
                     }
                 }
 
-                SQLiteConnection connection = new SQLiteConnection($"Data Source={databasePath}");
-                connection.Open();
-                string sql = $"INSERT INTO tbl_url (url, date) VALUES (@url, @date);";
-                using (var command = new SQLiteCommand(sql, connection))
+                if (isOnWIFI)
                 {
-                    command.Parameters.AddWithValue("@url", path);
-                    command.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
-                    command.ExecuteNonQuery();
+                    SaveWIFI();
                 }
-                connection.Close();
+                else
+                {
+                    SaveURL();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error copying to clipboard: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void SaveURL()
+        {
+            SQLiteConnection connection = new SQLiteConnection($"Data Source={databasePath}");
+            connection.Open();
+            string sql = $"INSERT INTO tbl_url (url, date) VALUES (@url, @date);";
+            using (var command = new SQLiteCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@url", path);
+                command.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
+                command.ExecuteNonQuery();
+            }
+            connection.Close();
+        }
+
+        private void SaveWIFI()
+        {
+            SQLiteConnection connection = new SQLiteConnection($"Data Source={databasePath}");
+            connection.Open();
+            string sql = "INSERT INTO tbl_wifi (date, ssid, password, encryptionType) VALUES (@date, @ssid, @password, @encryptionType);";
+            using (var command = new SQLiteCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
+                command.Parameters.AddWithValue("@ssid", ssid);
+                command.Parameters.AddWithValue("@password", password);
+                command.Parameters.AddWithValue("@encryptionType", encryptionType);
+                command.ExecuteNonQuery();
+            }
+            connection.Close();
         }
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
@@ -569,11 +659,60 @@ namespace BLT_Generator.Pages
                     {
                         MessageBox.Show("Invalid File Extension", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
+                    SaveURL();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error saving file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
+            }
+        }
+
+        private void GenerateQrCodeButton_Click(object sender, RoutedEventArgs e)
+        {
+            string wifiQrCode = $"WIFI:S:{ssid};T:{encryptionType};P:{password};;";
+
+            var writer = new BarcodeWriterPixelData
+            {
+                Format = BarcodeFormat.QR_CODE,
+                Options = new EncodingOptions
+                {
+                    Height = 250,
+                    Width = 250,
+                    Margin = 1
+                }
+            };
+
+            var pixelData = writer.Write(wifiQrCode);
+
+            using (var bitmap = new Bitmap(pixelData.Width, pixelData.Height, System.Drawing.Imaging.PixelFormat.Format32bppRgb))
+            {
+                var bitmapData = bitmap.LockBits(new Rectangle(0, 0, pixelData.Width, pixelData.Height), System.Drawing.Imaging.ImageLockMode.WriteOnly, System.Drawing.Imaging.PixelFormat.Format32bppRgb);
+                try
+                {
+                    System.Runtime.InteropServices.Marshal.Copy(pixelData.Pixels, 0, bitmapData.Scan0, pixelData.Pixels.Length);
+                }
+                finally
+                {
+                    bitmap.UnlockBits(bitmapData);
+                }
+
+                QRCode.Source = ConvertBitmapToBitmapImage(bitmap);
+            }
+        }
+
+        private BitmapImage ConvertBitmapToBitmapImage(System.Drawing.Bitmap bitmap)
+        {
+            using (MemoryStream memory = new MemoryStream())
+            {
+                bitmap.Save(memory, System.Drawing.Imaging.ImageFormat.Png);
+                memory.Position = 0;
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.StreamSource = memory;
+                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapImage.EndInit();
+                return bitmapImage;
             }
         }
     }
