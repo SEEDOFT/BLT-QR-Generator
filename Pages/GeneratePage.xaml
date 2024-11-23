@@ -121,10 +121,10 @@
                                     VerticalAlignment="Center"
                                     Background="#5FEAFF">
                                 <!--<StackPanel>
-                                    <Button x:Name="frame1"/>
+                                <Button x:Name="frame1"/>
                                 </StackPanel>-->
-                                <Button x:Name="frame1" 
-                                        Background="Transparent" 
+                                <Button x:Name="frame1"
+                                        Background="Transparent"
                                         BorderThickness="0" Click="frame1_Click"/>
                             </Border>
                             <Border Grid.Row="1" Grid.Column="1"
@@ -137,8 +137,8 @@
                                 <!--<StackPanel>
 
                                 </StackPanel>-->
-                                <Button x:Name="frame2" 
-                                        Background="Transparent" 
+                                <Button x:Name="frame2"
+                                        Background="Transparent"
                                         BorderThickness="0" Click="frame1_Click"/>
                             </Border>
                             <Border Grid.Row="1" Grid.Column="2"
@@ -151,8 +151,8 @@
                                 <!--<StackPanel>
 
                                 </StackPanel>-->
-                                <Button x:Name="frame3" 
-                                        Background="Transparent" 
+                                <Button x:Name="frame3"
+                                        Background="Transparent"
                                         BorderThickness="0" Click="frame1_Click"/>
                             </Border>
                             <Border Grid.Row="1" Grid.Column="3"
@@ -166,8 +166,8 @@
                                 <!--<StackPanel>
 
                                 </StackPanel>-->
-                                <Button x:Name="frame4" 
-                                        Background="Transparent" 
+                                <Button x:Name="frame4"
+                                        Background="Transparent"
                                         BorderThickness="0" Click="frame1_Click"/>
                             </Border>
                         </Grid>
@@ -192,28 +192,56 @@
                         </ComboBoxItem>
                     </ComboBox>
 
-                    <Button x:Name="Btn_AddIcon"
-                            Margin="0 15 0 0" Content="{DynamicResource InsertImage}"
-                            FontFamily="{DynamicResource PoppinsBold_KhSN}"
-                            Click="Btn_AddIcon_Click">
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Height="45"
-                                        CornerRadius="15"
-                                        Background="{DynamicResource QR_Background}">
-                                    <TextBlock Text="{TemplateBinding Content}"
 
-                                               VerticalAlignment="Center"
-                                               HorizontalAlignment="Left"
-                                               Margin="20 0 0 0"
-                                               Foreground="{DynamicResource Text}"
-                                               FontSize="16"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Button x:Name="Btn_AddIcon"
+                                    Margin="0 15 10 0" Content="{DynamicResource InsertImage}"
+                                    FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                    Click="Btn_AddIcon_Click">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="45"
+                                                CornerRadius="15"
+                                                Background="{DynamicResource QR_Background}">
+                                            <TextBlock Text="{TemplateBinding Content}"
+                                                       VerticalAlignment="Center"
+                                                       HorizontalAlignment="Center"
+                                                       Foreground="{DynamicResource Text}"
+                                                       FontSize="16"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Button x:Name="Btn_ClearIcon"
+                                    Margin="10 15 0 0" Content="{DynamicResource ClearImage}"
+                                    FontFamily="{DynamicResource PoppinsBold_KhSN}"
+                                    Click="Btn_ClearIcon_Click">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="45"
+                                                CornerRadius="15"
+                                                Background="{DynamicResource QR_Background}">
+                                            <TextBlock Text="{TemplateBinding Content}"
+                                                       VerticalAlignment="Center"
+                                                       HorizontalAlignment="Center"
+                                                       Foreground="{DynamicResource Text}"
+                                                       FontSize="16"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                    </Grid>
 
-                    <Grid Height="75">
+
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
@@ -221,16 +249,16 @@
 
                         <Button Style="{StaticResource Save}"
                                 FontFamily="{DynamicResource PoppinsBold_KhSN}"
-                                HorizontalAlignment="Left"
                                 FontSize="16"
                                 Grid.Column="0"
+                                Margin="0 15 10 0"
                                 Content="{DynamicResource BtnSave}"
                                 x:Name="ButtonSave" Click="ButtonSave_Click"/>
                         <Button Style="{StaticResource Copy}"
                                 FontFamily="{DynamicResource PoppinsBold_KhSN}"
-                                HorizontalAlignment="Right"
                                 FontSize="16"
                                 Grid.Column="1"
+                                Margin="10 15 0 0"
                                 Content="{DynamicResource BtnCopy}"
                                 x:Name="ButtonCopy" Click="ButtonCopy_Click"/>
                     </Grid>

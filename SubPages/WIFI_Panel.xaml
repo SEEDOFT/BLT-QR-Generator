@@ -66,9 +66,9 @@
                                      Margin="20 0 0 0"/>
                     </StackPanel>
                 </Border>
-                <Button x:Name="BtnWifiGenerate" 
-                        Content="Generate QR"
-                        Width="100"
+                <Button x:Name="BtnWifiGenerate"
+                        Style="{StaticResource Generate}"
+                        Width="120"
                         Margin="0,20,0,0"/>
             </StackPanel>
         </Grid>

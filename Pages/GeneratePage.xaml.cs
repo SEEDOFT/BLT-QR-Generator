@@ -715,5 +715,10 @@ namespace BLT_Generator.Pages
                 return bitmapImage;
             }
         }
+
+        private void Btn_ClearIcon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
