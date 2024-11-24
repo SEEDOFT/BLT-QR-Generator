@@ -45,6 +45,7 @@ namespace BLT_Generator.Pages
         private string password = "";
         private string encryptionType = "";
         private bool isOnWIFI = false;
+        private bool isOnURL = false;
 
         public void PageCenter(UserControl Page)
         {
@@ -106,6 +107,34 @@ namespace BLT_Generator.Pages
 
         }
 
+        public void SetIsOnWIFI(bool value)
+        {
+            isOnWIFI = value;
+        }
+
+        public void SelectWifiButton()
+        {
+            if (Btn_WIFI != null)
+            {
+                SetSelectedButton(Btn_WIFI);
+                isOnWIFI = true;
+            }
+        }
+
+        public void SetIsOnURL(bool value)
+        {
+            isOnURL = value;
+        }
+
+        public void SelectUrlButton()
+        {
+            if (Btn_URL != null)
+            {
+                SetSelectedButton(Btn_URL);
+                isOnWIFI = false;
+            }
+        }
+
         public void SetWifiCredentials(string ssid, string password, string encryptionType)
         {
             this.ssid = ssid;
@@ -113,9 +142,20 @@ namespace BLT_Generator.Pages
             this.encryptionType = encryptionType;
         }
 
+        public void SetUrlCredentials(string url)
+        {
+            this.path = url;
+            GenerateQR();
+        }
+
         private URL_Panel CreateUrlPanel()
         {
-            return new SubPages.URL_Panel(this);
+            var panel = new URL_Panel(this);
+            if (!string.IsNullOrWhiteSpace(path))
+            {
+                panel.TxtUrl.Text = path;
+            }
+            return panel;
         }
 
         private void SetSelectedButton(ToggleButton selectedButton)

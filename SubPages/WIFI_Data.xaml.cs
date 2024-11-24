@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLT_Generator.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace BLT_Generator.SubPages
     /// </summary>
     public partial class WIFI_Data : UserControl
     {
+        public event EventHandler<WIFI_Data>? RegenerateRequested;
         public event EventHandler<WIFI_Data>? DeleteRequested;
         public event EventHandler<bool>? PinStateChanged;
         private bool isPinned = false;
+
         public bool IsPinned
         {
             get => isPinned;
@@ -71,6 +74,11 @@ namespace BLT_Generator.SubPages
             {
                 DeleteRequested?.Invoke(this, this);
             }
+        }
+
+        private void BtnRegenerate_Click(object sender, RoutedEventArgs e)
+        {
+            RegenerateRequested?.Invoke(this, this);
         }
     }
 }

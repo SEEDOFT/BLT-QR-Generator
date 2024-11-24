@@ -5,6 +5,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 
 namespace BLT_Generator.SubPages
 {
@@ -25,6 +26,76 @@ namespace BLT_Generator.SubPages
             BtnPrevious.Click += BtnPrevious_Click;
             BtnNext.Click += BtnNext_Click;
             SortDate.SelectedDateChanged += SortDate_SelectedDateChanged;
+        }
+
+        private void InitializeWifiData(WIFI_Data data)
+        {
+            data.PinStateChanged += Data_PinStateChanged;
+            data.DeleteRequested += Data_DeleteRequested;
+            data.RegenerateRequested += Data_RegenerateRequested;
+        }
+
+        private void Data_RegenerateRequested(object? sender, WIFI_Data data)
+        {
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            if (mainWindow != null)
+            {
+                var generatePage = new GeneratePage();
+
+                using (SQLiteConnection connection = new SQLiteConnection($"Data Source={generatePage.databasePath}"))
+                {
+                    connection.Open();
+                    using (SQLiteCommand command = new SQLiteCommand(
+                        "SELECT password FROM tbl_wifi WHERE ssid = @ssid AND date = @date",
+                        connection))
+                    {
+                        command.Parameters.AddWithValue("@ssid", data.TxbWifiName.Text);
+                        command.Parameters.AddWithValue("@date", DateTime.ParseExact(data.TxbDate.Text, "dd/MMM/yyyy", null).ToString("yyyy-MM-dd"));
+
+                        var password = command.ExecuteScalar()?.ToString() ?? "";
+
+                        generatePage.SetWifiCredentials(
+                            data.TxbWifiName.Text,
+                            password,
+                            data.TxbPassword.Text
+                        );
+
+                        var wifiPanel = new WIFI_Panel(generatePage);
+
+                        if (wifiPanel.Txb_WIFI != null)
+                            wifiPanel.Txb_WIFI.Text = data.TxbWifiName.Text;
+
+                        if (wifiPanel.Txb_Password != null)
+                            wifiPanel.Txb_Password.Text = password;
+
+                        switch (data.TxbPassword.Text.ToUpper())
+                        {
+                            case "WEP":
+                                wifiPanel.RbWEP.IsChecked = true;
+                                break;
+                            case "NOPASS":
+                                wifiPanel.RbNone.IsChecked = true;
+                                break;
+                            default: // WPA
+                                wifiPanel.RbWPA.IsChecked = true;
+                                break;
+                        }
+
+                        mainWindow.PageBig(generatePage);
+                        generatePage.PageCenter(wifiPanel);
+
+                        var generateButton = mainWindow.FindName("Btn_Generate") as ToggleButton;
+                        if (generateButton != null)
+                        {
+                            mainWindow.SetSelectedButton(generateButton);
+                        }
+
+                        generatePage.SelectWifiButton();
+
+                        wifiPanel.BtnWifiGenerate.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    }
+                }
+            }
         }
 
         private void LoadData()
@@ -61,7 +132,7 @@ namespace BLT_Generator.SubPages
                         }
 
                         data.TxbWifiName.Text = reader["ssid"].ToString();
-                        data.TxbPassword.Text = reader["encryptionType"].ToString();
+                        data.TxbPassword.Text = reader["password"].ToString();
 
                         bool isPinned = Convert.ToBoolean(reader["is_pinned"]);
                         data.SetPinned(isPinned);
@@ -71,9 +142,7 @@ namespace BLT_Generator.SubPages
                             currentPinnedItem = data;
                         }
 
-                        // Subscribe to both pin and delete events
-                        data.PinStateChanged += Data_PinStateChanged;
-                        data.DeleteRequested += Data_DeleteRequested;
+                        InitializeWifiData(data);
                         allData.Add(data);
                     }
                 }
@@ -107,17 +176,14 @@ namespace BLT_Generator.SubPages
 
                             transaction.Commit();
 
-                            // Remove from lists and update UI
                             allData.Remove(data);
                             filteredData.Remove(data);
 
-                            // Reset currentPinnedItem if we're deleting it
                             if (currentPinnedItem == data)
                             {
                                 currentPinnedItem = null;
                             }
 
-                            // Ensure we're not on an empty page
                             if (currentPage > 0 && currentPage * ITEMS_PER_PAGE >= GetCurrentDataSource().Count)
                             {
                                 currentPage--;
@@ -170,7 +236,6 @@ namespace BLT_Generator.SubPages
                 {
                     try
                     {
-                        // If pinning, unpin all other items first
                         if (isPinned)
                         {
                             using (SQLiteCommand unpinCommand = new SQLiteCommand(
@@ -191,7 +256,6 @@ namespace BLT_Generator.SubPages
                             currentPinnedItem = null;
                         }
 
-                        // Update the pin status for this item
                         using (SQLiteCommand updateCommand = new SQLiteCommand(
                             "UPDATE tbl_wifi SET is_pinned = @isPinned WHERE ssid = @ssid AND date = @date;",
                             connection))
@@ -212,7 +276,6 @@ namespace BLT_Generator.SubPages
                 }
             }
 
-            // Reload and refresh the display
             LoadData();
             UpdatePageDisplay();
         }

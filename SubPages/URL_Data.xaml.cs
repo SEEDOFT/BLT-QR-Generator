@@ -23,6 +23,7 @@ namespace BLT_Generator.SubPages
         private bool isPinned = false;
         public event EventHandler<URL_Data>? DeleteRequested;
         public event EventHandler<bool>? PinStateChanged;
+        public event EventHandler<URL_Data>? RegenerateRequested;
         public bool IsPinned
         {
             get => isPinned;
@@ -72,6 +73,11 @@ namespace BLT_Generator.SubPages
             {
                 DeleteRequested?.Invoke(this, this);
             }
+        }
+
+        private void BtnRegenerate_Click(object sender, RoutedEventArgs e)
+        {
+            RegenerateRequested?.Invoke(this, this);
         }
     }
 }

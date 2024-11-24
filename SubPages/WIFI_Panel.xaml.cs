@@ -19,6 +19,11 @@ namespace BLT_Generator.SubPages
 
         private void BtnWifiGenerate_Click(object sender, RoutedEventArgs e)
         {
+            generateWIfiQR();
+        }
+
+        private void generateWIfiQR()
+        {
             if (string.IsNullOrWhiteSpace(Txb_WIFI.Text))
             {
                 MessageBox.Show("Please enter WIFI SSID", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -42,10 +47,8 @@ namespace BLT_Generator.SubPages
                 password = Txb_Password.Text;
             }
 
-            // Set the credentials in the parent page
             parentPage.SetWifiCredentials(Txb_WIFI.Text, password, encryptionType);
 
-            // Generate the WIFI configuration string
             string wifiConfig = $"WIFI:S:{Txb_WIFI.Text};T:{encryptionType};";
             if (encryptionType != "nopass")
             {

@@ -15,13 +15,12 @@ using System.IO;
 
 namespace BLT_Generator
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-
         public string dir = "Data";
+
+        // Remove this property as it's causing the conflict
+        // public ToggleButton Btn_Generate => this.Btn_Generate;
 
         public void PageBig(UserControl page)
         {
@@ -32,33 +31,31 @@ namespace BLT_Generator
         public MainWindow()
         {
             InitializeComponent();
-
             Btn_Generate.IsChecked = true;
             SetSelectedButton(Btn_Generate);
             PageBig(new Pages.GeneratePage());
-
             Directory.CreateDirectory(dir);
         }
 
-        private void SetSelectedButton(ToggleButton selectedButton)
+        public void SetSelectedButton(ToggleButton selectedButton)
         {
-            foreach (var child in ((StackPanel)Btn_Generate.Parent).Children)
+            var stackPanel = (StackPanel)Btn_Generate.Parent;
+            foreach (var child in stackPanel.Children)
             {
                 if (child is ToggleButton button && button != selectedButton)
                 {
                     button.IsChecked = false;
                 }
             }
-
             selectedButton.IsChecked = true;
         }
-        //click to open generate page
+
         private void Btn_Generate_Click(object sender, RoutedEventArgs e)
         {
             SetSelectedButton(Btn_Generate);
             PageBig(new Pages.GeneratePage());
         }
-        //info
+
         private void Btn_Profile_Click(object sender, RoutedEventArgs e)
         {
             SetSelectedButton(Btn_Profile);
@@ -84,17 +81,13 @@ namespace BLT_Generator
 
         private void Btn_Maximize_Click(object sender, RoutedEventArgs e)
         {
-           
             if (this.WindowState == WindowState.Maximized)
             {
-
                 this.WindowState = WindowState.Normal;
-
             }
             else
             {
                 this.WindowState = WindowState.Maximized;
-
             }
         }
 

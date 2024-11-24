@@ -43,7 +43,8 @@
                     VerticalAlignment="Center">
             <Button Style="{StaticResource Regenerate}"
                     FontFamily="{DynamicResource PoppinsBold_KhSN}"
-                    Content="Regenerate">
+                    Content="Regenerate"
+                    x:Name="BtnRegenerate" Click="BtnRegenerate_Click">
 
             </Button>
         </StackPanel>
