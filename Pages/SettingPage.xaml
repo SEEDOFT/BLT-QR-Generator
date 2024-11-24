@@ -48,8 +48,8 @@
         </TextBlock>
 
         <TextBlock Grid.Column="0" Grid.Row="1"
-                   FontFamily="{DynamicResource PoppinsBold_KhSN}"
-                   FontSize="28"
+                   FontFamily="{DynamicResource PoppinsBold_Moul}"
+                   FontSize="26"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    Foreground="{DynamicResource Uncheck}"

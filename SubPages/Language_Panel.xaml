@@ -10,7 +10,7 @@
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </UserControl.Resources>
 
-    <Border Background="{DynamicResource WIFI_URL_BG}"
+    <Border Background="{DynamicResource LeftPanelBackground}"
             CornerRadius="10">
         <Grid Margin="25">
             <Grid.RowDefinitions>
@@ -21,11 +21,11 @@
             <TextBlock Grid.Row="0"
                        FontFamily="{DynamicResource Poppins_KhSN}"
                        FontSize="12"
-                       Foreground="{DynamicResource Uncheck}"
+                       Foreground="{DynamicResource Text}"
                        TextWrapping="Wrap">
                 <Run Text="{DynamicResource LanguagePanel_Default}"
                      FontSize="20"
-                     FontFamily="{DynamicResource PoppinsBold_Moul}"/>
+                     FontFamily="{DynamicResource Poppins_KhSN}"/>
                 <LineBreak/>
                 <Run Text="{DynamicResource LanguagePanel_TextP1}"/>
                 <LineBreak/>
@@ -37,8 +37,8 @@
 
             <StackPanel Grid.Row="1"
                         Margin="0 5 0 0">
-                <TextBlock FontFamily="{DynamicResource PoppinsBold_Moul}"
-                           Foreground="{DynamicResource Uncheck}"
+                <TextBlock FontFamily="{DynamicResource Poppins_KhSN}"
+                           Foreground="{DynamicResource Text}"
                            FontSize="20"
                            Text="{DynamicResource LanguagePanel_Title}"/>
 

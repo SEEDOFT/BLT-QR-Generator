@@ -15,7 +15,7 @@
             Background="{DynamicResource BackgroundColor}">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50   "/>
+                <RowDefinition Height="40"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0"
@@ -23,7 +23,7 @@
                   Background="{DynamicResource FAQ_Top}">
                 <Button Style="{StaticResource FAQ_Back}"
                         HorizontalAlignment="Left"
-                        Margin="5 0 0 0"
+                        Margin="10 0 0 0"
                         Click="Button_Click">
                 </Button>
                 <TextBlock HorizontalAlignment="Center"
@@ -218,13 +218,16 @@
                                    Text="{DynamicResource A10}"/>
                     </Expander>
 
-                    <TextBlock Margin="0 40 0 0" FontFamily="{StaticResource Ole_Bold}"
+                    <TextBlock Margin="0 40 0 0"
+                               FontFamily="{DynamicResource Poppins_KhSN}"
                                Foreground="{DynamicResource _QR_Generator}"
                                FontSize="11"
-                               HorizontalAlignment="Center">
-                        ©Copyright By
-                        <Run Text="Group 1"
-                             Foreground="{DynamicResource _BLT}"/>
+                               HorizontalAlignment="Center"
+                               TextAlignment="Center">
+                        <Run Text="{DynamicResource Copyright}"/>
+                        <LineBreak/>
+                        <Run Text="BLT QR Generator"
+                             FontFamily="{DynamicResource PoppinsBold}"/>
                         <LineBreak/>
                         <LineBreak/>
                     </TextBlock>

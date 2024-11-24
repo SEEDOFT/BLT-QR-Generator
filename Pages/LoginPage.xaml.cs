@@ -28,22 +28,6 @@ namespace BLT_Generator.Pages
         {
             this.WindowState = WindowState.Minimized;
         }
-
-        private void Btn_Maximize_Click(object sender, RoutedEventArgs e)
-        {
-            if (this.WindowState == WindowState.Maximized)
-            {
-
-                this.WindowState = WindowState.Normal;
-
-            }
-            else
-            {
-                this.WindowState = WindowState.Maximized;
-
-            }
-        }
-
         private void Btn_Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

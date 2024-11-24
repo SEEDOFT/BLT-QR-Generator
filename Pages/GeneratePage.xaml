@@ -200,14 +200,15 @@
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
                             <Button x:Name="Btn_AddIcon"
-                                    Margin="0 15 10 0" Content="{DynamicResource InsertImage}"
+                                    Margin="0 15 10 0"
+                                    Content="{DynamicResource InsertImage}"
                                     FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                     Click="Btn_AddIcon_Click">
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border Height="45"
                                                 CornerRadius="15"
-                                                Background="{DynamicResource QR_Background}">
+                                                Background="{DynamicResource AddColor}">
                                             <TextBlock Text="{TemplateBinding Content}"
                                                        VerticalAlignment="Center"
                                                        HorizontalAlignment="Center"
@@ -220,14 +221,15 @@
                         </Grid>
                         <Grid Grid.Column="1">
                             <Button x:Name="Btn_ClearIcon"
-                                    Margin="10 15 0 0" Content="{DynamicResource ClearImage}"
+                                    Margin="10 15 0 0"
+                                    Content="{DynamicResource ClearImage}"
                                     FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                     Click="Btn_ClearIcon_Click">
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border Height="45"
                                                 CornerRadius="15"
-                                                Background="{DynamicResource QR_Background}">
+                                                Background="{DynamicResource ClearColor}">
                                             <TextBlock Text="{TemplateBinding Content}"
                                                        VerticalAlignment="Center"
                                                        HorizontalAlignment="Center"

@@ -59,10 +59,6 @@
                         Style="{StaticResource Minimize}"
                         Margin="0 0 6 0"
                         Click="Btn_Minimize_Click"/>
-                <Button x:Name="Btn_Maximize"
-                        Style="{StaticResource Maximize}"
-                        Margin="0 0 6 0"
-                        Click="Btn_Maximize_Click"/>
                 <Button x:Name="Btn_Close"
                         Style="{StaticResource Close}"
                         Margin="0 0 6 0"

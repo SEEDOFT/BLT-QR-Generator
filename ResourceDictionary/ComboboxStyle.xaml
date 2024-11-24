@@ -9,7 +9,7 @@
                         <Border x:Name="Border"
                                 Width="{TemplateBinding Width}"
                                 Height="{TemplateBinding Height}"
-                                Background="{TemplateBinding Background}"
+                                Background="{DynamicResource QR_Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="0"
                                 CornerRadius="15">
@@ -31,7 +31,7 @@
                                                       HorizontalAlignment="Right"
                                                       Margin="0 0 20 0"
                                                       Data="M 0 0 L 4 4 L 8 0 Z"
-                                                      Fill="Black"/>
+                                                      Fill="{DynamicResource Text}"/>
                                             </Border>
                                         </ControlTemplate>
                                     </ToggleButton.Template>

@@ -40,6 +40,13 @@
     <Color x:Key="TBR">#80D9D9D9</Color>
     <SolidColorBrush x:Key="FAQ_Top" Color="{DynamicResource TBR}"/>
 
+    <!-- Button Insert -->
+    <Color x:Key="a">#53C6D7</Color>
+    <SolidColorBrush x:Key="AddColor" Color="{DynamicResource a}"/>
+    <!--Clear-->
+    <Color x:Key="b">#EA4335</Color>
+    <SolidColorBrush x:Key="ClearColor" Color="{DynamicResource b}"/>
+
     <!--Loading Screen -->
     <!--Top left -->
     <Color x:Key="TL">#2B3A67</Color>

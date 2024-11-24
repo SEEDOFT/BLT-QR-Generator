@@ -5,6 +5,7 @@
     <FontFamily x:Key="Poppins_KhSN">/Fonts/Poppins_Regular.ttf#Poppins</FontFamily>
     <FontFamily x:Key="Ole_Moul">/Fonts/OleoScriptSwashCaps_Bold.ttf#Oleo Script Swash Caps</FontFamily>
     <FontFamily x:Key="PoppinsBold_Moul">/Fonts/Poppins_Bold.ttf#Poppins</FontFamily>
+    <FontFamily x:Key="PoppinsBold">/Fonts/Poppins_Bold.ttf#Poppins</FontFamily>
     <FontFamily x:Key="PoppinsBold_KhSN">/Fonts/Poppins_Bold.ttf#Poppins</FontFamily>
     <FontFamily x:Key="KhANG_PoppinsBold">/Fonts/Poppins_Bold.ttf#Poppins</FontFamily>
     <FontFamily x:Key="Ole_Bold">/Fonts/OleoScriptSwashCaps_Bold.ttf#Oleo Script Swash Caps</FontFamily>
@@ -153,4 +154,5 @@
     <sys:String x:Key="A8">BLT QR Generator is available for personal and commercial use, though it may depend on any licensing terms provided by your project.</sys:String>
     <sys:String x:Key="A9">BLT QR Generator is designed with simplicity and customization in mind, offering a user-friendly interface, powerful customization options, and the ability to integrate logos or unique design elements.</sys:String>
     <sys:String x:Key="A10">For support, you can refer to the documentation provided with the app or contact the development team through the specified support channels.</sys:String>
+    <sys:String x:Key="Copyright">©Copyright by</sys:String>
 </ResourceDictionary>

@@ -35,7 +35,7 @@
                             Orientation="Vertical">
                     <TextBlock FontFamily="{DynamicResource  PoppinsBold_KhSN}"
                                FontSize="21"
-                               HorizontalAlignment="Center"
+                               HorizontalAlignment="Left"
                                VerticalAlignment="Center"
                                Foreground="{DynamicResource Text}"
                                Text="{DynamicResource LengName}"/>

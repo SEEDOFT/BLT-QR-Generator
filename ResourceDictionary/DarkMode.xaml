@@ -2,10 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <!--Background Color-->
-    <Color x:Key="Background">#14181C</Color>
+    <Color x:Key="Background">#181C14</Color>
     <SolidColorBrush x:Key="BackgroundColor" Color="{DynamicResource Background}"/>
     <!-- Left Panel that Contain Buttons -->
-    <Color x:Key="LeftPanel">#3C3D37</Color>
+    <Color x:Key="LeftPanel">#262721</Color>
     <SolidColorBrush x:Key="LeftPanelBackground" Color="{DynamicResource LeftPanel}"/>
     <!--Left Panel IsMouseOver and IsClick Color-->
     <Color x:Key="HowerColor">#697565</Color>
@@ -19,7 +19,7 @@
     <Color x:Key="_WIFI_URL">#697565</Color>
     <SolidColorBrush x:Key="Hower_WIFI_URL" Color="{DynamicResource _WIFI_URL}"/>
     <!--QR (Background) -->
-    <Color x:Key="QR">#697565</Color>
+    <Color x:Key="QR">#191B17</Color>
     <SolidColorBrush x:Key="QR_Background" Color="{DynamicResource QR}"/>
     <!-- WIFI and URL History top bar -->
     <Color x:Key="Color">#697565</Color>
@@ -40,6 +40,13 @@
     <Color x:Key="TBR">#ECDFCC</Color>
     <SolidColorBrush x:Key="FAQ_Top" Color="{DynamicResource TBR}"/>
 
+
+    <!-- Button Insert -->
+    <Color x:Key="a">#697565</Color>
+    <SolidColorBrush x:Key="AddColor" Color="{DynamicResource a}"/>
+    <!--Clear-->
+    <Color x:Key="b">#EA4335</Color>
+    <SolidColorBrush x:Key="ClearColor" Color="{DynamicResource b}"/>
 
     <!--Loading Screen -->
     <!--Top left -->
