@@ -41,9 +41,9 @@
         <StackPanel Grid.Column="3"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
-            <Button Style="{StaticResource Regenerate}"
+            <Button Style="{StaticResource COPY}"
                     FontFamily="{DynamicResource PoppinsBold_KhSN}"
-                    Content="Regenerate"
+                    Content="Copy"
                     x:Name="BtnRegenerate" Click="BtnRegenerate_Click">
 
             </Button>

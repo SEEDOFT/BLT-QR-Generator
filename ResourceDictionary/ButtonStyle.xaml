@@ -419,6 +419,47 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="COPY" TargetType="Button">
+        <Setter Property="Width" Value="80"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Foreground" Value="{DynamicResource DefaultRegenerate}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="{DynamicResource RegenerateBG}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="buttonBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Image x:Name="icon"
+                                   Width="13"
+                                   Height="13"
+                                   Stretch="UniformToFill"
+                                   Margin="0,0,5,0"
+                                   Source="/Images/WhiteIcons/wCopy.png"/>
+
+                            <TextBlock x:Name="buttonText"
+                                       Text="{TemplateBinding Content}"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="icon" Property="Source" Value="/Images/BlackIcons/Copy.png"/>
+                            <Setter Property="Foreground" Value="{DynamicResource HowerRegenerate}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
     <!-- Button Pin -->
     <Style x:Key="Pin" TargetType="Button">
         <Setter Property="Width" Value="20"/>
