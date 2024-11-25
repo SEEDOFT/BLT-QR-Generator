@@ -622,7 +622,10 @@ namespace BLT_Generator.Pages
                         Clipboard.SetImage(bitmapImage);
                     }
                 }
-                SaveURL();
+                if (!isOnWIFI)
+                {
+                    SaveURL();
+                }
 
                 //if (isOnWIFI)
                 //{
@@ -722,7 +725,10 @@ namespace BLT_Generator.Pages
                         MessageBox.Show("Invalid File Extension", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
 
-                    SaveURL();
+                    if (!isOnWIFI)
+                    {
+                        SaveURL();
+                    }
                 }
                 catch (Exception ex)
                 {
