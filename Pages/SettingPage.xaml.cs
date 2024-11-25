@@ -55,11 +55,6 @@ SetSelectedButton(Btn_Theme);
 OpenPage(new SubPages.Theme_Panel());
 }
 
-private void Btn_Passcode_Click(object sender, RoutedEventArgs e)
-{
-SetSelectedButton(Btn_Passcode);
-OpenPage(new SubPages.PIN_Panel());
-}
 
 private void Btn_FAQ_Click(object sender, RoutedEventArgs e)
 {

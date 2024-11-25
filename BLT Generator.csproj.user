@@ -22,9 +22,6 @@
     <Compile Update="Pages\LetterMessage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\LoginPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Pages\ProfilePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -41,9 +38,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SubPages\LengCard.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="SubPages\PIN_Panel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SubPages\QR_Panel.xaml.cs">
@@ -136,9 +130,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SubPages\LengCard.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="SubPages\PIN_Panel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SubPages\QR_Panel.xaml">

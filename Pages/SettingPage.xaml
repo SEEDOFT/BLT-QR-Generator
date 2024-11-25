@@ -60,10 +60,10 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
+                    <RowDefinition Height="50"/>
                     <RowDefinition Height="30"/>
-                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="50"/>
                     <RowDefinition Height="30"/>
-                    <RowDefinition Height="25"/>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="25"/>
                     <RowDefinition/>
@@ -95,19 +95,6 @@
                            Foreground="{DynamicResource Text}"
                            FontFamily="{DynamicResource Poppins_KhSN}"
                            FontSize="8" Text="{DynamicResource ThemeChange}"/>
-                <ToggleButton x:Name="Btn_Passcode"
-                              Click="Btn_Passcode_Click"
-                              Grid.Row="5"
-                              Style="{StaticResource Passcode}"
-                              FontFamily="{DynamicResource Poppins_KhSN}"
-                              FontSize="14"
-                              Foreground="{DynamicResource Text}"
-                              Content="{DynamicResource PINs}"/>
-                <TextBlock Margin="15 2 0 0"
-                           Grid.Row="6"
-                           Foreground="{DynamicResource Text}"
-                           FontFamily="{DynamicResource Poppins_KhSN}"
-                           FontSize="8" Text="{DynamicResource PINsChange}"/>
             </Grid>
         </Border>
         <Grid Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3"
