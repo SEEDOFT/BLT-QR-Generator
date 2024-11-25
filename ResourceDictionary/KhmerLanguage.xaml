@@ -156,4 +156,8 @@
     <sys:String x:Key="A9">BLT QR Generator ត្រូវបានរចនាឡើងដោយផ្តោតសំខាន់លើភាពងាយស្រួលនិងជម្រើសប្ដូរស្ទាយ ដោយផ្តល់នូវចំណុចល្អ ងាយស្រួលប្រើ ជម្រើសប្ដូរស្ទាយដោយសេរី និងសមត្ថភាពក្នុងការបញ្ចូលឡូហ្គោ។</sys:String>
     <sys:String x:Key="A10">សម្រាប់ជំនួយ អ្នកអាចស្វែងរកនូវឯកសារដែលបានផ្តល់ជូនជាមួយកម្មវិធី ឬទាក់ទងក្រុមអភិវឌ្ឍតាមបណ្ដាញសង្គមនានាដែលបានដាក់ជូន។</sys:String>
     <sys:String x:Key="Copyright">©រក្សារសិទ្ធដោយ</sys:String>
+    <sys:String x:Key="ColorBlack">ព័ណ៌ខ្មៅ</sys:String>
+    <sys:String x:Key="ColorBlue">ព័ណ៌ខៀវ</sys:String>
+    <sys:String x:Key="ColorGreen">ព័ណ៌បៃតង</sys:String>
+    <sys:String x:Key="ColorRed">ព័ណ៌ក្រហម</sys:String>
 </ResourceDictionary>

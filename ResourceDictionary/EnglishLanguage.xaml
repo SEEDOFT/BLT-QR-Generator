@@ -155,4 +155,8 @@
     <sys:String x:Key="A9">BLT QR Generator is designed with simplicity and customization in mind, offering a user-friendly interface, powerful customization options, and the ability to integrate logos or unique design elements.</sys:String>
     <sys:String x:Key="A10">For support, you can refer to the documentation provided with the app or contact the development team through the specified support channels.</sys:String>
     <sys:String x:Key="Copyright">©Copyright by</sys:String>
+    <sys:String x:Key="ColorBlack">Black</sys:String>
+    <sys:String x:Key="ColorBlue">Blue</sys:String>
+    <sys:String x:Key="ColorGreen">Green</sys:String>
+    <sys:String x:Key="ColorRed">Red</sys:String>
 </ResourceDictionary>

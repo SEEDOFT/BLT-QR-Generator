@@ -273,25 +273,32 @@ namespace BLT_Generator.Pages
                     {
                         g.SmoothingMode = SmoothingMode.AntiAlias;
                         g.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                        g.Clear(Color.Transparent);
+                        g.Clear(Color.White);
 
-                        if (Path.GetFileName(framePath) == "frame.png")
+                        // Draw border if no frame is selected
+                        if (string.IsNullOrEmpty(framePath))
+                        {
+                            using (GraphicsPath path = new GraphicsPath())
+                            {
+                                int cornerRadius = 15;
+                                Rectangle rect = new Rectangle(0, 0, borderedQR.Width - 1, borderedQR.Height - 1);
+
+                                path.AddArc(rect.X, rect.Y, cornerRadius * 2, cornerRadius * 2, 180, 90);
+                                path.AddArc(rect.Width - (cornerRadius * 2), rect.Y, cornerRadius * 2, cornerRadius * 2, 270, 90);
+                                path.AddArc(rect.Width - (cornerRadius * 2), rect.Height - (cornerRadius * 2), cornerRadius * 2, cornerRadius * 2, 0, 90);
+                                path.AddArc(rect.X, rect.Height - (cornerRadius * 2), cornerRadius * 2, cornerRadius * 2, 90, 90);
+                                path.CloseFigure();
+
+                                // Draw border
+                                using (Pen borderPen = new Pen(qrColor, 2))
+                                {
+                                    g.DrawPath(borderPen, path);
+                                }
+                            }
+                        }
+                        else if (Path.GetFileName(framePath) == "frame.png")
                         {
                             g.Clear(Color.Black);
-                        }
-
-                        using (GraphicsPath path = new GraphicsPath())
-                        {
-                            int cornerRadius = 15;
-                            Rectangle rect = new Rectangle(0, 0, borderedQR.Width - 1, borderedQR.Height - 1);
-
-                            path.AddArc(rect.X, rect.Y, cornerRadius * 2, cornerRadius * 2, 180, 90);
-                            path.AddArc(rect.Width - (cornerRadius * 2), rect.Y, cornerRadius * 2, cornerRadius * 2, 270, 90);
-                            path.AddArc(rect.Width - (cornerRadius * 2), rect.Height - (cornerRadius * 2), cornerRadius * 2, cornerRadius * 2, 0, 90);
-                            path.AddArc(rect.X, rect.Height - (cornerRadius * 2), cornerRadius * 2, cornerRadius * 2, 90, 90);
-                            path.CloseFigure();
-
-                            g.SetClip(path);
                         }
 
                         g.DrawImage(qrCodeImage, padding, padding);
@@ -576,6 +583,14 @@ namespace BLT_Generator.Pages
             //    return;
             //}
 
+            if(path == "បញ្ចូល URL")
+            {
+                path = "";
+                GenerateQR();
+                MessageBox.Show("Please enter valid content to generate QR code.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             if (generateQRCodeWithLogo == null)
             {
                 MessageBox.Show("Please enter valid content to generate QR code.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -656,12 +671,13 @@ namespace BLT_Generator.Pages
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
-            var urlPanel = Grid_Center.Children[0] as URL_Panel;
-            //if (urlPanel == null || string.IsNullOrWhiteSpace(urlPanel.TxtUrl.Text))
-            //{
-            //    MessageBox.Show("Please enter valid content to generate QR code.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-            //    return;
-            //}
+            if (path == "បញ្ចូល URL")
+            {
+                path = "";
+                GenerateQR();
+                MessageBox.Show("Please enter valid content to generate QR code.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
             if (generateQRCodeWithLogo == null)
             {
@@ -707,14 +723,6 @@ namespace BLT_Generator.Pages
                     }
 
                     SaveURL();
-                    //if (isOnWIFI)
-                    //{
-                    //    SaveWIFI();
-                    //}
-                    //else
-                    //{
-                    //    SaveURL();
-                    //}
                 }
                 catch (Exception ex)
                 {
@@ -785,19 +793,23 @@ namespace BLT_Generator.Pages
 
                 switch (selectedColor)
                 {
-                    case "1":
+                    case "ព័ណ៌ខ្មៅ":
+                    case "Black":
                         qrBackColor = System.Drawing.Color.White;
                         qrColor = System.Drawing.Color.Black;
                         break;
-                    case "2":
+                    case "ព័ណ៌ខៀវ":
+                    case "Blue":
                         qrBackColor = System.Drawing.Color.White;
                         qrColor = System.Drawing.Color.Blue;
                         break;
-                    case "3":
+                    case "ព័ណ៌បៃតង":
+                    case "Green":
                         qrBackColor = System.Drawing.Color.White;
                         qrColor = System.Drawing.Color.Green;
                         break;
-                    case "4":
+                    case "ព័ណ៌ក្រហម":
+                    case "Red":
                         qrBackColor = System.Drawing.Color.White;
                         qrColor = System.Drawing.Color.Red;
                         break;

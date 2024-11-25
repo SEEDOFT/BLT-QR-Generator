@@ -1,5 +1,6 @@
 ﻿using BLT_Generator.Pages;
 using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace BLT_Generator.SubPages

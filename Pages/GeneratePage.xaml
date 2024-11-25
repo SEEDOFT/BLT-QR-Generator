@@ -179,18 +179,14 @@
                               FontSize="16"
                               Foreground="{DynamicResource Text}" 
                               SelectionChanged="ComboBox_SelectionChanged">
-                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}">
-                            1
-                        </ComboBoxItem>
-                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}">
-                            2
-                        </ComboBoxItem>
-                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}">
-                            3
-                        </ComboBoxItem>
-                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}">
-                            4
-                        </ComboBoxItem>
+                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}" 
+                                      Content="{DynamicResource ColorBlack}"/>
+                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}"
+                                      Content="{DynamicResource ColorBlue}"/>
+                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}"
+                                      Content="{DynamicResource ColorGreen}"/>
+                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}"
+                                      Content="{DynamicResource ColorRed}"/>
                     </ComboBox>
 
 

@@ -98,6 +98,94 @@ namespace BLT_Generator.SubPages
             }
         }
 
+        private void EnsureIsPinnedColumn(SQLiteConnection connection)
+        {
+            using (SQLiteCommand command = new SQLiteCommand(
+                "SELECT COUNT(*) FROM pragma_table_info('tbl_wifi') WHERE name='is_pinned';",
+                connection))
+            {
+                bool columnExists = Convert.ToInt32(command.ExecuteScalar()) > 0;
+
+                if (!columnExists)
+                {
+                    using (SQLiteCommand alterCommand = new SQLiteCommand(
+                        "ALTER TABLE tbl_wifi ADD COLUMN is_pinned INTEGER DEFAULT 0;",
+                        connection))
+                    {
+                        alterCommand.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
+        private void EnsureIdColumn(SQLiteConnection connection)
+        {
+            using (SQLiteCommand command = new SQLiteCommand(
+                "SELECT COUNT(*) FROM pragma_table_info('tbl_wifi') WHERE name='record_id';",
+                connection))
+            {
+                bool columnExists = Convert.ToInt32(command.ExecuteScalar()) > 0;
+
+                if (!columnExists)
+                {
+                    using (var transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            // Add ID column
+                            using (SQLiteCommand alterCommand = new SQLiteCommand(
+                                "ALTER TABLE tbl_wifi ADD COLUMN record_id INTEGER;",
+                                connection))
+                            {
+                                alterCommand.ExecuteNonQuery();
+                            }
+
+                            // Create temporary table with auto-incrementing ID
+                            using (SQLiteCommand createTempTable = new SQLiteCommand(@"
+                            CREATE TABLE tbl_wifi_temp (
+                                record_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                date TEXT,
+                                ssid TEXT,
+                                password TEXT,
+                                encryptionType TEXT,
+                                is_pinned INTEGER DEFAULT 0
+                            );", connection))
+                            {
+                                createTempTable.ExecuteNonQuery();
+                            }
+
+                            // Copy data to temp table
+                            using (SQLiteCommand copyData = new SQLiteCommand(
+                                "INSERT INTO tbl_wifi_temp (date, ssid, password, encryptionType, is_pinned) SELECT date, ssid, password, encryptionType, is_pinned FROM tbl_wifi;",
+                                connection))
+                            {
+                                copyData.ExecuteNonQuery();
+                            }
+
+                            // Drop original table
+                            using (SQLiteCommand dropOriginal = new SQLiteCommand("DROP TABLE tbl_wifi;", connection))
+                            {
+                                dropOriginal.ExecuteNonQuery();
+                            }
+
+                            // Rename temp table to original
+                            using (SQLiteCommand renameTable = new SQLiteCommand("ALTER TABLE tbl_wifi_temp RENAME TO tbl_wifi;", connection))
+                            {
+                                renameTable.ExecuteNonQuery();
+                            }
+
+                            transaction.Commit();
+                        }
+                        catch (Exception)
+                        {
+                            transaction.Rollback();
+                            throw;
+                        }
+                    }
+                }
+            }
+        }
+
         private void LoadData()
         {
             allData.Clear();
@@ -108,16 +196,17 @@ namespace BLT_Generator.SubPages
             {
                 connection.Open();
                 EnsureIsPinnedColumn(connection);
+                EnsureIdColumn(connection);
 
                 string sql = @"
-                SELECT date, ssid, password, encryptionType, COALESCE(is_pinned, 0) as is_pinned 
-                FROM tbl_wifi 
-                ORDER BY 
-                    is_pinned DESC,
-                    CASE 
-                        WHEN is_pinned = 1 THEN date 
-                        ELSE date 
-                    END DESC";
+            SELECT record_id, date, ssid, password, encryptionType, COALESCE(is_pinned, 0) as is_pinned 
+            FROM tbl_wifi 
+            ORDER BY 
+                is_pinned DESC,
+                CASE 
+                    WHEN is_pinned = 1 THEN date 
+                    ELSE date 
+                END DESC";
 
                 using (SQLiteCommand command = new SQLiteCommand(sql, connection))
                 using (SQLiteDataReader reader = command.ExecuteReader())
@@ -125,6 +214,7 @@ namespace BLT_Generator.SubPages
                     while (reader.Read())
                     {
                         WIFI_Data data = new WIFI_Data();
+                        data.RecordId = Convert.ToInt32(reader["record_id"]);
 
                         if (DateTime.TryParse(reader["date"].ToString(), out DateTime parsedDate))
                         {
@@ -166,11 +256,10 @@ namespace BLT_Generator.SubPages
                         try
                         {
                             using (SQLiteCommand deleteCommand = new SQLiteCommand(
-                                "DELETE FROM tbl_wifi WHERE ssid = @ssid AND date = @date;",
+                                "DELETE FROM tbl_wifi WHERE record_id = @recordId;",
                                 connection))
                             {
-                                deleteCommand.Parameters.AddWithValue("@ssid", data.TxbWifiName.Text);
-                                deleteCommand.Parameters.AddWithValue("@date", DateTime.ParseExact(data.TxbDate.Text, "dd/MMM/yyyy", null).ToString("yyyy-MM-dd"));
+                                deleteCommand.Parameters.AddWithValue("@recordId", data.RecordId);
                                 deleteCommand.ExecuteNonQuery();
                             }
 
@@ -202,26 +291,6 @@ namespace BLT_Generator.SubPages
             catch (Exception ex)
             {
                 MessageBox.Show($"Error deleting WIFI record: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        private void EnsureIsPinnedColumn(SQLiteConnection connection)
-        {
-            using (SQLiteCommand command = new SQLiteCommand(
-                "SELECT COUNT(*) FROM pragma_table_info('tbl_wifi') WHERE name='is_pinned';",
-                connection))
-            {
-                bool columnExists = Convert.ToInt32(command.ExecuteScalar()) > 0;
-
-                if (!columnExists)
-                {
-                    using (SQLiteCommand alterCommand = new SQLiteCommand(
-                        "ALTER TABLE tbl_wifi ADD COLUMN is_pinned INTEGER DEFAULT 0;",
-                        connection))
-                    {
-                        alterCommand.ExecuteNonQuery();
-                    }
-                }
             }
         }
 
