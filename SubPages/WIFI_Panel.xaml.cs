@@ -1,5 +1,6 @@
 ﻿using BLT_Generator.Pages;
 using System;
+using System.Data.SQLite;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -61,6 +62,25 @@ namespace BLT_Generator.SubPages
 
             parentPage.path = wifiConfig;
             parentPage.GenerateQR();
+            SaveWIFI(encryptionType);
+            parentPage.path = "";
+        }
+
+        private void SaveWIFI(string encryptionType)
+        {
+            GeneratePage generatePage = new GeneratePage();
+            SQLiteConnection connection = new SQLiteConnection($"Data Source={generatePage.databasePath}");
+            connection.Open();
+            string sql = "INSERT INTO tbl_wifi (date, ssid, password, encryptionType) VALUES (@date, @ssid, @password, @encryptionType);";
+            using (var command = new SQLiteCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
+                command.Parameters.AddWithValue("@ssid", Txb_WIFI.Text);
+                command.Parameters.AddWithValue("@password", Txb_Password.Text);
+                command.Parameters.AddWithValue("@encryptionType", encryptionType);
+                command.ExecuteNonQuery();
+            }
+            connection.Close();
         }
     }
 }

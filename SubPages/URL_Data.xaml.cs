@@ -52,7 +52,7 @@ namespace BLT_Generator.SubPages
 
         private void UpdatePinVisual()
         {
-            //BtnPin.Style = (Style)FindResource(IsPinned ? "PinActive" : "Pin");
+            BtnPin.Style = (Style)FindResource(IsPinned ? "PinActive" : "Pin");
             //BtnPin.Style = (Style)FindResource(IsPinned ? "PinActive" : "Pin");
         }
 
@@ -75,9 +75,17 @@ namespace BLT_Generator.SubPages
             }
         }
 
-        private void BtnRegenerate_Click(object sender, RoutedEventArgs e)
+        private void BtnCopy_Click(object sender, RoutedEventArgs e)
         {
-            RegenerateRequested?.Invoke(this, this);
+            try
+            {
+                Clipboard.SetText(TxbURL.Text);
+                MessageBox.Show("URL copied to clipboard!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to copy URL: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

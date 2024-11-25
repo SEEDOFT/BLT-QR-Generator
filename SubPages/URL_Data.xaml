@@ -44,7 +44,7 @@
             <Button Style="{StaticResource COPY}"
                     FontFamily="{DynamicResource PoppinsBold_KhSN}"
                     Content="Copy"
-                    x:Name="BtnRegenerate" Click="BtnRegenerate_Click">
+                    x:Name="BtnCopy" Click="BtnCopy_Click">
 
             </Button>
         </StackPanel>

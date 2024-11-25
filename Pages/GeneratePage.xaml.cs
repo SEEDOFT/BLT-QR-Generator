@@ -452,6 +452,10 @@ namespace BLT_Generator.Pages
 
         private void frame1_Click(object sender, RoutedEventArgs e)
         {
+            ComboBoxColor.IsEnabled = true;
+            ComboBoxColor.SelectedIndex = 0;
+            qrBackColor = Color.White;
+            qrColor = Color.Black;
             if (sender is Button button)
             {
                 var frame = button.Name;
@@ -481,6 +485,7 @@ namespace BLT_Generator.Pages
                         }
                         else
                         {
+                            ComboBoxColor.IsEnabled = false;
                             qrBackColor = Color.Black;
                             qrColor = Color.White;
                             framePath = Path.Combine("Assets", "frame.png");
@@ -500,8 +505,8 @@ namespace BLT_Generator.Pages
                         }
                         else
                         {
-                            qrBackColor = Color.White;
-                            qrColor = Color.Black;
+                            //qrBackColor = Color.White;
+                            //qrColor = Color.Black;
                             framePath = Path.Combine("Assets", "frameTwo.png");
                             isFrame2Clicked = true;
                             currentFrameName = frame;
@@ -519,8 +524,8 @@ namespace BLT_Generator.Pages
                         }
                         else
                         {
-                            qrBackColor = Color.White;
-                            qrColor = Color.Black;
+                            //qrBackColor = Color.White;
+                            //qrColor = Color.Black;
                             framePath = Path.Combine("Assets", "frameThree.jpg");
                             isFrame3Clicked = true;
                             currentFrameName = frame;
@@ -539,8 +544,8 @@ namespace BLT_Generator.Pages
                         else
                         {
                             // Apply frame4
-                            qrBackColor = Color.White;
-                            qrColor = Color.Black;
+                            //qrBackColor = Color.White;
+                            //qrColor = Color.Black;
                             framePath = Path.Combine("Assets", "frameFour.jpg");
                             isFrame4Clicked = true;
                             currentFrameName = frame;
@@ -602,15 +607,16 @@ namespace BLT_Generator.Pages
                         Clipboard.SetImage(bitmapImage);
                     }
                 }
+                SaveURL();
 
-                if (isOnWIFI)
-                {
-                    SaveWIFI();
-                }
-                else
-                {
-                    SaveURL();
-                }
+                //if (isOnWIFI)
+                //{
+                //    SaveWIFI();
+                //}
+                //else
+                //{
+                //    SaveURL();
+                //}
             }
             catch (Exception ex)
             {
@@ -632,30 +638,30 @@ namespace BLT_Generator.Pages
             connection.Close();
         }
 
-        private void SaveWIFI()
-        {
-            SQLiteConnection connection = new SQLiteConnection($"Data Source={databasePath}");
-            connection.Open();
-            string sql = "INSERT INTO tbl_wifi (date, ssid, password, encryptionType) VALUES (@date, @ssid, @password, @encryptionType);";
-            using (var command = new SQLiteCommand(sql, connection))
-            {
-                command.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
-                command.Parameters.AddWithValue("@ssid", ssid);
-                command.Parameters.AddWithValue("@password", password);
-                command.Parameters.AddWithValue("@encryptionType", encryptionType);
-                command.ExecuteNonQuery();
-            }
-            connection.Close();
-        }
+        //private void SaveWIFI()
+        //{
+        //    SQLiteConnection connection = new SQLiteConnection($"Data Source={databasePath}");
+        //    connection.Open();
+        //    string sql = "INSERT INTO tbl_wifi (date, ssid, password, encryptionType) VALUES (@date, @ssid, @password, @encryptionType);";
+        //    using (var command = new SQLiteCommand(sql, connection))
+        //    {
+        //        command.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
+        //        command.Parameters.AddWithValue("@ssid", ssid);
+        //        command.Parameters.AddWithValue("@password", password);
+        //        command.Parameters.AddWithValue("@encryptionType", encryptionType);
+        //        command.ExecuteNonQuery();
+        //    }
+        //    connection.Close();
+        //}
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
             var urlPanel = Grid_Center.Children[0] as URL_Panel;
-            if (urlPanel == null || string.IsNullOrWhiteSpace(urlPanel.TxtUrl.Text))
-            {
-                MessageBox.Show("Please enter valid content to generate QR code.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
+            //if (urlPanel == null || string.IsNullOrWhiteSpace(urlPanel.TxtUrl.Text))
+            //{
+            //    MessageBox.Show("Please enter valid content to generate QR code.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //    return;
+            //}
 
             if (generateQRCodeWithLogo == null)
             {
@@ -699,7 +705,16 @@ namespace BLT_Generator.Pages
                     {
                         MessageBox.Show("Invalid File Extension", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
+
                     SaveURL();
+                    //if (isOnWIFI)
+                    //{
+                    //    SaveWIFI();
+                    //}
+                    //else
+                    //{
+                    //    SaveURL();
+                    //}
                 }
                 catch (Exception ex)
                 {
@@ -758,7 +773,45 @@ namespace BLT_Generator.Pages
 
         private void Btn_ClearIcon_Click(object sender, RoutedEventArgs e)
         {
+            selectPath = "";
+            GenerateQR();
+        }
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ComboBoxColor.SelectedItem is ComboBoxItem selectedItem)
+            {
+                string selectedColor = (selectedItem.Content as string)?.Trim();
+
+                switch (selectedColor)
+                {
+                    case "1":
+                        qrBackColor = System.Drawing.Color.White;
+                        qrColor = System.Drawing.Color.Black;
+                        break;
+                    case "2":
+                        qrBackColor = System.Drawing.Color.White;
+                        qrColor = System.Drawing.Color.Blue;
+                        break;
+                    case "3":
+                        qrBackColor = System.Drawing.Color.White;
+                        qrColor = System.Drawing.Color.Green;
+                        break;
+                    case "4":
+                        qrBackColor = System.Drawing.Color.White;
+                        qrColor = System.Drawing.Color.Red;
+                        break;
+                    default:
+                        qrBackColor = System.Drawing.Color.White;
+                        qrColor = System.Drawing.Color.Black;
+                        break;
+                }
+
+                if (!string.IsNullOrWhiteSpace(path))
+                {
+                    GenerateQR();
+                }
+            }
         }
     }
 }

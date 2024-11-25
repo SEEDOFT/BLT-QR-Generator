@@ -494,6 +494,34 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <Style x:Key="PinActive" TargetType="Button">
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="#4d4d4d"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="buttonBorder"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="2">
+                        <Grid>
+                            <Image x:Name="icon"
+                               Width="10"
+                               Height="10"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Source="/Images/WhiteIcons/unpin.png"
+                               Stretch="UniformToFill"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
     <!--Button Trash -->
     <Style x:Key="Trash" TargetType="Button">
         <Setter Property="Width" Value="20"/>

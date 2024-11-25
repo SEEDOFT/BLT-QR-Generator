@@ -85,6 +85,7 @@
     <None Remove="Images\DarkIcons\dSun.png" />
     <None Remove="Images\DarkIcons\dUser.png" />
     <None Remove="Images\DarkIcons\dWIFI.png" />
+    <None Remove="Images\WhiteIcons\unpin.png" />
     <None Remove="Images\WhiteIcons\wArrowRight.png" />
     <None Remove="Images\WhiteIcons\wBack.png" />
     <None Remove="Images\WhiteIcons\wBook.png" />
@@ -346,6 +347,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\DarkIcons\dWIFI.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WhiteIcons\unpin.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WhiteIcons\wArrowRight.png">

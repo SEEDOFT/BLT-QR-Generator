@@ -53,7 +53,7 @@ namespace BLT_Generator.SubPages
 
         private void UpdatePinVisual()
         {
-            //BtnPin.Style = (Style)FindResource(IsPinned ? "PinActive" : "Pin");
+            BtnPin.Style = (Style)FindResource(IsPinned ? "PinActive" : "Pin");
             //BtnPin.Style = (Style)FindResource(IsPinned ? "PinActive" : "Pin");
         }
 
