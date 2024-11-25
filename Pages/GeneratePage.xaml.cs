@@ -180,6 +180,7 @@ namespace BLT_Generator.Pages
 
         private void Btn_URL_Click(object sender, RoutedEventArgs e)
         {
+            path = "";
             SetSelectedButton(Btn_URL);
             PageCenter(CreateUrlPanel());
             isOnWIFI = false;

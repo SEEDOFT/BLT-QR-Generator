@@ -63,7 +63,7 @@ namespace BLT_Generator.SubPages
             parentPage.path = wifiConfig;
             parentPage.GenerateQR();
             SaveWIFI(encryptionType);
-            parentPage.path = "";
+            //parentPage.path = "";
         }
 
         private void SaveWIFI(string encryptionType)
