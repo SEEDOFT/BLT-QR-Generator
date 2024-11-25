@@ -49,20 +49,23 @@
                            Margin="0,5,0,0"/>
 
                 <ComboBox x:Name="ComboBoxLanguage"
-                          SelectionChanged="ComboBoxLanguage_SelectionChanged"
-                          Margin="0,10,0,0"
-                          HorizontalAlignment="Left">
+                          HorizontalAlignment="Left" VerticalAlignment="Top" Width="150"
+                          SelectionChanged="ComboBoxLanguage_SelectionChanged">
                     <ComboBoxItem>
-                        English
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Images/Contents/UK.png" Height="20" Width="20" Margin="5"/>
+                            <TextBlock Text="English" VerticalAlignment="Center"
+                                       Margin="10 0 0 0"/>
+                        </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
-                        Khmer
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Images/Contents/KH.png"  Height="20" Width="20" Margin="5"/>
+                            <TextBlock Text="Khmer" VerticalAlignment="Center"
+                                       Margin="10 0 0 0"/>
+                        </StackPanel>
                     </ComboBoxItem>
-                    <ComboBox.Background>
-                        <SolidColorBrush Color="#222B43"/>
-                    </ComboBox.Background>
                 </ComboBox>
-
             </StackPanel>
         </Grid>
     </Border>

@@ -18,6 +18,8 @@
     <sys:String x:Key="BtnSave">រក្សាទុក</sys:String>
     <sys:String x:Key="BtnCopy">ចម្លង</sys:String>
 
+    <!--KH and UK Flage-->
+    <ImageSource x:Key="UK_KH">/Images/Contents/KH.png</ImageSource>
 
     <!-- WIFI Panel-->
     <sys:String x:Key="WIFI_Name">បញ្ចូលឈ្មោះ WIFI របស់អ្នក ឬ SSID</sys:String>

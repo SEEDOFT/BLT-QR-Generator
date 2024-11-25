@@ -177,9 +177,9 @@
                               Height="45"
                               FontFamily="{DynamicResource PoppinsBold_KhSN}"
                               FontSize="16"
-                              Foreground="{DynamicResource Text}" 
+                              Foreground="{DynamicResource Text}"
                               SelectionChanged="ComboBox_SelectionChanged">
-                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}" 
+                        <ComboBoxItem Foreground="{DynamicResource _QR_Generator}"
                                       Content="{DynamicResource ColorBlack}"/>
                         <ComboBoxItem Foreground="{DynamicResource _QR_Generator}"
                                       Content="{DynamicResource ColorBlue}"/>

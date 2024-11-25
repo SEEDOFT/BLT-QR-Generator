@@ -19,7 +19,7 @@ namespace BLT_Generator.SubPages
     /// Interaction logic for Language_Panel.xaml
     /// </summary>
     public partial class Language_Panel : UserControl
-    {
+    {   
         private Theme_Panel? Theme_Panel;
         public Language_Panel()
         {
@@ -29,10 +29,16 @@ namespace BLT_Generator.SubPages
 
         private void ComboBoxLanguage_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(ComboBoxLanguage.SelectedItem is ComboBoxItem selectedItem)
+            if (ComboBoxLanguage.SelectedItem is ComboBoxItem selectedItem)
             {
-                string selectedLanguage = selectedItem.Content.ToString()!;
-                SetLanguage(selectedLanguage);
+                var textBlock = (selectedItem.Content as StackPanel)?.Children.OfType<TextBlock>().FirstOrDefault();
+
+                string selectedLanguage = textBlock?.Text!;
+
+                if (!string.IsNullOrEmpty(selectedLanguage))
+                {
+                    SetLanguage(selectedLanguage);
+                }
             }
         }
         private void LoadEnglishLanguage()

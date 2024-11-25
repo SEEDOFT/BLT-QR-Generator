@@ -19,6 +19,8 @@
     <sys:String x:Key="BtnSave">Save</sys:String>
     <sys:String x:Key="BtnCopy">Copy</sys:String>
 
+    <!--KH and UK Flage-->
+    <ImageSource x:Key="UK_KH">/Images/Contents/UK.png</ImageSource>
 
     <!-- WIFI Panel-->
     <sys:String x:Key="WIFI_Name">Enter your WIFI name or SSID</sys:String>
