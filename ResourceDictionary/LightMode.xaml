@@ -21,6 +21,9 @@
     <!--QR (Background) -->
     <Color x:Key="QR">#53C6D7</Color>
     <SolidColorBrush x:Key="QR_Background" Color="{DynamicResource QR}"/>
+    <!--Frame background-->
+    <Color x:Key="FrameColor">#53C6D7</Color>
+    <SolidColorBrush x:Key="Frame_Background" Color="{DynamicResource FrameColor}"/>
     <!-- WIFI and URL History top bar -->
     <Color x:Key="Color">#222B43</Color>
     <SolidColorBrush x:Key="HistoryBarColor" Color="{DynamicResource Color}"/>

@@ -33,7 +33,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
             <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
-                       FontSize="20"
+                       FontSize="18"
                        Foreground="{DynamicResource Text}"
                        Text="{DynamicResource Date}"/>
         </StackPanel>
@@ -41,7 +41,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
             <TextBlock FontFamily="{DynamicResource PoppinsBold_KhSN}"
-                       FontSize="20"
+                       FontSize="18"
                        Foreground="{DynamicResource Text}">
                 URL
             </TextBlock>

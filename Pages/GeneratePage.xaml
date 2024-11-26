@@ -90,18 +90,12 @@
                     <Border Height="120"
                             CornerRadius="20"
                             Margin="0,20,0,0"
-                            Background="{DynamicResource QR_Background}">
+                            Background="{DynamicResource Frame_Background}">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="25"/>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
                             <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                                         HorizontalAlignment="Left"
                                         VerticalAlignment="Bottom"
@@ -112,64 +106,63 @@
                                     Text="{DynamicResource Frame}"
                                     FontFamily="{DynamicResource PoppinsBold_KhSN}"/>
                             </StackPanel>
-                            <Border Grid.Row="1" Grid.Column="0"
-                                    Width="50"
-                                    Height="70"
-                                    CornerRadius="10"
-                                    Margin="10 0 0 0"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Background="#5FEAFF">
-                                <!--<StackPanel>
-                                <Button x:Name="frame1"/>
-                                </StackPanel>-->
-                                <Button x:Name="frame1"
-                                        Background="Transparent"
-                                        BorderThickness="0" Click="frame1_Click"/>
-                            </Border>
-                            <Border Grid.Row="1" Grid.Column="1"
-                                    Width="50"
-                                    Height="70"
-                                    CornerRadius="10"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Background="#5FEAFF">
-                                <!--<StackPanel>
+                            <ScrollViewer HorizontalScrollBarVisibility="Visible"
+                                          VerticalScrollBarVisibility="Disabled"
+                                          Grid.Row="1">
 
-                                </StackPanel>-->
-                                <Button x:Name="frame2"
-                                        Background="Transparent"
-                                        BorderThickness="0" Click="frame1_Click"/>
-                            </Border>
-                            <Border Grid.Row="1" Grid.Column="2"
-                                    Width="50"
-                                    Height="70"
-                                    CornerRadius="10"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Background="#5FEAFF">
-                                <!--<StackPanel>
+                                <StackPanel Orientation="Horizontal"
+                                            Margin="0 -5 0 0">
+                                    <Border Width="150"
+                                            Height="120"
+                                            Margin="0 -15 0 0">
+                                        <!--<StackPanel>
+                                        <Button x:Name="frame1"/>
+                                        </StackPanel>-->
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Assets/frame.png"
+                                                        Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                        <Button x:Name="frame1"
+                                                Background="Transparent"
+                                                BorderThickness="0" Click="frame1_Click"/>
 
-                                </StackPanel>-->
-                                <Button x:Name="frame3"
-                                        Background="Transparent"
-                                        BorderThickness="0" Click="frame1_Click"/>
-                            </Border>
-                            <Border Grid.Row="1" Grid.Column="3"
-                                    Width="50"
-                                    Height="70"
-                                    CornerRadius="10"
-                                    Margin="0 0 10 0"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Background="#5FEAFF">
-                                <!--<StackPanel>
-
-                                </StackPanel>-->
-                                <Button x:Name="frame4"
-                                        Background="Transparent"
-                                        BorderThickness="0" Click="frame1_Click"/>
-                            </Border>
+                                    </Border>
+                                    <Border Width="100"
+                                            Height="100"
+                                            Margin="40 -5 0 0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Images/Contents/frameTwo.png"
+                                                        Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                        <Button x:Name="frame2"
+                                                Background="Transparent"
+                                                BorderThickness="0" Click="frame1_Click"/>
+                                    </Border>
+                                    <Border Width="100"
+                                            Height="100"
+                                            Margin="40 -10 0 0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Images/Contents/frameThree.png"
+                                                        Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                        <Button x:Name="frame3"
+                                                Background="Transparent"
+                                                BorderThickness="0" Click="frame1_Click"/>
+                                    </Border>
+                                    <Border Width="150"
+                                            Height="100"
+                                            Margin="40 -5 0 0">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Images/Contents/frameFour.png"
+                                                        Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                        <Button x:Name="frame4"
+                                                Background="Transparent"
+                                                BorderThickness="0" Click="frame1_Click">
+                                        </Button>
+                                    </Border>
+                                </StackPanel>
+                            </ScrollViewer>
                         </Grid>
                     </Border>
                     <ComboBox x:Name="ComboBoxColor" Style="{StaticResource Color}"

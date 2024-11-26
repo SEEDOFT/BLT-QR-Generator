@@ -64,7 +64,7 @@
             <Grid>
                 <Border CornerRadius="10">
                     <Border.Background>
-                        <ImageBrush ImageSource="/Images/Contents/T.png"
+                        <ImageBrush ImageSource="{DynamicResource TheaProfile}"
                                     Stretch="UniformToFill"/>
                     </Border.Background>
                     <Border.Effect>

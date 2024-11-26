@@ -142,10 +142,10 @@
     <sys:String x:Key="Q4">៤.តើខ្ញុំអាចប្ដូរស្ទាយ QR Code របស់ខ្ញុំបានដូចម្តេច?</sys:String>
     <sys:String x:Key="Q5">៥.តើខ្ញុំអាចរក្សាទុកឬនាំចេញ QR Code ដែលបានបង្កើតរបស់ខ្ញុំបានទេ?</sys:String>
     <sys:String x:Key="Q6">៦.តើ BLT QR Generator ផ្តល់នូវសុវត្ថិភាពដល់អ្នកប្រើប្រាស់ដែរឬទេ?</sys:String>
-    <sys:String x:Key="Q7">៧.តើ BLT QR Generator មានមីនុយការកំណត់ទេ? ហើយវាផ្តល់ជម្រើសអ្វីខ្លះ?</sys:String>
-    <sys:String x:Key="Q8">៨.តើខ្ញុំអាចប្រើ BLT QR Generator សម្រាប់អាជីវកម្មបានទេ?</sys:String>
-    <sys:String x:Key="Q9">៩.តើ BLT QR Generator មានអ្វីខុសពីកម្មវិធីបង្កើត QR Code ផ្សេងទៀត?</sys:String>
-    <sys:String x:Key="Q10">១០.តើខ្ញុំអាចទទួលបានជំនួយបើប្រឈមនឹងបញ្ហាជាមួយ BLT QR Generator បានដូចម្តេច?</sys:String>
+    <sys:String x:Key="Q7">៦.តើ BLT QR Generator មានមីនុយការកំណត់ទេ? ហើយវាផ្តល់ជម្រើសអ្វីខ្លះ?</sys:String>
+    <sys:String x:Key="Q8">៧.តើខ្ញុំអាចប្រើ BLT QR Generator សម្រាប់អាជីវកម្មបានទេ?</sys:String>
+    <sys:String x:Key="Q9">៨.តើ BLT QR Generator មានអ្វីខុសពីកម្មវិធីបង្កើត QR Code ផ្សេងទៀត?</sys:String>
+    <sys:String x:Key="Q10">៩.តើខ្ញុំអាចទទួលបានជំនួយបើប្រឈមនឹងបញ្ហាជាមួយ BLT QR Generator បានដូចម្តេច?</sys:String>
 
     <sys:String x:Key="A1">BLT QR Generator គឺជាកម្មវិធីដែលត្រូវបានរចនាឡើងដើម្បីបង្កើត QR Code បានយ៉ាងងាយស្រួល និងមានប្រសិទ្ធភាព។ វាត្រូវបានបង្កើតឡើងជាពិសេសសម្រាប់អ្នកប្រើប្រាស់ដែលកំពុងស្វែងរកវិធីងាយស្រួលក្នុងការបង្កើត QR Code ជាមួយនឹងជម្រើសប្ដូរទៅតាមបំណងរបស់អ្នកប្រើប្រាស់។</sys:String>
     <sys:String x:Key="A2">បច្ចុប្បន្ន BLT QR Generator ត្រូវបានអភិវឌ្ឍជា WPF Application ដែលធ្វើឱ្យវាសមស្របសម្រាប់អ្នកប្រើ Windows។</sys:String>

@@ -141,10 +141,10 @@
     <sys:String x:Key="Q4">4. How can I customize my QR codes?</sys:String>
     <sys:String x:Key="Q5">5. Can I save or export my generated QR codes?</sys:String>
     <sys:String x:Key="Q6">6. Does BLT QR Generator offer any security features?</sys:String>
-    <sys:String x:Key="Q7">7. Is there a settings menu in BLT QR Generator? What options does it offer?</sys:String>
-    <sys:String x:Key="Q8">8. Can I use BLT QR Generator for commercial purposes?</sys:String>
-    <sys:String x:Key="Q9">9. What makes BLT QR Generator different from other QR code generators?</sys:String>
-    <sys:String x:Key="Q10">10. How can I get support if I encounter issues with BLT QR Generator?</sys:String>
+    <sys:String x:Key="Q7">6. Is there a settings menu in BLT QR Generator? What options does it offer?</sys:String>
+    <sys:String x:Key="Q8">7. Can I use BLT QR Generator for commercial purposes?</sys:String>
+    <sys:String x:Key="Q9">8. What makes BLT QR Generator different from other QR code generators?</sys:String>
+    <sys:String x:Key="Q10">9. How can I get support if I encounter issues with BLT QR Generator?</sys:String>
 
     <sys:String x:Key="A1">BLT QR Generator is a tool designed to create QR codes easily and efficiently. It is especially tailored for users looking for a straightforward way to generate QR codes with various customization options.</sys:String>
     <sys:String x:Key="A2">Currently, BLT QR Generator is developed as a WPF application, making it suitable for Windows users.</sys:String>

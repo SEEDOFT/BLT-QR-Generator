@@ -63,6 +63,9 @@
     <None Remove="Images\Contents\Dark_T.png" />
     <None Remove="Images\Contents\Developer.png" />
     <None Remove="Images\Contents\Facebook.png" />
+    <None Remove="Images\Contents\frameFour.png" />
+    <None Remove="Images\Contents\frameThree.png" />
+    <None Remove="Images\Contents\frameTwo.png" />
     <None Remove="Images\Contents\Github.png" />
     <None Remove="Images\Contents\KH.png" />
     <None Remove="Images\Contents\L.png" />
@@ -280,6 +283,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\Facebook.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\frameFour.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\frameThree.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Contents\frameTwo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Contents\Github.png">

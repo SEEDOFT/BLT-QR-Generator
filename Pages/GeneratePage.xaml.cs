@@ -664,19 +664,6 @@ namespace BLT_Generator.Pages
                         Clipboard.SetImage(bitmapImage);
                     }
                 }
-                if (!isOnWIFI)
-                {
-                    SaveURL();
-                }
-
-                //if (isOnWIFI)
-                //{
-                //    SaveWIFI();
-                //}
-                //else
-                //{
-                //    SaveURL();
-                //}
             }
             catch (Exception ex)
             {
@@ -697,22 +684,6 @@ namespace BLT_Generator.Pages
             }
             connection.Close();
         }
-
-        //private void SaveWIFI()
-        //{
-        //    SQLiteConnection connection = new SQLiteConnection($"Data Source={databasePath}");
-        //    connection.Open();
-        //    string sql = "INSERT INTO tbl_wifi (date, ssid, password, encryptionType) VALUES (@date, @ssid, @password, @encryptionType);";
-        //    using (var command = new SQLiteCommand(sql, connection))
-        //    {
-        //        command.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
-        //        command.Parameters.AddWithValue("@ssid", ssid);
-        //        command.Parameters.AddWithValue("@password", password);
-        //        command.Parameters.AddWithValue("@encryptionType", encryptionType);
-        //        command.ExecuteNonQuery();
-        //    }
-        //    connection.Close();
-        //}
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
@@ -765,11 +736,6 @@ namespace BLT_Generator.Pages
                     else
                     {
                         MessageBox.Show("Invalid File Extension", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-
-                    if (!isOnWIFI)
-                    {
-                        SaveURL();
                     }
                 }
                 catch (Exception ex)

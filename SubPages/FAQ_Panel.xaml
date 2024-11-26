@@ -132,24 +132,6 @@
                               Margin="0 15 0 0">
                         <Expander.Header>
                             <StackPanel Orientation="Vertical">
-                                <TextBlock Text="{DynamicResource Q6}"
-                                           TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"
-                                           Foreground="{DynamicResource _QR_Generator}"/>
-                                <Line X1="0" Y1="5" X2="165" Y2="5"
-                                      Stroke="{DynamicResource _QR_Generator}"
-                                      StrokeThickness="1"/>
-                            </StackPanel>
-                        </Expander.Header>
-                        <TextBlock TextAlignment="Left" TextWrapping="Wrap"
-                                   Margin="25 5 5 0" FontFamily="{DynamicResource PoppinsBold_KhSN}"
-                                   Foreground="{DynamicResource _QR_Generator}"
-                                   Text="{DynamicResource A6}"/>
-                    </Expander>
-
-                    <Expander FontSize="12" HorizontalAlignment="Stretch"
-                              Margin="0 15 0 0">
-                        <Expander.Header>
-                            <StackPanel Orientation="Vertical">
                                 <TextBlock Text="{DynamicResource Q7}"
                                            TextWrapping="Wrap" FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                            Foreground="{DynamicResource _QR_Generator}"/>
