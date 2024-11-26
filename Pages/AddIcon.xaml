@@ -100,7 +100,8 @@
                                             HorizontalAlignment="Stretch"
                                             Background="Black">
                                         <Button x:Name="Default4" 
-                                                Background="Transparent"/>
+                                                Background="Transparent"
+                                                Click="Default1_Click"/>
                                     </Border>
                                 </Grid>
                                 <Grid Grid.Column="4"
@@ -110,7 +111,8 @@
                                             HorizontalAlignment="Stretch"
                                             Background="Black">
                                         <Button x:Name="Default5" 
-                                                Background="Transparent"/>
+                                                Background="Transparent"
+                                                Click="Default1_Click"/>
                                     </Border>
                                 </Grid>
                             </Grid>

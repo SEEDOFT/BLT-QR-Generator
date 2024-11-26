@@ -28,53 +28,32 @@ namespace BLT_Generator.Pages
 
         private void LoadImage()
         {
-            string exePath = AppDomain.CurrentDomain.BaseDirectory;
-            assetsPath = Path.GetFullPath(assetsPath);
-            defaultIconsPath = Path.Combine(assetsPath, "DefaultIcons");
-            string[] files = Directory.GetFiles(defaultIconsPath);
-
-            // Load default icons
-            for (int i = 0; i < 3; i++)
+            try
             {
-                using (var stream = new FileStream(files[i], FileMode.Open, FileAccess.Read))
+                // Use a more reliable method to find the Assets folder
+                string exePath = AppDomain.CurrentDomain.BaseDirectory;
+                string solutionDir = Directory.GetParent(exePath).Parent.Parent.Parent.FullName;
+                string assetsPath = Path.Combine(solutionDir, "Assets", "DefaultIcons");
+
+                // Verify the path exists
+                if (!Directory.Exists(assetsPath))
                 {
-                    BitmapImage bitmap = new BitmapImage();
-                    bitmap.BeginInit();
-                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
-                    bitmap.StreamSource = stream;
-                    bitmap.EndInit();
-                    bitmap.Freeze();
-
-                    ImageBrush imageBrush = new ImageBrush { ImageSource = bitmap };
-
-                    switch (i)
-                    {
-                        case 0:
-                            Default1.Background = imageBrush;
-                            Default1.Tag = files[i];
-                            break;
-                        case 1:
-                            Default2.Background = imageBrush;
-                            Default2.Tag = files[i];
-                            break;
-                        case 2:
-                            Default3.Background = imageBrush;
-                            Default3.Tag = files[i];
-                            break;
-                    }
+                    MessageBox.Show($"Assets folder not found at: {assetsPath}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
                 }
-            }
 
-            // Load recent images
-            string imagePath = Path.Combine(exePath, App.main.dir);
-            string[] supportedExtensions = { ".png", ".jpg", ".jpeg" };
-            int j = 1;
+                string[] files = Directory.GetFiles(assetsPath);
 
-            foreach (string file in Directory.GetFiles(imagePath))
-            {
-                if (supportedExtensions.Contains(Path.GetExtension(file).ToLower()))
+                if (files.Length < 5)
                 {
-                    using (var stream = new FileStream(file, FileMode.Open, FileAccess.Read))
+                    MessageBox.Show($"Not enough default icons found in: {assetsPath}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                // Load default icons
+                for (int i = 0; i < 5; i++)
+                {
+                    using (var stream = new FileStream(files[i], FileMode.Open, FileAccess.Read))
                     {
                         BitmapImage bitmap = new BitmapImage();
                         bitmap.BeginInit();
@@ -83,40 +62,91 @@ namespace BLT_Generator.Pages
                         bitmap.EndInit();
                         bitmap.Freeze();
 
-                        ImageBrush imageBrush = new ImageBrush
-                        {
-                            ImageSource = bitmap,
-                            Stretch = Stretch.UniformToFill
-                        };
+                        ImageBrush imageBrush = new ImageBrush { ImageSource = bitmap };
 
-                        Button? targetButton = null;
-                        switch (j % 5)
+                        switch (i)
                         {
+                            case 0:
+                                Default1.Background = imageBrush;
+                                Default1.Tag = files[i];
+                                break;
                             case 1:
-                                targetButton = Recent1;
+                                Default2.Background = imageBrush;
+                                Default2.Tag = files[i];
                                 break;
                             case 2:
-                                targetButton = Recent2;
+                                Default3.Background = imageBrush;
+                                Default3.Tag = files[i];
                                 break;
                             case 3:
-                                targetButton = Recent3;
+                                Default4.Background = imageBrush;
+                                Default4.Tag = files[i];
                                 break;
                             case 4:
-                                targetButton = Recent4;
-                                break;
-                            case 0:
-                                targetButton = Recent5;
+                                Default5.Background = imageBrush;
+                                Default5.Tag = files[i];
                                 break;
                         }
-
-                        if (targetButton != null)
-                        {
-                            targetButton.Background = imageBrush;
-                            targetButton.Tag = file;
-                        }
-                        j++;
                     }
                 }
+
+                // Load recent images
+                string imagePath = Path.Combine(exePath, App.main.dir);
+                string[] supportedExtensions = { ".png", ".jpg", ".jpeg" };
+                int j = 1;
+
+                foreach (string file in Directory.GetFiles(imagePath))
+                {
+                    if (supportedExtensions.Contains(Path.GetExtension(file).ToLower()))
+                    {
+                        using (var stream = new FileStream(file, FileMode.Open, FileAccess.Read))
+                        {
+                            BitmapImage bitmap = new BitmapImage();
+                            bitmap.BeginInit();
+                            bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                            bitmap.StreamSource = stream;
+                            bitmap.EndInit();
+                            bitmap.Freeze();
+
+                            ImageBrush imageBrush = new ImageBrush
+                            {
+                                ImageSource = bitmap,
+                                Stretch = Stretch.UniformToFill
+                            };
+
+                            Button? targetButton = null;
+                            switch (j % 5)
+                            {
+                                case 1:
+                                    targetButton = Recent1;
+                                    break;
+                                case 2:
+                                    targetButton = Recent2;
+                                    break;
+                                case 3:
+                                    targetButton = Recent3;
+                                    break;
+                                case 4:
+                                    targetButton = Recent4;
+                                    break;
+                                case 0:
+                                    targetButton = Recent5;
+                                    break;
+                            }
+
+                            if (targetButton != null)
+                            {
+                                targetButton.Background = imageBrush;
+                                targetButton.Tag = file;
+                            }
+                            j++;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading images: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -186,12 +216,10 @@ namespace BLT_Generator.Pages
                 string file = Path.GetFileName(dialog.FileName);
                 string fullDir = Path.Combine(App.main.dir, file);
 
-                // Get list of image files
                 string[] imageFiles = Directory.GetFiles(App.main.dir, "*.*")
                     .Where(f => f.ToLower().EndsWith(".png") || f.ToLower().EndsWith(".jpg"))
                     .ToArray();
 
-                // Delete the oldest image if we exceed the max limit
                 if (imageFiles.Length >= MAX_IMAGES)
                 {
                     var fileInfos = imageFiles
@@ -203,7 +231,6 @@ namespace BLT_Generator.Pages
                     File.Delete(oldestFile);
                 }
 
-                // Create a copy of the file
                 using (var sourceStream = File.OpenRead(dialog.FileName))
                 using (var destinationStream = File.Create(fullDir))
                 {

@@ -251,46 +251,33 @@ namespace BLT_Generator.Pages
                 isFrameAdded = false;
                 currentFrame = null;
                 framePath = "";
-                return;  // Important: return here to prevent further execution
+                return; 
             }
-
-            // If it's all digits, format as phone number
-            if (path.All(char.IsDigit))
-            {
-                path = $"tel:+{path}";
-            }
-
             using (QRCodeGenerator qrCodeGenerator = new QRCodeGenerator())
             {
                 QRCodeData qrCodeData = qrCodeGenerator.CreateQrCode(path, QRCodeGenerator.ECCLevel.Q);
                 using (QRCode qrCode = new QRCode(qrCodeData))
                 {
                     Bitmap qrCodeImage = qrCode.GetGraphic(20, qrColor, qrBackColor, false);
-
                     int padding = 35;
-                    Bitmap borderedQR = new Bitmap(qrCodeImage.Width + (padding * 2), qrCodeImage.Height + (padding * 2));
-
+                    int additionalHeight = 70;
+                    Bitmap borderedQR = new Bitmap(qrCodeImage.Width + (padding * 2), qrCodeImage.Height + (padding * 2) + additionalHeight);
                     using (Graphics g = Graphics.FromImage(borderedQR))
                     {
                         g.SmoothingMode = SmoothingMode.AntiAlias;
                         g.InterpolationMode = InterpolationMode.HighQualityBicubic;
                         g.Clear(Color.White);
-
-                        // Draw border if no frame is selected
                         if (string.IsNullOrEmpty(framePath))
                         {
                             using (GraphicsPath path = new GraphicsPath())
                             {
                                 int cornerRadius = 15;
                                 Rectangle rect = new Rectangle(0, 0, borderedQR.Width - 1, borderedQR.Height - 1);
-
                                 path.AddArc(rect.X, rect.Y, cornerRadius * 2, cornerRadius * 2, 180, 90);
                                 path.AddArc(rect.Width - (cornerRadius * 2), rect.Y, cornerRadius * 2, cornerRadius * 2, 270, 90);
                                 path.AddArc(rect.Width - (cornerRadius * 2), rect.Height - (cornerRadius * 2), cornerRadius * 2, cornerRadius * 2, 0, 90);
                                 path.AddArc(rect.X, rect.Height - (cornerRadius * 2), cornerRadius * 2, cornerRadius * 2, 90, 90);
                                 path.CloseFigure();
-
-                                // Draw border
                                 using (Pen borderPen = new Pen(qrColor, 2))
                                 {
                                     g.DrawPath(borderPen, path);
@@ -301,10 +288,47 @@ namespace BLT_Generator.Pages
                         {
                             g.Clear(Color.Black);
                         }
-
                         g.DrawImage(qrCodeImage, padding, padding);
-                    }
+                        if (!isOnWIFI && !string.IsNullOrEmpty(path))
+                        {
+                            Font font = new Font("Arial", 16, System.Drawing.FontStyle.Regular);
+                            SolidBrush brush;
+                            if (Path.GetFileName(framePath) == "frame.png")
+                            {
+                                brush = new SolidBrush(Color.White);
+                            }
+                            else
+                            {
+                                brush = new SolidBrush(Color.Black);
+                            }
+                            string url = $"Text: {path}";
+                            g.DrawString(url, font, brush, new PointF(padding, qrCodeImage.Height + padding + 15));
+                        }
+                        if (isOnWIFI && !string.IsNullOrEmpty(ssid))
+                        {
+                            Font font = new Font("Arial", 16, System.Drawing.FontStyle.Regular);
+                            SolidBrush brush;
 
+                            if (Path.GetFileName(framePath) == "frame.png")
+                            {
+                                brush = new SolidBrush(Color.White);
+                            }
+                            else
+                            {
+                                brush = new SolidBrush(Color.Black);
+                            }
+
+                            string ssidText = $"SSID: {ssid}";
+
+                            g.DrawString(ssidText, font, brush, new PointF(padding + 10, qrCodeImage.Height + padding + 15));
+
+                            if (!string.IsNullOrEmpty(password))
+                            {
+                                string passwordText = $"Password: {password}";
+                                g.DrawString(passwordText, font, brush, new PointF(padding + 10, qrCodeImage.Height + padding + 40));
+                            }
+                        }
+                    }
                     if (!string.IsNullOrEmpty(selectPath))
                     {
                         Bitmap logo = new Bitmap(selectPath);
@@ -314,7 +338,6 @@ namespace BLT_Generator.Pages
                     {
                         generateQRCodeWithLogo = borderedQR;
                     }
-
                     if (isFrameAdded)
                     {
                         ApplyFrame();
@@ -330,19 +353,33 @@ namespace BLT_Generator.Pages
         private Bitmap CombineLogo(Bitmap qrCodeImage, Bitmap logo)
         {
             int logoSize = qrCodeImage.Width / 5;
+            int borderWidth = 4;
+
+            Bitmap circularLogo = new Bitmap(logoSize + (borderWidth * 2), logoSize + (borderWidth * 2));
+
             Bitmap resizedLogo = new Bitmap(logo, new System.Drawing.Size(logoSize, logoSize));
 
-            Bitmap circularLogo = new Bitmap(logoSize, logoSize);
             using (Graphics g = Graphics.FromImage(circularLogo))
             {
                 g.SmoothingMode = SmoothingMode.AntiAlias;
+                g.InterpolationMode = InterpolationMode.HighQualityBicubic;
 
-                using (GraphicsPath path = new GraphicsPath())
+                using (GraphicsPath borderPath = new GraphicsPath())
                 {
-                    path.AddEllipse(0, 0, logoSize, logoSize);
-                    g.SetClip(path);
+                    borderPath.AddEllipse(0, 0, logoSize + (borderWidth * 2), logoSize + (borderWidth * 2));
+                    g.SetClip(borderPath);
 
-                    g.DrawImage(resizedLogo, 0, 0, logoSize, logoSize);
+                    using (SolidBrush whiteBrush = new SolidBrush(Color.White))
+                    {
+                        g.FillPath(whiteBrush, borderPath);
+                    }
+
+                    using (GraphicsPath logoPath = new GraphicsPath())
+                    {
+                        logoPath.AddEllipse(borderWidth, borderWidth, logoSize, logoSize);
+                        g.SetClip(logoPath);
+                        g.DrawImage(resizedLogo, borderWidth, borderWidth, logoSize, logoSize);
+                    }
                 }
             }
 
@@ -351,6 +388,7 @@ namespace BLT_Generator.Pages
             {
                 g.DrawImage(qrCodeImage, 0, 0);
 
+                // Center the logo with border
                 int centerX = (qrCodeImage.Width - circularLogo.Width) / 2;
                 int centerY = (qrCodeImage.Height - circularLogo.Height) / 2;
 
@@ -416,10 +454,14 @@ namespace BLT_Generator.Pages
 
                 if (Path.GetFileName(framePath) == "frame.png")
                 {
-                    qrCodeTargetWidth = 346;
-                    qrCodeTargetHeight = 340;
-                    posX = 302;
-                    posY = 180;
+                    qrCodeTargetWidth = 340;
+                    qrCodeTargetHeight = 335;
+                    posX = 310;
+                    posY = 182;
+                    //qrCodeTargetWidth = 346;
+                    //qrCodeTargetHeight = 340;
+                    //posX = 300;
+                    //posY = 180;
                 }
                 else if (Path.GetFileName(framePath) == "frameTwo.png")
                 {
@@ -513,8 +555,8 @@ namespace BLT_Generator.Pages
                         }
                         else
                         {
-                            //qrBackColor = Color.White;
-                            //qrColor = Color.Black;
+                            qrBackColor = Color.White;
+                            qrColor = Color.Black;
                             framePath = Path.Combine("Assets", "frameTwo.png");
                             isFrame2Clicked = true;
                             currentFrameName = frame;
@@ -532,8 +574,8 @@ namespace BLT_Generator.Pages
                         }
                         else
                         {
-                            //qrBackColor = Color.White;
-                            //qrColor = Color.Black;
+                            qrBackColor = Color.White;
+                            qrColor = Color.Black;
                             framePath = Path.Combine("Assets", "frameThree.jpg");
                             isFrame3Clicked = true;
                             currentFrameName = frame;
@@ -551,9 +593,8 @@ namespace BLT_Generator.Pages
                         }
                         else
                         {
-                            // Apply frame4
-                            //qrBackColor = Color.White;
-                            //qrColor = Color.Black;
+                            qrBackColor = Color.White;
+                            qrColor = Color.Black;
                             framePath = Path.Combine("Assets", "frameFour.jpg");
                             isFrame4Clicked = true;
                             currentFrameName = frame;

@@ -11,9 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\DefaultIcons\B.png" />
-    <None Remove="Assets\DefaultIcons\L.png" />
-    <None Remove="Assets\DefaultIcons\T.png" />
+    <None Remove="Assets\DefaultIcons\BLT_logo_light_mode.jpg" />
+    <None Remove="Assets\DefaultIcons\facebook.png" />
+    <None Remove="Assets\DefaultIcons\telegram.png" />
+    <None Remove="Assets\DefaultIcons\url.png" />
+    <None Remove="Assets\DefaultIcons\wi-fi.png" />
     <None Remove="Assets\frame.png" />
     <None Remove="Assets\frameFour.jpg" />
     <None Remove="Assets\frameThree.jpg" />
@@ -118,15 +120,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Assets\DefaultIcons\B.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\DefaultIcons\L.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\DefaultIcons\T.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Assets\frame.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -151,6 +144,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\DefaultIcons\BLT_logo_light_mode.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\DefaultIcons\facebook.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\DefaultIcons\telegram.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\DefaultIcons\url.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\DefaultIcons\wi-fi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Fonts\Kh_ANG.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
