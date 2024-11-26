@@ -14,7 +14,7 @@
             CornerRadius="10">
         <Grid Margin="25">
             <Grid.RowDefinitions>
-                <RowDefinition Height="90"/>
+                <RowDefinition Height="100  "/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
@@ -49,20 +49,72 @@
                            Margin="0,5,0,0"/>
 
                 <ComboBox x:Name="ComboBoxLanguage"
-                          HorizontalAlignment="Left" VerticalAlignment="Top" Width="150"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Center"
+                          HorizontalContentAlignment="Left"
+                          VerticalContentAlignment="Center"
+                          Width="120"
                           SelectionChanged="ComboBoxLanguage_SelectionChanged">
+                    <ComboBox.Resources>
+                        <!-- Style for ComboBox dropdown items -->
+                        <Style TargetType="ComboBoxItem">
+                            <Setter Property="Background" Value="Black" />
+                            <Setter Property="Foreground" Value="{DynamicResource Text}" />
+                            <Setter Property="Padding" Value="5" />
+                            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                            <Setter Property="VerticalAlignment" Value="Stretch"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                        </Style>
+                    </ComboBox.Resources>
+
+                    <ComboBox.Template>
+                        <ControlTemplate TargetType="ComboBox">
+                            <Grid>
+                                <!-- Background of the main ComboBox -->
+                                <Border Background="{DynamicResource BottomRight}" BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
+                                    <ToggleButton x:Name="ToggleButton"
+                                                  Background="Transparent"
+                                                  Foreground="White"
+                                                  BorderThickness="0"
+                                                  Focusable="False"
+                                                  IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                                  ClickMode="Press">
+                                        <ContentPresenter Margin="5"
+                                                          HorizontalAlignment="Left"
+                                                          VerticalAlignment="Center"
+                                                          Content="{TemplateBinding SelectionBoxItem}" />
+                                    </ToggleButton>
+                                </Border>
+
+                                <!-- Dropdown menu -->
+                                <Popup x:Name="PART_Popup"
+                                       Placement="Bottom"
+                                       IsOpen="{TemplateBinding IsDropDownOpen}"
+                                       AllowsTransparency="True"
+                                       PopupAnimation="Slide"
+                                       Width="120">
+                                    <Border Background="{DynamicResource DropdownHower}" BorderThickness="1" BorderBrush="Gray">
+                                        <ScrollViewer Margin="4" SnapsToDevicePixels="True">
+                                            <StackPanel IsItemsHost="True" />
+                                        </ScrollViewer>
+                                    </Border>
+                                </Popup>
+                            </Grid>
+                        </ControlTemplate>
+                    </ComboBox.Template>
+
+                    <!-- ComboBox items -->
                     <ComboBoxItem>
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Images/Contents/UK.png" Height="20" Width="20" Margin="5"/>
-                            <TextBlock Text="English" VerticalAlignment="Center"
-                                       Margin="10 0 0 0"/>
+                            <Image Source="/Images/Contents/UK.png" Height="20" Width="20" Margin="0" />
+                            <TextBlock Text="English" VerticalAlignment="Center" Margin="10 0 0 0" />
                         </StackPanel>
                     </ComboBoxItem>
                     <ComboBoxItem>
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Images/Contents/KH.png"  Height="20" Width="20" Margin="5"/>
-                            <TextBlock Text="Khmer" VerticalAlignment="Center"
-                                       Margin="10 0 0 0"/>
+                            <Image Source="/Images/Contents/KH.png" Height="20" Width="20" Margin="0" />
+                            <TextBlock Text="Khmer" VerticalAlignment="Center" Margin="10 0 0 0" />
                         </StackPanel>
                     </ComboBoxItem>
                 </ComboBox>

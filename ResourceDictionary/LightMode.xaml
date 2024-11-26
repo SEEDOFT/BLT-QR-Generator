@@ -61,7 +61,7 @@
     <Color x:Key="BL">#4060B3</Color>
     <SolidColorBrush x:Key="BottomLeft" Color="{DynamicResource BL}"/>
     <!--Bottom Right -->
-    <Color x:Key="BR">#29A9DB</Color>
+    <Color x:Key="BR">#53C6D7</Color>
     <SolidColorBrush x:Key="BottomRight" Color="{DynamicResource BR}"/>
 
 
