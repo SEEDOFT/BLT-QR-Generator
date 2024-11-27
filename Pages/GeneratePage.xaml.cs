@@ -194,21 +194,21 @@ namespace BLT_Generator.Pages
 
         private void Btn_AddIcon_Click(object sender, RoutedEventArgs e)
         {
-            icon = new AddIcon(this);
-            icon.Owner = Application.Current.MainWindow;
-            icon.WindowStartupLocation = WindowStartupLocation.Manual;
-            CenterAddIcon();
-
-            Application.Current.MainWindow.LocationChanged += MainWindow_LocationChanged!;
-            Application.Current.MainWindow.SizeChanged += MainWindow_SizeChanged;
-
-            icon.Closed += (s, args) =>
+            if (path == "" || path == "បញ្ចូល URL" || path == "Enter URL") 
             {
-                Application.Current.MainWindow.LocationChanged -= MainWindow_LocationChanged!;
-                Application.Current.MainWindow.SizeChanged -= MainWindow_SizeChanged;
-            };
+                MessageBox.Show("Please enter valid content to generate QR code.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return; 
+            }
 
-            icon.ShowDialog();
+            try
+            {
+                AddIcon addIconWindow = new AddIcon(this);
+                addIconWindow.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void CenterAddIcon()
@@ -243,7 +243,6 @@ namespace BLT_Generator.Pages
 
         public void GenerateQR()
         {
-            // Clear everything if path is empty or whitespace
             if (string.IsNullOrWhiteSpace(path))
             {
                 QRCode.Source = null;
@@ -625,7 +624,7 @@ namespace BLT_Generator.Pages
             //    return;
             //}
 
-            if(path == "បញ្ចូល URL")
+            if(path == "បញ្ចូល URL" || path == "Enter URL")
             {
                 path = "";
                 GenerateQR();
@@ -687,7 +686,7 @@ namespace BLT_Generator.Pages
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
-            if (path == "បញ្ចូល URL")
+            if (path == "បញ្ចូល URL" || path == "Enter URL")
             {
                 path = "";
                 GenerateQR();

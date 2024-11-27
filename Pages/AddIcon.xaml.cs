@@ -19,9 +19,18 @@ namespace BLT_Generator.Pages
             InitializeComponent();
             this.generatePage = generatePage;
             LoadImage();
+
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+
+            this.Closed -= CloseButton_Click;
+        }
+
+        private void CloseButton_Click(object? sender, EventArgs e)
         {
             this.Close();
         }
@@ -30,12 +39,10 @@ namespace BLT_Generator.Pages
         {
             try
             {
-                // Use a more reliable method to find the Assets folder
                 string exePath = AppDomain.CurrentDomain.BaseDirectory;
                 string solutionDir = Directory.GetParent(exePath).Parent.Parent.Parent.FullName;
                 string assetsPath = Path.Combine(solutionDir, "Assets", "DefaultIcons");
 
-                // Verify the path exists
                 if (!Directory.Exists(assetsPath))
                 {
                     MessageBox.Show($"Assets folder not found at: {assetsPath}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -50,7 +57,6 @@ namespace BLT_Generator.Pages
                     return;
                 }
 
-                // Load default icons
                 for (int i = 0; i < 5; i++)
                 {
                     using (var stream = new FileStream(files[i], FileMode.Open, FileAccess.Read))

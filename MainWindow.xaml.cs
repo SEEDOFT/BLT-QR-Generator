@@ -76,8 +76,17 @@ public string dir = "Data";
 
     private void Btn_Close_Click(object sender, RoutedEventArgs e)
     {
-    this.Close();
+        //this.Close();
+        foreach (Window window in Application.Current.Windows)
+        {
+            if (window != this) // Skip MainWindow itself
+            {
+                window.Close();
+            }
+        }
+            this.Close();
     }
+
     private void Btn_Minimize_Click(object sender, RoutedEventArgs e)
     {
     this.WindowState = WindowState.Minimized;
