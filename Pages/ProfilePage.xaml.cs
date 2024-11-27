@@ -26,52 +26,62 @@ using BLT_Generator.SubPages;
     private LetterMessage? msg;
     public ProfilePage()
     {
-    InitializeComponent();
-    //display card page
-    SubProfile tmp = new SubProfile();
+        InitializeComponent();
+        //display card page
+        SubProfile tmp = new();
 
-    Card_Display.Children.Clear();
-    Card_Display.Children.Add(tmp);
+        Card_Display.Children.Clear();
+        Card_Display.Children.Add(tmp);
     }
 
     private void Btn_Msg_Click(object sender, RoutedEventArgs e)
     {
-        msg = new LetterMessage();
-        msg.Owner = Application.Current.MainWindow;
-        msg.WindowStartupLocation = WindowStartupLocation.Manual; // Allow manual positioning
-        CenterThanksMessage();
-
-        Application.Current.MainWindow.LocationChanged += MainWindow_LocationChanged!;
-        Application.Current.MainWindow.SizeChanged += MainWindow_SizeChanged;
-
-        msg.Closed += (s, args) =>
+            try
             {
-            // Detach events when message closes
-            Application.Current.MainWindow.LocationChanged -= MainWindow_LocationChanged!;
-            Application.Current.MainWindow.SizeChanged -= MainWindow_SizeChanged;
-            };
-
-            msg.ShowDialog();
+                var letterMessage = new LetterMessage();
+                letterMessage.Owner = Window.GetWindow(this);
+                letterMessage.ShowDialog();
             }
-            private void CenterThanksMessage()
+            catch (Exception ex)
             {
-            if (msg != null && msg.Owner != null)
-            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            //msg = new LetterMessage();
+            //msg.Owner = Application.Current.MainWindow;
+            //msg.WindowStartupLocation = WindowStartupLocation.Manual; // Allow manual positioning
+            //CenterThanksMessage();
+
+            //Application.Current.MainWindow.LocationChanged += MainWindow_LocationChanged!;
+            //Application.Current.MainWindow.SizeChanged += MainWindow_SizeChanged;
+
+            //msg.Closed += (s, args) =>
+            //{
+            //    // Detach events when message closes
+            //    Application.Current.MainWindow.LocationChanged -= MainWindow_LocationChanged!;
+            //    Application.Current.MainWindow.SizeChanged -= MainWindow_SizeChanged;
+            //};
+
+            //msg.Show();
+    }
+    private void CenterThanksMessage()
+    {
+        if (msg != null && msg.Owner != null)
+        {
             Window mainWindow = msg.Owner;
             msg.Left = mainWindow.Left + (mainWindow.Width - msg.Width) / 2;
             msg.Top = mainWindow.Top + (mainWindow.Height - msg.Height) / 2;
-            }
+        }
     }
 
-        private void MainWindow_LocationChanged(object sender, EventArgs e)
-        {
+    private void MainWindow_LocationChanged(object sender, EventArgs e)
+    {
         CenterThanksMessage();
-        }
+    }
 
-        private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
+    private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
+    {
         CenterThanksMessage();
-        }
-        }
+    }
+    }
 
-        }
+}

@@ -61,8 +61,8 @@
                             <Setter Property="Background" Value="Black" />
                             <Setter Property="Foreground" Value="{DynamicResource Text}" />
                             <Setter Property="Padding" Value="5" />
-                            <Setter Property="HorizontalAlignment" Value="Stretch"/>
-                            <Setter Property="VerticalAlignment" Value="Stretch"/>
+                            <Setter Property="HorizontalAlignment" Value="Stretch" />
+                            <Setter Property="VerticalAlignment" Value="Stretch" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
                             <Setter Property="VerticalContentAlignment" Value="Center" />
                         </Style>
@@ -72,7 +72,10 @@
                         <ControlTemplate TargetType="ComboBox">
                             <Grid>
                                 <!-- Background of the main ComboBox -->
-                                <Border Background="{DynamicResource BottomRight}" BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
+                                <Border Background="{DynamicResource BottomRight}"
+                                        BorderThickness="1"
+                                        BorderBrush="Gray"
+                                        CornerRadius="5">
                                     <ToggleButton x:Name="ToggleButton"
                                                   Background="Transparent"
                                                   Foreground="White"
@@ -81,9 +84,11 @@
                                                   IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
                                                   ClickMode="Press">
                                         <ContentPresenter Margin="5"
+                                                          x:Name="CursorColor"
                                                           HorizontalAlignment="Left"
                                                           VerticalAlignment="Center"
-                                                          Content="{TemplateBinding SelectionBoxItem}" />
+                                                          Content="{TemplateBinding SelectionBoxItem}"
+                                                          ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" />
                                     </ToggleButton>
                                 </Border>
 
@@ -101,6 +106,12 @@
                                     </Border>
                                 </Popup>
                             </Grid>
+                            <ControlTemplate.Triggers>
+                                <!-- Trigger to change the foreground of the top display text -->
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="ToggleButton" Property="Foreground" Value="Black" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </ComboBox.Template>
 
