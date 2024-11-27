@@ -20,7 +20,7 @@ namespace BLT_Generator.Pages
             this.generatePage = generatePage;
             LoadImage();
 
-            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            //this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         protected override void OnClosed(EventArgs e)

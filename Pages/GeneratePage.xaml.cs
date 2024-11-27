@@ -202,7 +202,8 @@ namespace BLT_Generator.Pages
 
             try
             {
-                AddIcon addIconWindow = new AddIcon(this);
+                var addIconWindow = new AddIcon(this);
+                addIconWindow.Owner = Window.GetWindow(this);
                 addIconWindow.ShowDialog();
             }
             catch (Exception ex)
