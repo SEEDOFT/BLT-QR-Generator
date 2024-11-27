@@ -44,6 +44,10 @@
     <SolidColorBrush x:Key="FAQ_Top" Color="{DynamicResource TBR}"/>
 
 
+    <!--Hower-->
+    <Color x:Key="c">#53C6D7</Color>
+    <SolidColorBrush x:Key="ButtonHowerColor" Color="{DynamicResource c}"/>
+
     <!-- Button Insert -->
     <Color x:Key="a">#697565</Color>
     <SolidColorBrush x:Key="AddColor" Color="{DynamicResource a}"/>

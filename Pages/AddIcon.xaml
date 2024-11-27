@@ -64,10 +64,10 @@
                                       Margin="15">
                                     <Border CornerRadius="15"
                                             VerticalAlignment="Stretch"
-                                            HorizontalAlignment="Stretch"
-                                            Background="Black">
-                                        <Button x:Name="Default1" 
-                                                Background="Transparent" 
+                                            HorizontalAlignment="Stretch">
+                                        <Button x:Name="Default1"
+                                                Style="{StaticResource HowerFrame}"
+                                                Background="Transparent"
                                                 Click="Default1_Click"/>
                                     </Border>
                                 </Grid>
@@ -75,9 +75,9 @@
                                       Margin="15">
                                     <Border CornerRadius="15"
                                             VerticalAlignment="Stretch"
-                                            HorizontalAlignment="Stretch"
-                                            Background="Black">
-                                        <Button x:Name="Default2" 
+                                            HorizontalAlignment="Stretch">
+                                        <Button x:Name="Default2"
+                                                Style="{StaticResource HowerFrame}"
                                                 Background="Transparent"
                                                 Click="Default1_Click"/>
                                     </Border>
@@ -86,9 +86,9 @@
                                       Margin="15">
                                     <Border CornerRadius="15"
                                             VerticalAlignment="Stretch"
-                                            HorizontalAlignment="Stretch"
-                                            Background="Black">
-                                        <Button x:Name="Default3" 
+                                            HorizontalAlignment="Stretch">
+                                        <Button x:Name="Default3"
+                                                Style="{StaticResource HowerFrame}"
                                                 Background="Transparent"
                                                 Click="Default1_Click"/>
                                     </Border>
@@ -97,9 +97,9 @@
                                       Margin="15">
                                     <Border CornerRadius="15"
                                             VerticalAlignment="Stretch"
-                                            HorizontalAlignment="Stretch"
-                                            Background="Black">
-                                        <Button x:Name="Default4" 
+                                            HorizontalAlignment="Stretch">
+                                        <Button x:Name="Default4"
+                                                Style="{StaticResource HowerFrame}"
                                                 Background="Transparent"
                                                 Click="Default1_Click"/>
                                     </Border>
@@ -108,9 +108,9 @@
                                       Margin="15">
                                     <Border CornerRadius="15"
                                             VerticalAlignment="Stretch"
-                                            HorizontalAlignment="Stretch"
-                                            Background="Black">
-                                        <Button x:Name="Default5" 
+                                            HorizontalAlignment="Stretch">
+                                        <Button x:Name="Default5"
+                                                Style="{StaticResource HowerFrame}"
                                                 Background="Transparent"
                                                 Click="Default1_Click"/>
                                     </Border>
@@ -143,9 +143,9 @@
                                       Margin="15">
                                     <Border CornerRadius="15"
                                             VerticalAlignment="Stretch"
-                                            HorizontalAlignment="Stretch"
-                                            Background="Black">
-                                        <Button x:Name="Recent1" 
+                                            HorizontalAlignment="Stretch">
+                                        <Button x:Name="Recent1"
+                                                Style="{StaticResource HowerFrame}"
                                                 Background="Transparent"
                                                 Click="Recent_Click"/>
                                     </Border>
@@ -154,9 +154,9 @@
                                       Margin="15">
                                     <Border CornerRadius="15"
                                             VerticalAlignment="Stretch"
-                                            HorizontalAlignment="Stretch"
-                                            Background="Black">
-                                        <Button x:Name="Recent2" 
+                                            HorizontalAlignment="Stretch">
+                                        <Button x:Name="Recent2"
+                                                Style="{StaticResource HowerFrame}"
                                                 Background="Transparent"
                                                 Click="Default1_Click"/>
                                     </Border>
@@ -165,9 +165,9 @@
                                       Margin="15">
                                     <Border CornerRadius="15"
                                             VerticalAlignment="Stretch"
-                                            HorizontalAlignment="Stretch"
-                                            Background="Black">
-                                        <Button x:Name="Recent3" 
+                                            HorizontalAlignment="Stretch">
+                                        <Button x:Name="Recent3"
+                                                Style="{StaticResource HowerFrame}"
                                                 Background="Transparent"
                                                 Click="Default1_Click"/>
                                     </Border>
@@ -176,9 +176,9 @@
                                       Margin="15">
                                     <Border CornerRadius="15"
                                             VerticalAlignment="Stretch"
-                                            HorizontalAlignment="Stretch"
-                                            Background="Black">
-                                        <Button x:Name="Recent4" 
+                                            HorizontalAlignment="Stretch">
+                                        <Button x:Name="Recent4"
+                                                Style="{StaticResource HowerFrame}"
                                                 Background="Transparent"
                                                 Click="Default1_Click"/>
                                     </Border>
@@ -187,9 +187,9 @@
                                       Margin="15">
                                     <Border CornerRadius="15"
                                             VerticalAlignment="Stretch"
-                                            HorizontalAlignment="Stretch"
-                                            Background="Black">
-                                        <Button x:Name="Recent5" 
+                                            HorizontalAlignment="Stretch">
+                                        <Button x:Name="Recent5"
+                                                Style="{StaticResource HowerFrame}"
                                                 Background="Transparent"
                                                 Click="Default1_Click"/>
                                     </Border>
@@ -212,7 +212,7 @@
                                     Content="Browse files"
                                     FontFamily="{DynamicResource Poppins_KhSN}"
                                     Foreground="{DynamicResource Text}"
-                                    FontSize="16" 
+                                    FontSize="16"
                                     x:Name="BtnBrowseFile"
                                     Click="Button_Click"/>
                         </Border>

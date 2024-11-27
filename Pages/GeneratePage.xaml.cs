@@ -502,7 +502,7 @@ namespace BLT_Generator.Pages
 
         private void frame1_Click(object sender, RoutedEventArgs e)
         {
-            ComboBoxColor.IsEnabled = true;
+            //ComboBoxColor.IsEnabled = true;
             ComboBoxColor.SelectedIndex = 0;
             qrBackColor = Color.White;
             qrColor = Color.Black;
@@ -535,7 +535,7 @@ namespace BLT_Generator.Pages
                         }
                         else
                         {
-                            ComboBoxColor.IsEnabled = false;
+                            //ComboBoxColor.IsEnabled = false;
                             qrBackColor = Color.Black;
                             qrColor = Color.White;
                             framePath = Path.Combine("Assets", "frame.png");
@@ -669,20 +669,6 @@ namespace BLT_Generator.Pages
             {
                 MessageBox.Show($"Error copying to clipboard: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }
-
-        private void SaveURL()
-        {
-            SQLiteConnection connection = new SQLiteConnection($"Data Source={databasePath}");
-            connection.Open();
-            string sql = $"INSERT INTO tbl_url (url, date) VALUES (@url, @date);";
-            using (var command = new SQLiteCommand(sql, connection))
-            {
-                command.Parameters.AddWithValue("@url", path);
-                command.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd"));
-                command.ExecuteNonQuery();
-            }
-            connection.Close();
         }
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)

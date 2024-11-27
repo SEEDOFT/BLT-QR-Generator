@@ -5,13 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:BLT_Generator.SubPages"
              mc:Ignorable="d"
-             d:DesignHeight="50" d:DesignWidth="800"
-             Background="#D9D9D9">
+             d:DesignHeight="50" d:DesignWidth="800">
     <UserControl.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResources.xaml"/>
     </UserControl.Resources>
 
-    <Grid>
+    <Grid x:Name="URL_Data_Background" Background="#D9D9D9">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80"/>
             <ColumnDefinition Width="150"/>
@@ -41,7 +40,7 @@
         <StackPanel Grid.Column="3"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
-            <Button Style="{StaticResource COPY}"
+            <Button Style="{StaticResource CopyURL}"
                     FontFamily="{DynamicResource PoppinsBold_KhSN}"
                     Content="Copy"
                     x:Name="BtnCopy" Click="BtnCopy_Click">
@@ -53,7 +52,7 @@
                     VerticalAlignment="Center"
                     Orientation="Horizontal">
             <Button Style="{StaticResource Pin}"
-                    x:Name="BtnPin">
+                    x:Name="BtnPin" Click="BtnPin_Click">
 
             </Button>
             <Button Style="{StaticResource Trash}"

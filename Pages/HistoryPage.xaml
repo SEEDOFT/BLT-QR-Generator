@@ -64,8 +64,8 @@
                       SelectedIndex="0"
                       HorizontalAlignment="Left"
                       Margin="0 12 0 0">
-                <ComboBoxItem>URL Records</ComboBoxItem>
-                <ComboBoxItem>WIFI Records</ComboBoxItem>
+                <ComboBoxItem Content="{DynamicResource URL_Data}"></ComboBoxItem>
+                <ComboBoxItem Content="{DynamicResource WIFI_Data}"></ComboBoxItem>
             </ComboBox>
 
         </StackPanel>

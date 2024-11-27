@@ -50,6 +50,10 @@
     <Color x:Key="b">#EA4335</Color>
     <SolidColorBrush x:Key="ClearColor" Color="{DynamicResource b}"/>
 
+    <!--Hower-->
+    <Color x:Key="c">#697565</Color>
+    <SolidColorBrush x:Key="ButtonHowerColor" Color="{DynamicResource c}"/>
+
     <!--Loading Screen -->
     <!--Top left -->
     <Color x:Key="TL">#2B3A67</Color>

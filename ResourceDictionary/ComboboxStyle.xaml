@@ -234,33 +234,78 @@
         <Setter Property="Background" Value="Transparent" />
     </Style>
 
-
-    <Style x:Key="LanguageComboBox" TargetType="ComboBox">
-        <Setter Property="Height" Value="40"/>
-        <Setter Property="Width" Value="100"/>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="BorderThickness" Value="0"/>
+    <Style TargetType="ComboBox" x:Key="ComboBoxStyle">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="{DynamicResource Poppins_KhSN}"/>
+        <Setter Property="Width" Value="120" />
+        <Setter Property="ItemContainerStyle">
+            <Setter.Value>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Background" Value="{DynamicResource BottomRight}" />
+                    <Setter Property="Foreground" Value="{DynamicResource Text}" />
+                    <Setter Property="Padding" Value="5" />
+                    <Setter Property="HorizontalAlignment" Value="Stretch" />
+                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                    <Setter Property="HorizontalContentAlignment" Value="Left" />
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                    <Setter Property="Width" Value="120"/>
+                </Style>
+            </Setter.Value>
+        </Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ComboBox">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <!-- Flag Icon -->
-                        <Image Source="{Binding SelectedItem.FlagImage, RelativeSource={RelativeSource TemplatedParent}}"
-                               Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
-                        <!-- ComboBox Text -->
-                        <TextBlock Text="{Binding SelectedItem.Name, RelativeSource={RelativeSource TemplatedParent}}"
-                                   VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5" />
-                        <!-- Dropdown Icon -->
-                        <Button Grid.Column="2" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Right" VerticalAlignment="Center">
-                            <Path Data="M 0 0 L 5 5 L 10 0 Z" Fill="White" Width="16" Height="10"/>
-                        </Button>
+                    <Grid x:Name="gridBG">
+                        <!-- Background of the main ComboBox -->
+                        <Border x:Name="border"
+                                Background="{DynamicResource BottomRight}"
+                                BorderThickness="1"
+                                BorderBrush="Gray"
+                                CornerRadius="5">
+                            <ToggleButton x:Name="ToggleButton"
+                                          Background="Transparent"
+                                          Foreground="White"
+                                          BorderThickness="0"
+                                          Focusable="False"
+                                          IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                          ClickMode="Press">
+                                <ContentPresenter Margin="5"
+                                                  x:Name="CursorColor"
+                                                  HorizontalAlignment="Left"
+                                                  VerticalAlignment="Center"
+                                                  Content="{TemplateBinding SelectionBoxItem}"
+                                                  ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" />
+                            </ToggleButton>
+                        </Border>
+
+                        <!-- Dropdown menu -->
+                        <Popup x:Name="PART_Popup"
+                               Placement="Bottom"
+                               IsOpen="{TemplateBinding IsDropDownOpen}"
+                               AllowsTransparency="True"
+                               PopupAnimation="Slide"
+                               Width="{TemplateBinding Width}">
+                            <Border x:Name="borderBG"
+                                    Background="{DynamicResource DropdownHower}"
+                                    BorderThickness="1"
+                                    BorderBrush="Gray"
+                                    HorizontalAlignment="Left">
+                                <ScrollViewer Margin="4" SnapsToDevicePixels="True"
+                                              HorizontalScrollBarVisibility="Hidden">
+                                    <StackPanel IsItemsHost="True" />
+                                </ScrollViewer>
+                            </Border>
+                        </Popup>
                     </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- Trigger to change the foreground of the top display text -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ToggleButton" Property="Foreground" Value="{DynamicResource Text}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

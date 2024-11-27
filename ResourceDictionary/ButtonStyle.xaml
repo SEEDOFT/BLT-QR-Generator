@@ -24,7 +24,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#53C6D7"/>
+                            <Setter Property="Background" Value="{DynamicResource ButtonHowerColor}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -79,7 +79,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#53C6D7"/>
+                            <Setter Property="Background" Value="{DynamicResource ButtonHowerColor}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -326,60 +326,60 @@
     </Style>
     <!-- Button NEXT and Previous -->
     <Style x:Key="Next" TargetType="Button">
-        <Setter Property="Width" Value="70"/>
+        <Setter Property="Width" Value="80"/>
         <Setter Property="Height" Value="20"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="{DynamicResource Text}"/>
         <Setter Property="BorderThickness" Value="0"/>
-
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <StackPanel Orientation="Horizontal">
                         <Border x:Name="border" Background="{DynamicResource QR_Background}"
-                                Width="60"
+                                Width="80"
                                 CornerRadius="10">
-                            <TextBlock Text="Next"
+                            <TextBlock Text="{DynamicResource Next_Text}"
                                        Foreground="{DynamicResource Text}"
+                                       FontFamily="{DynamicResource Poppins_KhSN}"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center" />
                         </Border>
                     </StackPanel>
-                    <!--<ControlTemplate.Triggers>
-                    <Trigger Property="IsMouseOver" Value="True">
-                    <Setter TargetName="border" Property="Background" Value="{DynamicResource LeftPanelBackground}"/>
-                    </Trigger>
-                    </ControlTemplate.Triggers>-->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource LeftPanelBackground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
     <!---->
     <Style x:Key="Previous" TargetType="Button">
-        <Setter Property="Width" Value="70"/>
+        <Setter Property="Width" Value="80"/>
         <Setter Property="Height" Value="20"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="{DynamicResource Text}"/>
         <Setter Property="BorderThickness" Value="0"/>
-
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <StackPanel Orientation="Horizontal">
                         <Border x:Name="border" Background="{DynamicResource QR_Background}"
-                                Width="60"
+                                Width="80"
                                 CornerRadius="10">
-                            <TextBlock Text="Previous"
+                            <TextBlock Text="{DynamicResource Previous_Text}"
                                        Foreground="{DynamicResource Text}"
+                                       FontFamily="{DynamicResource Poppins_KhSN}"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center" />
                         </Border>
                     </StackPanel>
-                    <!--<ControlTemplate.Triggers>
-                    <Trigger Property="IsMouseOver" Value="True">
-                    <Setter TargetName="border" Property="Background" Value="{DynamicResource LeftPanelBackground}"/>
-                    </Trigger>
-                    </ControlTemplate.Triggers>-->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource LeftPanelBackground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -411,7 +411,7 @@
                                    Source="{DynamicResource RegenerateIcon}"/>
 
                             <TextBlock x:Name="buttonText"
-                                       Text="{TemplateBinding Content}"
+                                       Text="{DynamicResource Regenerate_Text}"
                                        VerticalAlignment="Center"/>
                         </StackPanel>
                     </Border>
@@ -427,7 +427,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="COPY" TargetType="Button">
+    <Style x:Key="CopyURL" TargetType="Button">
         <Setter Property="Width" Value="80"/>
         <Setter Property="Height" Value="25"/>
         <Setter Property="Foreground" Value="{DynamicResource DefaultRegenerate}"/>
@@ -452,7 +452,7 @@
                                    Source="/Images/WhiteIcons/wCopy.png"/>
 
                             <TextBlock x:Name="buttonText"
-                                       Text="{TemplateBinding Content}"
+                                       Text="{DynamicResource Copy_Text}"
                                        VerticalAlignment="Center"/>
                         </StackPanel>
                     </Border>
@@ -1079,6 +1079,9 @@
     </Style>
 
     <Style TargetType="{x:Type ScrollViewer}">
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="CanContentScroll" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ScrollViewer}">
@@ -1092,7 +1095,13 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Rectangle x:Name="Corner" Grid.Column="1" Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Grid.Row="1"/>
-                        <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" CanContentScroll="{TemplateBinding CanContentScroll}" CanHorizontallyScroll="False" CanVerticallyScroll="False" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Grid.Column="0" Margin="{TemplateBinding Padding}" Grid.Row="0"/>
+                        <ScrollContentPresenter x:Name="PART_ScrollContentPresenter"
+                                                CanContentScroll="{TemplateBinding CanContentScroll}"
+                                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                Content="{TemplateBinding Content}"
+                                                Grid.Column="0"
+                                                Margin="{TemplateBinding Padding}"
+                                                Grid.Row="0"/>
                         <ScrollBar x:Name="PART_VerticalScrollBar"
                                    Opacity="0.2"
                                    AutomationProperties.AutomationId="VerticalScrollBar"
@@ -1101,6 +1110,7 @@
                                    Maximum="{TemplateBinding ScrollableHeight}"
                                    Minimum="0"
                                    Grid.Row="0"
+                                   Orientation="Vertical"
                                    Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
                                    Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
                                    ViewportSize="{TemplateBinding ViewportHeight}"/>
@@ -1140,6 +1150,7 @@
         </Setter>
     </Style>
 
+
     <Style TargetType="Button" x:Key="HowerFrame">
         <Setter Property="BorderBrush" Value="Black" />
         <Setter Property="BorderThickness" Value="0" />
@@ -1161,4 +1172,55 @@
         </Style.Triggers>
     </Style>
 
+    <Style x:Key="AddIconButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0 15 10 0"/>
+        <Setter Property="FontFamily" Value="{DynamicResource PoppinsBold_KhSN}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                            Height="45"
+                            CornerRadius="15"
+                            Background="{DynamicResource AddColor}">
+                        <TextBlock Text="{TemplateBinding Content}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Foreground="{DynamicResource Text}"
+                                   FontSize="16"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource ButtonHowerColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ClearIconButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="10 15 0 0"/>
+        <Setter Property="FontFamily" Value="{DynamicResource PoppinsBold_KhSN}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                            Height="45"
+                            CornerRadius="15"
+                            Background="{DynamicResource ClearColor}">
+                        <TextBlock Text="{TemplateBinding Content}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Foreground="{DynamicResource Text}"
+                                   FontSize="16"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource ButtonHowerColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

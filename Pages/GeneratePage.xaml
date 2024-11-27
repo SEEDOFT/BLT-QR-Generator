@@ -80,10 +80,10 @@
                     <Border Height="170"
                             CornerRadius="25"
                             Background="{DynamicResource QR_Background}">
-                        <Border Width="150"
+                        <Border Width="200"
                                 Height="150" Margin="0,10,0,0" VerticalAlignment="Top">
                             <Image x:Name="QRCode"
-                                   Width="150"
+                                   Width="200"
                                    Height="150"/>
                         </Border>
                     </Border>
@@ -187,44 +187,20 @@
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
                             <Button x:Name="Btn_AddIcon"
+                                    Style="{StaticResource AddIconButtonStyle}"
                                     Margin="0 15 10 0"
                                     Content="{DynamicResource InsertImage}"
                                     FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                     Click="Btn_AddIcon_Click">
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Height="45"
-                                                CornerRadius="15"
-                                                Background="{DynamicResource AddColor}">
-                                            <TextBlock Text="{TemplateBinding Content}"
-                                                       VerticalAlignment="Center"
-                                                       HorizontalAlignment="Center"
-                                                       Foreground="{DynamicResource Text}"
-                                                       FontSize="16"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
                             </Button>
                         </Grid>
                         <Grid Grid.Column="1">
                             <Button x:Name="Btn_ClearIcon"
+                                    Style="{StaticResource ClearIconButtonStyle}"
                                     Margin="10 15 0 0"
                                     Content="{DynamicResource ClearImage}"
                                     FontFamily="{DynamicResource PoppinsBold_KhSN}"
                                     Click="Btn_ClearIcon_Click">
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Height="45"
-                                                CornerRadius="15"
-                                                Background="{DynamicResource ClearColor}">
-                                            <TextBlock Text="{TemplateBinding Content}"
-                                                       VerticalAlignment="Center"
-                                                       HorizontalAlignment="Center"
-                                                       Foreground="{DynamicResource Text}"
-                                                       FontSize="16"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
                             </Button>
                         </Grid>
                     </Grid>

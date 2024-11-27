@@ -88,8 +88,12 @@
     <sys:String x:Key="Date">Date</sys:String>
     <sys:String x:Key="Name">SSID</sys:String>
     <sys:String x:Key="Password">Password</sys:String>
-    <sys:String x:Key="Next">Next</sys:String>
-    <sys:String x:Key="Previous">Previous</sys:String>
+    <sys:String x:Key="Next_Text">Next</sys:String>
+    <sys:String x:Key="Previous_Text">Previous</sys:String>
+    <sys:String x:Key="URL_Data">URL Records</sys:String>
+    <sys:String x:Key="WIFI_Data">WIFI Records</sys:String>
+    <sys:String x:Key="Copy_Text">Copy</sys:String>
+    <sys:String x:Key="Regenerate_Text">Regenerate</sys:String>
     <!--<sys:String x:Key="Regenerate">Regenerate</sys:String>-->
 
 
@@ -107,6 +111,8 @@
     <!-- Language Panel (Default Title) -->
     <sys:String x:Key="LanguagePanel_Default">Language</sys:String>
     <sys:String x:Key="LanguagePanel_Title">Language</sys:String>
+    <sys:String x:Key="Khmer_Language">Khmer</sys:String>
+    <sys:String x:Key="English_Language">English</sys:String>
     <!-- Language Panel (Inside text, first part) -->
     <sys:String x:Key="LanguagePanel_TextP1">By default, our application is configured to select Khmer as the primary language, providing users with an intuitive and localized experience right from the start.</sys:String>
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->

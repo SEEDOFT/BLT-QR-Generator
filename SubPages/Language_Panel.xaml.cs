@@ -71,11 +71,11 @@ namespace BLT_Generator.SubPages
         private void SetLanguage(string language)
         {
 
-            if (language == "English")
+            if (language == "English" || language == "ភាសាអង់គ្លេស")
             {
                 LoadEnglishLanguage();
             }
-            else if (language == "Khmer")
+            else if (language == "Khmer" || language == "ភាសាខ្មែរ")
             {
                 LoadKhmerLanguage();
             }

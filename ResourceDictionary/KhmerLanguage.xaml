@@ -87,8 +87,12 @@
     <sys:String x:Key="Date">ការបរិច្ឆេទ</sys:String>
     <sys:String x:Key="Name">ឈ្មោះ SSID</sys:String>
     <sys:String x:Key="Password">ពាក្យសម្ងាត់</sys:String>
-    <sys:String x:Key="Next">ទៅមុខ</sys:String>
-    <sys:String x:Key="Previous">ថយក្រោយ</sys:String>
+    <sys:String x:Key="Next_Text">ទៅមុខ</sys:String>
+    <sys:String x:Key="Previous_Text">ថយក្រោយ</sys:String>
+    <sys:String x:Key="URL_Data">ទិន្នន័យ URL</sys:String>
+    <sys:String x:Key="WIFI_Data">ទិន្នន័យ WIFI</sys:String>
+    <sys:String x:Key="Copy_Text">ចម្លង</sys:String>
+    <sys:String x:Key="Regenerate_Text">បង្កើតម្តងទៀត</sys:String>
     <!--<sys:String x:Key="Regenerate">បង្កើតម្ដងទៀត</sys:String>-->
 
 
@@ -107,6 +111,8 @@
     <!-- Language Panel (Default Title) -->
     <sys:String x:Key="LanguagePanel_Default">លំនាំដើម</sys:String>
     <sys:String x:Key="LanguagePanel_Title">ផ្លាស់ប្ដូរភាសា</sys:String>
+    <sys:String x:Key="Khmer_Language">ភាសាខ្មែរ</sys:String>
+    <sys:String x:Key="English_Language">ភាសាអង់គ្លេស</sys:String>
     <!-- Language Panel (Inside text, first part) -->
     <sys:String x:Key="LanguagePanel_TextP1">កម្មវិធីរបស់យើងត្រូវបានកំណត់រចនាឡើងដើម្បីជ្រើសរើសភាសាខ្មែរជាភាសាចម្បង ដោយផ្តល់ភាពងាយស្រួលដល់អ្នកប្រើប្រាស់ដែលជាជនជាតិខ្មែរ។</sys:String>
 
