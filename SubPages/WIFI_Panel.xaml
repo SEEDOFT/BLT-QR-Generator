@@ -14,7 +14,7 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="300"/>
+                <RowDefinition Height="320"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0"
@@ -68,8 +68,7 @@
                 </Border>
                 <Button x:Name="BtnWifiGenerate"
                         Style="{StaticResource Generate}"
-                        Width="120"
-                        Margin="0,20,0,0"/>
+                        Margin="0,30,0,0"/>
             </StackPanel>
         </Grid>
     </Grid>

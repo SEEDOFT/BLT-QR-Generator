@@ -25,6 +25,7 @@
     <!-- WIFI Panel-->
     <sys:String x:Key="WIFI_Name">Enter your WIFI name or SSID</sys:String>
     <sys:String x:Key="WIFI_Pw">Password</sys:String>
+    <sys:String x:Key="Generate_Text">Generate</sys:String>
 
 
     <!-- URL Panel-->

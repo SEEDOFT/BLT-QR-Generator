@@ -24,6 +24,7 @@
     <!-- WIFI Panel-->
     <sys:String x:Key="WIFI_Name">បញ្ចូលឈ្មោះ WIFI របស់អ្នក ឬ SSID</sys:String>
     <sys:String x:Key="WIFI_Pw">លេខកូដសម្ងាត់</sys:String>
+    <sys:String x:Key="Generate_Text">បង្កើត</sys:String>
 
 
     <!-- URL Panel-->
