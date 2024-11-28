@@ -97,7 +97,14 @@ public string dir = "Data";
     if (e.ChangedButton == MouseButton.Left)
     {
     this.DragMove();
-    }
+                var screenBounds = System.Windows.SystemParameters.WorkArea;
+
+                // Clamp the window's position within the screen bounds
+                if (this.Left < screenBounds.Left) this.Left = screenBounds.Left;
+                if (this.Top < screenBounds.Top) this.Top = screenBounds.Top;
+                if (this.Left + this.Width > screenBounds.Right) this.Left = screenBounds.Right - this.Width;
+                if (this.Top + this.Height > screenBounds.Bottom) this.Top = screenBounds.Bottom - this.Height;
+            }
     }
 
     private void Btn_Maximize_Click(object sender, RoutedEventArgs e)
