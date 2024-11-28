@@ -10,8 +10,8 @@ namespace BLT_Generator.Pages
 {
     public partial class AddIcon : Window
     {
-        private string assetsPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Assets");
-        private string? defaultIconsPath;
+        //private string assetsPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Assets");
+        //private string? defaultIconsPath;
         private GeneratePage generatePage;
 
         public AddIcon(GeneratePage generatePage)
@@ -41,7 +41,7 @@ namespace BLT_Generator.Pages
             {
                 string exePath = AppDomain.CurrentDomain.BaseDirectory;
                 string solutionDir = Directory.GetParent(exePath).Parent.Parent.Parent.FullName;
-                string assetsPath = Path.Combine(solutionDir, "Assets", "DefaultIcons");
+                string assetsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", "DefaultIcons");
 
                 if (!Directory.Exists(assetsPath))
                 {
@@ -96,7 +96,6 @@ namespace BLT_Generator.Pages
                     }
                 }
 
-                // Load recent images
                 string imagePath = Path.Combine(exePath, App.main.dir);
                 string[] supportedExtensions = { ".png", ".jpg", ".jpeg" };
                 int j = 1;
@@ -181,32 +180,6 @@ namespace BLT_Generator.Pages
             }
             this.Close();
         }
-
-        //private void Default2_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (sender is Button button)
-        //    {
-        //        string? imagePath = button.Tag as string;
-        //        if (imagePath != null)
-        //        {
-        //            generatePage.UpdateQRCodeIcon(imagePath);
-        //        }
-        //    }
-        //    this.Close();
-        //}
-
-        //private void Default3_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (sender is Button button)
-        //    {
-        //        string? imagePath = button.Tag as string;
-        //        if (imagePath != null)
-        //        {
-        //            generatePage.UpdateQRCodeIcon(imagePath);
-        //        }
-        //    }
-        //    this.Close();
-        //}
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

@@ -52,7 +52,7 @@
                     VerticalAlignment="Center"
                     Orientation="Horizontal">
             <Button Style="{StaticResource Pin}"
-                    x:Name="BtnPin" Click="BtnPin_Click">
+                    x:Name="BtnPin">
 
             </Button>
             <Button Style="{StaticResource Trash}"
