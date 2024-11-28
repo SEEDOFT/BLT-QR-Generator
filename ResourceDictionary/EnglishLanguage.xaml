@@ -70,7 +70,11 @@
     <sys:String x:Key="TheaTitle">UX/UI Designer</sys:String>
     <sys:String x:Key="TheaDetail">My name is Sam Sokunthea. I am currently enrolled in a scholarship program offered by the Ministry of Posts and Telecommunications at the ANT Technology Training Center, specializing in Mobile App (Flutter) development.</sys:String>
 
-
+    <!-- Add Icon Panel -->
+    <sys:String x:Key="Defauil_Text">Default</sys:String>
+    <sys:String x:Key="Recent_Text">Recent</sys:String>
+    <sys:String x:Key="ChooseFile_Text">Choose File</sys:String>
+    <sys:String x:Key="BrowseFile">Browse files</sys:String>
 
     <!-- A Letter from US-->
     <sys:String x:Key="LetterTitle">A LETTER FROM US</sys:String>

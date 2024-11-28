@@ -42,7 +42,8 @@
                             Click="CloseButton_Click"/>
                     <TextBlock Grid.Row="1" Margin="25 0 0 0"
                                FontFamily="{DynamicResource Poppins_KhSN}"
-                               FontSize="16" Text="Default"
+                               FontSize="14"
+                               Text="{DynamicResource Defauil_Text}"
                                Foreground="{DynamicResource Text}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Left"/>
@@ -121,7 +122,8 @@
 
                     <TextBlock Grid.Row="3" Margin="25 0 0 0"
                                FontFamily="{DynamicResource Poppins_KhSN}"
-                               FontSize="16" Text="Recent"
+                               FontSize="14"
+                               Text="{DynamicResource Recent_Text}"
                                Foreground="{DynamicResource Text}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Left"/>
@@ -199,7 +201,8 @@
                     </Grid>
                     <TextBlock Grid.Row="5" Margin="25 0 0 0"
                                FontFamily="{DynamicResource Poppins_KhSN}"
-                               FontSize="16" Text="Choose File"
+                               FontSize="14"
+                               Text="{DynamicResource ChooseFile_Text}"
                                Foreground="{DynamicResource Text}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Left"/>
@@ -209,7 +212,7 @@
                                 Background="#99D9D9D9"
                                 CornerRadius="15">
                             <Button Style="{StaticResource Upload}"
-                                    Content="Browse files"
+                                    Content="{DynamicResource BrowseFile}"
                                     FontFamily="{DynamicResource Poppins_KhSN}"
                                     Foreground="{DynamicResource Text}"
                                     FontSize="16"

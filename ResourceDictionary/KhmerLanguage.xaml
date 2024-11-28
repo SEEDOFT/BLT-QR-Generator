@@ -70,6 +70,11 @@
     <sys:String x:Key="TheaTitle">អ្នករចនា UX/UI</sys:String>
     <sys:String x:Key="TheaDetail">ជម្រាបសួរ ខ្ញុំបាទឈ្មោះ សំ សុគន្ធធារ។ បច្ចុប្បន្នខ្ញុំកំពុងសិក្សារក្នុងកម្មវិធីអាហារូបករណ៍ដែលផ្តល់ដោយ ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ នៅសាលាបណ្ដុះបណ្ដាលបច្ចេកវិទ្យាអាន ជំនាញ Mobile App (Flutter)</sys:String>
 
+    <!-- Add Icon Panel -->
+    <sys:String x:Key="Defauil_Text">លំនាំដើម</sys:String>
+    <sys:String x:Key="Recent_Text">ថ្មីៗ</sys:String>
+    <sys:String x:Key="ChooseFile_Text">ជ្រើសរើសរូប</sys:String>
+    <sys:String x:Key="BrowseFile">ស្វែងរករូប</sys:String>
 
     <!-- A Letter from US-->
     <sys:String x:Key="LetterTitle">សេចក្តីថ្លែងអំណរគុណ</sys:String>
