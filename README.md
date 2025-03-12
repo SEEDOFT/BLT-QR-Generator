@@ -1,22 +1,25 @@
 # BLT QR Generator
-- The BLT QR Generator is a modern WPF application built using the .NET in C#. It empowers users to create customizable QR codes effortlessly. With a clean, user-friendly interface, this application is designed for both personal and professional use.
 
-~ #Key Highlights
-- Customizable QR code generation tailored to your needs.
-- Persistent theme management (light/dark modes) with settings remembered across sessions.
-- Advanced settings for user preferences, offering flexibility and control.
+## Overview
+The **BLT QR Generator** is a modern WPF application built using .NET in C#. It provides an intuitive and efficient way to generate customizable QR codes for various purposes. Designed with a clean and user-friendly interface, this application is ideal for both personal and professional use.
 
-~ #Features
-- Generate QR codes quickly and easily.
-- Save QR codes in popular image formats: PNG and JPG.
-- Personalize QR codes with Wi-Fi credentials, URLs, and more.
-- Seamlessly switch between light and dark themes with settings saved for future use.
-- Export QR codes in high-quality resolution for diverse applications.
+## Key Highlights
+- Fully customizable QR code generation to suit specific needs.
+- Persistent theme management with seamless switching between light and dark modes.
+- Advanced settings for enhanced user preferences, ensuring flexibility and control.
 
-~ #Installation
-- Support Windows Operating System (Windows 10 or later).
+## Features
+- Generate QR codes effortlessly with a simple and intuitive interface.
+- Save QR codes in popular image formats, including **PNG** and **JPG**.
+- Personalize QR codes with **Wi-Fi credentials, URLs, and other data**.
+- Enjoy seamless light and dark mode transitions with settings retained across sessions.
+- Export QR codes in high-quality resolution for professional applications.
 
-~ Designed and Developed by:
-- Koy Yotraboth
-- Yong Bunleng
-- Sam Sokunthea
+## Installation Requirements
+- **Supported OS:** Windows 10 or later.
+
+## Designed and Developed By
+- **Koy Yotraboth**
+- **Yong Bunleng**
+- **Sam Sokunthea**
+
