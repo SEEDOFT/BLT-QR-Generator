@@ -17,7 +17,7 @@ jobs:
     runs-on: windows-latest # WPF applications require a Windows runner
 
     env:
-      Solution_Name: BLT QR Generator.sln # Your solution file name
+      Solution_Name: BLT Generator.sln # Your solution file name
       Project_Name: BLT QR Generator      # The main project name (without .csproj)
                                           # Used for constructing artifact paths
 
